@@ -18,7 +18,7 @@ password = os.environ['password']
 
 if "df" not in db.keys():
     db["df"] = None
-
+print("test")
 
 class NumpyEncoder(json.JSONEncoder):
 
