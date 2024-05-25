@@ -6,7 +6,7 @@
 [![Static Badge](https://img.shields.io/badge/Made%20With%20Streamlit-_?style=flat&logo=streamlit&logoSize=50&labelColor=grey&color=red)](https://streamlit.io/)
 [![Static Badge](https://img.shields.io/badge/Hosted%20On%20Replit-_?style=flat&logo=replit&logoSize=50&labelColor=grey&color=orange)](https://replit.com/@kTaNk8k/WinterPixelGamescom-streamlit-part/)
 <br>
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Fwinterpixelgames.com&up_message=Up&up_color=brightgreen&down_message=Down&down_color=ff0000&style=flat-square&label=Website&nbsp;Status)](https://winterpixelgames.com/)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Finner.winterpixelgames.com&up_message=Up&up_color=brightgreen&down_message=Down&down_color=ff0000&style=flat-square&label=Website&nbsp;Status)](https://inner.winterpixelgames.com/)
 ![Static Badge](https://img.shields.io/badge/Built_With-Passion_%E2%9D%A4%EF%B8%8F%E2%80%8D%F0%9F%94%A5_-blue?style=flat-square&logo=a)
 [![Pull Requests Welcome](https://img.shields.io/badge/PRs-welcome-darkgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![Discord](https://img.shields.io/discord/1161656512024956959?logo=discord&label=Discord&color=5865F2&style=flat-square)](https://discord.gg/9q2Nnt4wnd)
@@ -52,7 +52,7 @@
 
 <a href="https://discord.gg/9q2Nnt4wnd"><img width="150" src="https://github.com/TANK8K/WinterPixelGames.com_flask_part/blob/main/static/images/join_discord_button.png" alt="Join Discord server"></a>
 
-![Alt](https://repobeats.axiom.co/api/embed/f49db6353cf7d70aabdb2e30c253eed42f4a4d56.svg "Repobeats analytics image")
+![Alt](https://repobeats.axiom.co/api/embed/c0463acbab7d9a2117e2e14c23bd2e7779e055cb.svg "Repobeats analytics image")
 
 <br>
 
