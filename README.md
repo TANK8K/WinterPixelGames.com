@@ -3,8 +3,8 @@
 
 <div align="center">
 
-[![Static Badge](https://img.shields.io/badge/Made%20With%20Streamlit-_?style=flat&logo=streamlit&logoSize=50&labelColor=grey&color=red)](https://streamlit.io/)
-[![Static Badge](https://img.shields.io/badge/Hosted%20On%20Replit-_?style=flat&logo=replit&logoSize=50&labelColor=grey&color=orange)](https://replit.com/@kTaNk8k/WinterPixelGamescom-streamlit-part/)
+[![Static Badge](https://img.shields.io/badge/Made%20With%20Streamlit-_?style=flat&logo=streamlit&labelColor=grey&color=red)](https://streamlit.io/)
+[![Static Badge](https://img.shields.io/badge/Hosted%20On%20Replit-_?style=flat&logo=replit&labelColor=grey&color=orange)](https://replit.com/@kTaNk8k/WinterPixelGamescom-streamlit-part/)
 <br>
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Finner.winterpixelgames.com&up_message=Up&up_color=brightgreen&down_message=Down&down_color=ff0000&style=flat-square&label=Website&nbsp;Status)](https://inner.winterpixelgames.com/)
 ![Static Badge](https://img.shields.io/badge/Built_With-Passion_%E2%9D%A4%EF%B8%8F%E2%80%8D%F0%9F%94%A5_-blue?style=flat-square&logo=a)
