@@ -18,7 +18,7 @@ password = os.environ['password']
 
 if "df" not in db.keys():
     db["df"] = None
-print("test")
+
 
 class NumpyEncoder(json.JSONEncoder):
 
@@ -93,7 +93,7 @@ def update_leaderboard():
             global data, data_tied, race_dict
 
             race_dict = list_levels()
-            time.sleep(2)
+            time.sleep(10)
             data = np.empty([len(race_dict), 5], dtype="<U100")
             data_tied = np.empty([0, 5], dtype="<U100")
 
@@ -101,7 +101,7 @@ def update_leaderboard():
             index = 0
             for level_id in race_dict:
                 level_name = race_dict[level_id]
-                # print(level_name)
+                print(level_name)
                 ws2 = websocket.create_connection(
                     "wss://gooberdash-api.winterpixel.io/ws?lang=en&status=true&token="
                     + token)
@@ -160,12 +160,12 @@ def update_leaderboard():
                         data_tied = np.vstack([data_tied, [append_row]])
                     rank_index += 1
                     #time.sleep(1)
-                    time.sleep(3)
+                    time.sleep(2)
 
                 index += 1
                 ws2.close()
                 #time.sleep(1)
-                time.sleep(5)
+                time.sleep(4)
 
             db["df"] = json.dumps(np.vstack([data, data_tied]),
                                   cls=NumpyEncoder)
@@ -176,149 +176,146 @@ def update_leaderboard():
 
 
 def load_website():
-    while True:
-        try:
-            st.set_page_config(
-                layout="wide",
-                initial_sidebar_state="collapsed",
+    try:
+        st.set_page_config(
+            page_title='WinterPixelGames » Tools and Stats',
+            page_icon = './static/images/wpg_hex_logo_144.png',
+            layout = 'wide',
+            initial_sidebar_state = 'auto'
+        )
+
+        insert_html = """
+            <link href='https://fonts.googleapis.com/css?family=Baloo 2' rel='stylesheet'>
+            <style>
+            h1, h2, h3, h4, h5, h6, p {
+                font-family: 'Baloo 2' !important;
+                font-weight: bolder;
+                text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            }
+            header {
+                background: transparent !important;
+            }
+            [data-testid="stAppViewContainer"] > .main {
+                background-image: url("https://winterpixelgames.com/static/images/background_gd.png");
+                height: 100%; 
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            #stDecoration {
+                display: none;
+            }
+            .main-svg {
+              border-radius: 10px;
+            }
+            div[data-testid="stToolbar"] {
+            visibility: hidden;
+            height: 0%;
+            position: fixed;
+            }
+            div[data-testid="stDecoration"] {
+            visibility: hidden;
+            height: 0%;
+            position: fixed;
+            }
+            div[data-testid="stStatusWidget"] {
+            visibility: hidden;
+            height: 0%;
+            position: fixed;
+            }
+            #MainMenu {
+            visibility: hidden;
+            height: 0%;
+            }
+            header {
+            visibility: hidden;
+            height: 0%;
+            }
+            footer {
+            visibility: hidden;
+            height: 0%;
+            }
+            </style>
+        """
+        st.markdown(insert_html, unsafe_allow_html=True)
+
+        df = pd.DataFrame(
+            np.asarray(json.loads(db["df"])),
+            columns=[
+                "Level",
+                "Rank",
+                "Player",
+                "Record (in seconds)",
+                "Upload time (in UTC)",
+            ],
+        )
+        df2 = df[df["Rank"] == "1"]
+        df2 = df2.drop("Rank", axis=1)
+        df2 = df2.sort_values(by=["Upload time (in UTC)"], ascending=False)
+
+        st.markdown("## :blue[Goober] :red[Dash]")
+        st.markdown(
+            '<img style="display: inline; margin: 0 5px 8px 0; width: 25px" src="https://winterpixelgames.com/static/images/medal_1st.png"><span style="font-size: 25px">World Records Statistics</span>',
+            unsafe_allow_html=True)
+        st.caption("Update every 6 hours")
+        tab1, tab2, tab3 = st.tabs([
+            "🥇 All Records (WR Holders)",
+            "🌟 Hall of Fame (Top 3)",
+            "🗒️ Distribution (Pie Chart)",
+        ])
+
+        with tab1:
+            st.dataframe(df2.set_index(df2.columns[0]))
+
+        with tab2:
+            df3 = df.groupby(["Rank",
+                              "Player"]).size().reset_index(name="Counts")
+            df3 = df3.pivot(index="Player", columns="Rank", values="Counts")
+            df3 = df3.fillna(0)
+            df3 = df3.rename(columns={
+                "Player": "Player",
+                "1": "🥇",
+                "2": "🥈",
+                "3": "🥉"
+            })
+            df3["Rank"] = df3[["🥇", "🥈", "🥉"]].apply(tuple, axis=1).rank(
+                method='min', ascending=False).astype(int)
+            df3 = df3.reset_index()
+            df3.set_index("Rank", inplace=True)
+            df3 = df3.sort_values("Rank")
+            df3.loc[:, "Total"] = df3.sum(numeric_only=True, axis=1)
+            st.dataframe(df3)
+
+        with tab3:
+            df2 = df2.groupby(["Player"]).size().reset_index(name="Counts")
+            fig = px.pie(
+                df2,
+                values=df2["Counts"],
+                names=df2["Player"],
+                labels=df2["Player"],
+                hole=0.4,
             )
+            fig.update_traces(textposition="inside", textinfo="percent+label")
 
-            insert_html = """
-                <link href='https://fonts.googleapis.com/css?family=Baloo 2' rel='stylesheet'>
-                <style>
-                h1, h2, h3, h4, h5, h6, p {
-                    font-family: 'Baloo 2' !important;
-                    font-weight: bolder;
-                    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-                }
-                header {
-                    background: transparent !important;
-                }
-                [data-testid="stAppViewContainer"] > .main {
-                    background-image: url("https://winterpixelgames.com/static/images/background_gd.png");
-                    height: 100%; 
-                    background-position: center;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                }
-                #stDecoration {
-                    display: none;
-                }
-                .main-svg {
-                  border-radius: 10px;
-                }
-                div[data-testid="stToolbar"] {
-                visibility: hidden;
-                height: 0%;
-                position: fixed;
-                }
-                div[data-testid="stDecoration"] {
-                visibility: hidden;
-                height: 0%;
-                position: fixed;
-                }
-                div[data-testid="stStatusWidget"] {
-                visibility: hidden;
-                height: 0%;
-                position: fixed;
-                }
-                #MainMenu {
-                visibility: hidden;
-                height: 0%;
-                }
-                header {
-                visibility: hidden;
-                height: 0%;
-                }
-                footer {
-                visibility: hidden;
-                height: 0%;
-                }
-                </style>
-            """
-            st.markdown(insert_html, unsafe_allow_html=True)
+            race_dict = list_levels()
 
-            df = pd.DataFrame(
-                np.asarray(json.loads(db["df"])),
-                columns=[
-                    "Level",
-                    "Rank",
-                    "Player",
-                    "Record (in seconds)",
-                    "Upload time (in UTC)",
-                ],
-            )
-            df2 = df[df["Rank"] == "1"]
-            df2 = df2.drop("Rank", axis=1)
-            df2 = df2.sort_values(by=["Upload time (in UTC)"], ascending=False)
+            time.sleep(3)
 
-            st.markdown("## :blue[Goober] :red[Dash]")
-            st.markdown(
-                '<img style="display: inline; margin: 0 5px 8px 0; width: 25px" src="https://winterpixelgames.com/static/images/medal_1st.png"><span style="font-size: 25px">World Records Statistics</span>',
-                unsafe_allow_html=True)
-            st.caption("Update every 6 hours")
-            tab1, tab2, tab3 = st.tabs([
-                "🥇 All Records (WR Holders)",
-                "🌟 Hall of Fame (Top 3)",
-                "🗒️ Distribution (Pie Chart)",
-            ])
-
-            with tab1:
-                st.dataframe(df2.set_index(df2.columns[0]))
-
-            with tab2:
-                df3 = df.groupby(["Rank",
-                                  "Player"]).size().reset_index(name="Counts")
-                df3 = df3.pivot(index="Player",
-                                columns="Rank",
-                                values="Counts")
-                df3 = df3.fillna(0)
-                df3 = df3.rename(columns={
-                    "Player": "Player",
-                    "1": "🥇",
-                    "2": "🥈",
-                    "3": "🥉"
-                })
-                df3["Rank"] = df3[["🥇", "🥈", "🥉"]].apply(tuple, axis=1).rank(
-                    method='min', ascending=False).astype(int)
-                df3 = df3.reset_index()
-                df3.set_index("Rank", inplace=True)
-                df3 = df3.sort_values("Rank")
-                df3.loc[:, "Total"] = df3.sum(numeric_only=True, axis=1)
-                st.dataframe(df3)
-
-            with tab3:
-                df2 = df2.groupby(["Player"]).size().reset_index(name="Counts")
-                fig = px.pie(
-                    df2,
-                    values=df2["Counts"],
-                    names=df2["Player"],
-                    labels=df2["Player"],
-                    hole=0.4,
+            fig.update_layout(annotations=[
+                dict(
+                    text=
+                    f"{len(race_dict)} Levels<br>{len(df2.index)} WR Holders<br>{df2['Counts'].sum()} WRs",
+                    showarrow=False,
                 )
-                fig.update_traces(textposition="inside",
-                                  textinfo="percent+label")
-
-                race_dict = list_levels()
-
-                time.sleep(1)
-
-                fig.update_layout(annotations=[
-                    dict(
-                        text=
-                        f"{len(race_dict)} Levels<br>{len(df2.index)} WR Holders<br>{df2['Counts'].sum()} WRs",
-                        showarrow=False,
-                    )
-                ])
-                st.plotly_chart(fig, use_container_width=True)
-            st.text(
-                "WinterPixelGames.com is NOT affiliated with or endorsed by WinterpixelGames Inc."
-            )
-            st.text(
-                "All relevant trademarks belong to their respective owners.")
-        except Exception as e:
-            print(e)
-            time.sleep(900)
+            ])
+            st.plotly_chart(fig, use_container_width=True)
+        st.text(
+            "WinterPixelGames.com is not affiliated with or endorsed by WinterpixelGames Inc."
+        )
+        st.text("All relevant trademarks belong to their respective owners.")
+    except Exception as e:
+        print(e)
+        time.sleep(10)
 
 
 t1 = Thread(target=load_website())
