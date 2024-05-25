@@ -312,7 +312,7 @@ def load_website():
                 ])
                 st.plotly_chart(fig, use_container_width=True)
             st.text(
-                "WinterPixelGames.com is not affiliated with or endorsed by WinterpixelGames Inc."
+                "WinterPixelGames.com is NOT affiliated with or endorsed by WinterpixelGames Inc."
             )
             st.text(
                 "All relevant trademarks belong to their respective owners.")
