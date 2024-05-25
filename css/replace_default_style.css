@@ -1,0 +1,49 @@
+h1, h2, h3, h4, h5, h6, p {
+  font-family: 'Baloo 2' !important;
+  font-weight: bolder;
+}
+
+header {
+    background: transparent !important;
+}
+
+#stDecoration {
+    display: none;
+}
+
+.main-svg {
+    border-radius: 10px;
+}
+
+div[data-testid="stToolbar"] {
+    visibility: hidden;
+    height: 0%;
+    position: fixed;
+}
+
+div[data-testid="stDecoration"] {
+    visibility: hidden;
+    height: 0%;
+    position: fixed;
+}
+
+div[data-testid="stStatusWidget"] {
+    visibility: hidden;
+    height: 0%;
+    position: fixed;
+}
+
+#MainMenu {
+    visibility: hidden;
+    height: 0%;
+}
+
+header {
+    visibility: hidden;
+    height: 0%;
+}
+
+footer {
+    visibility: hidden;
+    height: 0%;
+}

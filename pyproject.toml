@@ -16,8 +16,8 @@ websocket = "^0.2.1"
 flag = "^0.1.1"
 replit = "^3.6.3"
 requests = "^2.31.0"
-streamlit = "^1.34.0"
 flask = "^3.0.3"
+streamlit = "1.35.0"
 
 [tool.pyright]
 # https://github.com/microsoft/pyright/blob/main/docs/configuration.md

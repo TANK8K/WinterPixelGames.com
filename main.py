@@ -179,64 +179,65 @@ def load_website():
     try:
         st.set_page_config(
             page_title='WinterPixelGames » Tools and Stats',
-            page_icon = './static/images/wpg_hex_logo_144.png',
-            layout = 'wide',
+            page_icon = 'static/images/wpg_hex_logo_144.png',
+            layout = 'centered',
             initial_sidebar_state = 'auto'
         )
 
+        race_dict = list_levels()
+
+        st.logo("static/images/streamlit_logo.png", icon_image="static/images/wpg_hex_logo_144.png")
+        st.sidebar.markdown("Hi!")
+        
         insert_html = """
             <link href='https://fonts.googleapis.com/css?family=Baloo 2' rel='stylesheet'>
             <style>
             h1, h2, h3, h4, h5, h6, p {
                 font-family: 'Baloo 2' !important;
-                font-weight: bolder;
-                text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+                font-weight: bolder !important;
             }
             header {
                 background: transparent !important;
             }
-            [data-testid="stAppViewContainer"] > .main {
-                background-image: url("https://winterpixelgames.com/static/images/background_gd.png");
-                height: 100%; 
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
+            .st-bd, .st-bn:hover {
+                color: #0099ef !important; 
+            }
+            .st-c2 {
+                background-color: #0099ef !important;
+            }
+            img[data-testid="stLogo"] {
+                width: 100%;
+                height: 2.5em;
             }
             #stDecoration {
                 display: none;
             }
-            .main-svg {
-              border-radius: 10px;
+           div[data-testid="stToolbar"], div[data-testid="stDecoration"], div[data-testid="stStatusWidget"] {
+                visibility: hidden;
+                height: 0%;
+                position: fixed;
             }
-            div[data-testid="stToolbar"] {
-            visibility: hidden;
-            height: 0%;
-            position: fixed;
-            }
-            div[data-testid="stDecoration"] {
-            visibility: hidden;
-            height: 0%;
-            position: fixed;
-            }
-            div[data-testid="stStatusWidget"] {
-            visibility: hidden;
-            height: 0%;
-            position: fixed;
-            }
-            #MainMenu {
-            visibility: hidden;
-            height: 0%;
-            }
-            header {
-            visibility: hidden;
-            height: 0%;
-            }
-            footer {
-            visibility: hidden;
-            height: 0%;
+            #MainMenu, header, footer {
+                visibility: hidden;
+                height: 0%;
             }
             </style>
         """
+        self_test = """
+            #stDecoration {
+                display: none;
+            }
+           div[data-testid="stToolbar"], div[data-testid="stDecoration"], div[data-testid="stStatusWidget"] {
+                visibility: hidden;
+                height: 0%;
+                position: fixed;
+            }
+            #MainMenu, header, footer {
+                visibility: hidden;
+                height: 0%;
+            }
+        """
+        
         st.markdown(insert_html, unsafe_allow_html=True)
 
         df = pd.DataFrame(
@@ -296,11 +297,6 @@ def load_website():
                 hole=0.4,
             )
             fig.update_traces(textposition="inside", textinfo="percent+label")
-
-            race_dict = list_levels()
-
-            time.sleep(3)
-
             fig.update_layout(annotations=[
                 dict(
                     text=
