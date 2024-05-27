@@ -6,6 +6,7 @@ import websocket
 import json
 import requests
 import time
+import datetime
 import os
 from replit import db
 from pathlib import Path
@@ -95,6 +96,7 @@ def load_page():
             '<img style="display: inline; margin: 0 5px 8px 0; width: 25px" src="https://winterpixelgames.com/static/images/medal_1st.png"><span style="font-size: 25px">World Records Statistics</span>',
             unsafe_allow_html=True)
         st.caption("Update every 6 hours")
+        st.caption(f"Last Update: {datetime.datetime.fromtimestamp(db['df_last_update']).strftime('%Y-%m-%d %H:%M:%S')} UTC")
         tab1, tab2, tab3 = st.tabs([
             "🥇 All Records (WR Holders)",
             "🌟 Hall of Fame (Top 3)",
@@ -102,7 +104,7 @@ def load_page():
         ])
 
         with tab1:
-            st.dataframe(df2.set_index(df2.columns[0]))
+            st.dataframe(df2.set_index(df2.columns[0]), use_container_width=True, height=600) 
 
         with tab2:
             df3 = df.groupby(["Rank",
@@ -141,10 +143,6 @@ def load_page():
                 )
             ])
             st.plotly_chart(fig, use_container_width=True)
-        st.text(
-            "WinterPixelGames.com is not affiliated with or endorsed by WinterpixelGames Inc."
-        )
-        st.text("All relevant trademarks belong to their respective owners.")
     except Exception as e:
         print(e)
         time.sleep(3)
