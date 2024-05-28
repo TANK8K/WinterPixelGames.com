@@ -5,11 +5,13 @@ def common_config():
                        page_icon='static/images/wpg_hex_logo_144.png',
                        layout='wide',
                        initial_sidebar_state='auto',
-                        menu_items={
+                       menu_items={
                             'About': '''
                             Provides useful **:blue-background[Tools & Statistics]** of games made by **[Winterpixel Games](https://winterpixel.com/)**!
 
-                            This website is **NOT** affiliated with or endorsed by Winterpixel Games Inc.
+                            This website is **NOT** affiliated with or endorsed by Winterpixel Games Inc. 
+
+                            All relevant trademarks belong to their respective owners.
 
                             ​
 
@@ -25,11 +27,13 @@ def common_config():
     st.logo("static/images/streamlit_banner.png",
             icon_image="static/images/wpg_hex_logo_144.png")
 
-    insert_html = """
-        <link href='https://fonts.googleapis.com/css?family=Baloo 2' rel='stylesheet'>
+    st.markdown("""
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
         <div class="footer">
-            <p>Developed with 💖 by <a style="text-decoration:none" href="https://tank8k.com/" target="_blank">TANK8K</a></p>
+            <p><span style="display:inline-block;">This website is NOT affiliated with or endorsed by Winterpixel Games Inc.</span><span style="display:inline-block;">&nbsp;All relevant trademarks belong to their respective owners.</span><br>Developed with 💖 by <a style="text-decoration:none" href="https://tank8k.com/" target="_blank">TANK8K</a></p>
         </div>
         <style>
         *:hover {
@@ -41,12 +45,20 @@ def common_config():
         h1, h2, h3, h4, h5, h6, p, li {
             font-family: 'Baloo 2' !important;
         }
+        h3 {
+            font-weight: 800;
+            color: #32bafa;
+            font-size: 25px;
+        }
+        h3, h4 {
+            padding: 0;
+        }
         section[data-testid="stSidebar"] {
             width: 336px !important;
         }
         div[data-testid="stSidebarNav"] > ul[data-testid="stSidebarNavItems"] > li > div > a > span {
             color: white !important;
-            font-weight: 800;
+            font-weight: 700;
             font-size: 25px;
         }
         ul[data-testid="stSidebarNavItems"] > li:nth-child(1) > div > a::before{
@@ -54,18 +66,19 @@ def common_config():
             content: "\\f015";
             display: inline-block;
             vertical-align: middle;
-            font-weight:900;
+            font-weight: 800;
+            font-size: 20px;
             color: white;
-            min-width: 25px;
-            padding-left: 5px;
+            min-width: 35px;
+            padding-left: 8px;
         }
         ul[data-testid="stSidebarNavItems"] > li:nth-child(2) > div > a::before{
             content: "";
             background-image: url("https://winterpixelgames.com/static/images/RocketBotRoyale_logo_180.png");
             background-size: 100% 100%;
             display: inline-block;
-            height: 25px;
-            width: 25px;
+            height: 35px;
+            width: 35px;
             position: relative;
         }
         ul[data-testid="stSidebarNavItems"] > li:nth-child(3) > div > a::before{
@@ -73,8 +86,8 @@ def common_config():
             background-image: url("https://winterpixelgames.com/static/images/GooberDash_logo_180.png");
             background-size: 100% 100%;
             display: inline-block;
-            height: 25px;
-            width: 25px;
+            height: 35px;
+            width: 35px;
             position: relative;
         }
         ul[data-testid="stSidebarNavItems"] > li:nth-child(4) > div > a::before{
@@ -82,8 +95,8 @@ def common_config():
             background-image: url("https://winterpixelgames.com/static/images/GooberRoyale_logo_180.png");
             background-size: 100% 100%;
             display: inline-block;
-            height: 25px;
-            width: 25px;
+            height: 35px;
+            width: 35px;
             position: relative;
         }
         ul[data-testid="stSidebarNavItems"] > li:nth-child(5) > div > a::before{
@@ -91,8 +104,8 @@ def common_config():
             background-image: url("https://winterpixelgames.com/static/images/GooberShot_logo_180.png");
             background-size: 100% 100%;
             display: inline-block;
-            height: 25px;
-            width: 25px;
+            height: 35px;
+            width: 35px;
             position: relative;
         }
         ul[data-testid="stSidebarNavItems"] > li:nth-child(6) > div > a::before{
@@ -100,8 +113,8 @@ def common_config():
             background-image: url("https://winterpixelgames.com/static/images/MoonrockMiners_logo_180.png");
             background-size: 100% 100%;
             display: inline-block;
-            height: 25px;
-            width: 25px;
+            height: 35px;
+            width: 35px;
             position: relative;
         }
         ul[data-testid="stSidebarNavItems"] > li:nth-child(7) > div > a::before{
@@ -109,26 +122,25 @@ def common_config():
             content: "\\f129";
             display: inline-block;
             vertical-align: middle;
-            font-weight:900;
+            font-weight: 800;
+            font-size: 20px;
             color: white;
-            min-width: 25px;
-            padding-left: 10px;
+            min-width: 35px;
+            padding-left: 14px;
         }
         ul[data-testid="stSidebarNavItems"] > li:nth-child(8) > div > a::before{
             font-family: "Font Awesome 5 Free" !important;
             content: "\\f08e";
             display: inline-block;
             vertical-align: middle;
-            font-weight: 900;
+            font-weight: 800;
+            font-size: 20px;
             color: white;
-            min-width: 25px;
-            padding-left: 5px;
+            min-width: 35px;
+            padding-left: 7px;
         }
         header {
             background: transparent !important;
-        }
-        button > div[data-testid="stMarkdownContainer"]:hover {
-            color: #3097e6 !important; 
         }
         button[data-baseweb="tab"] {
             color: #ffffff !important; 
@@ -136,11 +148,13 @@ def common_config():
         div[data-baseweb="tab-list"] > div[data-baseweb="tab-highlight"] {
             background-color: #3097e6 !important;
         }
-        img[data-testid="stLogo"] {
+        div[data-testid="stSidebarHeader"] img[data-testid="stLogo"] {
             width: 100%;
             height: 2.5em;
-            left: 8px;
+            left: 12px;
             position: relative;
+            transform: scale(1.2, 1.2);
+            top: 15px;
         }
         div[data-testid="stDecoration"] {
             background-image: linear-gradient(90deg, rgb(0, 108, 176), rgb(0, 43, 71));
@@ -148,6 +162,18 @@ def common_config():
         div[role="dialog"] > div > div > div[data-testid="stMarkdownContainer"] > p:nth-last-child(1) {
             display: none;
         }
+        div[role="dialog"] > div:nth-child(2) > div > div:not([data-testid="stMarkdownContainer"]):nth-last-child(1) {
+            display: none;
+        }
+        div[role="dialog"] > div:nth-child(2) > div > div:not([data-testid="stMarkdownContainer"]):nth-child(1) {
+            display: none;
+        }
+        ul[data-testid="main-menu-list"] > ul:nth-child(4) {
+            display: none;
+        }
+        ul[data-testid="main-menu-list"] > div[data-testid="main-menu-divider"] {
+            display: none;
+        } 
         body {
             overscroll-behavior-x: none !important;
             overscroll-behavior-y: none !important;
@@ -159,6 +185,11 @@ def common_config():
             padding-top: 8px;
             left: -3px;
             position: relative;
+        }
+        div[data-testid="stSidebarCollapseButton"] {
+            position: relative;
+            top: 25px;
+            left: 22px;
         }
         div[data-testid="stSidebarCollapseButton"] > button[data-testid="baseButton-header"], button[data-testid="baseButton-headerNoPadding"] {
             border-radius: 50px;
@@ -201,41 +232,71 @@ def common_config():
         .footer {
             position: fixed;
             left: 0;
-            bottom: 2px;
+            bottom: 0;
             width: 100%;
-            height: 25px;
+            height: 33px;
             color: white;
             text-align: center;
             background-color: #081427;
             z-index: 99999;
+            border-top: 0.5px inset #666666;
         }
         .footer > p {
-            font-size: 18px !important;
+            font-size: 11px !important;
+            line-height: 15px;
+            margin-top: 1px;
         }
         div[data-testid="collapsedControl"] > div > button {
             margin: 0;
+            position: relative;
+            top: -2px;
         }
         div[data-testid="collapsedControl"] {
             background: #192841;
             margin-left: -50px;
-            left: 10px;
-            padding-left: 30px;
+            left: 30px;
+            padding: 3px 0 3px 30px;
             border-radius: 50px;
             outline: none;
             border-color: #158fd8;
             box-shadow: 0 0 12px #158fd8;
+            top: 35px;
+        }
+        div[data-testid="collapsedControl"] img {
+            transform: scale(1.6,1.6);
+            top: 6px;
+            position: relative;
+            left: -1px;
         }
         div[data-testid="stAppViewBlockContainer"] p {
-            font-size: 25px;
+            font-size: 20px;
+        }
+        hr:not([size]) {
+            height: 1px;
+            margin: 15px 0px;
+        }
+        a[data-testid="baseLinkButton-primary"]:hover, a[data-testid="baseLinkButton-secondary"]:hover, div[data-testid="stVerticalBlock"] div:not([data-baseweb]) button:hover {
+            color: white;
+            outline: none;
+            border: 1.5px solid #158fd8;
+            box-shadow: 0 0 10px #158fd8;
+        }
+        a[data-testid="baseLinkButton-primary"]:focus, a[data-testid="baseLinkButton-secondary"]:focus, button:focus {
+            color: white !important;
+        }
+        a[kind="primary"]:hover, button[kind="primary"]:hover {
+            background: #192841;
+        }
+        div[data-baseweb="tab-list"] button:hover {
+            color: #158fd8 !important;    
+            border: none !important;
+            box-shadow: none !important;
+        }
+        section[data-testid="stSidebar"] > div:nth-child(2) > div > div {
+            display: none;
+        }
+        div[data-testid="stAppViewBlockContainer"] {
+            padding: 0px 30px 50px 30px;
         }
         </style>
-    """
-    # background: #041827;
-    #   opacity: .5;
-    #   border: 2px solid #1590d8;
-    #   margin-left: -50px;
-    #   left: 20px;
-    #   padding-left: 30px;
-    #   border-radius: 50px;
-
-    st.markdown(insert_html, unsafe_allow_html=True)
+    """, unsafe_allow_html=True)

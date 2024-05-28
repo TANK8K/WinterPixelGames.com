@@ -76,7 +76,7 @@ def load_page():
     try:
         race_dict = list_levels()
         time.sleep(2)
-        
+
         df = pd.DataFrame(
             np.asarray(json.loads(db["df"])),
             columns=[
@@ -91,12 +91,15 @@ def load_page():
         df2 = df2.drop("Rank", axis=1)
         df2 = df2.sort_values(by=["Upload time (in UTC)"], ascending=False)
 
-        st.markdown("## :blue[Goober] :red[Dash]")
-        st.markdown(
-            '<img style="display: inline; margin: 0 5px 8px 0; width: 25px" src="https://winterpixelgames.com/static/images/medal_1st.png"><span style="font-size: 25px">World Records Statistics</span>',
-            unsafe_allow_html=True)
-        st.caption("Update every 6 hours")
-        st.caption(f"Last Update: {datetime.datetime.fromtimestamp(db['df_last_update']).strftime('%Y-%m-%d %H:%M:%S')} UTC")
+        st.image(
+            'https://winterpixelgames.com/static/images/goober_dash_logo_text.png',
+            width=235)
+        st.html(
+            '<span style="font-size: 25px; font-weight: bold;"></span><img style="display: inline; margin: 0 5px 8px 0; width: 25px" src="https://winterpixelgames.com/static/images/medal_1st.png"><span style="font-size: 25px; font-weight: bold;">Time Trials - World Records Statistics</span>'
+        )
+        st.caption(
+            f"Last Update: {datetime.datetime.fromtimestamp(db['df_last_update']).strftime('%Y-%m-%d %H:%M:%S')} UTC (Update every 6 hours)"
+        )
         tab1, tab2, tab3 = st.tabs([
             "🥇 All Records (WR Holders)",
             "🌟 Hall of Fame (Top 3)",
@@ -104,7 +107,9 @@ def load_page():
         ])
 
         with tab1:
-            st.dataframe(df2.set_index(df2.columns[0]), use_container_width=True, height=600) 
+            st.dataframe(df2.set_index(df2.columns[0]),
+                         use_container_width=True,
+                         height=600)
 
         with tab2:
             df3 = df.groupby(["Rank",

@@ -15,7 +15,7 @@ password = os.environ['password']
 
 if "df" not in db.keys():
     db["df"] = None
-    
+
 if "df_last_update" not in db.keys():
     db["df_last_update"] = None
 
@@ -84,22 +84,24 @@ def list_levels():
     except Exception as e:
         print(e)
 
+
 lock = threading.Lock()
+
 
 def update_leaderboard():
     with lock:
         while True:
             time.sleep(21601)
             #time.sleep(5)
-    
+
             try:
                 global data, data_tied, race_dict
-    
+
                 race_dict = list_levels()
                 time.sleep(10)
                 data = np.empty([len(race_dict), 5], dtype="<U100")
                 data_tied = np.empty([0, 5], dtype="<U100")
-    
+
                 token = str(refresh_token(email, password))
                 index = 0
                 for level_id in race_dict:
@@ -107,7 +109,7 @@ def update_leaderboard():
                     ws2 = websocket.create_connection(
                         "wss://gooberdash-api.winterpixel.io/ws?lang=en&status=true&token="
                         + token)
-    
+
                     payload = '{"level_id":"' + str(level_id) + '","limit":50}'
                     query_leaderboard = {
                         "cid": "11",
@@ -121,7 +123,7 @@ def update_leaderboard():
                     msg2 = ws2.recv()
                     msg2_json_loads = json.loads(msg2)["rpc"]["payload"]
                     msg2_json_loads_row = json.loads(msg2_json_loads)
-    
+
                     record_time = float(
                         f"{msg2_json_loads_row['records'][0]['score'] / 100000:.3f}"
                     )
@@ -134,10 +136,10 @@ def update_leaderboard():
                         if int(record_time) < 10 else f"{record_time:.3f}",
                         str(
                             datetime.datetime.fromtimestamp(
-                                msg2_json_loads_row["records"][0]["update_time"]
-                                ["seconds"])),
+                                msg2_json_loads_row["records"][0]
+                                ["update_time"]["seconds"])),
                     ]
-    
+
                     rank_eq = 1
                     prev_rank_counter = 0
                     rank_index = 1
@@ -161,22 +163,23 @@ def update_leaderboard():
                                  f"{next_record_time:.3f}"),
                                 str(
                                     datetime.datetime.fromtimestamp(
-                                        msg2_json_loads_row["records"][rank_index]
-                                        ["update_time"]["seconds"])),
+                                        msg2_json_loads_row["records"]
+                                        [rank_index]["update_time"]
+                                        ["seconds"])),
                             ]
-    
+
                             data_tied = np.vstack([data_tied, [append_row]])
                         rank_index += 1
-    
+
                     index += 1
                     ws2.close()
                     #time.sleep(1)
                     time.sleep(2)
-    
+
                 db["df"] = json.dumps(np.vstack([data, data_tied]),
                                       cls=NumpyEncoder)
                 db["df_last_update"] = time.time()
-    
+
             except Exception as e:
                 print(e)
                 pass

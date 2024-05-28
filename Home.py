@@ -3,6 +3,7 @@ from threading import Thread
 from common_config import common_config
 from backend.GooberDash.update_time_trails_leaderboard import update_leaderboard as GooberDash_update_time_trails_leaderboard
 
+
 def load_website():
     common_config()
     st.write('This is the index_page')
