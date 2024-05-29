@@ -1,6 +1,5 @@
 import streamlit as st
-import time
-from common_config import common_config
+from common_config import common_config, back_to_menu
 
 common_config()
 
@@ -12,16 +11,20 @@ except Exception:
 st.session_state.game = "GooberDash"
 
 
-def to_menu_page():
-    st.session_state.page = "menu"
-
-
 def to_flip_level_page():
     st.session_state.page = "flip_level"
 
 
 def to_time_trials_page():
     st.session_state.page = "time_trials"
+
+
+def to_user_info_page():
+    st.session_state.page = "user_info"
+
+
+def to_season_leaderboard_page():
+    st.session_state.page = "season_leaderboard"
 
 
 ph = st.empty()
@@ -136,12 +139,30 @@ if st.session_state.game == "GooberDash" and st.session_state.page == "menu":
                         color: white;
                         padding-right: 5px;
                     }
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(13) div:nth-child(2) p::before {
+                        font-family: "font awesome 5 Free" !important;
+                        content: "\\f007";
+                        display: inline-block;
+                        vertical-align: middle;
+                        font-weight: 900;
+                        font-size: 20px;
+                        color: white;
+                        padding-right: 5px;
+                    }
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(13) div:nth-child(3) p::before {
+                        font-family: "font awesome 5 Free" !important;
+                        content: "\\f073";
+                        display: inline-block;
+                        vertical-align: middle;
+                        font-weight: 900;
+                        font-size: 20px;
+                        color: white;
+                        padding-right: 5px;
+                    }
                     </style>""")
-        st.image(
-            'https://winterpixelgames.com/static/images/goober_dash_banner_v2.png',
-            use_column_width=True)
+        st.markdown('<div class="container" style="margin: auto; max-height: 18em; display: flex; padding-bottom: 15px; justify-content: center;"><img src="https://winterpixelgames.com/static/images/goober_dash_banner_v2.png" style="max-height: 100%; max-width: 100%"></div>', unsafe_allow_html=True)
         st.markdown(
-            'Goober Dash is a multiplayer battle royale game that you can play online. Dash your opponents into deadly spikes, gather precious coins, and unlock a plethora of unique costumes as you strive to outlast the competition. Invite your friends to engage in epic battles in custom private lobbies. Unleash your creativity with the level editor, crafting and conquering your very own battlegrounds. Climb the global and country-based seasonal leaderboards to prove your dominance in this thrilling contest.'
+            '**GOOBER DASH** is a multiplayer battle royale game that you can play online. Dash your opponents into deadly spikes, gather precious coins, and unlock a plethora of unique costumes as you strive to outlast the competition. Invite your friends to engage in epic battles in custom private lobbies. Unleash your creativity with the level editor, crafting and conquering your very own battlegrounds. Climb the global and country-based seasonal leaderboards to prove your dominance in this thrilling contest.'
         )
 
         st.html("<h4>Platforms</h4>")
@@ -175,8 +196,7 @@ if st.session_state.game == "GooberDash" and st.session_state.page == "menu":
                 'https://goober-dash.fandom.com/wiki/Goober_Dash_Wiki')
         with col4:
             st.link_button('Reddit', 'https://www.reddit.com/r/gooberdash')
-
-        st.divider()
+        "---"
         st.html(
             "<h3><i class='fa-solid fa-screwdriver-wrench'></i>&nbsp;Tools</h3>"
         )
@@ -185,24 +205,44 @@ if st.session_state.game == "GooberDash" and st.session_state.page == "menu":
             st.button('Flip Level (WIP)',
                       on_click=to_flip_level_page,
                       type='primary')
-        st.divider()
+        "---"
         st.html(
             "<h3><i class='fa-solid fa-chart-simple'></i>&nbsp;Statistics</h3>"
         )
-        col1, col2 = st.columns(2)
+        col1, col2, col3 = st.columns(3)
         with col1:
             st.button('Time Trials',
                       on_click=to_time_trials_page,
+                      type='primary')
+        with col2:
+            st.button('User Info (WIP)',
+                      on_click=to_user_info_page,
+                      type='primary')
+        with col3:
+            st.button('Season Leaderboard (WIP)',
+                      on_click=to_season_leaderboard_page,
                       type='primary')
 
 elif st.session_state.game == "GooberDash" and st.session_state.page == "flip_level":
     with ph.container():
         from pages.GooberDash.Tools.flip_level import load_page as GooberDash_flip_level
         GooberDash_flip_level()
-        st.button('Back to Menu', on_click=to_menu_page)
+        back_to_menu()
 
 elif st.session_state.game == "GooberDash" and st.session_state.page == "time_trials":
     with ph.container():
         from pages.GooberDash.Statistics.time_trials import load_page as GooberDash_time_trials
         GooberDash_time_trials()
-        st.button('Back to Menu', on_click=to_menu_page)
+        back_to_menu()
+
+elif st.session_state.game == "GooberDash" and st.session_state.page == "user_info":
+    with ph.container():
+        from pages.GooberDash.Statistics.user_info import load_page as GooberDash_user_info
+        GooberDash_user_info()
+        back_to_menu()
+
+elif st.session_state.game == "GooberDash" and st.session_state.page == "season_leaderboard":
+    with ph.container():
+        from pages.GooberDash.Statistics.season_leaderboard import load_page as GooberDash_season_leaderboard
+        GooberDash_season_leaderboard()
+        back_to_menu()

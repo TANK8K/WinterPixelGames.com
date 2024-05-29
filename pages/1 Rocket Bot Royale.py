@@ -1,6 +1,6 @@
 import streamlit as st
 import streamlit.components.v1 as components
-from common_config import common_config
+from common_config import common_config, back_to_menu
 
 common_config()
 
@@ -10,10 +10,6 @@ try:
 except Exception:
     st.session_state.page = "menu"
 st.session_state.game = "RocketBotRoyale"
-
-
-def to_menu_page():
-    st.session_state.page = "menu"
 
 
 def to_username_changer_page():
@@ -120,7 +116,7 @@ if st.session_state.game == "RocketBotRoyale" and st.session_state.page == "menu
                         color: white;
                         padding-right: 5px;
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(10) div:nth-child(1) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(10) div[data-testid="stVerticalBlock"] > div:nth-child(1) p::before {
                         font-family: "font awesome 5 Free" !important;
                         content: "\\f2f9";
                         display: inline-block;
@@ -151,11 +147,9 @@ if st.session_state.game == "RocketBotRoyale" and st.session_state.page == "menu
                         padding-right: 5px;
                     }
                     </style>""")
-        st.image(
-            "https://winterpixelgames.com/static/images/rocket_bot_royale_banner_v2.png",
-            use_column_width=True)
+        st.markdown('<div class="container" style="margin: auto; max-height: 30rem; display: flex; padding-bottom: 15px; justify-content: center;"><img src="https://winterpixelgames.com/static/images/rocket_bot_royale_banner_v2.png" style="max-height: 100%; max-width: 100%"></div>', unsafe_allow_html=True)
         st.markdown(
-            "Welcome to ROCKET BOT ROYALE, a fun new take on the online battle royale formula. Powerful, wall-climbing, rocket-jumping, artillery-pumping Robo-Tanks are the vehicle of choice in this fast-paced shootout, where the goal is to survive longer than the competition. Collect the loot to upgrade your arsenal, tunnel into the terrain to take cover and collect buried treasure, and avoid the rising water levels to be the BLAST ONE STANDING!"
+            """**ROCKET BOT ROYALE** is a fun new take on the online battle royale formula. Powerful, wall-climbing, rocket-jumping, artillery-pumping Robo-Tanks are the vehicle of choice in this fast-paced shootout, where the goal is to survive longer than the competition. Collect the loot to upgrade your arsenal, tunnel into the terrain to take cover and collect buried treasure, and avoid the rising water levels to be the blast one standing!"""
         )
 
         st.html("<h4>Platforms</h4>")
@@ -191,8 +185,7 @@ if st.session_state.game == "RocketBotRoyale" and st.session_state.page == "menu
         with col4:
             st.link_button('Reddit',
                            'https://www.reddit.com/r/RocketBotRoyale')
-
-        st.divider()
+        "---"
         st.html(
             "<h3><i class='fa-solid fa-screwdriver-wrench'></i>&nbsp;Tools</h3>"
         )
@@ -202,10 +195,10 @@ if st.session_state.game == "RocketBotRoyale" and st.session_state.page == "menu
             st.button('Username Changer',
                       on_click=to_username_changer_page,
                       type='primary')
-            # st.link_button('Username Changer',
-            #                'https://usernamechanger.winterpixelgames.com',
-            #                type='primary')
-        st.divider()
+            st.error(
+                "Discussions about the **Username Changer** is **NOT** allowed in the **Official Winterpixel Games Discord server** as Moderators **DO NOT APPROVE** it.",
+                icon="🚨")
+        "---"
         st.html(
             "<h3><i class='fa-solid fa-chart-simple'></i>&nbsp;Statistics</h3>"
         )
@@ -223,16 +216,16 @@ elif st.session_state.game == "RocketBotRoyale" and st.session_state.page == "us
     with ph.container():
         from pages.RocketBotRoyale.Tools.username_changer import load_page as RocketBotRoyale_username_changer
         RocketBotRoyale_username_changer()
-        st.button('Back to Menu', on_click=to_menu_page)
+        back_to_menu()
 
 elif st.session_state.game == "RocketBotRoyale" and st.session_state.page == "user_info":
     with ph.container():
         from pages.RocketBotRoyale.Statistics.user_info import load_page as RocketBotRoyale_user_info
         RocketBotRoyale_user_info()
-        st.button('Back to Menu', on_click=to_menu_page)
+        back_to_menu()
 
 elif st.session_state.game == "RocketBotRoyale" and st.session_state.page == "season_leaderboard":
     with ph.container():
         from pages.RocketBotRoyale.Statistics.season_leaderboard import load_page as RocketBotRoyale_season_leaderboard
         RocketBotRoyale_season_leaderboard()
-        st.button('Back to Menu', on_click=to_menu_page)
+        back_to_menu()

@@ -1,32 +1,40 @@
 import streamlit as st
 
+def back_to_menu():
+    def to_menu_page():
+        st.session_state.page = "menu"
+    st.html("""<style>
+            div[data-testid="stAppViewBlockContainer"] button:nth-last-child(1) p::before { 
+                font-family: "Font Awesome 5 Free" !important;
+                content: "\\f0c9";
+                display: inline-block;
+                vertical-align: middle;
+                font-weight: 900;
+                font-size: 18px;
+                color: white;
+                padding-right: 8px;
+            }
+            div[data-testid="stAppViewBlockContainer"] button:nth-last-child(1) { 
+                position: absolute;
+                right: 50%;
+                transform: translateX(50%);
+                padding: 5px 10px;
+            }
+            div[data-testid="stAppViewBlockContainer"] button:nth-last-child(1) p { 
+                font-size: 18px !important;
+            }</style>""")
+    st.divider()
+    st.button('Back to Menu', on_click=to_menu_page)
+
+
 def common_config():
     st.set_page_config(page_title='WinterPixelGames » Tools and Stats',
-                       page_icon='static/images/wpg_hex_logo_144.png',
+                       page_icon='https://winterpixelgames.com/static/images/wpg_hex_logo_144.png',
                        layout='wide',
-                       initial_sidebar_state='auto',
-                       menu_items={
-                            'About': '''
-                            Provides useful **:blue-background[Tools & Statistics]** of games made by **[Winterpixel Games](https://winterpixel.com/)**!
+                       initial_sidebar_state='auto')
 
-                            This website is **NOT** affiliated with or endorsed by Winterpixel Games Inc. 
-
-                            All relevant trademarks belong to their respective owners.
-
-                            ​
-
-                            Developed with 💖 by **[:blue[TANK8K]](https://tank8k.com/)**
-                            
-                            [![Source Code](https://winterpixelgames.com/static/images/source_code_icon_25.svg)](https://github.com/TANK8K/WinterPixelGames.com_streamlit_part)&nbsp;
-                            [![Github](https://winterpixelgames.com/static/images/github_icon_20.svg)](https://github.com/TANK8K/)&nbsp;&nbsp;
-                            [![YouTube](https://winterpixelgames.com/static/images/youtube_icon_20.svg)](https://youtube.com/@TANK8K/)&nbsp;&nbsp;
-                            [![My Website](https://winterpixelgames.com/static/images/tank8k_favicon_20.svg)](https://tank8k.com/)
-                            '''
-                        })
-
-    st.logo("static/images/streamlit_banner.png",
-            icon_image="static/images/wpg_hex_logo_144.png")
-
+    st.logo("https://winterpixelgames.com/static/images/streamlit_banner_v2.png",
+            icon_image="https://winterpixelgames.com/static/images/wpg_hex_logo_144.png")
     st.markdown("""
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,11 +44,19 @@ def common_config():
             <p><span style="display:inline-block;">This website is NOT affiliated with or endorsed by Winterpixel Games Inc.</span><span style="display:inline-block;">&nbsp;All relevant trademarks belong to their respective owners.</span><br>Developed with 💖 by <a style="text-decoration:none" href="https://tank8k.com/" target="_blank">TANK8K</a></p>
         </div>
         <style>
+        div[data-testid="stToolbar"] {
+            visibility: hidden !important;
+            height: 0% !important;
+            position: fixed !important;
+        }
         *:hover {
             cursor: url('https://winterpixelgames.com/static/images/cursor_v5.png'), auto !important;
         }
         *:focus {
             cursor: url('https://winterpixelgames.com/static/images/cursor_v5.png'), auto !important;
+        }
+        body * {
+            word-break: break-word;
         }
         h1, h2, h3, h4, h5, h6, p, li {
             font-family: 'Baloo 2' !important;
@@ -54,7 +70,8 @@ def common_config():
             padding: 0;
         }
         section[data-testid="stSidebar"] {
-            width: 336px !important;
+            width: 340px !important;
+            padding-right: 3px !important;
         }
         div[data-testid="stSidebarNav"] > ul[data-testid="stSidebarNavItems"] > li > div > a > span {
             color: white !important;
@@ -74,7 +91,7 @@ def common_config():
         }
         ul[data-testid="stSidebarNavItems"] > li:nth-child(2) > div > a::before{
             content: "";
-            background-image: url("https://winterpixelgames.com/static/images/RocketBotRoyale_logo_180.png");
+            background-image: url("https://winterpixelgames.com/static/images/rocket_bot_royale_favicon.png");
             background-size: 100% 100%;
             display: inline-block;
             height: 35px;
@@ -83,7 +100,7 @@ def common_config():
         }
         ul[data-testid="stSidebarNavItems"] > li:nth-child(3) > div > a::before{
             content: "";
-            background-image: url("https://winterpixelgames.com/static/images/GooberDash_logo_180.png");
+            background-image: url("https://winterpixelgames.com/static/images/goober_dash_favicon.png");
             background-size: 100% 100%;
             display: inline-block;
             height: 35px;
@@ -92,7 +109,7 @@ def common_config():
         }
         ul[data-testid="stSidebarNavItems"] > li:nth-child(4) > div > a::before{
             content: "";
-            background-image: url("https://winterpixelgames.com/static/images/GooberRoyale_logo_180.png");
+            background-image: url("https://winterpixelgames.com/static/images/goober_royale_favicon.png");
             background-size: 100% 100%;
             display: inline-block;
             height: 35px;
@@ -101,7 +118,7 @@ def common_config():
         }
         ul[data-testid="stSidebarNavItems"] > li:nth-child(5) > div > a::before{
             content: "";
-            background-image: url("https://winterpixelgames.com/static/images/GooberShot_logo_180.png");
+            background-image: url("https://winterpixelgames.com/static/images/goober_shot_favicon.png");
             background-size: 100% 100%;
             display: inline-block;
             height: 35px;
@@ -110,7 +127,7 @@ def common_config():
         }
         ul[data-testid="stSidebarNavItems"] > li:nth-child(6) > div > a::before{
             content: "";
-            background-image: url("https://winterpixelgames.com/static/images/MoonrockMiners_logo_180.png");
+            background-image: url("https://winterpixelgames.com/static/images/moonrock_miners_favicon.png");
             background-size: 100% 100%;
             display: inline-block;
             height: 35px;
@@ -150,7 +167,7 @@ def common_config():
         }
         div[data-testid="stSidebarHeader"] img[data-testid="stLogo"] {
             width: 100%;
-            height: 2.5em;
+            height: 100%;
             left: 12px;
             position: relative;
             transform: scale(1.2, 1.2);
@@ -161,6 +178,9 @@ def common_config():
         }
         div[role="dialog"] > div > div > div[data-testid="stMarkdownContainer"] > p:nth-last-child(1) {
             display: none;
+        }
+        div[role="dialog"] > div > div > div[data-testid="stMarkdownContainer"] > hr ~ p {
+            margin: 0;
         }
         div[role="dialog"] > div:nth-child(2) > div > div:not([data-testid="stMarkdownContainer"]):nth-last-child(1) {
             display: none;
@@ -179,6 +199,7 @@ def common_config():
             overscroll-behavior-y: none !important;
         }
         div[data-testid="collapsedControl"] {
+            z-index: 9999999;
             left: 0.5rem;
         }
         div[data-testid="collapsedControl"] > div {
@@ -189,7 +210,7 @@ def common_config():
         div[data-testid="stSidebarCollapseButton"] {
             position: relative;
             top: 25px;
-            left: 22px;
+            left: 25px;
         }
         div[data-testid="stSidebarCollapseButton"] > button[data-testid="baseButton-header"], button[data-testid="baseButton-headerNoPadding"] {
             border-radius: 50px;
@@ -242,38 +263,53 @@ def common_config():
             border-top: 0.5px inset #666666;
         }
         .footer > p {
-            font-size: 11px !important;
+            font-size: 0.7rem !important;
             line-height: 15px;
-            margin-top: 1px;
+            margin-top: 2px;
         }
         div[data-testid="collapsedControl"] > div > button {
             margin: 0;
             position: relative;
             top: -2px;
+            padding-left: 50px;
+            left: -50px;
+            transform: translateX(50px);
+        }
+        div[data-testid="collapsedControl"] button:hover {
+            background-color: transparent;
+        }
+        div[data-testid="collapsedControl"]:hover {
+            border-color: #158fd8;
+            box-shadow: 0 0 12px #158fd8;
+            transform: translateX(-10px);
+            -webkit-transform:translateX(-10px);
+            transition: 0.2s ease-in-out;
+            -wenkit-transition: 0.2s ease-in-out;
+            opacity: 1;
         }
         div[data-testid="collapsedControl"] {
             background: #192841;
             margin-left: -50px;
-            left: 30px;
+            left: -10px;
             padding: 3px 0 3px 30px;
+            border: 1px solid #32bafa;
             border-radius: 50px;
-            outline: none;
-            border-color: #158fd8;
-            box-shadow: 0 0 12px #158fd8;
             top: 35px;
+            transform: translateX(-50px);
+            opacity: 0.5;
         }
         div[data-testid="collapsedControl"] img {
-            transform: scale(1.6,1.6);
             top: 6px;
             position: relative;
             left: -1px;
+            transform: translateX(50px) scale(1.5,1.5);
         }
         div[data-testid="stAppViewBlockContainer"] p {
-            font-size: 20px;
+            font-size: 1.3rem;
         }
         hr:not([size]) {
             height: 1px;
-            margin: 15px 0px;
+            margin: 1rem 0px;
         }
         a[data-testid="baseLinkButton-primary"]:hover, a[data-testid="baseLinkButton-secondary"]:hover, div[data-testid="stVerticalBlock"] div:not([data-baseweb]) button:hover {
             color: white;
@@ -296,7 +332,13 @@ def common_config():
             display: none;
         }
         div[data-testid="stAppViewBlockContainer"] {
-            padding: 0px 30px 50px 30px;
+            padding: 0px 5vw 90px 5vw !important;
+        }
+        div[data-testid="stNotification"] {
+            padding: 10px;
+        }
+        div[data-testid="stSidebarContent"] {
+            overflow: hidden;
         }
         </style>
     """, unsafe_allow_html=True)

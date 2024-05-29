@@ -21,6 +21,10 @@ localPort = 5000
 localPort = 8501
 externalPort = 80
 
+[[ports]]
+localPort = 8502
+externalPort = 3000
+
 [auth]
 pageEnabled = false
 buttonEnabled = false
