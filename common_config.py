@@ -1,9 +1,12 @@
 import streamlit as st
 
+
 def back_to_menu():
     def to_menu_page():
         st.session_state.page = "menu"
-    st.html("""<style>
+
+    st.html(
+        """<style>
             div[data-testid="stAppViewBlockContainer"] button:nth-last-child(1) p::before { 
                 font-family: "Font Awesome 5 Free" !important;
                 content: "\\f0c9";
@@ -22,20 +25,26 @@ def back_to_menu():
             }
             div[data-testid="stAppViewBlockContainer"] button:nth-last-child(1) p { 
                 font-size: 18px !important;
-            }</style>""")
+            }</style>"""
+    )
     st.divider()
-    st.button('Back to Menu', on_click=to_menu_page)
+    st.button("Back to Menu", on_click=to_menu_page)
 
 
 def common_config():
-    st.set_page_config(page_title='WinterPixelGames » Tools and Stats',
-                       page_icon='https://winterpixelgames.com/static/images/wpg_hex_logo_144.png',
-                       layout='wide',
-                       initial_sidebar_state='auto')
+    st.set_page_config(
+        page_title="WinterPixelGames » Tools and Stats",
+        page_icon="https://winterpixelgames.com/static/images/wpg_hex_logo_144.png",
+        layout="wide",
+        initial_sidebar_state="auto",
+    )
 
-    st.logo("https://winterpixelgames.com/static/images/streamlit_banner_v2.png",
-            icon_image="https://winterpixelgames.com/static/images/wpg_hex_logo_144.png")
-    st.markdown("""
+    st.logo(
+        "https://winterpixelgames.com/static/images/streamlit_banner_v2.png",
+        icon_image="https://winterpixelgames.com/static/images/wpg_hex_logo_144.png",
+    )
+    st.markdown(
+        """
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
@@ -44,11 +53,11 @@ def common_config():
             <p><span style="display:inline-block;">This website is NOT affiliated with or endorsed by Winterpixel Games Inc.</span><span style="display:inline-block;">&nbsp;All relevant trademarks belong to their respective owners.</span><br>Developed with 💖 by <a style="text-decoration:none" href="https://tank8k.com/" target="_blank">TANK8K</a></p>
         </div>
         <style>
-        div[data-testid="stToolbar"] {
-            visibility: hidden !important;
-            height: 0% !important;
-            position: fixed !important;
-        }
+#        div[data-testid="stToolbar"] {
+#            visibility: hidden !important;
+#            height: 0% !important;
+#            position: fixed !important;
+#        }
         *:hover {
             cursor: url('https://winterpixelgames.com/static/images/cursor_v5.png'), auto !important;
         }
@@ -70,8 +79,9 @@ def common_config():
             padding: 0;
         }
         section[data-testid="stSidebar"] {
-            width: 340px !important;
+            width: fit-content !important;
             padding-right: 3px !important;
+            user-select: none !important;
         }
         div[data-testid="stSidebarNav"] > ul[data-testid="stSidebarNavItems"] > li > div > a > span {
             color: white !important;
@@ -176,18 +186,6 @@ def common_config():
         div[data-testid="stDecoration"] {
             background-image: linear-gradient(90deg, rgb(0, 108, 176), rgb(0, 43, 71));
         }
-        div[role="dialog"] > div > div > div[data-testid="stMarkdownContainer"] > p:nth-last-child(1) {
-            display: none;
-        }
-        div[role="dialog"] > div > div > div[data-testid="stMarkdownContainer"] > hr ~ p {
-            margin: 0;
-        }
-        div[role="dialog"] > div:nth-child(2) > div > div:not([data-testid="stMarkdownContainer"]):nth-last-child(1) {
-            display: none;
-        }
-        div[role="dialog"] > div:nth-child(2) > div > div:not([data-testid="stMarkdownContainer"]):nth-child(1) {
-            display: none;
-        }
         ul[data-testid="main-menu-list"] > ul:nth-child(4) {
             display: none;
         }
@@ -260,7 +258,7 @@ def common_config():
             text-align: center;
             background-color: #081427;
             z-index: 99999;
-            border-top: 0.5px inset #666666;
+            border-top: 1px solid #384251;
         }
         .footer > p {
             font-size: 0.7rem !important;
@@ -341,4 +339,6 @@ def common_config():
             overflow: hidden;
         }
         </style>
-    """, unsafe_allow_html=True)
+    """,
+        unsafe_allow_html=True,
+    )

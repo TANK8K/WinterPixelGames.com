@@ -10,8 +10,8 @@ import os
 import threading
 from replit import db
 
-email = os.environ['email']
-password = os.environ['password']
+email = "mevavis921@jzexport.com"
+password = "b7YPADMh"
 
 if "df" not in db.keys():
     db["df"] = None
@@ -21,7 +21,6 @@ if "df_last_update" not in db.keys():
 
 
 class NumpyEncoder(json.JSONEncoder):
-
     def default(self, obj):
         if isinstance(obj, np.ndarray):
             return obj.tolist()
@@ -37,9 +36,7 @@ def refresh_token(email, password):
         },
     }
 
-    headers = {
-        "authorization": "Basic OTAyaXViZGFmOWgyZTlocXBldzBmYjlhZWIzOTo="
-    }
+    headers = {"authorization": "Basic OTAyaXViZGFmOWgyZTlocXBldzBmYjlhZWIzOTo="}
 
     try:
         response = requests.post(
@@ -57,14 +54,11 @@ def list_levels():
     try:
         token = str(refresh_token(email, password))
         ws1 = websocket.create_connection(
-            "wss://gooberdash-api.winterpixel.io/ws?lang=en&status=true&token="
-            + token)
+            "wss://gooberdash-api.winterpixel.io/ws?lang=en&status=true&token=" + token
+        )
         levels_query = {
             "cid": "6",
-            "rpc": {
-                "id": "levels_query_curated",
-                "payload": "{}"
-            }
+            "rpc": {"id": "levels_query_curated", "payload": "{}"},
         }
         ws1.send(json.dumps(levels_query).encode())
         ws1.recv()
@@ -92,7 +86,7 @@ def update_leaderboard():
     with lock:
         while True:
             time.sleep(21601)
-            #time.sleep(5)
+            # time.sleep(5)
 
             try:
                 global data, data_tied, race_dict
@@ -108,14 +102,15 @@ def update_leaderboard():
                     level_name = race_dict[level_id]
                     ws2 = websocket.create_connection(
                         "wss://gooberdash-api.winterpixel.io/ws?lang=en&status=true&token="
-                        + token)
+                        + token
+                    )
 
                     payload = '{"level_id":"' + str(level_id) + '","limit":50}'
                     query_leaderboard = {
                         "cid": "11",
                         "rpc": {
                             "id": "time_trial_query_leaderboard",
-                            "payload": f"{payload}"
+                            "payload": f"{payload}",
                         },
                     }
                     ws2.send(json.dumps(query_leaderboard).encode())
@@ -132,12 +127,18 @@ def update_leaderboard():
                         level_name,
                         "1",
                         f"{flag.flag(json.loads(msg2_json_loads_row['records'][0]['metadata'])['country'])}   {re.sub(r'[^A-Za-z0-9 ]+','',msg2_json_loads_row['records'][0]['username']['value'])}",
-                        f"   {record_time:.3f}"
-                        if int(record_time) < 10 else f"{record_time:.3f}",
+                        (
+                            f"   {record_time:.3f}"
+                            if int(record_time) < 10
+                            else f"{record_time:.3f}"
+                        ),
                         str(
                             datetime.datetime.fromtimestamp(
-                                msg2_json_loads_row["records"][0]
-                                ["update_time"]["seconds"])),
+                                msg2_json_loads_row["records"][0]["update_time"][
+                                    "seconds"
+                                ]
+                            )
+                        ),
                     ]
 
                     rank_eq = 1
@@ -148,7 +149,7 @@ def update_leaderboard():
                             f"{msg2_json_loads_row['records'][rank_index]['score'] / 100000:.3f}"
                         )
                         if next_record_time != record_time:
-                            rank_eq += (prev_rank_counter + 1)
+                            rank_eq += prev_rank_counter + 1
                             prev_rank_counter = 0
                         else:
                             prev_rank_counter += 1
@@ -158,14 +159,18 @@ def update_leaderboard():
                                 level_name,
                                 rank_eq,
                                 f"{flag.flag(json.loads(msg2_json_loads_row['records'][rank_index]['metadata'])['country'])}   {re.sub(r'[^A-Za-z0-9 ]+','',msg2_json_loads_row['records'][rank_index]['username']['value'])}",
-                                (f"   {next_record_time:.3f}"
-                                 if int(next_record_time) < 10 else
-                                 f"{next_record_time:.3f}"),
+                                (
+                                    f"   {next_record_time:.3f}"
+                                    if int(next_record_time) < 10
+                                    else f"{next_record_time:.3f}"
+                                ),
                                 str(
                                     datetime.datetime.fromtimestamp(
-                                        msg2_json_loads_row["records"]
-                                        [rank_index]["update_time"]
-                                        ["seconds"])),
+                                        msg2_json_loads_row["records"][rank_index][
+                                            "update_time"
+                                        ]["seconds"]
+                                    )
+                                ),
                             ]
 
                             data_tied = np.vstack([data_tied, [append_row]])
@@ -173,11 +178,10 @@ def update_leaderboard():
 
                     index += 1
                     ws2.close()
-                    #time.sleep(1)
+                    # time.sleep(1)
                     time.sleep(2)
 
-                db["df"] = json.dumps(np.vstack([data, data_tied]),
-                                      cls=NumpyEncoder)
+                db["df"] = json.dumps(np.vstack([data, data_tied]), cls=NumpyEncoder)
                 db["df_last_update"] = time.time()
 
             except Exception as e:
