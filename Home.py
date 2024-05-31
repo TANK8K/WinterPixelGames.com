@@ -14,12 +14,15 @@ def load_website():
         unsafe_allow_html=True,
     )
     st.markdown(
-        '<span style="text-align: center; font-size: 1.6rem; display: inline-block; width: 100%; padding: .8rem 0;">Welcome to **:blue-background[WinterPixelGames]**, a website which provides useful **Tools & Statistics** of games made by **[Winterpixel Games](https://www.winterpixel.com/)**!</span>',
+        '<span id="welcome" style="font-weight: 800; text-align: center; display: inline-block; width: 100%; padding: .8rem 0 0 0;"><span style="display: inline-block;">Welcome to :blue-background[WinterPixelGames]&nbsp;!</span><span style="display: inline-block;">A website which provides useful Tools & Statistics of games made by [Winterpixel Games](https://www.winterpixel.com/)</span></span>',
         unsafe_allow_html=True,
     )
     st.html(
         """
     <style>
+        #welcome a {
+            text-decoration: none;
+        }
         .row-widget.stButton {
             display: flex;
             justify-content: center;
@@ -43,24 +46,33 @@ def load_website():
         div[data-testid="stHorizontalBlock"] div button p:hover:before { 
             box-shadow: 0 0 30px #158fd8;
         }
-        div[data-testid="stHorizontalBlock"] > div:nth-child(1) button:hover:after { 
-            content: "Rocket Bot Royale" !important;
-        }
-        div[data-testid="stHorizontalBlock"] > div:nth-child(2) button:hover:after { 
-            content: "Goober Dash" !important;
-        }
-        div[data-testid="stHorizontalBlock"] > div:nth-child(3) button:hover:after { 
-            content: "Goober Royale" !important;
-        }
-        div[data-testid="stHorizontalBlock"] > div:nth-child(4) button:hover:after { 
-            content: "Goober Shot" !important;
-        }
-        div[data-testid="stHorizontalBlock"] > div:nth-child(5) button:hover:after { 
-            content: "Moonrock Miners" !important;
+        @media screen and (min-width: 1100px) and (orientation: landscape) {
+            #welcome {
+                padding-top: 4rem !important;
+                font-size: 2vw !important;
+            } 
+            div[data-testid="stHorizontalBlock"] { 
+                padding-top: 4rem !important;
+            }
+            div[data-testid="stHorizontalBlock"] > div:nth-child(1) button:after { 
+                content: "Rocket Bot Royale" !important;
+            }
+            div[data-testid="stHorizontalBlock"] > div:nth-child(2) button:after { 
+                content: "Goober Dash" !important;
+            }
+            div[data-testid="stHorizontalBlock"] > div:nth-child(3) button:after { 
+                content: "Goober Royale" !important;
+            }
+            div[data-testid="stHorizontalBlock"] > div:nth-child(4) button:after { 
+                content: "Goober Shot" !important;
+            }
+            div[data-testid="stHorizontalBlock"] > div:nth-child(5) button:after { 
+                content: "Moonrock Miners" !important;
+            }
         }
         div[data-testid="stHorizontalBlock"] div button:hover:after { 
             position: relative;
-            top: 8em;
+            top: 15rem;
             font-family: 'Baloo 2';
             font-weight: 700;
             font-size: 2rem;
@@ -68,7 +80,7 @@ def load_website():
         div[data-testid="stHorizontalBlock"] div button p:before { 
             border: 5px solid #0196ee;
             max-width: 25vw;
-            border-radius: 3rem;
+            border-radius: 2.8rem;
             background-size: 100%;
             display: flex;
             justify-content: center;

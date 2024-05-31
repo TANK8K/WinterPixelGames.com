@@ -2,83 +2,22 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.express as px
-import websocket
-import json
-import requests
 import time
 import datetime
-import os
-from replit import db
-from pathlib import Path
-
-email = os.environ['email']
-password = os.environ['password']
-
-
-def refresh_token(email, password):
-    data = {
-        "email": email,
-        "password": password,
-        "vars": {
-            "client_version": "99999",
-        },
-    }
-
-    headers = {
-        "authorization": "Basic OTAyaXViZGFmOWgyZTlocXBldzBmYjlhZWIzOTo="
-    }
-
-    try:
-        response = requests.post(
-            "https://gooberdash-api.winterpixel.io/v2/account/authenticate/email?create=false",
-            data=json.dumps(data),
-            headers=headers,
-        )
-        token = json.loads(response.content)["token"]
-        return token
-    except Exception:
-        print("Invalid credentials!")
-
-
-def list_levels():
-    try:
-        token = str(refresh_token(email, password))
-        ws1 = websocket.create_connection(
-            "wss://gooberdash-api.winterpixel.io/ws?lang=en&status=true&token="
-            + token)
-        levels_query = {
-            "cid": "6",
-            "rpc": {
-                "id": "levels_query_curated",
-                "payload": "{}"
-            }
-        }
-        ws1.send(json.dumps(levels_query).encode())
-        ws1.recv()
-        msg1 = ws1.recv()
-        output = json.loads(msg1)
-        ws1.close()
-
-        output2 = json.loads(output["rpc"]["payload"])
-
-        race_dict = dict()
-
-        for level in output2["levels"]:
-            if level["game_mode"] == "Race":
-                race_dict[level["id"]] = level["name"]
-
-        return race_dict
-    except Exception as e:
-        print(e)
 
 
 def load_page():
     try:
-        race_dict = list_levels()
-        time.sleep(2)
+        dataframe = np.load("../storage/dataframe.npy")
+
+        with open("../storage/last_update.txt", "r") as f:
+            last_update = float(f.readline())
+
+        with open("../storage/level_counts.txt", "r") as f:
+            level_counts = int(f.readline())
 
         df = pd.DataFrame(
-            np.asarray(json.loads(db["df"])),
+            np.asarray(dataframe),
             columns=[
                 "Level",
                 "Rank",
@@ -92,38 +31,41 @@ def load_page():
         df2 = df2.sort_values(by=["Upload time (in UTC)"], ascending=False)
 
         st.image(
-            'https://winterpixelgames.com/static/images/goober_dash_logo_text.png',
-            width=235)
+            "https://winterpixelgames.com/static/images/goober_dash_logo_text.png",
+            width=235,
+        )
         st.html(
             '<span style="font-size: 25px; font-weight: bold;"></span><img style="display: inline; margin: 0 5px 8px 0; width: 25px" src="https://winterpixelgames.com/static/images/medal_1st.png"><span style="font-size: 25px; font-weight: bold;">Time Trials - World Records Statistics</span>'
         )
         st.caption(
-            f"Last Update: {datetime.datetime.fromtimestamp(db['df_last_update']).strftime('%Y-%m-%d %H:%M:%S')} UTC (Update every 6 hours)"
+            f"Last Update: {datetime.datetime.fromtimestamp(last_update).strftime('%Y-%m-%d %H:%M:%S')} UTC (Update every 6 hours)"
         )
-        tab1, tab2, tab3 = st.tabs([
-            "🥇 All Records (WR Holders)",
-            "🌟 Hall of Fame (Top 3)",
-            "🗒️ Distribution (Pie Chart)",
-        ])
+        tab1, tab2, tab3 = st.tabs(
+            [
+                "🥇 All Records (WR Holders)",
+                "🌟 Hall of Fame (Top 3)",
+                "🗒️ Distribution (Pie Chart)",
+            ]
+        )
 
         with tab1:
-            st.dataframe(df2.set_index(df2.columns[0]),
-                         use_container_width=True,
-                         height=600)
+            st.dataframe(
+                df2.set_index(df2.columns[0]), use_container_width=True, height=600
+            )
 
         with tab2:
-            df3 = df.groupby(["Rank",
-                              "Player"]).size().reset_index(name="Counts")
+            df3 = df.groupby(["Rank", "Player"]).size().reset_index(name="Counts")
             df3 = df3.pivot(index="Player", columns="Rank", values="Counts")
             df3 = df3.fillna(0)
-            df3 = df3.rename(columns={
-                "Player": "Player",
-                "1": "🥇",
-                "2": "🥈",
-                "3": "🥉"
-            })
-            df3["Rank"] = df3[["🥇", "🥈", "🥉"]].apply(tuple, axis=1).rank(
-                method='min', ascending=False).astype(int)
+            df3 = df3.rename(
+                columns={"Player": "Player", "1": "🥇", "2": "🥈", "3": "🥉"}
+            )
+            df3["Rank"] = (
+                df3[["🥇", "🥈", "🥉"]]
+                .apply(tuple, axis=1)
+                .rank(method="min", ascending=False)
+                .astype(int)
+            )
             df3 = df3.reset_index()
             df3.set_index("Rank", inplace=True)
             df3 = df3.sort_values("Rank")
@@ -140,13 +82,14 @@ def load_page():
                 hole=0.4,
             )
             fig.update_traces(textposition="inside", textinfo="percent+label")
-            fig.update_layout(annotations=[
-                dict(
-                    text=
-                    f"{len(race_dict)} Levels<br>{len(df2.index)} WR Holders<br>{df2['Counts'].sum()} WRs",
-                    showarrow=False,
-                )
-            ])
+            fig.update_layout(
+                annotations=[
+                    dict(
+                        text=f"{level_counts} Levels<br>{len(df2.index)} WR Holders<br>{df2['Counts'].sum()} WRs",
+                        showarrow=False,
+                    )
+                ]
+            )
             st.plotly_chart(fig, use_container_width=True)
     except Exception as e:
         print(e)

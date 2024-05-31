@@ -1,6 +1,45 @@
 import streamlit as st
 
 
+def back_to_home():
+    st.html(
+        """<style>
+            div[data-testid="stPageLink"] p::before { 
+                font-family: "Font Awesome 5 Free" !important;
+                content: "\\f015";
+                display: inline-block;
+                vertical-align: middle;
+                font-weight: 700;
+                font-size: 18px;
+                font-family: 'Baloo 2';
+                color: white;
+                padding-right: 8px;
+            }
+            div[data-testid="stPageLink"] p { 
+                position: absolute;
+                right: 50%;
+                transform: translateX(50%);
+                padding: 5px 10px;
+                font-weight: 800;
+                font-size: 18px !important;
+                color: white;
+                outline: none;
+                background-color: rgb(10, 26, 51);
+                border-radius: 0.5rem;
+                border: 2px solid #2b3d58;
+            }
+            div[data-testid="stPageLink"] p:hover { 
+                border: 2px solid #158fd8;
+                box-shadow: 0 0 10px #158fd8;
+            }
+            div[data-testid="stPageLink"] p:active { 
+                background-color: #192841;
+            }</style>"""
+    )
+    st.divider()
+    st.page_link("Home.py", label="Back to Home")
+
+
 def back_to_menu():
     def to_menu_page():
         st.session_state.page = "menu"
@@ -24,6 +63,7 @@ def back_to_menu():
                 padding: 5px 10px;
             }
             div[data-testid="stAppViewBlockContainer"] button:nth-last-child(1) p { 
+                font-weight: 700;
                 font-size: 18px !important;
             }</style>"""
     )
@@ -53,11 +93,11 @@ def common_config():
             <p><span style="display:inline-block;">This website is NOT affiliated with or endorsed by Winterpixel Games Inc.</span><span style="display:inline-block;">&nbsp;All relevant trademarks belong to their respective owners.</span><br>Developed with 💖 by <a style="text-decoration:none" href="https://tank8k.com/" target="_blank">TANK8K</a></p>
         </div>
         <style>
-#        div[data-testid="stToolbar"] {
-#            visibility: hidden !important;
-#            height: 0% !important;
-#            position: fixed !important;
-#        }
+        div[data-testid="stToolbar"] {
+            visibility: hidden !important;
+            height: 0% !important;
+            position: fixed !important;
+        }
         *:hover {
             cursor: url('https://winterpixelgames.com/static/images/cursor_v5.png'), auto !important;
         }
@@ -330,7 +370,7 @@ def common_config():
             display: none;
         }
         div[data-testid="stAppViewBlockContainer"] {
-            padding: 0px 5vw 90px 5vw !important;
+            padding: 0px 5vw 100px 5vw !important;
         }
         div[data-testid="stNotification"] {
             padding: 10px;
@@ -338,6 +378,7 @@ def common_config():
         div[data-testid="stSidebarContent"] {
             overflow: hidden;
         }
+
         </style>
     """,
         unsafe_allow_html=True,

@@ -6,25 +6,7 @@ import time
 import datetime
 import flag
 import re
-import os
 import threading
-from replit import db
-
-email = "mevavis921@jzexport.com"
-password = "b7YPADMh"
-
-if "df" not in db.keys():
-    db["df"] = None
-
-if "df_last_update" not in db.keys():
-    db["df_last_update"] = None
-
-
-class NumpyEncoder(json.JSONEncoder):
-    def default(self, obj):
-        if isinstance(obj, np.ndarray):
-            return obj.tolist()
-        return json.JSONEncoder.default(self, obj)
 
 
 def refresh_token(email, password):
@@ -50,7 +32,7 @@ def refresh_token(email, password):
         print("Invalid credentials!")
 
 
-def list_levels():
+def list_levels(email, password):
     try:
         token = str(refresh_token(email, password))
         ws1 = websocket.create_connection(
@@ -68,11 +50,14 @@ def list_levels():
 
         output2 = json.loads(output["rpc"]["payload"])
 
-        race_dict = dict()
+        race_dict = {}
 
         for level in output2["levels"]:
             if level["game_mode"] == "Race":
                 race_dict[level["id"]] = level["name"]
+
+        with open("../storage/level_counts.txt", "w") as f:
+            f.write(str(len(race_dict)))
 
         return race_dict
     except Exception as e:
@@ -82,16 +67,16 @@ def list_levels():
 lock = threading.Lock()
 
 
-def update_leaderboard():
+def update_leaderboard(email, password):
     with lock:
         while True:
-            time.sleep(21601)
-            # time.sleep(5)
+            # time.sleep(21601)
+            time.sleep(5)
 
             try:
                 global data, data_tied, race_dict
 
-                race_dict = list_levels()
+                race_dict = list_levels(email, password)
                 time.sleep(10)
                 data = np.empty([len(race_dict), 5], dtype="<U100")
                 data_tied = np.empty([0, 5], dtype="<U100")
@@ -181,8 +166,9 @@ def update_leaderboard():
                     # time.sleep(1)
                     time.sleep(2)
 
-                db["df"] = json.dumps(np.vstack([data, data_tied]), cls=NumpyEncoder)
-                db["df_last_update"] = time.time()
+                np.save("../storage/dataframe.npy", np.vstack([data, data_tied]))
+                with open("../storage/last_update.txt", "w") as f:
+                    f.write(str(time.time()))
 
             except Exception as e:
                 print(e)

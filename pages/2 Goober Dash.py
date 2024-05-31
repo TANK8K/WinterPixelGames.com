@@ -1,5 +1,5 @@
 import streamlit as st
-from common_config import common_config, back_to_menu
+from common_config import common_config, back_to_home, back_to_menu
 
 common_config()
 
@@ -142,6 +142,7 @@ if st.session_state.game == "GooberDash" and st.session_state.page == "menu":
             on_click=to_season_leaderboard_page,
             type="primary",
         )
+        back_to_home()
 
 elif st.session_state.game == "GooberDash" and st.session_state.page == "flip_level":
     with ph.container():
