@@ -1,12 +1,12 @@
 <h1 align="center">🔷 WinterPixelGames.com 🔷</h1>
-<img src="https://github.com/TANK8K/WinterPixelGames.com_flask_part/blob/main/static/images/github_banner.png" alt="banner">
+<img src="https://winterpixelgames.com/static/images/github_banner.png" alt="banner">
 
 <div align="center">
 
 [![Static Badge](https://img.shields.io/badge/Made%20With%20Streamlit-_?&logo=streamlit&labelColor=grey&color=red)](https://streamlit.io/)
-[![Static Badge](https://img.shields.io/badge/Hosted%20On%20Replit-_?&logo=replit&labelColor=grey&color=orange)](https://replit.com/@kTaNk8k/WinterPixelGamescom-streamlit-part/)
+[![Static Badge](https://img.shields.io/badge/Hosted%20On%20Digital%20Ocean-_?&logo=digitalOcean&labelColor=grey&color=2283f7)](https://winterpixelgames.com)
 <br>
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Finner.winterpixelgames.com&up_message=Up&up_color=brightgreen&down_message=Down&down_color=ff0000&label=Website&nbsp;Status)](https://inner.winterpixelgames.com/)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fmain.winterpixelgames.com&up_message=Up&up_color=brightgreen&down_message=Down&down_color=ff0000&label=Website&nbsp;Status)](https://main.winterpixelgames.com/)
 ![Static Badge](https://img.shields.io/badge/Built_With-Passion_%E2%9D%A4%EF%B8%8F%E2%80%8D%F0%9F%94%A5_-blue)
 [![Pull Requests Welcome](https://img.shields.io/badge/PRs-welcome-darkgreen.svg)](http://makeapullrequest.com)
 [![Discord](https://img.shields.io/discord/1161656512024956959?logo=discord&label=Discord&color=5865F2)](https://discord.gg/9q2Nnt4wnd)
@@ -41,16 +41,16 @@
 
 ## 🚀 Usage
 - All tools and statistics available are on [WinterPixelGames » Tools and Stats](https://winterpixelgames.com/)! Check it out 👀!
-<img src="https://github.com/TANK8K/WinterPixelGames.com_flask_part/blob/main/static/images/screenshot.png" alt="screenshot">
+<img src="https://winterpixelgames.com/static/images/screenshot.png" alt="screenshot">
 <br>
 
 ## 🤝 Contributing
 - Want to suggest something?
-- Open up an [issue](https://github.com/TANK8K/WinterPixelGames.com_streamlit_part/issues) with the `enhancement` label.
-- You may also feel free to make a [pull request](https://github.com/TANK8K/WinterPixelGames.com_streamlit_part/pulls) if you want to implement it on your own.
+- Open up an [issue](https://github.com/TANK8K/WinterPixelGames.com/issues) with the `enhancement` label.
+- You may also feel free to make a [pull request](https://github.com/TANK8K/WinterPixelGames.com/pulls) if you want to implement it on your own.
 - You can also join my Discord server.
 
-<a href="https://discord.gg/9q2Nnt4wnd"><img width="150" src="https://github.com/TANK8K/WinterPixelGames.com_flask_part/blob/main/static/images/join_discord_button.png" alt="Join Discord server"></a>
+<a href="https://discord.gg/9q2Nnt4wnd"><img width="150" src="https://winterpixelgames.com/static/images/join_discord_button.png" alt="Join Discord server"></a>
 
 ![Alt](https://repobeats.axiom.co/api/embed/c0463acbab7d9a2117e2e14c23bd2e7779e055cb.svg "Repobeats analytics image")
 
@@ -67,7 +67,7 @@ Winterpixel, Rocket Bot Royale, Goober Dash, Goober Shot, Goober Royale, and Moo
 <br>
 
 ## 📝 License
-The source code is licensed under [MIT license](https://github.com/TANK8K/WinterPixelGames.com_streamlit_part/blob/main/LICENSE).
+The source code is licensed under [MIT license](https://github.com/TANK8K/WinterPixelGames.com/blob/main/LICENSE).
 <br>
 
 ---
