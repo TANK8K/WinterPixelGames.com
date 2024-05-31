@@ -70,8 +70,8 @@ lock = threading.Lock()
 def update_leaderboard(email, password):
     with lock:
         while True:
-            # time.sleep(21601)
-            time.sleep(5)
+            time.sleep(21601)
+            # time.sleep(5)
 
             try:
                 global data, data_tied, race_dict
@@ -163,7 +163,6 @@ def update_leaderboard(email, password):
 
                     index += 1
                     ws2.close()
-                    # time.sleep(1)
                     time.sleep(2)
 
                 np.save("../storage/dataframe.npy", np.vstack([data, data_tied]))
