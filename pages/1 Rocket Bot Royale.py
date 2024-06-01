@@ -1,5 +1,4 @@
 import streamlit as st
-import streamlit.components.v1 as components
 from common_config import common_config, back_to_home, back_to_menu
 
 common_config()
@@ -45,54 +44,54 @@ if st.session_state.game == "RocketBotRoyale" and st.session_state.page == "menu
                         color: white;
                         padding-right: 5px;
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) div:nth-child(1) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) > div:nth-child(1) p::before {
                         font-family: "Font Awesome 5 Free" !important;
                         content: "\\f0ac";
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) div:nth-child(2) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) > div:nth-child(2) p::before {
                         font-family: "Font Awesome 5 Brands" !important;
                         content: "\\f1b6";
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) div:nth-child(3) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) > div:nth-child(3) p::before {
                         font-family: "Font Awesome 5 Brands" !important;
                         content: "\\f3ab";
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) div:nth-child(4) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) > div:nth-child(4) p::before {
                         font-family: "Font Awesome 5 Brands" !important;
                         content: "\\f36f";
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(7) div:nth-child(1) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(7) > div:nth-child(1) p::before {
                         font-family: "Font Awesome 5 Brands" !important;
                         content: "\\f392";
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(7) div:nth-child(2) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(7) > div:nth-child(2) p::before {
                         font-family: "Font Awesome 5 Brands" !important;
                         content: "\\f1b6";
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(7) div:nth-child(3) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(7) > div:nth-child(3) p::before {
                         font-family: "Font Awesome 5 Free" !important;
                         content: "\\f06d";
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(7) div:nth-child(4) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(7) > div:nth-child(4) p::before {
                         font-family: "Font Awesome 5 Brands" !important;
                         content: "\\f281";
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(10) div[data-testid="stVerticalBlock"] > div:nth-child(1) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(10) > div:nth-child(1) p::before {
                         font-family: "font awesome 5 Free" !important;
                         content: "\\f2f9";
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(13) div:nth-child(1) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(13) > div:nth-child(1) p::before {
                         font-family: "font awesome 5 Free" !important;
                         content: "\\f007";
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(13) div:nth-child(2) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(13) > div:nth-child(2) p::before {
                         font-family: "font awesome 5 Free" !important;
                         content: "\\f073";
                     }
                     </style>"""
         )
         st.markdown(
-            '<div class="container" style="margin: auto; max-height: 30rem; display: flex; padding-bottom: 15px; justify-content: center;"><img src="https://winterpixelgames.com/static/images/rocket_bot_royale_banner_v2.png" style="max-height: 100%; max-width: 100%"></div>',
+            '<div style="margin: auto; max-height: 30rem; display: flex; padding-bottom: 15px; justify-content: center;"><img src="./app/static/rocket_bot_royale_banner_v2.png" style="max-height: 100%; max-width: 100%"></div>',
             unsafe_allow_html=True,
         )
         st.markdown(

@@ -1,9 +1,5 @@
 import streamlit as st
-import time
-from threading import Thread
 from common_config import common_config
-
-# from pages.GooberDash.Backend.update_time_trails_leaderboard import update_leaderboard as GooberDash_update_time_trails_leaderboard
 
 common_config()
 
@@ -129,11 +125,4 @@ def load_website():
         st.switch_page("pages/5 Moonrock Miners.py")
 
 
-t1 = Thread(target=load_website())
-# t2 = Thread(target=GooberDash_update_time_trails_leaderboard())
-
-t1.start()
-t1.join()
-
-# t2.start()
-# t2.join()
+load_website()

@@ -40,26 +40,29 @@ if st.session_state.game == "GooberRoyale" and st.session_state.page == "menu":
                         color: white;
                         padding-right: 5px;
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(6) div:nth-child(1) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(6) > div:nth-child(1) p::before {
                         font-family: "Font Awesome 5 Free" !important;
                         content: "\\f0ac";
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(8) div:nth-child(1) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(8) > div:nth-child(1) p::before {
                         font-family: "Font Awesome 5 Brands" !important;
                         content: "\\f392";
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(11) div:nth-child(1) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(11) > div:nth-child(1) p::before {
                         font-family: "font awesome 5 Free" !important;
                         content: "\\f007";
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(11) div:nth-child(2) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(11) > div:nth-child(2) p::before {
                         font-family: "font awesome 5 Free" !important;
                         content: "\\f073";
                     }
                     </style>"""
         )
         st.markdown(
-            '<img src="https://winterpixelgames.com/static/images/goober_royale_logo_text.png" style="display: block; margin-left: auto; margin-right: auto; width: 300px; padding-bottom: 15px;">',
+            """
+            <div style="margin: auto; max-width: 350px; display: flex; padding-bottom: 15px; justify-content: center;">
+                <img src="https://winterpixelgames.com/static/images/goober_royale_logo_text.png" style="max-height: 100%; max-width: 100%">
+            </div>""",
             unsafe_allow_html=True,
         )
         st.markdown(

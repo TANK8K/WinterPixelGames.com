@@ -8,8 +8,7 @@ def back_to_home():
                 font-family: "Font Awesome 5 Free" !important;
                 content: "\\f015";
                 display: inline-block;
-                vertical-align: middle;
-                font-weight: 700;
+                vertical-align: middle; font-weight: 700;
                 font-size: 18px;
                 font-family: 'Baloo 2';
                 color: white;
@@ -19,7 +18,7 @@ def back_to_home():
                 position: absolute;
                 right: 50%;
                 transform: translateX(50%);
-                padding: 5px 10px;
+                padding: 3px 10px;
                 font-weight: 800;
                 font-size: 18px !important;
                 color: white;
@@ -56,15 +55,24 @@ def back_to_menu():
                 color: white;
                 padding-right: 8px;
             }
-            div[data-testid="stAppViewBlockContainer"] button:nth-last-child(1) { 
+            div[data-testid="stAppViewBlockContainer"] button:nth-last-child(1) p { 
+                font-weight: 900;
+                font-size: 18px;
+            }
+            div[data-testid="stAppViewBlockContainer"] button[data-testid="baseButton-secondary"]:nth-last-child(1) { 
                 position: absolute;
                 right: 50%;
                 transform: translateX(50%);
                 padding: 5px 10px;
+                border-radius: 0.5rem;
+                border: 2px solid #2b3d58;
             }
-            div[data-testid="stAppViewBlockContainer"] button:nth-last-child(1) p { 
-                font-weight: 700;
-                font-size: 18px !important;
+            div[data-testid="stAppViewBlockContainer"] button[data-testid="baseButton-secondary"]:nth-last-child(1):hover { 
+                border: 2px solid #158fd8;
+                box-shadow: 0 0 10px #158fd8;
+            }
+            div[data-testid="stAppViewBlockContainer"] button[data-testid="baseButton-secondary"]:nth-last-child(1):active { 
+                background-color: #192841;
             }</style>"""
     )
     st.divider()
@@ -74,7 +82,7 @@ def back_to_menu():
 def common_config():
     st.set_page_config(
         page_title="WinterPixelGames » Tools and Stats",
-        page_icon="https://winterpixelgames.com/static/images/wpg_hex_logo_144.png",
+        page_icon="static/wpg_hex_logo_144.png",
         layout="wide",
         initial_sidebar_state="auto",
     )
@@ -93,11 +101,11 @@ def common_config():
             <p><span style="display:inline-block;">This website is NOT affiliated with or endorsed by Winterpixel Games Inc.</span><span style="display:inline-block;">&nbsp;All relevant trademarks belong to their respective owners.</span><br>Developed with 💖 by <a style="text-decoration:none" href="https://tank8k.com/" target="_blank">TANK8K</a></p>
         </div>
         <style>
-        div[data-testid="stToolbar"] {
-            visibility: hidden !important;
-            height: 0% !important;
-            position: fixed !important;
-        }
+        #div[data-testid="stToolbar"] {
+        #    display: none !important;
+        #    height: 0% !important;
+        #    position: fixed !important;
+        #}
         *:hover {
             cursor: url('https://winterpixelgames.com/static/images/cursor_v5.png'), auto !important;
         }
@@ -107,7 +115,7 @@ def common_config():
         body * {
             word-break: break-word;
         }
-        h1, h2, h3, h4, h5, h6, p, li {
+        h1, h2, h3, h4, h5, h6, p, li, div[class="stHtml"] {
             font-family: 'Baloo 2' !important;
         }
         h3 {
@@ -378,7 +386,9 @@ def common_config():
         div[data-testid="stSidebarContent"] {
             overflow: hidden;
         }
-
+        div[data-testid="stAppViewBlockContainer"] div[data-testid="stFullScreenFrame"]:first-child > div {
+            justify-content: center;
+        }
         </style>
     """,
         unsafe_allow_html=True,

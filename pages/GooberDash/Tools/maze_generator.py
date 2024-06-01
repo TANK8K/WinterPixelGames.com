@@ -6,6 +6,4 @@ def load_page():
         "https://winterpixelgames.com/static/images/goober_dash_logo_text.png",
         width=280,
     )
-    st.html(
-        '<span style="font-size: 25px; font-weight: bold;">Easy Level Flip Tool</span>'
-    )
+    st.html('<span style="font-size: 25px; font-weight: bold;">Maze Generator</span>')

@@ -1,6 +1,7 @@
 import streamlit as st
 from common_config import common_config, back_to_home, back_to_menu
 
+
 common_config()
 
 try:
@@ -13,6 +14,10 @@ st.session_state.game = "GooberDash"
 
 def to_flip_level_page():
     st.session_state.page = "flip_level"
+
+
+def to_maze_generator_page():
+    st.session_state.page = "maze_generator"
 
 
 def to_time_trials_page():
@@ -48,58 +53,62 @@ if st.session_state.game == "GooberDash" and st.session_state.page == "menu":
                         color: white;
                         padding-right: 5px;
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) div:nth-child(1) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) > div:nth-child(1) p::before {
                         font-family: "Font Awesome 5 Free" !important;
                         content: "\\f0ac";
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) div:nth-child(2) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) > div:nth-child(2) p::before {
                         font-family: "Font Awesome 5 Brands" !important;
                         content: "\\f1b6";
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) div:nth-child(3) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) > div:nth-child(3) p::before {
                         font-family: "Font Awesome 5 Brands" !important;
                         content: "\\f3ab";
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) div:nth-child(4) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) > div:nth-child(4) p::before {
                         font-family: "Font Awesome 5 Brands" !important;
                         content: "\\f36f";
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(7) div:nth-child(1) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(7) > div:nth-child(1) p::before {
                         font-family: "Font Awesome 5 Brands" !important;
                         content: "\\f392";
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(7) div:nth-child(2) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(7) > div:nth-child(2) p::before {
                         font-family: "Font Awesome 5 Brands" !important;
                         content: "\\f1b6";
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(7) div:nth-child(3) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(7) > div:nth-child(3) p::before {
                         font-family: "Font Awesome 5 Free" !important;
                         content: "\\f06d";
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(7) div:nth-child(4) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(7) > div:nth-child(4) p::before {
                         font-family: "Font Awesome 5 Brands" !important;
                         content: "\\f281";
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(10) div:nth-child(1) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(10) > div:nth-child(1) p::before {
                         font-family: "font awesome 5 Free" !important;
                         content: "\\f07e";
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(13) div:nth-child(1) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(10) > div:nth-child(2) p::before {
+                        font-family: "font awesome 5 Free" !important;
+                        content: "\\f12e";
+                    }
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(13) > div:nth-child(1) p::before {
                         font-family: "font awesome 5 Free" !important;
                         content: "\\f11e";
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(13) div:nth-child(2) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(13) > div:nth-child(2) p::before {
                         font-family: "font awesome 5 Free" !important;
                         content: "\\f007";
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(13) div:nth-child(3) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(13) > div:nth-child(3) p::before {
                         font-family: "font awesome 5 Free" !important;
                         content: "\\f073";
                     }
                     </style>"""
         )
         st.markdown(
-            '<div class="container" style="margin: auto; max-height: 18em; display: flex; padding-bottom: 15px; justify-content: center;"><img src="https://winterpixelgames.com/static/images/goober_dash_banner_v2.png" style="max-height: 100%; max-width: 100%"></div>',
+            '<div style="margin: auto; max-height: 18em; display: flex; padding-bottom: 15px; justify-content: center;"><img src="https://winterpixelgames.com/static/images/goober_dash_banner_v2.png" style="max-height: 100%; max-width: 100%"></div>',
             unsafe_allow_html=True,
         )
         st.markdown(
@@ -132,6 +141,9 @@ if st.session_state.game == "GooberDash" and st.session_state.page == "menu":
         st.html("<h3><i class='fa-solid fa-screwdriver-wrench'></i>&nbsp;Tools</h3>")
         col1, col2 = st.columns(2)
         col1.button("Flip Level (WIP)", on_click=to_flip_level_page, type="primary")
+        col2.button(
+            "Maze Generator (WIP)", on_click=to_maze_generator_page, type="primary"
+        )
         "---"
         st.html("<h3><i class='fa-solid fa-chart-simple'></i>&nbsp;Statistics</h3>")
         col1, col2, col3 = st.columns(3)
@@ -149,6 +161,17 @@ elif st.session_state.game == "GooberDash" and st.session_state.page == "flip_le
         from pages.GooberDash.Tools.flip_level import load_page as GooberDash_flip_level
 
         GooberDash_flip_level()
+        back_to_menu()
+
+elif (
+    st.session_state.game == "GooberDash" and st.session_state.page == "maze_generator"
+):
+    with ph.container():
+        from pages.GooberDash.Tools.maze_generator import (
+            load_page as GooberDash_maze_generator,
+        )
+
+        GooberDash_maze_generator()
         back_to_menu()
 
 elif st.session_state.game == "GooberDash" and st.session_state.page == "time_trials":
