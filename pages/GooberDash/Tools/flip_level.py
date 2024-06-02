@@ -7,5 +7,5 @@ def load_page():
         width=280,
     )
     st.html(
-        '<span style="font-size: 25px; font-weight: bold;">Easy Level Flip Tool</span>'
+        '<span style="font-size: 25px; font-weight: bold;"><i class="fa-solid fa-left-right" style="display: inline; margin: 0 5px 8px 0; width: 25px"></i>Flip Level<span>'
     )

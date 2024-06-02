@@ -5,12 +5,9 @@ common_config()
 
 
 def load_website():
+    st.image("static/streamlit_banner_v4.png")
     st.markdown(
-        '<div class="container" style="margin: auto; max-width: 550px; display: flex; padding: 1.5rem 0; justify-content: center;"><img src="https://winterpixelgames.com/static/images/streamlit_banner_v2.png" style="max-height: 100%; max-width: 100%"></div>',
-        unsafe_allow_html=True,
-    )
-    st.markdown(
-        '<span id="welcome" style="font-weight: 800; text-align: center; display: inline-block; width: 100%; padding: .8rem 0 0 0;"><span style="display: inline-block;">Welcome to :blue-background[WinterPixelGames]&nbsp;!</span><span style="display: inline-block;">A website which provides useful Tools & Statistics of games made by [Winterpixel Games](https://www.winterpixel.com/)</span></span>',
+        '<span id="welcome" style="font-weight: 800; text-align: center; display: inline-block; width: 100%;"><span style="display: inline-block;">Welcome to :blue-background[WinterPixelGames]&nbsp;!</span><span style="display: inline-block;">A website which provides useful Tools & Statistics of games made by [Winterpixel Games](https://www.winterpixel.com/)</span></span>',
         unsafe_allow_html=True,
     )
     st.html(
@@ -91,19 +88,19 @@ def load_website():
             aspect-ratio: 1/1;
         }
         div[data-testid="stHorizontalBlock"] > div:nth-child(1) button p::before { 
-            background-image: url("https://winterpixelgames.com/static/images/rocket_bot_royale_favicon.png");
+            background-image: url("./app/static/rocket_bot_royale_favicon.png");
         }
         div[data-testid="stHorizontalBlock"] > div:nth-child(2) button p::before { 
-            background-image: url("https://winterpixelgames.com/static/images/goober_dash_favicon.png");
+            background-image: url("./app/static/goober_dash_favicon.png");
         }
         div[data-testid="stHorizontalBlock"] > div:nth-child(3) button p::before { 
-            background-image: url("https://winterpixelgames.com/static/images/goober_royale_favicon.png");
+            background-image: url("./app/static/goober_royale_favicon.png");
         }
         div[data-testid="stHorizontalBlock"] > div:nth-child(4) button p::before { 
-            background-image: url("https://winterpixelgames.com/static/images/goober_shot_favicon.png");
+            background-image: url("./app/static/goober_shot_favicon.png");
         }
         div[data-testid="stHorizontalBlock"] > div:nth-child(5) button p::before { 
-            background-image: url("https://winterpixelgames.com/static/images/moonrock_miners_favicon.png");
+            background-image: url("./app/static/moonrock_miners_favicon.png");
         }
     </style>
     """

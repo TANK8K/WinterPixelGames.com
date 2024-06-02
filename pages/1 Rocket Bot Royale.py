@@ -15,6 +15,10 @@ def to_username_changer_page():
     st.session_state.page = "username_changer"
 
 
+def to_optimize_crate_page():
+    st.session_state.page = "optimize_crate"
+
+
 def to_user_info_page():
     st.session_state.page = "user_info"
 
@@ -80,20 +84,21 @@ if st.session_state.game == "RocketBotRoyale" and st.session_state.page == "menu
                         font-family: "font awesome 5 Free" !important;
                         content: "\\f2f9";
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(13) > div:nth-child(1) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(10) > div:nth-child(2) p::before {
+                        font-family: "font awesome 5 Free" !important;
+                        content: "\\f466";
+                    }
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(14) > div:nth-child(1) p::before {
                         font-family: "font awesome 5 Free" !important;
                         content: "\\f007";
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(13) > div:nth-child(2) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(14) > div:nth-child(2) p::before {
                         font-family: "font awesome 5 Free" !important;
                         content: "\\f073";
                     }
                     </style>"""
         )
-        st.markdown(
-            '<div style="margin: auto; max-height: 30rem; display: flex; padding-bottom: 15px; justify-content: center;"><img src="./app/static/rocket_bot_royale_banner_v2.png" style="max-height: 100%; max-width: 100%"></div>',
-            unsafe_allow_html=True,
-        )
+        st.image("static/rocket_bot_royale_banner_v2.png")
         st.markdown(
             """**ROCKET BOT ROYALE** is a fun new take on the online battle royale formula. Powerful, wall-climbing, rocket-jumping, artillery-pumping Robo-Tanks are the vehicle of choice in this fast-paced shootout, where the goal is to survive longer than the competition. Collect the loot to upgrade your arsenal, tunnel into the terrain to take cover and collect buried treasure, and avoid the rising water levels to be the blast one standing!"""
         )
@@ -128,9 +133,12 @@ if st.session_state.game == "RocketBotRoyale" and st.session_state.page == "menu
         col1.button(
             "Username Changer", on_click=to_username_changer_page, type="primary"
         )
-        col2.error(
+        col2.button(
+            "Optimize Crate (WIP)", on_click=to_optimize_crate_page, type="primary"
+        )
+        st.warning(
             "Discussions about the **Username Changer** is **NOT** allowed in the **Official Winterpixel Games Discord server** as Moderators **DO NOT APPROVE** it.",
-            icon="🚨",
+            icon="⚠️",
         )
         "---"
         st.html("<h3><i class='fa-solid fa-chart-simple'></i>&nbsp;Statistics</h3>")
@@ -153,6 +161,18 @@ elif (
         )
 
         RocketBotRoyale_username_changer()
+        back_to_menu()
+
+elif (
+    st.session_state.game == "RocketBotRoyale"
+    and st.session_state.page == "optimize_crate"
+):
+    with ph.container():
+        from pages.RocketBotRoyale.Tools.optimize_crate import (
+            load_page as RocketBotRoyale_optimize_crate,
+        )
+
+        RocketBotRoyale_optimize_crate()
         back_to_menu()
 
 elif (

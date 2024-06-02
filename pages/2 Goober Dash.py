@@ -107,10 +107,7 @@ if st.session_state.game == "GooberDash" and st.session_state.page == "menu":
                     }
                     </style>"""
         )
-        st.markdown(
-            '<div style="margin: auto; max-height: 18em; display: flex; padding-bottom: 15px; justify-content: center;"><img src="https://winterpixelgames.com/static/images/goober_dash_banner_v2.png" style="max-height: 100%; max-width: 100%"></div>',
-            unsafe_allow_html=True,
-        )
+        st.image("static/goober_dash_banner_v2.png")
         st.markdown(
             "**GOOBER DASH** is a multiplayer battle royale game that you can play online. Dash your opponents into deadly spikes, gather precious coins, and unlock a plethora of unique costumes as you strive to outlast the competition. Invite your friends to engage in epic battles in custom private lobbies. Unleash your creativity with the level editor, crafting and conquering your very own battlegrounds. Climb the global and country-based seasonal leaderboards to prove your dominance in this thrilling contest."
         )

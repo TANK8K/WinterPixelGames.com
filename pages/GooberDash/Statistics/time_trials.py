@@ -31,7 +31,7 @@ def load_page():
         df2 = df2.sort_values(by=["Upload time (in UTC)"], ascending=False)
 
         st.image(
-            "https://winterpixelgames.com/static/images/goober_dash_logo_text.png",
+            "static/goober_dash_logo_text.png",
             width=280,
         )
         st.html(

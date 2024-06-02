@@ -58,24 +58,18 @@ if st.session_state.game == "GooberRoyale" and st.session_state.page == "menu":
                     }
                     </style>"""
         )
-        st.markdown(
-            """
-            <div style="margin: auto; max-width: 350px; display: flex; padding-bottom: 15px; justify-content: center;">
-                <img src="https://winterpixelgames.com/static/images/goober_royale_logo_text.png" style="max-height: 100%; max-width: 100%">
-            </div>""",
-            unsafe_allow_html=True,
-        )
+        st.image("static/goober_royale_logo_text.png", width=330)
         st.markdown(
             """**Goober Royale** is a multiplayer battle royale game in which each player controls a character (called a "goober") and must collect weapons, power-ups and other items to eliminate their opponents. The clashes bring together 16 players on a map and the objective will be to be the last survivor of the game. You can play alone or in a team of 4 players. Your Goober will have several weapons, a main missile that reloads at regular intervals and a secondary accessory such as mines, a tornado, a drill and many others. Also use your jetpack to move around the map more easily, reach high places and surprise your opponents. Completing games and missions will earn you gold coins that you can spend either to improve your Goober's skills or to buy cosmetics that will give your character a unique style. An online ranking will allow you to see the 100 best players in the world and in your region."""
         )
-        st.warning(
-            "**Goober Royale** is in **beta** currently. (Bugs are expected and Data may be reset in future)",
-            icon="⚠️",
+        st.info(
+            " **Goober Royale** is in **beta** currently (Bugs are expected and Data may be reset in future) ",
+            icon="ℹ️",
         )
-        st.html("<h4>Platforms</h4>")
+        st.html("<h4>Platform</h4>")
         col1, col2 = st.columns(2)
         col1.link_button("Browser", "https://gooberroyale.winterpixel.io")
-        st.html("<h4>Communities</h4>")
+        st.html("<h4>Community</h4>")
         col1, col2 = st.columns(2)
         col1.link_button("Discord", "https://discord.com/invite/kdGuBhXz2r")
         "---"

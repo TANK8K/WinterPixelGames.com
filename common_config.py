@@ -88,8 +88,8 @@ def common_config():
     )
 
     st.logo(
-        "https://winterpixelgames.com/static/images/streamlit_banner_v2.png",
-        icon_image="https://winterpixelgames.com/static/images/wpg_hex_logo_144.png",
+        "static/streamlit_banner_v4.png",
+        icon_image="static/wpg_hex_logo_144.png",
     )
     st.markdown(
         """
@@ -101,27 +101,32 @@ def common_config():
             <p><span style="display:inline-block;">This website is NOT affiliated with or endorsed by Winterpixel Games Inc.</span><span style="display:inline-block;">&nbsp;All relevant trademarks belong to their respective owners.</span><br>Developed with 💖 by <a style="text-decoration:none" href="https://tank8k.com/" target="_blank">TANK8K</a></p>
         </div>
         <style>
-        #div[data-testid="stToolbar"] {
-        #    display: none !important;
-        #    height: 0% !important;
-        #    position: fixed !important;
-        #}
+        div[data-testid="stToolbar"] {
+            display: none !important;
+            height: 0% !important;
+            position: fixed !important;
+        }
         *:hover {
-            cursor: url('https://winterpixelgames.com/static/images/cursor_v5.png'), auto !important;
+            cursor: url('./app/static/cursor_v5.png'), auto !important;
         }
         *:focus {
-            cursor: url('https://winterpixelgames.com/static/images/cursor_v5.png'), auto !important;
+            cursor: url('./app/static/cursor_v5.png'), auto !important;
         }
         body * {
             word-break: break-word;
         }
+        a {
+            text-decoration: none !important;
+        }
         h1, h2, h3, h4, h5, h6, p, li, div[class="stHtml"] {
             font-family: 'Baloo 2' !important;
         }
-        h3 {
+        h3, h4 {
             font-weight: 800;
-            color: #32bafa;
             font-size: 25px;
+        }
+        h3 {
+            color: #32bafa;
         }
         h3, h4 {
             padding: 0;
@@ -149,7 +154,7 @@ def common_config():
         }
         ul[data-testid="stSidebarNavItems"] > li:nth-child(2) > div > a::before{
             content: "";
-            background-image: url("https://winterpixelgames.com/static/images/rocket_bot_royale_favicon.png");
+            background-image: url("./app/static/rocket_bot_royale_favicon.png");
             background-size: 100% 100%;
             display: inline-block;
             height: 35px;
@@ -158,7 +163,7 @@ def common_config():
         }
         ul[data-testid="stSidebarNavItems"] > li:nth-child(3) > div > a::before{
             content: "";
-            background-image: url("https://winterpixelgames.com/static/images/goober_dash_favicon.png");
+            background-image: url("./app/static/goober_dash_favicon.png");
             background-size: 100% 100%;
             display: inline-block;
             height: 35px;
@@ -167,7 +172,7 @@ def common_config():
         }
         ul[data-testid="stSidebarNavItems"] > li:nth-child(4) > div > a::before{
             content: "";
-            background-image: url("https://winterpixelgames.com/static/images/goober_royale_favicon.png");
+            background-image: url("./app/static/goober_royale_favicon.png");
             background-size: 100% 100%;
             display: inline-block;
             height: 35px;
@@ -176,7 +181,7 @@ def common_config():
         }
         ul[data-testid="stSidebarNavItems"] > li:nth-child(5) > div > a::before{
             content: "";
-            background-image: url("https://winterpixelgames.com/static/images/goober_shot_favicon.png");
+            background-image: url("./app/static/goober_shot_favicon.png");
             background-size: 100% 100%;
             display: inline-block;
             height: 35px;
@@ -185,7 +190,7 @@ def common_config():
         }
         ul[data-testid="stSidebarNavItems"] > li:nth-child(6) > div > a::before{
             content: "";
-            background-image: url("https://winterpixelgames.com/static/images/moonrock_miners_favicon.png");
+            background-image: url("./app/static/moonrock_miners_favicon.png");
             background-size: 100% 100%;
             display: inline-block;
             height: 35px;
@@ -194,14 +199,14 @@ def common_config():
         }
         ul[data-testid="stSidebarNavItems"] > li:nth-child(7) > div > a::before{
             font-family: "Font Awesome 5 Free" !important;
-            content: "\\f129";
+            content: "\\f05a";
             display: inline-block;
             vertical-align: middle;
             font-weight: 800;
-            font-size: 20px;
+            font-size: 25px;
             color: white;
             min-width: 35px;
-            padding-left: 14px;
+            padding-left: 6px;
         }
         ul[data-testid="stSidebarNavItems"] > li:nth-child(8) > div > a::before{
             font-family: "Font Awesome 5 Free" !important;
@@ -266,7 +271,7 @@ def common_config():
             position: relative;
         }
         * {
-            cursor: url('https://winterpixelgames.com/static/images/cursor_v5.png'), auto !important;
+            cursor: url('./app/static/cursor_v5.png'), auto !important;
         }
         @supports not selector(::-webkit-scrollbar) {
             html {
@@ -388,6 +393,9 @@ def common_config():
         }
         div[data-testid="stAppViewBlockContainer"] div[data-testid="stFullScreenFrame"]:first-child > div {
             justify-content: center;
+        }
+        div[data-testid="stNotification"] {
+          width: fit-content;
         }
         </style>
     """,
