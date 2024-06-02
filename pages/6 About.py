@@ -19,9 +19,20 @@ st.html(
         h3 {
             padding-bottom: 0;
         }
+        table * {
+            border: none !important;
+        }
         table {
             font-size: 1.3rem;
             margin-top: 10px;
+            position: relative;
+            top: -20px;
+        }
+        table thead {
+            display: none;
+        }
+        table td {
+            padding: 0 5vw 0 0 !important;
         }
         table a {
             color: rgb(46, 154, 255) !important;
@@ -32,6 +43,7 @@ st.html(
         }
         table td img {
             margin-right: 5px;
+            width: 25px;
         }
     </style>
     """
@@ -88,32 +100,19 @@ st.markdown(
 st.html(
     """
     <h3><span style="font-size: 25px;">Technology<span></h3>
-    <table>
-        <tr>
-            <td><b>Framework</b></td>
-            <td><img src="https://winterpixelgames.com/static/images/streamlit.svg" width="25"><a href="https://streamlit.io" target="_blank">Streamlit</a></td>
-        </tr>
-        <tr>
-            <td><b>Language</b></td>
-            <td><img src="https://winterpixelgames.com/static/images/python.svg" width="25"><a href="https://www.python.org/" target="_blank">Python</a></td>
-        </tr>
-        <tr>
-            <td><b>Database (WIP)</b></td>
-            <td><img src="https://winterpixelgames.com/static/images/postgresql.svg" width="25"><a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a></td>
-        </tr>
-        <tr>
-            <td><b>Cloud Vendor</b></td>
-            <td><img src="https://winterpixelgames.com/static/images/digital_ocean.svg" width="25"><a href="https://www.digitalocean.com/" target="_blank">Digital Ocean</a></td>
-        </tr>
-        <tr>
-            <td><b>Web Server</b></td>
-            <td><img src="https://winterpixelgames.com/static/images/nginx.svg" width="25"><a href="https://nginx.org/" target="_blank">Nginx</a></td>
-        </tr>
-        <tr>
-            <td><b>Source Code</b></td>
-            <td><img src="https://winterpixelgames.com/static/images/source_code.svg" width="25"><a href="https://github.com/TANK8K/WinterPixelGames.com" target="_blank">GitHub Repo</a></td>
-        </tr>
-    </table>
+    """
+)
+
+st.markdown(
+    """
+    |||
+    |---|---|
+    |**Framework**|![Streamlit](https://winterpixelgames.com/static/images/streamlit.svg)[Streamlit](https://streamlit.io)|
+    |**Language**|![Python](https://winterpixelgames.com/static/images/python.svg)[Python](https://www.python.org/)|
+    |**Database (WIP)**|![PostgreSQL](https://winterpixelgames.com/static/images/postgresql.svg)[PostgreSQL](https://www.postgresql.org/)|
+    |**Cloud Vendor**|![Digital Ocean](https://winterpixelgames.com/static/images/digital_ocean.svg)[Digital Ocean](https://www.digitalocean.com/)|
+    |**Web Server**|![Nginx](https://winterpixelgames.com/static/images/nginx.svg)[Nginx](https://nginx.org/)|
+    |**Source Code**|![GitHub Repo](https://winterpixelgames.com/static/images/source_code.svg)[GitHub Repo](https://github.com/TANK8K/WinterPixelGames.com)|
     """
 )
 
@@ -122,28 +121,18 @@ st.html(
 st.html(
     """
     <h3><span style="font-size: 25px;">Developer<span></h3>
-    <table>
-        <tr>
-            <td><b>GitHub</b></td>
-            <td><img src="https://winterpixelgames.com/static/images/github.svg" width="25"><a href="https://github.com/TANK8K/" target="_blank">TANK8K</a></td>
-        </tr>
-        <tr>
-            <td><b>Replit</b></td>
-            <td><img src="https://winterpixelgames.com/static/images/replit.svg" width="25"><a href="https://replit.com/@TANK8K" target="_blank">TANK8K</a></td>
-        </tr>
-        <tr>
-            <td><b>Discord</b></td>
-            <td><img src="https://winterpixelgames.com/static/images/discord.svg" width="25"><a href="https://discord.com/invite/9q2Nnt4wnd" target="_blank">TANK8K</a></td>
-        </tr>
-        <tr>
-            <td><b>YouTube</b></td>
-            <td><img src="https://winterpixelgames.com/static/images/youtube.svg" width="25"><a href="https://youtube.com/@TANK8K/" target="_blank">TANK8K</a></td>
-        </tr>
-        <tr>
-            <td><b>Personal Website</b></td>
-            <td><img src="https://winterpixelgames.com/static/images/tank8k.svg" width="25"><a href="https://tank8k.com/" target="_blank">TANK8K</a></td>
-        </tr>
-    </table> 
+    """
+)
+
+st.markdown(
+    """
+    |||
+    |---|---|
+    |**GitHub**|![GitHub](https://winterpixelgames.com/static/images/github.svg)[TANK8K](https://github.com/TANK8K/)|
+    |**Replit**|![Replit](https://winterpixelgames.com/static/images/replit.svg)[TANK8K](https://replit.com/@TANK8K/)|
+    |**Discord**|![Discord](https://winterpixelgames.com/static/images/discord.svg)[TANK8K](https://discord.com/invite/9q2Nnt4wnd)|
+    |**YouTube**|![YouTube](https://winterpixelgames.com/static/images/youtube.svg)[TANK8K](https://youtube.com/@TANK8K/)|
+    |**Personal Website**|![Personal Website](https://winterpixelgames.com/static/images/tank8k.svg)[TANK8K](https://tank8k.com/)|
     """
 )
 
