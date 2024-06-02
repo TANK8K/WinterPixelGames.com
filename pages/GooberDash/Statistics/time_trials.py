@@ -35,7 +35,7 @@ def load_page():
             width=280,
         )
         st.html(
-            '<span style="font-size: 25px; font-weight: bold;"><i class="fa-solid fa-flag-checkered" style="display: inline; margin: 0 5px 8px 0; width: 25px"></i>Time Trials<br><img style="display: inline; margin: 0 5px 8px 0; width: 25px" src="https://winterpixelgames.com/static/images/medal_1st.png">World Records Statistics<span>'
+            '<span style="font-size: 25px; font-weight: bold;"><i class="fa-solid fa-flag-checkered" style="display: inline; margin: 0 5px 8px 0; width: 25px"></i>Time Trials<br><img style="display: inline; margin: 0 5px 8px 0; width: 25px" src="./app/static/medal_1st.png">World Records Statistics<span>'
         )
         st.caption(
             f"Last Update: {datetime.datetime.fromtimestamp(last_update).strftime('%Y-%m-%d %H:%M:%S')} UTC (Update every 6 hours)"
