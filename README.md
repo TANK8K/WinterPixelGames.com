@@ -41,7 +41,7 @@
 
 ## 🚀 Usage
 - All tools and statistics available are on [WinterPixelGames » Tools and Stats](https://winterpixelgames.com/)! Check it out 👀!
-<img src="https://winterpixelgames.com/static/images/screenshot.png" alt="screenshot">
+<img src="https://winterpixelgames.com/static/images/screenshot_v2.png" alt="screenshot">
 <br>
 
 ## 🤝 Contributing
