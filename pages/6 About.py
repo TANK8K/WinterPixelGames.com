@@ -91,27 +91,27 @@ st.html(
     <table>
         <tr>
             <td><b>Framework</b></td>
-            <td><img src="https://winterpixelgames.com/static/images/streamlit.svg" width="25"><a href="https://streamlit.io">Streamlit</a></td>
+            <td><img src="https://winterpixelgames.com/static/images/streamlit.svg" width="25"><a href="https://streamlit.io" target="_blank">Streamlit</a></td>
         </tr>
         <tr>
             <td><b>Language</b></td>
-            <td><img src="https://winterpixelgames.com/static/images/python.svg" width="25"><a href="https://www.python.org/">Python</a></td>
+            <td><img src="https://winterpixelgames.com/static/images/python.svg" width="25"><a href="https://www.python.org/" target="_blank">Python</a></td>
         </tr>
         <tr>
             <td><b>Database (WIP)</b></td>
-            <td><img src="https://winterpixelgames.com/static/images/postgresql.svg" width="25"><a href="https://www.postgresql.org/">PostgreSQL</a></td>
+            <td><img src="https://winterpixelgames.com/static/images/postgresql.svg" width="25"><a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a></td>
         </tr>
         <tr>
             <td><b>Cloud Vendor</b></td>
-            <td><img src="https://winterpixelgames.com/static/images/digital_ocean.svg" width="25"><a href="https://www.digitalocean.com/">Digital Ocean</a></td>
+            <td><img src="https://winterpixelgames.com/static/images/digital_ocean.svg" width="25"><a href="https://www.digitalocean.com/" target="_blank">Digital Ocean</a></td>
         </tr>
         <tr>
             <td><b>Web Server</b></td>
-            <td><img src="https://winterpixelgames.com/static/images/nginx.svg" width="25"><a href="https://nginx.org/">Nginx</a></td>
+            <td><img src="https://winterpixelgames.com/static/images/nginx.svg" width="25"><a href="https://nginx.org/" target="_blank">Nginx</a></td>
         </tr>
         <tr>
             <td><b>Source Code</b></td>
-            <td><img src="https://winterpixelgames.com/static/images/source_code.svg" width="25"><a href="https://github.com/TANK8K/WinterPixelGames.com">GitHub Repo</a></td>
+            <td><img src="https://winterpixelgames.com/static/images/source_code.svg" width="25"><a href="https://github.com/TANK8K/WinterPixelGames.com" target="_blank">GitHub Repo</a></td>
         </tr>
     </table>
     """
@@ -125,23 +125,23 @@ st.html(
     <table>
         <tr>
             <td><b>GitHub</b></td>
-            <td><img src="https://winterpixelgames.com/static/images/github.svg" width="25"><a href="https://github.com/TANK8K/">TANK8K</a></td>
+            <td><img src="https://winterpixelgames.com/static/images/github.svg" width="25"><a href="https://github.com/TANK8K/" target="_blank">TANK8K</a></td>
         </tr>
         <tr>
             <td><b>Replit</b></td>
-            <td><img src="https://winterpixelgames.com/static/images/replit.svg" width="25"><a href="https://replit.com/@TANK8K">TANK8K</a></td>
+            <td><img src="https://winterpixelgames.com/static/images/replit.svg" width="25"><a href="https://replit.com/@TANK8K" target="_blank">TANK8K</a></td>
         </tr>
         <tr>
             <td><b>Discord</b></td>
-            <td><img src="https://winterpixelgames.com/static/images/discord.svg" width="25"><a href="https://discord.com/invite/9q2Nnt4wnd">TANK8K</a></td>
+            <td><img src="https://winterpixelgames.com/static/images/discord.svg" width="25"><a href="https://discord.com/invite/9q2Nnt4wnd" target="_blank">TANK8K</a></td>
         </tr>
         <tr>
             <td><b>YouTube</b></td>
-            <td><img src="https://winterpixelgames.com/static/images/youtube.svg" width="25"><a href="https://youtube.com/@TANK8K/">TANK8K</a></td>
+            <td><img src="https://winterpixelgames.com/static/images/youtube.svg" width="25"><a href="https://youtube.com/@TANK8K/" target="_blank">TANK8K</a></td>
         </tr>
         <tr>
             <td><b>Personal Website</b></td>
-            <td><img src="https://winterpixelgames.com/static/images/tank8k.svg" width="25"><a href="https://tank8k.com/">TANK8K</a></td>
+            <td><img src="https://winterpixelgames.com/static/images/tank8k.svg" width="25"><a href="https://tank8k.com/" target="_blank">TANK8K</a></td>
         </tr>
     </table> 
     """
