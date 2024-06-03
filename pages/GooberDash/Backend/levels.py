@@ -60,9 +60,39 @@ def upload_level(response, output):
         level_name = response["name"]
         player_count = str(response["player_count"])
         theme = response["theme"]
-        nodes = str(json.loads(output)["nodes"]).replace('\'', '\\\\\\"').replace('[','').replace(']','')
-        
-        data = '"{\\"engine_version\\":2,\\"game_mode\\":\\"'+ game_mode + '\\",\\"level_data\\":\\"{\\\\\\"metadata\\\\\\":{\\\\\\"author_id\\\\\\":\\\\\\"e3552f30-35cc-4cee-a70e-bc0607016cad\\\\\\",\\\\\\"author_name\\\\\\":\\\\\\"\\\\\\",\\\\\\"game_mode\\\\\\":\\\\\\"' + game_mode + '\\\\\\",\\\\\\"id\\\\\\":\\\\\\"\\\\\\",\\\\\\"name\\\\\\":\\\\\\"' + level_name + ' flipped ' + current_time + '\\\\\\",\\\\\\"player_count\\\\\\":' + player_count + ',\\\\\\"published\\\\\\":\\\\\\"Private\\\\\\",\\\\\\"rating\\\\\\":0,\\\\\\"rating_count\\\\\\":0,\\\\\\"theme\\\\\\":\\\\\\"' + theme + '\\\\\\",\\\\\\"type\\\\\\":0},\\\\\\"nodes\\\\\\":[' + nodes + ']}\\",\\"level_name\\":\\"' + level_name + ' flipped ' + current_time + '\\",\\"level_theme\\":\\"' + theme + '\\",\\"player_count\\":' + player_count + ',\\"pub_state\\":\\"Private\\",\\"world_idx\\":0}\"'.replace(' ','')
+        nodes = (
+            str(json.loads(output)["nodes"])
+            .replace("'", '\\\\\\"')
+            .replace("[", "")
+            .replace("]", "")
+            .replace(" ", "")
+        )
+
+        data = (
+            '"{\\"engine_version\\":2,\\"game_mode\\":\\"'
+            + game_mode
+            + '\\",\\"level_data\\":\\"{\\\\\\"metadata\\\\\\":{\\\\\\"author_id\\\\\\":\\\\\\"e3552f30-35cc-4cee-a70e-bc0607016cad\\\\\\",\\\\\\"author_name\\\\\\":\\\\\\"\\\\\\",\\\\\\"game_mode\\\\\\":\\\\\\"'
+            + game_mode
+            + '\\\\\\",\\\\\\"id\\\\\\":\\\\\\"\\\\\\",\\\\\\"name\\\\\\":\\\\\\"'
+            + level_name
+            + " flipped "
+            + current_time
+            + '\\\\\\",\\\\\\"player_count\\\\\\":'
+            + player_count
+            + ',\\\\\\"published\\\\\\":\\\\\\"Private\\\\\\",\\\\\\"rating\\\\\\":0,\\\\\\"rating_count\\\\\\":0,\\\\\\"theme\\\\\\":\\\\\\"'
+            + theme
+            + '\\\\\\",\\\\\\"type\\\\\\":0},\\\\\\"nodes\\\\\\":['
+            + nodes
+            + ']}\\",\\"level_name\\":\\"'
+            + level_name
+            + " flipped "
+            + current_time
+            + '\\",\\"level_theme\\":\\"'
+            + theme
+            + '\\",\\"player_count\\":'
+            + player_count
+            + ',\\"pub_state\\":\\"Private\\",\\"world_idx\\":0}"'.replace(" ", "")
+        )
         print(data)
         response2 = requests.post(
             "https://gooberdash-api.winterpixel.io/v2/rpc/levels_editor_create",
