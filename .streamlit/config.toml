@@ -6,3 +6,11 @@ textColor="#f9f9f9"
 
 [server]
 enableStaticServing = true
+maxUploadSize = 1
+runOnSave = true
+
+[client]
+toolbarMode = "minimal"
+
+[browser]
+gatherUsageStats = false
