@@ -71,7 +71,7 @@ def upload_level(response, output):
         data = (
             '"{\\"engine_version\\":2,\\"game_mode\\":\\"'
             + game_mode
-            + '\\",\\"level_data\\":\\"{\\\\\\"metadata\\\\\\":{\\\\\\"author_id\\\\\\":\\\\\\"e3552f30-35cc-4cee-a70e-bc0607016cad\\\\\\",\\\\\\"author_name\\\\\\":\\\\\\"\\\\\\",\\\\\\"game_mode\\\\\\":\\\\\\"'
+            + '\\",\\"level_data\\":\\"{\\\\\\"metadata\\\\\\":{\\\\\\"author_id\\\\\\":\\\\\\"e3552f30-35cc-4cee-a70e-bc0607016cad\\\\\\",\\\\\\"author_name\\\\\\":\\\\\\"ToeBiter\\\\\\",\\\\\\"game_mode\\\\\\":\\\\\\"'
             + game_mode
             + '\\\\\\",\\\\\\"id\\\\\\":\\\\\\"\\\\\\",\\\\\\"name\\\\\\":\\\\\\"'
             + level_name
