@@ -137,7 +137,7 @@ if st.session_state.game == "GooberDash" and st.session_state.page == "menu":
         "---"
         st.html("<h3><i class='fa-solid fa-screwdriver-wrench'></i>&nbsp;Tools</h3>")
         col1, col2 = st.columns(2)
-        col1.button("Flip Level (WIP)", on_click=to_flip_level_page, type="primary")
+        col1.button("Flip Level", on_click=to_flip_level_page, type="primary")
         col2.button(
             "Maze Generator (WIP)", on_click=to_maze_generator_page, type="primary"
         )

@@ -45,7 +45,7 @@ def back_to_menu():
 
     st.html(
         """<style>
-            div[data-testid="stAppViewBlockContainer"] button:nth-last-child(1) p::before { 
+            div[data-testid="stAppViewBlockContainer"] div[data-testid="stButton"] button:nth-last-child(1) p::before { 
                 font-family: "Font Awesome 5 Free" !important;
                 content: "\\f0c9";
                 display: inline-block;
@@ -55,11 +55,11 @@ def back_to_menu():
                 color: white;
                 padding-right: 8px;
             }
-            div[data-testid="stAppViewBlockContainer"] button:nth-last-child(1) p { 
+            div[data-testid="stAppViewBlockContainer"] div[data-testid="stButton"] button:nth-last-child(1) p { 
                 font-weight: 900;
                 font-size: 18px;
             }
-            div[data-testid="stAppViewBlockContainer"] button[data-testid="baseButton-secondary"]:nth-last-child(1) { 
+            div[data-testid="stAppViewBlockContainer"] div[data-testid="stButton"] button[data-testid="baseButton-secondary"]:nth-last-child(1) { 
                 position: absolute;
                 right: 50%;
                 transform: translateX(50%);

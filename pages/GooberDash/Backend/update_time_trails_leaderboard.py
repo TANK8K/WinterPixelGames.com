@@ -1,3 +1,4 @@
+import streamlit as st
 import numpy as np
 import websocket
 import json
@@ -8,8 +9,11 @@ import flag
 import re
 import threading
 
+email = st.secrets.goober_dash_credentials.email
+password = st.secrets.goober_dash_credentials.password
 
-def refresh_token(email, password):
+
+def refresh_token():
     data = {
         "email": email,
         "password": password,
@@ -32,9 +36,9 @@ def refresh_token(email, password):
         print("Invalid credentials!")
 
 
-def list_levels(email, password):
+def list_levels():
     try:
-        token = str(refresh_token(email, password))
+        token = str(refresh_token())
         ws1 = websocket.create_connection(
             "wss://gooberdash-api.winterpixel.io/ws?lang=en&status=true&token=" + token
         )
@@ -76,12 +80,12 @@ def update_leaderboard(email, password):
             try:
                 global data, data_tied, race_dict
 
-                race_dict = list_levels(email, password)
+                race_dict = list_levels()
                 time.sleep(10)
                 data = np.empty([len(race_dict), 5], dtype="<U100")
                 data_tied = np.empty([0, 5], dtype="<U100")
 
-                token = str(refresh_token(email, password))
+                token = str(refresh_token())
                 index = 0
                 for level_id in race_dict:
                     level_name = race_dict[level_id]
