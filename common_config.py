@@ -101,11 +101,11 @@ def common_config():
             <p><span style="display:inline-block;">This website is NOT affiliated with or endorsed by Winterpixel Games Inc.</span><span style="display:inline-block;">&nbsp;All relevant trademarks belong to their respective owners.</span><br>Developed with 💖 by <a style="text-decoration:none" href="https://tank8k.com/" target="_blank">TANK8K</a></p>
         </div>
         <style>
-        div[data-testid="stToolbar"] {
-            display: none !important;
-            height: 0% !important;
-            position: fixed !important;
-        }
+        #div[data-testid="stToolbar"] {
+        #    display: none !important;
+        #    height: 0% !important;
+        #    position: fixed !important;
+        #}
         *:hover {
             cursor: url('./app/static/cursor_v5.png'), auto !important;
         }
