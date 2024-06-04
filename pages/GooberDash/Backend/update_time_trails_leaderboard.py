@@ -71,7 +71,7 @@ def list_levels():
 lock = threading.Lock()
 
 
-def update_leaderboard(email, password):
+def update_leaderboard():
     with lock:
         while True:
             time.sleep(21601)
