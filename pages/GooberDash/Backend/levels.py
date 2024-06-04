@@ -2,6 +2,7 @@ import streamlit as st
 import json
 import requests
 import datetime
+import re
 
 email = st.secrets.goober_dash_credentials.email
 password = st.secrets.goober_dash_credentials.password
@@ -63,9 +64,9 @@ def upload_level(response, output):
         nodes = (
             str(json.loads(output)["nodes"])
             .replace("'", '\\\\\\"')
-            .replace("[", "")
-            .replace("]", "")
             .replace(" ", "")
+            .replace("True", "true")
+            .replace("False", "false")[1:-1]
         )
 
         data = (
@@ -93,13 +94,12 @@ def upload_level(response, output):
             + player_count
             + ',\\"pub_state\\":\\"Private\\",\\"world_idx\\":0}"'.replace(" ", "")
         )
-        print(data)
+        data = re.sub(r"[^\x00-\x7F]+", "", data)
         response2 = requests.post(
             "https://gooberdash-api.winterpixel.io/v2/rpc/levels_editor_create",
             data=data,
             headers=headers,
         )
-        print(response2.content)
         payload = json.loads(response2.content)["payload"]
         uuid = json.loads(payload)["uuid"]
         return uuid

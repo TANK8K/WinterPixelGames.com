@@ -133,7 +133,11 @@ def load_page():
 
     with st.form("input_form"):
         if method == "Level ID":
-            level_id = st.text_input("**Level ID**")
+            level_id = (
+                st.text_input("**Level ID (Full URL supported)**")
+                .replace("https://gooberdash.winterpixel.io/?play=", "")
+                .split("&ghost")[0]
+            )
         elif method == "JSON":
             uploaded_file = st.file_uploader(
                 "**Upload the Json File**", accept_multiple_files=False, type="json"
