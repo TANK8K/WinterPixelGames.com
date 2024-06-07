@@ -5,6 +5,8 @@ import plotly.express as px
 import time
 import datetime
 
+conn = st.connection("postgresql", type="sql")
+
 
 def load_page():
     try:
@@ -40,11 +42,12 @@ def load_page():
         st.caption(
             f"Last Update: {datetime.datetime.fromtimestamp(last_update).strftime('%Y-%m-%d %H:%M:%S')} UTC (Update every 6 hours)"
         )
-        tab1, tab2, tab3 = st.tabs(
+        tab1, tab2, tab3, tab4 = st.tabs(
             [
                 "🥇 All Records (WR Holders)",
                 "🌟 Hall of Fame (Top 3)",
-                "🗒️ Distribution (Pie Chart)",
+                "🥧 Distribution (Pie Chart)",
+                "🏆 Time Trials Points Leaderboard",
             ]
         )
 
@@ -89,6 +92,44 @@ def load_page():
                 ]
             )
             st.plotly_chart(fig, use_container_width=True)
+
+        with tab4:
+            df_leaderboard = conn.query(
+                "SELECT * FROM goober_dash_time_trials_leaderboard"
+            )
+
+            top_menu = st.columns(3)
+            with top_menu[0]:
+                sort = st.radio(
+                    "Sort Data", options=["Yes", "No"], horizontal=1, index=1
+                )
+            if sort == "Yes":
+                with top_menu[1]:
+                    sort_field = st.selectbox("Sort By", options=df_leaderboard.columns)
+                with top_menu[2]:
+                    sort_direction = st.radio(
+                        "Direction", options=["⬆️", "⬇️"], horizontal=True
+                    )
+                df_leaderboard = df_leaderboard.sort_values(
+                    by=sort_field, ascending=sort_direction == "⬆️", ignore_index=True
+                )
+            pagination = st.container()
+
+            bottom_menu = st.columns((4, 1, 1))
+            with bottom_menu[2]:
+                batch_size = st.selectbox("Page Size", options=[25, 50, 100])
+            with bottom_menu[1]:
+                total_pages = (
+                    int(len(df_leaderboard) / batch_size)
+                    if int(len(df_leaderboard) / batch_size) > 0
+                    else 1
+                )
+                current_page = st.number_input(
+                    "Page", min_value=1, max_value=total_pages, step=1
+                )
+            with bottom_menu[0]:
+                st.markdown(f"Page **{current_page}** of **{total_pages}** ")
+
     except Exception as e:
         print(e)
         time.sleep(3)
