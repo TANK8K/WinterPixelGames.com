@@ -105,6 +105,7 @@ def load_website():
     </style>
     """
     )
+
     col1, col2, col3, col4, col5 = st.columns(5)
     if col1.button("​", key="RBR"):
         st.switch_page("pages/1 Rocket Bot Royale.py")
