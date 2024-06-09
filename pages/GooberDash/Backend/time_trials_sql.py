@@ -69,6 +69,8 @@ def update_leaderboard():
 
                 conn.commit()
 
+                time.sleep(2)
+
             with conn.cursor() as cur:
                 # Table 'goober_dash_time_trials_records'
                 # Add 'rank_eq' temporarily
