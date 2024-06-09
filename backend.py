@@ -1,10 +1,9 @@
-import streamlit as st
 from threading import Thread
-from pages.GooberDash.Backend.update_time_trails_leaderboard import (
-    update_leaderboard as GooberDash_update_time_trails_leaderboard,
+from pages.GooberDash.Backend.time_trials_sql import (
+    update_leaderboard as GooberDash_update_time_trials_leaderboard,
 )
 
-t2 = Thread(target=GooberDash_update_time_trails_leaderboard())
+t1 = Thread(target=GooberDash_update_time_trials_leaderboard())
 
-t2.start()
-t2.join()
+t1.start()
+t1.join()

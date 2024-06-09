@@ -366,9 +366,6 @@ def common_config():
         a[data-testid="baseLinkButton-primary"]:focus, a[data-testid="baseLinkButton-secondary"]:focus, button:focus {
             color: white !important;
         }
-        a[kind="primary"]:hover, button[kind="primary"]:hover {
-            background: #192841;
-        }
         div[data-baseweb="tab-list"] button:hover {
             color: #158fd8 !important;    
             border: none !important;
@@ -390,7 +387,10 @@ def common_config():
             justify-content: center;
         }
         div[data-testid="stNotification"] {
-          width: fit-content;
+            width: fit-content;
+        }
+        summary:hover {
+            color: rgb(48, 151, 230) !important;
         }
         </style>
     """,

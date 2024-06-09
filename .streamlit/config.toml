@@ -1,5 +1,5 @@
 [theme]
-primaryColor="#192841"
+primaryColor="#243C66"
 backgroundColor="#081427"
 secondaryBackgroundColor="#192841"
 textColor="#f9f9f9"
@@ -9,8 +9,8 @@ enableStaticServing = true
 maxUploadSize = 1
 runOnSave = true
 
-[client]
-toolbarMode = "minimal"
+#[client]
+#toolbarMode = "minimal"
 
 [browser]
 gatherUsageStats = false
