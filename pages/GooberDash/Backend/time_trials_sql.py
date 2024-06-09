@@ -69,7 +69,7 @@ def update_leaderboard():
 
                 conn.commit()
 
-                time.sleep(2)
+                time.sleep(3)
 
             with conn.cursor() as cur:
                 # Table 'goober_dash_time_trials_records'
@@ -267,4 +267,4 @@ def update_leaderboard():
         with open("../storage/level_counts.txt", "w") as f:
             f.write(str(len(level_ids)))
 
-        time.sleep(60 * 60 * 22)
+        time.sleep(43200)

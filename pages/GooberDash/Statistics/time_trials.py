@@ -260,13 +260,13 @@ country_region_list = [
 ]
 
 
-@st.cache_resource(show_spinner=True)
+@st.cache_data(show_spinner=True, ttl=43200)
 def split_frame(input_df, rows):
     df = [input_df.loc[i : i + rows - 1, :] for i in range(0, len(input_df), rows)]
     return df
 
 
-@st.cache_resource(show_spinner=True)
+@st.cache_data(show_spinner=True, ttl=43200)
 def query_df_first_records():
     df_first_records = conn.query(
         """
