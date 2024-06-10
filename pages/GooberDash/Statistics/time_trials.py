@@ -260,17 +260,17 @@ country_region_list = [
 ]
 
 
-@st.cache_resource(show_spinner=True, ttl=43200)
+@st.cache_resource(show_spinner=True, ttl=21600)
 def split_frame(input_df, rows):
     df = [input_df.loc[i : i + rows - 1, :] for i in range(0, len(input_df), rows)]
     return df
 
 
-@st.cache_resource(show_spinner=True, ttl=43200)
+@st.cache_resource(show_spinner=True, ttl=21600)
 def query_df_first_records():
     df_first_records = conn.query(
         """
-        SELECT level_id, level_name, user_id, username, time, upload_time, rank_out_of
+        SELECT level_name, level_id, username, user_id, time, upload_time, rank_out_of
         FROM goober_dash_time_trials_records
         WHERE rank=1
         ORDER BY upload_time DESC;
@@ -607,7 +607,7 @@ def load_page():
                 display_level_id = st.checkbox(
                     "Display Level ID",
                     value=display_level_id_value,
-                    key="first_display_leve_id",
+                    key="first_display_level_id",
                 )
             with checkboxes[1]:
                 display_user_id = st.checkbox(
@@ -656,8 +656,12 @@ def load_page():
                     "User ID": st.column_config.ListColumn(),
                     "Level ID": st.column_config.ListColumn(),
                     "Time": st.column_config.NumberColumn(format="%f s"),
-                    "Watch Replay": st.column_config.LinkColumn(display_text="▶️"),
-                    "Race Ghost": st.column_config.LinkColumn(display_text="👻"),
+                    "Watch Replay": st.column_config.LinkColumn(
+                        display_text="▶️", width="small"
+                    ),
+                    "Race Ghost": st.column_config.LinkColumn(
+                        display_text="👻", width="small"
+                    ),
                 },
                 hide_index=True,
             )
