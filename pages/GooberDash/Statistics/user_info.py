@@ -22,6 +22,30 @@ def query_df_user_records(user_id):
 
 
 @st.cache_resource(show_spinner=True, ttl=21600)
+def query_df_user_leaderboard_curr_row(user_id):
+    df_user_leaderboard_curr_row = conn.query(
+        f"""
+        SELECT *
+        FROM goober_dash_time_trials_leaderboard
+        WHERE user_id='{user_id}'
+    """
+    )
+    return df_user_leaderboard_curr_row
+
+
+@st.cache_resource(show_spinner=True, ttl=21600)
+def query_df_user_leaderboard_prev_row(user_id):
+    df_user_leaderboard_prev_row = conn.query(
+        f"""
+        SELECT *
+        FROM goober_dash_time_trials_leaderboard_prev
+        WHERE user_id='{user_id}'
+    """
+    )
+    return df_user_leaderboard_prev_row
+
+
+@st.cache_resource(show_spinner=True, ttl=21600)
 def query_df_level_ids():
     df_level_ids = conn.query(
         """
@@ -66,29 +90,44 @@ def load_page():
                 ]
             )
 
+            with tab1:
+                st.write("WIP")
+            with tab2:
+                st.write("WIP")
+            with tab3:
+                st.write("WIP")
+            with tab4:
+                st.write("WIP")
             with tab5:
                 st.caption(
                     f"Last Update: {datetime.datetime.fromtimestamp(last_update).strftime('%Y-%m-%d %H:%M:%S')} UTC (Updated Every 12 Hours)"
                 )
 
-                st.write("WIP")
+                user_leaderboard_curr_row = query_df_user_leaderboard_curr_row(user_id)
+                user_leaderboard_prev_row = query_df_user_leaderboard_prev_row(user_id)
 
                 metric_cols = st.columns((4, 4, 1, 1, 1, 4))
 
-                curr_performance_points = 50000
-                curr_global_rank = 70
-                curr_first = 30
-                curr_second = 20
-                curr_third = 10
-                curr_completed_levels = 70
-                curr_top_percent = 2.34
+                curr_performance_points = user_leaderboard_curr_row.loc[
+                    0, "total_points"
+                ]
+                curr_global_rank = int(user_leaderboard_curr_row.loc[0, "rank"])
+                curr_first = int(user_leaderboard_curr_row.loc[0, "first"])
+                curr_second = int(user_leaderboard_curr_row.loc[0, "second"])
+                curr_third = int(user_leaderboard_curr_row.loc[0, "third"])
+                curr_completed_levels = int(user_leaderboard_curr_row.loc[0, "count"])
+                curr_top_percent = int(
+                    user_leaderboard_curr_row.loc[0, "top_percentile"]
+                )
 
-                prev_performance_points = 49000
-                prev_global_rank = 60
-                prev_first = 27
-                prev_second = 18
-                prev_third = 9
-                prev_completed_levels = 65
+                prev_performance_points = user_leaderboard_prev_row.loc[
+                    0, "total_points"
+                ]
+                prev_global_rank = int(user_leaderboard_prev_row.loc[0, "rank"])
+                prev_first = int(user_leaderboard_prev_row.loc[0, "first"])
+                prev_second = int(user_leaderboard_prev_row.loc[0, "second"])
+                prev_third = int(user_leaderboard_prev_row.loc[0, "third"])
+                prev_completed_levels = int(user_leaderboard_prev_row.loc[0, "count"])
 
                 delta_performance_points = (
                     curr_performance_points - prev_performance_points
@@ -192,26 +231,41 @@ def load_page():
                     }
                 )
                 missing_levels["Time"] = None
-                missing_levels["Performance_Points"] = None
+                missing_levels["Performance Points"] = None
                 missing_levels["Rank"] = None
-                missing_levels["Percentile"] = 0
-                missing_levels["Upload_Time"] = None
-                missing_levels["Watch_Replay"] = None
-                missing_levels["Race_Ghost"] = None
-                df_user_records = pd.concat(
-                    [df_user_records, missing_levels], ignore_index=True
-                )
+                missing_levels["Percentile"] = None
+                missing_levels["Upload Time"] = None
+                missing_levels["Watch Replay"] = None
+                missing_levels["Race Ghost"] = None
+
+                missing_levels = missing_levels.dropna(how="all", axis=1)
+                if not missing_levels.empty:
+                    df_user_records = pd.concat(
+                        [df_user_records, missing_levels], ignore_index=True
+                    )
+
                 df_user_records["Player"] = df_user_records["Player"].str.replace(
                     "-", "", regex=False
                 )
+
+                df_user_records["column_name"] = (
+                    df_user_records["Performance Points"]
+                    .astype(float, errors="ignore")
+                    .astype(float, errors="ignore")
+                )
+
                 df_user_records["Upload Time"] = df_user_records["Upload Time"].astype(
                     str
                 )
-
                 if not df_user_records["Upload Time"].str.endswith(" UTC").all():
                     df_user_records["Upload Time"] = (
                         df_user_records["Upload Time"] + " UTC"
                     )
+
+                df_user_records["Upload Time"] = df_user_records["Upload Time"].replace(
+                    "NaT UTC", None
+                )
+
                 df_user_records["Watch Replay"] = (
                     "https://gooberdash.winterpixel.io/?play="
                     + df_user_records["Level ID"]
@@ -224,9 +278,6 @@ def load_page():
                     + "&ghost="
                     + df_user_records["User ID"]
                 )
-                df_user_records["Upload Time"] = df_user_records["Upload Time"].replace(
-                    "NaT UTC", None
-                )
 
                 def add_emojis(rank):
                     if rank == 1:
@@ -236,7 +287,7 @@ def load_page():
                     elif rank == 3:
                         return "🥉"
                     else:
-                        return f"# {rank}"
+                        return f"# {rank:.0f}"
 
                 df_user_records["Rank"] = df_user_records["Rank"].apply(add_emojis)
 
@@ -273,6 +324,30 @@ def load_page():
                 if not display_incompleted_levels:
                     df_user_records = df_user_records[df_user_records["Time"].notna()]
 
+                def _format_arrow(val):
+                    if isinstance(val, int):
+                        return (
+                            f"{'▲' if val > 0 else '▼'} {abs(val):.0f}"
+                            if val != 0
+                            else f"{val:.0f}"
+                        )
+                    else:
+                        return val
+
+                def _color_arrow(val):
+                    try:
+                        return (
+                            "color: green"
+                            if val > 0
+                            else "color: red" if val < 0 else "color: transparent"
+                        )
+                    except Exception:
+                        pass
+
+                # df_user_records = df_user_records.style.map(
+                #    _color_arrow, subset=["Out of"]
+                # ).format(_format_arrow)
+
                 st.dataframe(
                     data=df_user_records,
                     use_container_width=True,
@@ -293,6 +368,7 @@ def load_page():
                         "Percentile": st.column_config.ProgressColumn(
                             format="%f", min_value=0, max_value=100
                         ),
+                        # "Out of": st.column_config.TextColumn("", width="small"),
                     },
                     hide_index=True,
                 )

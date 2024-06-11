@@ -16,6 +16,36 @@ def update_leaderboard():
             connection = psycopg.connect(**st.secrets.sql_credentials)
 
             with connection as conn:
+                # Replace previous version with current version
+                with conn.cursor() as cur:
+                    cur.execute(
+                        """
+                        TRUNCATE TABLE goober_dash_time_trials_leaderboard_prev;
+                    """
+                    )
+                    cur.execute(
+                        """
+                        INSERT INTO goober_dash_time_trials_leaderboard_prev
+                        SELECT * FROM goober_dash_time_trials_leaderboard;
+                    """
+                    )
+                conn.commit()
+
+                # Replace previous version with current version
+                with conn.cursor() as cur:
+                    cur.execute(
+                        """
+                        TRUNCATE TABLE goober_dash_time_trials_records_prev;
+                    """
+                    )
+                    cur.execute(
+                        """
+                        INSERT INTO goober_dash_time_trials_records_prev
+                        SELECT * FROM goober_dash_time_trials_records;
+                    """
+                    )
+                conn.commit()
+
                 count = 0
                 global level_ids
                 level_ids = list_levels()
