@@ -297,10 +297,10 @@ def update_leaderboard():
 
             with open("../storage/level_counts.txt", "w") as f:
                 f.write(str(len(level_ids)))
-
-            time.sleep(43200)
         except psycopg.OperationalError as e:
             print("Error:", e)
             connection = psycopg.connect(**st.secrets.sql_credentials)
         finally:
             connection.close()
+
+        time.sleep(43200)

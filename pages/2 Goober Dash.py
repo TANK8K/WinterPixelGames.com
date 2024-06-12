@@ -20,12 +20,16 @@ def to_maze_generator_page():
     st.session_state.page = "maze_generator"
 
 
-def to_time_trials_page():
-    st.session_state.page = "time_trials"
+def to_time_trials_certified_levels_page():
+    st.session_state.page = "time_trials_certified_levels"
 
 
-def to_user_info_page():
-    st.session_state.page = "user_info"
+def to_player_info_page():
+    st.session_state.page = "player_info"
+
+
+def to_level_info_page():
+    st.session_state.page = "level_info"
 
 
 def to_season_leaderboard_page():
@@ -103,6 +107,10 @@ if st.session_state.game == "GooberDash" and st.session_state.page == "menu":
                     }
                     div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(13) > div:nth-child(3) p::before {
                         font-family: "font awesome 5 Free" !important;
+                        content: "\\f279";
+                    }
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(13) > div:nth-child(4) p::before {
+                        font-family: "font awesome 5 Free" !important;
                         content: "\\f073";
                     }
                     </style>"""
@@ -143,10 +151,15 @@ if st.session_state.game == "GooberDash" and st.session_state.page == "menu":
         )
         "---"
         st.html("<h3><i class='fa-solid fa-chart-simple'></i>&nbsp;Statistics</h3>")
-        col1, col2, col3 = st.columns(3)
-        col1.button("Time Trials", on_click=to_time_trials_page, type="primary")
-        col2.button("User Info (WIP)", on_click=to_user_info_page, type="primary")
-        col3.button(
+        col1, col2, col3, col4 = st.columns(4)
+        col1.button(
+            "Time Trials (Certified Levels)",
+            on_click=to_time_trials_certified_levels_page,
+            type="primary",
+        )
+        col2.button("Player Info (WIP)", on_click=to_player_info_page, type="primary")
+        col3.button("Level Info (WIP)", on_click=to_level_info_page, type="primary")
+        col4.button(
             "Season Leaderboard (WIP)",
             on_click=to_season_leaderboard_page,
             type="primary",
@@ -171,22 +184,34 @@ elif (
         GooberDash_maze_generator()
         back_to_menu()
 
-elif st.session_state.game == "GooberDash" and st.session_state.page == "time_trials":
+elif (
+    st.session_state.game == "GooberDash"
+    and st.session_state.page == "time_trials_certified_levels"
+):
     with ph.container():
-        from pages.GooberDash.Statistics.time_trials import (
-            load_page as GooberDash_time_trials,
+        from pages.GooberDash.Statistics.time_trials_certified_levels import (
+            load_page as GooberDash_time_trials_certified_levels,
         )
 
-        GooberDash_time_trials()
+        GooberDash_time_trials_certified_levels()
         back_to_menu()
 
-elif st.session_state.game == "GooberDash" and st.session_state.page == "user_info":
+elif st.session_state.game == "GooberDash" and st.session_state.page == "player_info":
     with ph.container():
-        from pages.GooberDash.Statistics.user_info import (
-            load_page as GooberDash_user_info,
+        from pages.GooberDash.Statistics.player_info import (
+            load_page as GooberDash_player_info,
         )
 
-        GooberDash_user_info()
+        GooberDash_player_info()
+        back_to_menu()
+
+elif st.session_state.game == "GooberDash" and st.session_state.page == "level_info":
+    with ph.container():
+        from pages.GooberDash.Statistics.level_info import (
+            load_page as GooberDash_level_info,
+        )
+
+        GooberDash_level_info()
         back_to_menu()
 
 elif (

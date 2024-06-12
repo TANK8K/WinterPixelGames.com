@@ -11,8 +11,8 @@ except Exception:
 st.session_state.game = "GooberRoyale"
 
 
-def to_user_info_page():
-    st.session_state.page = "user_info"
+def to_player_info_page():
+    st.session_state.page = "player_info"
 
 
 def to_season_leaderboard_page():
@@ -75,7 +75,7 @@ if st.session_state.game == "GooberRoyale" and st.session_state.page == "menu":
         "---"
         st.html("<h3><i class='fa-solid fa-chart-simple'></i>&nbsp;Statistics</h3>")
         col1, col2 = st.columns(2)
-        col1.button("User Info (WIP)", on_click=to_user_info_page, type="primary")
+        col1.button("Player Info (WIP)", on_click=to_player_info_page, type="primary")
         col2.button(
             "Season Leaderboard (WIP)",
             on_click=to_season_leaderboard_page,
@@ -83,13 +83,13 @@ if st.session_state.game == "GooberRoyale" and st.session_state.page == "menu":
         )
         back_to_home()
 
-elif st.session_state.game == "GooberRoyale" and st.session_state.page == "user_info":
+elif st.session_state.game == "GooberRoyale" and st.session_state.page == "player_info":
     with ph.container():
-        from pages.GooberRoyale.Statistics.user_info import (
-            load_page as GooberRoyale_user_info,
+        from pages.GooberRoyale.Statistics.player_info import (
+            load_page as GooberRoyale_player_info,
         )
 
-        GooberRoyale_user_info()
+        GooberRoyale_player_info()
         back_to_menu()
 
 elif (

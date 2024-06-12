@@ -292,7 +292,7 @@ def load_page():
             width=280,
         )
         st.html(
-            '<span style="font-size: 25px; font-weight: bold;"><i class="fa-solid fa-flag-checkered" style="display: inline; margin: 0 5px 8px 0; width: 25px"></i>Time Trials<br><img style="display: inline; margin: 0 5px 8px 0; width: 25px" src="./app/static/medal_1st.png">World Records Statistics<span>'
+            '<span style="font-size: 25px; font-weight: bold;"><i class="fa-solid fa-flag-checkered" style="display: inline; margin: 0 5px 8px 0; width: 25px"></i>Time Trials (Certified Levels)<br><img style="display: inline; margin: 0 5px 8px 0; width: 25px" src="./app/static/medal_1st.png">World Records Statistics<span>'
         )
         st.caption(
             f"Last Update: {datetime.datetime.fromtimestamp(last_update).strftime('%Y-%m-%d %H:%M:%S')} UTC (Updated Every 12 Hours)"
@@ -342,6 +342,9 @@ def load_page():
                 "Completed Levels",
             ]
             df_leaderboard = df_leaderboard[new_column_order]
+            df_leaderboard["Player"] = df_leaderboard["Player"].str.replace(
+                "-", "", regex=False
+            )
 
             top_menu = st.columns(5)
             with top_menu[0]:
