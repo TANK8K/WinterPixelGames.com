@@ -11,10 +11,6 @@ except Exception:
 st.session_state.game = "RocketBotRoyale"
 
 
-def to_username_changer_page():
-    st.session_state.page = "username_changer"
-
-
 def to_optimize_crate_page():
     st.session_state.page = "optimize_crate"
 
@@ -82,17 +78,13 @@ if st.session_state.game == "RocketBotRoyale" and st.session_state.page == "menu
                     }
                     div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(10) > div:nth-child(1) p::before {
                         font-family: "font awesome 5 Free" !important;
-                        content: "\\f2f9";
-                    }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(10) > div:nth-child(2) p::before {
-                        font-family: "font awesome 5 Free" !important;
                         content: "\\f466";
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(14) > div:nth-child(1) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(13) > div:nth-child(1) p::before {
                         font-family: "font awesome 5 Free" !important;
                         content: "\\f007";
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(14) > div:nth-child(2) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(13) > div:nth-child(2) p::before {
                         font-family: "font awesome 5 Free" !important;
                         content: "\\f073";
                     }
@@ -131,14 +123,7 @@ if st.session_state.game == "RocketBotRoyale" and st.session_state.page == "menu
         st.html("<h3><i class='fa-solid fa-screwdriver-wrench'></i>&nbsp;Tools</h3>")
         col1, col2 = st.columns(2)
         col1.button(
-            "Username Changer", on_click=to_username_changer_page, type="primary"
-        )
-        col2.button(
             "Optimize Crate (WIP)", on_click=to_optimize_crate_page, type="primary"
-        )
-        st.warning(
-            "Discussions about the **Username Changer** is **NOT** allowed in the **Official Winterpixel Games Discord server** as Moderators **DO NOT APPROVE** it.",
-            icon="⚠️",
         )
         "---"
         st.html("<h3><i class='fa-solid fa-chart-simple'></i>&nbsp;Statistics</h3>")
@@ -151,17 +136,6 @@ if st.session_state.game == "RocketBotRoyale" and st.session_state.page == "menu
         )
         back_to_home()
 
-elif (
-    st.session_state.game == "RocketBotRoyale"
-    and st.session_state.page == "username_changer"
-):
-    with ph.container():
-        from pages.RocketBotRoyale.Tools.username_changer import (
-            load_page as RocketBotRoyale_username_changer,
-        )
-
-        RocketBotRoyale_username_changer()
-        back_to_menu()
 
 elif (
     st.session_state.game == "RocketBotRoyale"

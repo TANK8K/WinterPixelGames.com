@@ -1,38 +1,17 @@
 import streamlit as st
 import websocket
 import json
-import requests
 
 email = st.secrets.goober_dash_credentials.email
 password = st.secrets.goober_dash_credentials.password
 
 
-def refresh_token():
-    data = {
-        "email": email,
-        "password": password,
-        "vars": {
-            "client_version": "99999",
-        },
-    }
-
-    headers = {"authorization": "Basic OTAyaXViZGFmOWgyZTlocXBldzBmYjlhZWIzOTo="}
-
-    try:
-        response = requests.post(
-            "https://gooberdash-api.winterpixel.io/v2/account/authenticate/email?create=false",
-            data=json.dumps(data),
-            headers=headers,
-        )
-        token = json.loads(response.content)["token"]
-        return token
-    except Exception:
-        print("Invalid credentials!")
+with open("../storage/goober_dash_token.txt", "r") as f:
+    token = f.readline()  # goober_dash_token
 
 
 def list_levels():
     try:
-        token = str(refresh_token())
         ws1 = websocket.create_connection(
             "wss://gooberdash-api.winterpixel.io/ws?lang=en&status=true&token=" + token
         )
@@ -60,8 +39,6 @@ def fetch_leaderboard(level_id):
     none_return = True
     while none_return:
         try:
-            token = str(refresh_token())
-
             ws2 = websocket.create_connection(
                 "wss://gooberdash-api.winterpixel.io/ws?lang=en&status=true&token="
                 + token

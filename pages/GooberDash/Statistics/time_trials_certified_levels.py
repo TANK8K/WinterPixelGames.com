@@ -1,6 +1,7 @@
 from math import floor, ceil, log10
 import streamlit as st
 import pandas as pd
+import numpy as np
 import plotly.express as px
 import time
 import datetime
@@ -322,24 +323,44 @@ def load_page():
                     "first": "🥇",
                     "second": "🥈",
                     "third": "🥉",
+                    "total_points_diff": "Performance Points diff",
+                    "count_diff": "Completed Levels diff",
+                    "rank_diff": "Global Rank diff",
+                    "top_percentile_diff": "Global Top % diff",
+                    "rank_local_diff": "Local Rank diff",
+                    "top_percentile_local_diff": "Local Top % diff",
+                    "first_diff": "🥇 diff",
+                    "second_diff": "🥈 diff",
+                    "third_diff": "🥉 diff",
                 },
                 inplace=True,
             )
             display_global_rank_value = True
             display_local_rank_value = False
             display_user_id_value = False
+            display_changes = False
+
             new_column_order = [
                 "Global Rank",
+                "Global Rank diff",
                 "Local Rank",
+                "Local Rank diff",
                 "Player",
                 "User ID",
                 "Performance Points",
+                "Performance Points diff",
                 "Global Top %",
+                "Global Top % diff",
                 "Local Top %",
+                "Local Top % diff",
                 "🥇",
+                "🥇 diff",
                 "🥈",
+                "🥈 diff",
                 "🥉",
+                "🥉 diff",
                 "Completed Levels",
+                "Completed Levels diff",
             ]
             df_leaderboard = df_leaderboard[new_column_order]
             df_leaderboard["Player"] = df_leaderboard["Player"].str.replace(
@@ -352,13 +373,25 @@ def load_page():
                     "Sort By",
                     options=[
                         "Global Rank",
+                        "Global Rank diff",
                         "Local Rank",
+                        "Local Rank diff",
                         "Completed Levels",
+                        "Completed Levels diff",
+                        "Performance Points",
+                        "Performance Points diff",
+                        "Global Top %",
+                        "Global Top % diff",
+                        "Local Top %",
+                        "Local Top % diff",
+                        "🥇",
+                        "🥇 diff",
+                        "🥈",
+                        "🥈 diff",
+                        "🥉",
+                        "🥉 diff",
                         "Player",
                         "User ID",
-                        "🥇",
-                        "🥈",
-                        "🥉",
                     ],
                 )
             with top_menu[1]:
@@ -388,6 +421,7 @@ def load_page():
                 display_user_id = st.checkbox(
                     "Display User ID", value=display_user_id_value
                 )
+                display_changes = st.checkbox("Display Changes", value=display_changes)
 
             def search_dataframe(filter_country, filter_user):
                 if filter_user != "":
@@ -460,28 +494,41 @@ def load_page():
                 st.markdown(bottom_info)
 
             column_order_config = [
+                "Global Rank diff",
                 "Global Rank",
+                "Local Rank diff",
                 "Local Rank",
                 "Player",
                 "User ID",
                 "Performance Points",
+                "Performance Points diff",
                 "Global Top %",
+                "Global Top % diff",
                 "Local Top %",
+                "Local Top % diff",
                 "🥇",
+                "🥇 diff",
                 "🥈",
+                "🥈 diff",
                 "🥉",
+                "🥉 diff",
                 "Completed Levels",
+                "Completed Levels diff",
             ]
             if not display_global_rank:
                 try:
                     column_order_config.remove("Global Rank")
+                    column_order_config.remove("Global Rank diff")
                     column_order_config.remove("Global Top %")
+                    column_order_config.remove("Global Top % diff")
                 except Exception:
                     pass
             if not display_local_rank:
                 try:
                     column_order_config.remove("Local Rank")
+                    column_order_config.remove("Local Rank diff")
                     column_order_config.remove("Local Top %")
+                    column_order_config.remove("Local Top % diff")
                 except Exception:
                     pass
             if not display_user_id:
@@ -489,13 +536,168 @@ def load_page():
                     column_order_config.remove("User ID")
                 except Exception:
                     pass
+            if not display_changes:
+                try:
+                    column_order_config = [
+                        column
+                        for column in column_order_config
+                        if column
+                        not in [
+                            "Global Rank diff",
+                            "Local Rank diff",
+                            "Performance Points diff",
+                            "Global Top % diff",
+                            "Local Top % diff",
+                            "🥇 diff",
+                            "🥈 diff",
+                            "🥉 diff",
+                            "Completed Levels diff",
+                        ]
+                    ]
+                except Exception:
+                    pass
+
+            def _format_arrow(val, column_name):
+                if isinstance(val, (int, float)) and not np.isnan(val):
+                    if column_name == "Performance Points diff":
+                        symbol = "▲" if val > 0 else "▼"
+                        formatted_value = f"{int(abs(val))}"
+                        suffix = " pp"
+                        return f"{symbol} {formatted_value}{suffix}"
+                    elif column_name in [
+                        "Global Rank diff",
+                        "Local Rank diff",
+                    ]:
+                        symbol = "▲" if val < 0 else "▼"
+                        formatted_value = f"{int(abs(val))}"
+                        suffix = ""
+                        return f"{symbol} {formatted_value}{suffix}"
+                    elif column_name in [
+                        "🥇 diff",
+                        "🥈 diff",
+                        "🥉 diff",
+                        "Completed Levels diff",
+                    ]:
+                        symbol = "▲" if val > 0 else "▼"
+                        formatted_value = f"{int(abs(val))}"
+                        suffix = ""
+                        return f"{symbol} {formatted_value}{suffix}"
+                    elif column_name in ["Global Top % diff", "Local Top % diff"]:
+                        symbol = "▲" if val > 0 else "▼"
+                        formatted_value = f"{abs(val):.2f}"
+                        suffix = " %"
+                        return f"{symbol} {formatted_value}{suffix}"
+                    elif column_name in ["Global Rank", "Local Rank"]:
+                        return f"# {val}"
+                    elif column_name == "Performance Points":
+                        return f"{val} pp"
+                    elif column_name in ["Global Top %", "Local Top %"]:
+                        return f"{val:.2f}%"
+                elif pd.isna(val):
+                    return ""
+                return val
+
+            def _color_arrow(val, column_name):
+                try:
+                    if val is None:
+                        return "color: transparent;"
+                    elif column_name in [
+                        "Performance Points diff",
+                        "🥇 diff",
+                        "🥈 diff",
+                        "🥉 diff",
+                        "Completed Levels diff",
+                    ]:
+                        if val > 0:
+                            return "color: green;"
+                        elif val < 0:
+                            return "color: red;"
+                        else:
+                            return "color: transparent;"
+                    elif column_name in [
+                        "Global Rank diff",
+                        "Local Rank diff",
+                        "Global Top % diff",
+                        "Local Top % diff",
+                    ]:
+                        if val > 0:
+                            return "color: red;"
+                        elif val < 0:
+                            return "color: green;"
+                        else:
+                            return "color: transparent;"
+                    else:
+                        return None
+                except Exception:
+                    return None
+
+            data = data.style
+            data = data.map(
+                lambda val: _color_arrow(val, "Global Rank diff"),
+                subset=["Global Rank diff"],
+            )
+            data = data.map(
+                lambda val: _color_arrow(val, "Local Rank diff"),
+                subset=["Local Rank diff"],
+            )
+            data = data.map(
+                lambda val: _color_arrow(val, "Performance Points diff"),
+                subset=["Performance Points diff"],
+            )
+            data = data.map(
+                lambda val: _color_arrow(val, "Global Top % diff"),
+                subset=["Global Top % diff"],
+            )
+            data = data.map(
+                lambda val: _color_arrow(val, "Local Top % diff"),
+                subset=["Local Top % diff"],
+            )
+            data = data.map(
+                lambda val: _color_arrow(val, "🥇 diff"), subset=["🥇 diff"]
+            )
+            data = data.map(
+                lambda val: _color_arrow(val, "🥈 diff"), subset=["🥈 diff"]
+            )
+            data = data.map(
+                lambda val: _color_arrow(val, "🥉 diff"), subset=["🥉 diff"]
+            )
+            data = data.map(
+                lambda val: _color_arrow(val, "Completed Levels diff"),
+                subset=["Completed Levels diff"],
+            )
+
+            data = data.format(
+                {
+                    "Global Rank": lambda x: _format_arrow(x, "Global Rank"),
+                    "Local Rank": lambda x: _format_arrow(x, "Local Rank"),
+                    "Performance Points": lambda x: _format_arrow(
+                        x, "Performance Points"
+                    ),
+                    "Global Top %": lambda x: _format_arrow(x, "Global Top %"),
+                    "Local Top %": lambda x: _format_arrow(x, "Local Top %"),
+                    "Global Rank diff": lambda x: _format_arrow(x, "Global Rank diff"),
+                    "Local Rank diff": lambda x: _format_arrow(x, "Local Rank diff"),
+                    "Performance Points diff": lambda x: _format_arrow(
+                        x, "Performance Points diff"
+                    ),
+                    "Global Top % diff": lambda x: _format_arrow(
+                        x, "Global Top % diff"
+                    ),
+                    "Local Top % diff": lambda x: _format_arrow(x, "Local Top % diff"),
+                    "🥇 diff": lambda x: _format_arrow(x, "🥇 diff"),
+                    "🥈 diff": lambda x: _format_arrow(x, "🥈 diff"),
+                    "🥉 diff": lambda x: _format_arrow(x, "🥉 diff"),
+                    "Completed Levels diff": lambda x: _format_arrow(
+                        x, "Completed Levels diff"
+                    ),
+                }
+            )
+
             pagination.dataframe(
                 data=data,
                 use_container_width=True,
                 column_order=tuple(column_order_config),
                 column_config={
-                    "Global Rank": st.column_config.NumberColumn(format="# %d"),
-                    "Local Rank": st.column_config.NumberColumn(format="# %d"),
                     "Completed Levels": st.column_config.ProgressColumn(
                         help="Total Number of Levels with Records",
                         format=f"%f/{level_counts}",
@@ -505,10 +707,20 @@ def load_page():
                     "User ID": st.column_config.ListColumn(),
                     "Performance Points": st.column_config.NumberColumn(
                         help="Total Performance Points (pp) in all levels combined",
-                        format="%d pp",
                     ),
-                    "Global Top %": st.column_config.NumberColumn(format="%f %%"),
-                    "Local Top %": st.column_config.NumberColumn(format="%f %%"),
+                    "Global Rank diff": st.column_config.TextColumn("", width="small"),
+                    "Local Rank diff": st.column_config.TextColumn("", width="small"),
+                    "Performance Points diff": st.column_config.TextColumn(
+                        "", width="small"
+                    ),
+                    "Global Top % diff": st.column_config.TextColumn("", width="small"),
+                    "Local Top % diff": st.column_config.TextColumn("", width="small"),
+                    "🥇 diff": st.column_config.TextColumn("", width="small"),
+                    "🥈 diff": st.column_config.TextColumn("", width="small"),
+                    "🥉 diff": st.column_config.TextColumn("", width="small"),
+                    "Completed Levels diff": st.column_config.TextColumn(
+                        "", width="small"
+                    ),
                 },
                 hide_index=True,
             )

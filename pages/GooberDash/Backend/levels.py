@@ -7,34 +7,12 @@ import re
 email = st.secrets.goober_dash_credentials.email
 password = st.secrets.goober_dash_credentials.password
 
-
-def refresh_token():
-    data = {
-        "email": email,
-        "password": password,
-        "vars": {
-            "client_version": "99999",
-        },
-    }
-
-    headers = {"authorization": "Basic OTAyaXViZGFmOWgyZTlocXBldzBmYjlhZWIzOTo="}
-
-    try:
-        response = requests.post(
-            "https://gooberdash-api.winterpixel.io/v2/account/authenticate/email?create=false",
-            data=json.dumps(data),
-            headers=headers,
-        )
-        token = json.loads(response.content)["token"]
-        return token
-    except Exception:
-        print("Invalid credentials!")
+with open("../storage/goober_dash_token.txt", "r") as f:
+    token = f.readline()  # goober_dash_token
 
 
 def download_level(level_id):
     try:
-        token = str(refresh_token())
-
         headers = {"authorization": f"Bearer {token}"}
 
         response = requests.post(
@@ -52,8 +30,6 @@ def download_level(level_id):
 
 def upload_level(response, output):
     try:
-        token = str(refresh_token())
-
         headers = {"authorization": f"Bearer {token}"}
         current_time = str(int(datetime.datetime.now().timestamp()))
         level_name = response["name"]

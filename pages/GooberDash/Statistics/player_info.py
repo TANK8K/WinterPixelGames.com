@@ -1,9 +1,10 @@
 import streamlit as st
+import numpy as np
 import pandas as pd
 import plotly.express as px
 import time
 import datetime
-from math import floor, ceil, log10
+from math import floor, ceil, log10, isnan
 from pages.GooberDash.Backend.get_user import user_info_2
 
 conn = st.connection("postgresql", type="sql")
@@ -25,7 +26,7 @@ def query_df_user(user):
 def query_df_user_records(user_id):
     df_user_records = conn.query(
         f"""
-        SELECT level_name, level_id, username, user_id, time, upload_time, point, rank, rank_out_of, percentile
+        SELECT *
         FROM goober_dash_time_trials_records
         WHERE user_id='{user_id}'
         ORDER BY rank, upload_time DESC;
@@ -35,27 +36,15 @@ def query_df_user_records(user_id):
 
 
 @st.cache_resource(show_spinner=True, ttl=21600)
-def query_df_user_leaderboard_curr_row(user_id):
-    df_user_leaderboard_curr_row = conn.query(
+def query_df_user_leaderboard(user_id):
+    df_user_leaderboard = conn.query(
         f"""
         SELECT *
         FROM goober_dash_time_trials_leaderboard
         WHERE user_id='{user_id}'
     """
     )
-    return df_user_leaderboard_curr_row
-
-
-@st.cache_resource(show_spinner=True, ttl=21600)
-def query_df_user_leaderboard_prev_row(user_id):
-    df_user_leaderboard_prev_row = conn.query(
-        f"""
-        SELECT *
-        FROM goober_dash_time_trials_leaderboard_prev
-        WHERE user_id='{user_id}'
-    """
-    )
-    return df_user_leaderboard_prev_row
+    return df_user_leaderboard
 
 
 @st.cache_resource(show_spinner=True, ttl=21600)
@@ -94,7 +83,9 @@ def load_page():
                 value=None,
             )
 
-        if user not in [None, ""]:
+        if user in [None, ""]:
+            user_id = None
+        else:
             users_found_database = query_df_user(user)
             users_found_database.rename(
                 columns={
@@ -121,7 +112,15 @@ def load_page():
                         ignore_index=True,
                     )
                 else:
-                    users_found_combined = users_found_database
+                    row_index = users_found_database.index[
+                        users_found_database["User ID"] == users_found_api_id
+                    ][0]
+                    row_to_move = users_found_database.loc[[row_index]]
+                    remaining_df = users_found_database.drop(index=row_index)
+                    result_df = pd.concat(
+                        [row_to_move, remaining_df], ignore_index=True
+                    )
+                    users_found_combined = result_df
             except KeyError:
                 users_found_combined = users_found_database
 
@@ -481,101 +480,95 @@ def load_page():
                     f"Last Update: {datetime.datetime.fromtimestamp(last_update).strftime('%Y-%m-%d %H:%M:%S')} UTC (Updated Every 12 Hours)"
                 )
 
-                user_leaderboard_curr_row = query_df_user_leaderboard_curr_row(user_id)
-                user_leaderboard_prev_row = query_df_user_leaderboard_prev_row(user_id)
+                user_leaderboard = query_df_user_leaderboard(user_id)
 
                 metric_cols = st.columns((4, 4, 1, 1, 1, 4))
 
                 try:
-                    curr_performance_points = user_leaderboard_curr_row.loc[
-                        0, "total_points"
-                    ]
-                    curr_global_rank = int(user_leaderboard_curr_row.loc[0, "rank"])
-                    curr_first = int(user_leaderboard_curr_row.loc[0, "first"])
-                    curr_second = int(user_leaderboard_curr_row.loc[0, "second"])
-                    curr_third = int(user_leaderboard_curr_row.loc[0, "third"])
-                    curr_completed_levels = int(
-                        user_leaderboard_curr_row.loc[0, "count"]
-                    )
-                    curr_top_percent = int(
-                        user_leaderboard_curr_row.loc[0, "top_percentile"]
-                    )
+                    performance_points = user_leaderboard.loc[0, "total_points"]
+                    global_rank = user_leaderboard.loc[0, "rank"]
+                    top_percent = user_leaderboard.loc[0, "top_percentile"]
+                    first = user_leaderboard.loc[0, "first"]
+                    second = user_leaderboard.loc[0, "second"]
+                    third = user_leaderboard.loc[0, "third"]
+                    completed_levels = user_leaderboard.loc[0, "count"]
 
-                    prev_performance_points = user_leaderboard_prev_row.loc[
-                        0, "total_points"
-                    ]
-                    prev_global_rank = int(user_leaderboard_prev_row.loc[0, "rank"])
-                    prev_first = int(user_leaderboard_prev_row.loc[0, "first"])
-                    prev_second = int(user_leaderboard_prev_row.loc[0, "second"])
-                    prev_third = int(user_leaderboard_prev_row.loc[0, "third"])
-                    prev_completed_levels = int(
-                        user_leaderboard_prev_row.loc[0, "count"]
+                    delta_performance_points = int(
+                        user_leaderboard.loc[0, "total_points_diff"]
                     )
-
-                    delta_performance_points = (
-                        curr_performance_points - prev_performance_points
-                    )
-                    delta_global_rank = curr_global_rank - prev_global_rank
-                    delta_first = curr_first - prev_first
-                    delta_second = curr_second - prev_second
-                    delta_third = curr_third - prev_third
-                    delta_completed_levels = (
-                        curr_completed_levels - prev_completed_levels
-                    )
+                    delta_global_rank = int(user_leaderboard.loc[0, "rank_diff"])
+                    delta_first = int(user_leaderboard.loc[0, "first_diff"])
+                    delta_second = int(user_leaderboard.loc[0, "second_diff"])
+                    delta_third = int(user_leaderboard.loc[0, "third_diff"])
+                    delta_completed_levels = int(user_leaderboard.loc[0, "count_diff"])
 
                     if delta_performance_points != 0:
                         metric_cols[0].metric(
                             label="Total Performance Points",
-                            value=f"{curr_performance_points} pp",
+                            value=f"{performance_points} pp",
                             delta=f"{delta_performance_points} pp",
                         )
                     else:
                         metric_cols[0].metric(
                             label="Total Performance Points",
-                            value=f"{curr_performance_points} pp",
+                            value=f"{performance_points} pp",
                         )
                     if delta_global_rank != 0:
                         metric_cols[1].metric(
                             label="Global Rank",
-                            value=f"#{curr_global_rank} (Top {curr_top_percent}%)",
+                            value=(
+                                f"#{global_rank} "
+                                + (
+                                    f"(Top {top_percent:.2f}%)"
+                                    if global_rank != 1
+                                    else "(First)"
+                                )
+                            ),
                             delta=delta_global_rank,
                             delta_color="inverse",
                         )
                     else:
                         metric_cols[1].metric(
                             label="Global Rank",
-                            value=f"#{curr_global_rank} (Top {0.01}%)",
+                            value=(
+                                f"#{global_rank} "
+                                + (
+                                    f"(Top {top_percent:.2f}%)"
+                                    if global_rank != 1
+                                    else "(First)"
+                                )
+                            ),
                         )
 
                     if delta_first != 0:
                         metric_cols[2].metric(
-                            label="🥇", value=f"{curr_first}", delta=delta_first
+                            label="🥇", value=f"{first}", delta=delta_first
                         )
                     else:
-                        metric_cols[2].metric(label="🥇", value=f"{curr_first}")
+                        metric_cols[2].metric(label="🥇", value=f"{first}")
 
                     if delta_second != 0:
                         metric_cols[3].metric(
-                            label="🥈", value=f"{curr_second}", delta=delta_second
+                            label="🥈", value=f"{second}", delta=delta_second
                         )
                     else:
-                        metric_cols[3].metric(label="🥈", value=f"{curr_second}")
+                        metric_cols[3].metric(label="🥈", value=f"{second}")
                     if delta_third != 0:
                         metric_cols[4].metric(
-                            label="🥉", value=f"{curr_third}", delta=delta_third
+                            label="🥉", value=f"{third}", delta=delta_third
                         )
                     else:
-                        metric_cols[4].metric(label="🥉", value=f"{curr_third}")
+                        metric_cols[4].metric(label="🥉", value=f"{third}")
                     if delta_completed_levels != 0:
                         metric_cols[5].metric(
                             label="Completed Levels",
-                            value=f"{curr_completed_levels}/{level_counts}",
+                            value=f"{completed_levels}/{level_counts}",
                             delta=delta_completed_levels,
                         )
                     else:
                         metric_cols[5].metric(
                             label="Completed Levels",
-                            value=f"{curr_completed_levels}/{129}",
+                            value=f"{completed_levels}/{129}",
                         )
 
                     st.divider()
@@ -589,11 +582,16 @@ def load_page():
                             "username": "Player",
                             "user_id": "User ID",
                             "time": "Time",
+                            "time_diff": "Time diff",
                             "upload_time": "Upload Time",
                             "point": "Performance Points",
+                            "point_diff": "Performance Points diff",
                             "rank": "Rank",
+                            "rank_diff": "Rank diff",
                             "rank_out_of": "Out of",
+                            "rank_out_of_diff": "Out of diff",
                             "percentile": "Percentile",
+                            "percentile_diff": "Percentile diff",
                         },
                         inplace=True,
                     )
@@ -619,7 +617,7 @@ def load_page():
                     missing_levels["Time"] = None
                     missing_levels["Performance Points"] = None
                     missing_levels["Rank"] = None
-                    missing_levels["Percentile"] = None
+                    missing_levels["Percentile"] = 0
                     missing_levels["Upload Time"] = None
                     missing_levels["Watch Replay"] = None
                     missing_levels["Race Ghost"] = None
@@ -634,10 +632,30 @@ def load_page():
                         "-", "", regex=False
                     )
 
-                    df_user_records["column_name"] = (
-                        df_user_records["Performance Points"]
-                        .astype(float, errors="ignore")
-                        .astype(float, errors="ignore")
+                    df_user_records["Time"] = pd.to_numeric(
+                        df_user_records["Time"], errors="coerce"
+                    )
+                    df_user_records["Time"] = df_user_records["Time"].replace(
+                        {pd.NA: None}
+                    )
+                    df_user_records["Time"] = df_user_records["Time"].apply(
+                        lambda x: f"{x} s" if pd.notnull(x) else None
+                    )
+
+                    df_user_records["Performance Points"] = pd.to_numeric(
+                        df_user_records["Performance Points"], errors="coerce"
+                    )
+                    df_user_records["Performance Points"] = df_user_records[
+                        "Performance Points"
+                    ].replace({np.nan: None})
+                    df_user_records["Performance Points"] = df_user_records[
+                        "Performance Points"
+                    ].apply(
+                        lambda x: (
+                            f"{int(x)} pp"
+                            if x is not None and x == int(x)
+                            else (f"{x} pp" if x is not None else None)
+                        )
                     )
 
                     df_user_records["Upload Time"] = df_user_records[
@@ -666,41 +684,51 @@ def load_page():
                     )
 
                     def add_emojis(rank):
-                        if rank == 1:
-                            return "🥇"
-                        elif rank == 2:
-                            return "🥈"
-                        elif rank == 3:
-                            return "🥉"
+                        if isnan(rank):
+                            return None
                         else:
-                            return f"# {rank:.0f}"
+                            if rank == 1:
+                                return "🥇"
+                            elif rank == 2:
+                                return "🥈"
+                            elif rank == 3:
+                                return "🥉"
+                            elif rank:
+                                return f"# {rank:.0f}"
 
                     df_user_records["Rank"] = df_user_records["Rank"].apply(add_emojis)
 
-                    display_level_id_value = False
-                    display_incompleted_levels_value = False
-
-                    checkboxes = st.columns(2)
+                    checkboxes = st.columns(3)
                     with checkboxes[0]:
                         display_level_id = st.checkbox(
                             "Display Level ID",
-                            value=display_level_id_value,
+                            value=False,
                             key="first_display_level_id",
                         )
                     with checkboxes[1]:
                         display_incompleted_levels = st.checkbox(
                             "Display Incompleted Levels",
-                            value=display_incompleted_levels_value,
+                            value=False,
+                        )
+                    with checkboxes[2]:
+                        display_changes = st.checkbox(
+                            "Display Changes",
+                            value=False,
                         )
 
                     column_order_config = [
                         "Level",
                         "Level ID",
                         "Time",
+                        "Time diff",
                         "Performance Points",
+                        "Performance Points diff",
                         "Rank",
+                        "Rank diff",
                         "Out of",
+                        "Out of diff",
                         "Percentile",
+                        "Percentile diff",
                         "Upload Time",
                         "Watch Replay",
                         "Race Ghost",
@@ -711,30 +739,116 @@ def load_page():
                         df_user_records = df_user_records[
                             df_user_records["Time"].notna()
                         ]
+                    if not display_changes:
+                        column_order_config = [
+                            column
+                            for column in column_order_config
+                            if column
+                            not in [
+                                "Time diff",
+                                "Performance Points diff",
+                                "Rank diff",
+                                "Out of diff",
+                                "Percentile diff",
+                            ]
+                        ]
 
-                    def _format_arrow(val):
-                        if isinstance(val, int):
-                            return (
-                                f"{'▲' if val > 0 else '▼'} {abs(val):.0f}"
-                                if val != 0
-                                else f"{val:.0f}"
-                            )
-                        else:
-                            return val
+                    def _format_arrow(val, column_name):
+                        if isinstance(val, (int, float)) and not np.isnan(val):
+                            if column_name == "Time diff":
+                                symbol = "▲" if val > 0 else "▼"
+                                formatted_value = f"{abs(val):.2f}"
+                                suffix = " s"
+                                return f"{symbol} {formatted_value}{suffix}"
+                            elif column_name == "Performance Points diff":
+                                symbol = "▲" if val > 0 else "▼"
+                                formatted_value = f"{int(abs(val))}"
+                                suffix = " pp"
+                                return f"{symbol} {formatted_value}{suffix}"
+                            elif column_name == "Rank diff":
+                                symbol = "▲" if val < 0 else "▼"
+                                formatted_value = f"{int(abs(val))}"
+                                suffix = ""
+                                return f"{symbol} {formatted_value}{suffix}"
+                            elif column_name == "Out of diff":
+                                if val > 0:
+                                    return f"(+ {int(val)})"
+                                elif val < 0:
+                                    return f"(- {abs(int(val))})"
+                                else:
+                                    return ""
+                            elif column_name == "Percentile diff":
+                                symbol = "▲" if val > 0 else "▼"
+                                formatted_value = f"{abs(val):.2f}"
+                                return f"{symbol} {formatted_value}"
+                        elif pd.isna(val):
+                            return ""
+                        return val
 
-                    def _color_arrow(val):
+                    def _color_arrow(val, column_name):
                         try:
-                            return (
-                                "color: green"
-                                if val > 0
-                                else "color: red" if val < 0 else "color: transparent"
-                            )
+                            if val is None:
+                                return "color: transparent;"
+                            elif column_name in [
+                                "Performance Points diff",
+                                "Percentile diff",
+                            ]:
+                                if val > 0:
+                                    return "color: green;"
+                                elif val < 0:
+                                    return "color: red;"
+                                else:
+                                    return "color: transparent;"
+                            elif column_name == "Out of diff":
+                                if val > 0:
+                                    return "color: white;"
+                                else:
+                                    return "color: transparent;"
+                            elif column_name in ["Time diff", "Rank diff"]:
+                                if val > 0:
+                                    return "color: red;"
+                                elif val < 0:
+                                    return "color: green;"
+                                else:
+                                    return "color: transparent;"
+                            else:
+                                return None
                         except Exception:
-                            pass
+                            return None
 
-                    # df_user_records = df_user_records.style.map(
-                    #    _color_arrow, subset=["Out of"]
-                    # ).format(_format_arrow)
+                    df_user_records = df_user_records.style
+                    df_user_records = df_user_records.map(
+                        lambda val: _color_arrow(val, "Time diff"), subset=["Time diff"]
+                    )
+                    df_user_records = df_user_records.map(
+                        lambda val: _color_arrow(val, "Performance Points diff"),
+                        subset=["Performance Points diff"],
+                    )
+                    df_user_records = df_user_records.map(
+                        lambda val: _color_arrow(val, "Rank diff"), subset=["Rank diff"]
+                    )
+                    df_user_records = df_user_records.map(
+                        lambda val: _color_arrow(val, "Out of diff"),
+                        subset=["Out of diff"],
+                    )
+                    df_user_records = df_user_records.map(
+                        lambda val: _color_arrow(val, "Percentile diff"),
+                        subset=["Percentile diff"],
+                    )
+
+                    df_user_records = df_user_records.format(
+                        {
+                            "Time diff": lambda x: _format_arrow(x, "Time diff"),
+                            "Performance Points diff": lambda x: _format_arrow(
+                                x, "Performance Points diff"
+                            ),
+                            "Rank diff": lambda x: _format_arrow(x, "Rank diff"),
+                            "Out of diff": lambda x: _format_arrow(x, "Out of diff"),
+                            "Percentile diff": lambda x: _format_arrow(
+                                x, "Percentile diff"
+                            ),
+                        }
+                    )
 
                     st.dataframe(
                         data=df_user_records,
@@ -742,21 +856,25 @@ def load_page():
                         column_order=tuple(column_order_config),
                         column_config={
                             "Level ID": st.column_config.ListColumn(),
-                            "Time": st.column_config.NumberColumn(format="%f s"),
-                            "Watch Replay": st.column_config.LinkColumn(
-                                display_text="▶️", width="small"
-                            ),
-                            "Race Ghost": st.column_config.LinkColumn(
-                                display_text="👻", width="small"
-                            ),
-                            "Performance Points": st.column_config.NumberColumn(
+                            "Watch Replay": st.column_config.LinkColumn(width="small"),
+                            "Race Ghost": st.column_config.LinkColumn(width="small"),
+                            "Performance Points": st.column_config.TextColumn(
                                 help="Total Performance Points (pp) in all levels combined",
-                                format="%d pp",
                             ),
                             "Percentile": st.column_config.ProgressColumn(
                                 format="%f", min_value=0, max_value=100
                             ),
-                            # "Out of": st.column_config.TextColumn("", width="small"),
+                            "Out of diff": st.column_config.TextColumn(
+                                "", width="small"
+                            ),
+                            "Time diff": st.column_config.TextColumn("", width="small"),
+                            "Performance Points diff": st.column_config.TextColumn(
+                                "", width="small"
+                            ),
+                            "Rank diff": st.column_config.TextColumn("", width="small"),
+                            "Percentile diff": st.column_config.TextColumn(
+                                "", width="small"
+                            ),
                         },
                         hide_index=True,
                     )
