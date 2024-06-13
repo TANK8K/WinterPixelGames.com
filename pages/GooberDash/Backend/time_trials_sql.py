@@ -1,3 +1,4 @@
+from threading import ExceptHookArgs
 import psycopg
 import time
 import streamlit as st
@@ -373,7 +374,7 @@ def update_leaderboard():
 
             st.cache_resource.clear()
 
-        except psycopg.OperationalError as e:
+        except Exception as e:
             print("Error:", e)
             connection = psycopg.connect(**st.secrets.sql_credentials)
 
