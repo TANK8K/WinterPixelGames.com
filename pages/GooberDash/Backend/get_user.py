@@ -4,6 +4,12 @@ import json
 import requests
 import re
 
+# crushers
+# 2 6 5 4 3 1
+
+# pancake
+# left 40 67 83
+# right 33 62 95
 email = st.secrets.goober_dash_credentials.email
 password = st.secrets.goober_dash_credentials.password
 
