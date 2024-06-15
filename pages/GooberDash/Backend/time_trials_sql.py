@@ -372,8 +372,6 @@ def update_leaderboard():
             with open("../storage/level_counts.txt", "w") as f:
                 f.write(str(len(level_ids)))
 
-            st.cache_resource.clear()
-
         except Exception as e:
             print("Error:", e)
             connection = psycopg.connect(**st.secrets.sql_credentials)

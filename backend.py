@@ -40,10 +40,10 @@ def refresh_goober_dash_token():
             time.sleep(5)
 
 
-# def clear_cache():
-#    while True:
-#        st.cache_resource.clear()
-#        time.sleep(21600)
+def clear_cache():
+    while True:
+        st.cache_resource.clear()
+        time.sleep(10800)
 
 
 def run_threaded_functions(functions):
@@ -62,6 +62,6 @@ if __name__ == "__main__":
         [
             GooberDash_update_time_trials_leaderboard,
             refresh_goober_dash_token,
-            # clear_cache,
+            clear_cache,
         ]
     )

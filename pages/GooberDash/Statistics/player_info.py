@@ -596,67 +596,66 @@ def load_page():
                         inplace=True,
                     )
 
-                    merged_df = pd.merge(
-                        df_level_ids,
-                        df_user_records,
-                        left_on="level_id",
-                        right_on="Level ID",
-                        how="left",
-                    )
-
-                    missing_levels = merged_df[merged_df["Level ID"].isna()]
-                    missing_levels = missing_levels[
-                        ["level_name", "level_id", "rank_out_of"]
-                    ].rename(
-                        columns={
-                            "level_name": "Level",
-                            "level_id": "Level ID",
-                            "rank_out_of": "Out of",
-                        }
-                    )
-                    missing_levels["Time"] = None
-                    missing_levels["Performance Points"] = None
-                    missing_levels["Rank"] = None
-                    missing_levels["Percentile"] = 0
-                    missing_levels["Upload Time"] = None
-                    missing_levels["Watch Replay"] = None
-                    missing_levels["Race Ghost"] = None
-
-                    missing_levels = missing_levels.dropna(how="all", axis=1)
-                    if not missing_levels.empty:
-                        df_user_records = pd.concat(
-                            [df_user_records, missing_levels], ignore_index=True
+                    if completed_levels != level_counts:
+                        merged_df = pd.merge(
+                            df_level_ids,
+                            df_user_records,
+                            left_on="level_id",
+                            right_on="Level ID",
+                            how="left",
                         )
+
+                        missing_levels = merged_df[merged_df["Level ID"].isna()]
+                        missing_levels = missing_levels[
+                            ["level_name", "level_id", "rank_out_of"]
+                        ].rename(
+                            columns={
+                                "level_name": "Level",
+                                "level_id": "Level ID",
+                                "rank_out_of": "Out of",
+                            }
+                        )
+                        missing_levels["Time"] = None
+                        missing_levels["Performance Points"] = None
+                        missing_levels["Rank"] = None
+                        missing_levels["Percentile"] = 0
+                        missing_levels["Upload Time"] = None
+                        missing_levels["Watch Replay"] = None
+                        missing_levels["Race Ghost"] = None
+
+                        missing_levels = missing_levels.dropna(how="all", axis=1)
+                        if not missing_levels.empty:
+                            df_user_records = pd.concat(
+                                [df_user_records, missing_levels], ignore_index=True
+                            )
 
                     df_user_records["Player"] = df_user_records["Player"].str.replace(
                         "-", "", regex=False
                     )
 
-                    df_user_records["Time"] = pd.to_numeric(
-                        df_user_records["Time"], errors="coerce"
-                    )
-                    df_user_records["Time"] = df_user_records["Time"].replace(
-                        {pd.NA: None}
-                    )
-                    df_user_records["Time"] = df_user_records["Time"].apply(
-                        lambda x: f"{x} s" if pd.notnull(x) else None
-                    )
+                    def format_time(x):
+                        if pd.isnull(x):
+                            return None
+                        if isinstance(x, str) and x.endswith(" s"):
+                            return x
+                        if isinstance(x, float) and x.is_integer():
+                            x = int(x)
+                        return f"{x} s"
 
-                    df_user_records["Performance Points"] = pd.to_numeric(
-                        df_user_records["Performance Points"], errors="coerce"
-                    )
+                    df_user_records["Time"] = df_user_records["Time"].apply(format_time)
+
+                    def format_performance_points(x):
+                        if pd.isnull(x):
+                            return None
+                        if isinstance(x, str) and x.endswith(" pp"):
+                            return x
+                        if isinstance(x, float) and x.is_integer():
+                            x = int(x)
+                        return f"{x} pp"
+
                     df_user_records["Performance Points"] = df_user_records[
                         "Performance Points"
-                    ].replace({np.nan: None})
-                    df_user_records["Performance Points"] = df_user_records[
-                        "Performance Points"
-                    ].apply(
-                        lambda x: (
-                            f"{int(x)} pp"
-                            if x is not None and x == int(x)
-                            else (f"{x} pp" if x is not None else None)
-                        )
-                    )
+                    ].apply(format_performance_points)
 
                     df_user_records["Upload Time"] = df_user_records[
                         "Upload Time"
@@ -684,17 +683,23 @@ def load_page():
                     )
 
                     def add_emojis(rank):
-                        if isnan(rank):
+                        if pd.isna(rank):
                             return None
+                        if isinstance(rank, str) and (
+                            rank.startswith("🥇")
+                            or rank.startswith("🥈")
+                            or rank.startswith("🥉")
+                            or rank.startswith("#")
+                        ):
+                            return rank
+                        elif rank == 1:
+                            return "🥇"
+                        elif rank == 2:
+                            return "🥈"
+                        elif rank == 3:
+                            return "🥉"
                         else:
-                            if rank == 1:
-                                return "🥇"
-                            elif rank == 2:
-                                return "🥈"
-                            elif rank == 3:
-                                return "🥉"
-                            elif rank:
-                                return f"# {rank:.0f}"
+                            return f"# {int(rank)}"
 
                     df_user_records["Rank"] = df_user_records["Rank"].apply(add_emojis)
 
@@ -735,10 +740,11 @@ def load_page():
                     ]
                     if not display_level_id:
                         column_order_config.remove("Level ID")
-                    if not display_incompleted_levels:
-                        df_user_records = df_user_records[
-                            df_user_records["Time"].notna()
-                        ]
+                    if completed_levels != level_counts:
+                        if not display_incompleted_levels:
+                            df_user_records = df_user_records[
+                                df_user_records["Time"].notna()
+                            ]
                     if not display_changes:
                         column_order_config = [
                             column
