@@ -97,7 +97,7 @@ def flip_json(file_name, data):
 
 def load_page():
     st.image(
-        "static/goober_dash_logo_text.png",
+        "static/GooberDash/goober_dash_logo_text.png",
         width=280,
     )
     st.html(

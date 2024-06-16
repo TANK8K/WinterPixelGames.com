@@ -88,19 +88,19 @@ def load_website():
             aspect-ratio: 1/1;
         }
         div[data-testid="stHorizontalBlock"] > div:nth-child(1) button p::before { 
-            background-image: url("./app/static/rocket_bot_royale_favicon.png");
+            background-image: url("./app/static/RocketBotRoyale/rocket_bot_royale_favicon.png");
         }
         div[data-testid="stHorizontalBlock"] > div:nth-child(2) button p::before { 
-            background-image: url("./app/static/goober_dash_favicon.png");
+            background-image: url("./app/static/GooberDash/goober_dash_favicon.png");
         }
         div[data-testid="stHorizontalBlock"] > div:nth-child(3) button p::before { 
-            background-image: url("./app/static/goober_royale_favicon.png");
+            background-image: url("./app/static/GooberRoyale/goober_royale_favicon.png");
         }
         div[data-testid="stHorizontalBlock"] > div:nth-child(4) button p::before { 
-            background-image: url("./app/static/goober_shot_favicon.png");
+            background-image: url("./app/static/GooberShot/goober_shot_favicon.png");
         }
         div[data-testid="stHorizontalBlock"] > div:nth-child(5) button p::before { 
-            background-image: url("./app/static/moonrock_miners_favicon.png");
+            background-image: url("./app/static/MoonrockMiners/moonrock_miners_favicon.png");
         }
     </style>
     """

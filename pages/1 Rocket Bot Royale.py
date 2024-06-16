@@ -15,6 +15,10 @@ def to_optimize_crate_page():
     st.session_state.page = "optimize_crate"
 
 
+def to_image_assets_page():
+    st.session_state.page = "image_assets"
+
+
 def to_player_info_page():
     st.session_state.page = "player_info"
 
@@ -80,6 +84,10 @@ if st.session_state.game == "RocketBotRoyale" and st.session_state.page == "menu
                         font-family: "font awesome 5 Free" !important;
                         content: "\\f466";
                     }
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(10) > div:nth-child(2) p::before {
+                        font-family: "font awesome 5 Free" !important;
+                        content: "\\f03e";
+                    }
                     div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(13) > div:nth-child(1) p::before {
                         font-family: "font awesome 5 Free" !important;
                         content: "\\f007";
@@ -90,7 +98,7 @@ if st.session_state.game == "RocketBotRoyale" and st.session_state.page == "menu
                     }
                     </style>"""
         )
-        st.image("static/rocket_bot_royale_banner_v2.png")
+        st.image("static/RocketBotRoyale/rocket_bot_royale_banner_v2.png")
         st.markdown(
             """**ROCKET BOT ROYALE** is a fun new take on the online battle royale formula. Powerful, wall-climbing, rocket-jumping, artillery-pumping Robo-Tanks are the vehicle of choice in this fast-paced shootout, where the goal is to survive longer than the competition. Collect the loot to upgrade your arsenal, tunnel into the terrain to take cover and collect buried treasure, and avoid the rising water levels to be the blast one standing!"""
         )
@@ -125,6 +133,7 @@ if st.session_state.game == "RocketBotRoyale" and st.session_state.page == "menu
         col1.button(
             "Optimize Crate (WIP)", on_click=to_optimize_crate_page, type="primary"
         )
+        col2.button("Image Assets (WIP)", on_click=to_image_assets_page, type="primary")
         "---"
         st.html("<h3><i class='fa-solid fa-chart-simple'></i>&nbsp;Statistics</h3>")
         col1, col2 = st.columns(2)
@@ -147,6 +156,18 @@ elif (
         )
 
         RocketBotRoyale_optimize_crate()
+        back_to_menu()
+
+elif (
+    st.session_state.game == "RocketBotRoyale"
+    and st.session_state.page == "image_assets"
+):
+    with ph.container():
+        from pages.RocketBotRoyale.Tools.image_assets import (
+            load_page as RocketBotRoyale_image_assets,
+        )
+
+        RocketBotRoyale_image_assets()
         back_to_menu()
 
 elif (

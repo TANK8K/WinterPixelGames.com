@@ -4,8 +4,11 @@ import pandas as pd
 import plotly.express as px
 import time
 import datetime
+import json
+import os
 from math import floor, ceil, log10, isnan
-from pages.GooberDash.Backend.get_user import user_info_2
+from pages.GooberDash.Backend.get_user import user_info, user_info_2
+from pages.GooberDash.Backend.goober_generator import generate_goober
 
 conn = st.connection("postgresql", type="sql")
 
@@ -67,7 +70,7 @@ def load_page():
             level_counts = int(f.readline())
 
         st.image(
-            "static/goober_dash_logo_text.png",
+            "static/GooberDash/goober_dash_logo_text.png",
             width=280,
         )
         st.html(
@@ -156,6 +159,16 @@ def load_page():
                 ]
             )
 
+            users_info_api_res = user_info(user_id)
+            cosmetics_dict = json.loads(users_info_api_res)["skin"]
+            goober_file_path = generate_goober(
+                cosmetics_dict["hat"],
+                cosmetics_dict["suit"],
+                cosmetics_dict["hand"],
+                cosmetics_dict["color"],
+            )
+            st.image(goober_file_path)
+            os.remove(goober_file_path)
             ###################################################################################################
             # async def user_info(
             #    self,

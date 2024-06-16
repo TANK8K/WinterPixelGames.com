@@ -11,6 +11,10 @@ except Exception:
 st.session_state.game = "MoonrockMiners"
 
 
+def to_image_assets_page():
+    st.session_state.page = "image_assets"
+
+
 def to_season_leaderboard_page():
     st.session_state.page = "season_leaderboard"
 
@@ -46,11 +50,15 @@ if st.session_state.game == "MoonrockMiners" and st.session_state.page == "menu"
                     }
                     div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(11) > div:nth-child(1) p::before {
                         font-family: "font awesome 5 Free" !important;
+                        content: "\\f03e";
+                    }
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(14) > div:nth-child(1) p::before {
+                        font-family: "font awesome 5 Free" !important;
                         content: "\\f073";
                     }
                     </style>"""
         )
-        st.image("static/moonrock_miners_banner.png", width=500)
+        st.image("static/MoonrockMiners/moonrock_miners_banner.png", width=500)
         st.markdown(
             """**Moonrock Miners** is a gravity-defying multiplayer space battle game set in an asteroid field. Blast other players, collect powerups and crystals, and avoid the asteroids. Try to survive until the end to win the match. Compete against players around the world in real-time to rank in every season. You can also create your own custom lobbies to play private games online with your friends!"""
         )
@@ -65,6 +73,10 @@ if st.session_state.game == "MoonrockMiners" and st.session_state.page == "menu"
         col1, col2 = st.columns(2)
         col1.link_button("Discord", "https://discord.com/invite/kdGuBhXz2r")
         "---"
+        st.html("<h3><i class='fa-solid fa-screwdriver-wrench'></i>&nbsp;Tools</h3>")
+        col1, col2 = st.columns(2)
+        col1.button("Image Assets (WIP)", on_click=to_image_assets_page, type="primary")
+        "---"
         st.html("<h3><i class='fa-solid fa-chart-simple'></i>&nbsp;Statistics</h3>")
         col1, col2 = st.columns(2)
         col1.button(
@@ -77,6 +89,18 @@ if st.session_state.game == "MoonrockMiners" and st.session_state.page == "menu"
             icon="ℹ️",
         )
         back_to_home()
+
+elif (
+    st.session_state.game == "MoonrockMiners"
+    and st.session_state.page == "image_assets"
+):
+    with ph.container():
+        from pages.MoonrockMiners.Tools.image_assets import (
+            load_page as MoonrockMiners_image_assets,
+        )
+
+        MoonrockMiners_image_assets()
+        back_to_menu()
 
 elif (
     st.session_state.game == "MoonrockMiners"

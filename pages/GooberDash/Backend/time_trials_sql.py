@@ -1,4 +1,3 @@
-from threading import ExceptHookArgs
 import psycopg
 import time
 import streamlit as st

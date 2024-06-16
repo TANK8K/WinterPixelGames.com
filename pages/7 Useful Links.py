@@ -23,19 +23,19 @@ st.html(
             font-weight: 800;
         }
         div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) > div:nth-child(1) p::before {
-            background-image: url("./app/static/rocket_bot_royale_favicon.png");
+            background-image: url("./app/static/RocketBotRoyale/rocket_bot_royale_favicon.png");
         }
         div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) > div:nth-child(2) p::before {
-            background-image: url("./app/static/goober_dash_favicon.png");
+            background-image: url("./app/static/GooberDash/goober_dash_favicon.png");
         }
         div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) > div:nth-child(3) p::before {
-            background-image: url("./app/static/goober_royale_favicon.png");
+            background-image: url("./app/static/GooberRoyale/goober_royale_favicon.png");
         }
         div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) > div:nth-child(4) p::before {
-            background-image: url("./app/static/goober_shot_favicon.png");
+            background-image: url("./app/static/GooberShot/goober_shot_favicon.png");
         }
         div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) > div:nth-child(5) p::before {
-            background-image: url("./app/static/moonrock_miners_favicon.png");
+            background-image: url("./app/static/MoonrockMiners/moonrock_miners_favicon.png");
         }
         div[data-testid="stVerticalBlock"] div:nth-child(10) > div p::before {
             background-image: url("./app/static/wph_logo.png");

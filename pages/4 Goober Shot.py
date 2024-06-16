@@ -11,6 +11,10 @@ except Exception:
 st.session_state.game = "GooberShot"
 
 
+def to_image_assets_page():
+    st.session_state.page = "image_assets"
+
+
 def to_player_info_page():
     st.session_state.page = "player_info"
 
@@ -50,15 +54,19 @@ if st.session_state.game == "GooberShot" and st.session_state.page == "menu":
                     }
                     div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(11) > div:nth-child(1) p::before {
                         font-family: "font awesome 5 Free" !important;
+                        content: "\\f03e";
+                    }
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(14) > div:nth-child(1) p::before {
+                        font-family: "font awesome 5 Free" !important;
                         content: "\\f007";
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(11) > div:nth-child(2) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(14) > div:nth-child(2) p::before {
                         font-family: "font awesome 5 Free" !important;
                         content: "\\f073";
                     }
                     </style>"""
         )
-        st.image("static/goober_shot_logo_text.png", width=330)
+        st.image("static/GooberShot/goober_shot_logo_text.png", width=330)
         st.markdown(
             """**Goober Shot** throws you into thrilling online archery battles against three other players! Prepare your bow, sharpen your arrows, enter the arena, and unleash your skills as a master archer. Remember, every arrow counts! Show off your precision and reflexes as you aim, shoot, and dodge with finesse. Rise through the ranks, climb the global leaderboards, and prove yourself as the ultimate archery champion. Will you emerge as the greatest archer in the realm? """
         )
@@ -73,6 +81,10 @@ if st.session_state.game == "GooberShot" and st.session_state.page == "menu":
         col1, col2 = st.columns(2)
         col1.link_button("Discord", "https://discord.com/invite/kdGuBhXz2r")
         "---"
+        st.html("<h3><i class='fa-solid fa-screwdriver-wrench'></i>&nbsp;Tools</h3>")
+        col1, col2 = st.columns(2)
+        col1.button("Image Assets (WIP)", on_click=to_image_assets_page, type="primary")
+        "---"
         st.html("<h3><i class='fa-solid fa-chart-simple'></i>&nbsp;Statistics</h3>")
         col1, col2 = st.columns(2)
         col1.button("Player Info (WIP)", on_click=to_player_info_page, type="primary")
@@ -82,6 +94,15 @@ if st.session_state.game == "GooberShot" and st.session_state.page == "menu":
             type="primary",
         )
         back_to_home()
+
+elif st.session_state.game == "GooberShot" and st.session_state.page == "image_assets":
+    with ph.container():
+        from pages.GooberShot.Tools.image_assets import (
+            load_page as GooberShot_image_assets,
+        )
+
+        GooberShot_image_assets()
+        back_to_menu()
 
 elif st.session_state.game == "GooberShot" and st.session_state.page == "player_info":
     with ph.container():

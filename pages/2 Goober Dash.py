@@ -20,6 +20,10 @@ def to_maze_generator_page():
     st.session_state.page = "maze_generator"
 
 
+def to_image_assets_page():
+    st.session_state.page = "image_assets"
+
+
 def to_time_trials_certified_levels_page():
     st.session_state.page = "time_trials_certified_levels"
 
@@ -97,6 +101,10 @@ if st.session_state.game == "GooberDash" and st.session_state.page == "menu":
                         font-family: "font awesome 5 Free" !important;
                         content: "\\f12e";
                     }
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(10) > div:nth-child(3) p::before {
+                        font-family: "font awesome 5 Free" !important;
+                        content: "\\f03e";
+                    }
                     div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(13) > div:nth-child(1) p::before {
                         font-family: "font awesome 5 Free" !important;
                         content: "\\f11e";
@@ -115,7 +123,7 @@ if st.session_state.game == "GooberDash" and st.session_state.page == "menu":
                     }
                     </style>"""
         )
-        st.image("static/goober_dash_banner_v2.png")
+        st.image("static/GooberDash/goober_dash_banner_v2.png")
         st.markdown(
             "**GOOBER DASH** is a multiplayer battle royale game that you can play online. Dash your opponents into deadly spikes, gather precious coins, and unlock a plethora of unique costumes as you strive to outlast the competition. Invite your friends to engage in epic battles in custom private lobbies. Unleash your creativity with the level editor, crafting and conquering your very own battlegrounds. Climb the global and country-based seasonal leaderboards to prove your dominance in this thrilling contest."
         )
@@ -144,11 +152,12 @@ if st.session_state.game == "GooberDash" and st.session_state.page == "menu":
         col4.link_button("Reddit", "https://www.reddit.com/r/gooberdash")
         "---"
         st.html("<h3><i class='fa-solid fa-screwdriver-wrench'></i>&nbsp;Tools</h3>")
-        col1, col2 = st.columns(2)
+        col1, col2, col3 = st.columns(3)
         col1.button("Flip Level", on_click=to_flip_level_page, type="primary")
         col2.button(
             "Maze Generator (WIP)", on_click=to_maze_generator_page, type="primary"
         )
+        col3.button("Image Assets (WIP)", on_click=to_image_assets_page, type="primary")
         "---"
         st.html("<h3><i class='fa-solid fa-chart-simple'></i>&nbsp;Statistics</h3>")
         col1, col2, col3, col4 = st.columns(4)
@@ -182,6 +191,15 @@ elif (
         )
 
         GooberDash_maze_generator()
+        back_to_menu()
+
+elif st.session_state.game == "GooberDash" and st.session_state.page == "image_assets":
+    with ph.container():
+        from pages.GooberDash.Tools.image_assets import (
+            load_page as GooberDash_image_assets,
+        )
+
+        GooberDash_image_assets()
         back_to_menu()
 
 elif (

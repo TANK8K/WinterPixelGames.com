@@ -149,7 +149,7 @@ def common_config():
         }
         ul[data-testid="stSidebarNavItems"] > li:nth-child(2) > div > a::before{
             content: "";
-            background-image: url("./app/static/rocket_bot_royale_favicon.png");
+            background-image: url("./app/static/RocketBotRoyale/rocket_bot_royale_favicon.png");
             background-size: 100% 100%;
             display: inline-block;
             height: 35px;
@@ -158,7 +158,7 @@ def common_config():
         }
         ul[data-testid="stSidebarNavItems"] > li:nth-child(3) > div > a::before{
             content: "";
-            background-image: url("./app/static/goober_dash_favicon.png");
+            background-image: url("./app/static/GooberDash/goober_dash_favicon.png");
             background-size: 100% 100%;
             display: inline-block;
             height: 35px;
@@ -167,7 +167,7 @@ def common_config():
         }
         ul[data-testid="stSidebarNavItems"] > li:nth-child(4) > div > a::before{
             content: "";
-            background-image: url("./app/static/goober_royale_favicon.png");
+            background-image: url("./app/static/GooberRoyale/goober_royale_favicon.png");
             background-size: 100% 100%;
             display: inline-block;
             height: 35px;
@@ -176,7 +176,7 @@ def common_config():
         }
         ul[data-testid="stSidebarNavItems"] > li:nth-child(5) > div > a::before{
             content: "";
-            background-image: url("./app/static/goober_shot_favicon.png");
+            background-image: url("./app/static/GooberShot/goober_shot_favicon.png");
             background-size: 100% 100%;
             display: inline-block;
             height: 35px;
@@ -185,7 +185,7 @@ def common_config():
         }
         ul[data-testid="stSidebarNavItems"] > li:nth-child(6) > div > a::before{
             content: "";
-            background-image: url("./app/static/moonrock_miners_favicon.png");
+            background-image: url("./app/static/MoonrockMiners/moonrock_miners_favicon.png");
             background-size: 100% 100%;
             display: inline-block;
             height: 35px;

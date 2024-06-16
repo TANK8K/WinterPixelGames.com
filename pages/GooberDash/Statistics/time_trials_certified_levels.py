@@ -289,11 +289,11 @@ def load_page():
             level_counts = int(f.readline())
 
         st.image(
-            "static/goober_dash_logo_text.png",
+            "static/GooberDash/goober_dash_logo_text.png",
             width=280,
         )
         st.html(
-            '<span style="font-size: 25px; font-weight: bold;"><i class="fa-solid fa-flag-checkered" style="display: inline; margin: 0 5px 8px 0; width: 25px"></i>Time Trials (Certified Levels)<br><img style="display: inline; margin: 0 5px 8px 0; width: 25px" src="./app/static/medal_1st.png">World Records Statistics<span>'
+            '<span style="font-size: 25px; font-weight: bold;"><i class="fa-solid fa-flag-checkered" style="display: inline; margin: 0 5px 8px 0; width: 25px"></i>Time Trials (Certified Levels)<br><img style="display: inline; margin: 0 5px 8px 0; width: 25px" src="./app/static/GooberDash/medal_1st.png">World Records Statistics<span>'
         )
         st.caption(
             f"Last Update: {datetime.datetime.fromtimestamp(last_update).strftime('%Y-%m-%d %H:%M:%S')} UTC (Updated Every 12 Hours)"
