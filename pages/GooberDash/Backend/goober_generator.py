@@ -127,13 +127,12 @@ def generate_goober(hat, suit, hand, color):
         layers.append("11_hand/hand_default")
 
     # 12_right_hand
-    if color != "color_skelly":
-        if suit == "suit_robot":
-            layers.append("12_right_hand/right_hand_robot")
-        else:
-            layers.append("12_right_hand/right_hand")
-    else:
+    if suit == "suit_robot":
+        layers.append("12_right_hand/right_hand_robot")
+    elif color == "color_skelly":
         layers.append("12_right_hand/right_hand_skelly")
+    else:
+        layers.append("12_right_hand/right_hand")
 
     # 13_suit_front
     suit_front_list = ["suit_viking", "suit_wizard"]

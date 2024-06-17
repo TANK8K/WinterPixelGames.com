@@ -3,6 +3,8 @@ import time
 import streamlit as st
 import flag
 import re
+import requests
+import json
 from datetime import datetime
 from pages.GooberDash.Backend.fetch_full_time_trials_leaderboard import (
     fetch_leaderboard,
@@ -10,9 +12,44 @@ from pages.GooberDash.Backend.fetch_full_time_trials_leaderboard import (
 )
 
 
+email = st.secrets.goober_dash_credentials.email
+password = st.secrets.goober_dash_credentials.password
+
+
+def refresh_goober_dash_token():
+    try:
+        data = {
+            "email": email,
+            "password": password,
+            "vars": {
+                "client_version": "99999",
+            },
+        }
+
+        headers = {"authorization": "Basic OTAyaXViZGFmOWgyZTlocXBldzBmYjlhZWIzOTo="}
+
+        response = requests.post(
+            "https://gooberdash-api.winterpixel.io/v2/account/authenticate/email?create=false",
+            data=json.dumps(data),
+            headers=headers,
+        )
+        token = json.loads(response.content)["token"]
+
+        with open("../storage/goober_dash_token.txt", "w") as f:
+            f.write(token)
+
+        time.sleep(540)
+    except Exception as e:
+        print(f"Failed to refresh token: {e}")
+        time.sleep(5)
+
+
 def update_leaderboard():
     while True:
         try:
+            time.sleep(43200)
+            refresh_goober_dash_token()
+
             connection = psycopg.connect(**st.secrets.sql_credentials)
 
             with connection as conn:
@@ -371,11 +408,9 @@ def update_leaderboard():
             with open("../storage/level_counts.txt", "w") as f:
                 f.write(str(len(level_ids)))
 
+            connection.close()
+            st.cache_resource.clear()
+
         except Exception as e:
             print("Error:", e)
-            connection = psycopg.connect(**st.secrets.sql_credentials)
-
-        finally:
-            connection.close()
-
-        time.sleep(43200)
+            time.sleep(5)

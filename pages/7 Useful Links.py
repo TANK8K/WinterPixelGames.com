@@ -3,6 +3,10 @@ from common_config import common_config, back_to_home
 
 common_config()
 
+# div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) > div:nth-child(2) p::before {
+#    background-image: url("./app/static/GooberDash/goober_dash_favicon.png");
+# }
+
 st.html(
     """
     <style>
@@ -26,15 +30,12 @@ st.html(
             background-image: url("./app/static/RocketBotRoyale/rocket_bot_royale_favicon.png");
         }
         div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) > div:nth-child(2) p::before {
-            background-image: url("./app/static/GooberDash/goober_dash_favicon.png");
-        }
-        div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) > div:nth-child(3) p::before {
             background-image: url("./app/static/GooberRoyale/goober_royale_favicon.png");
         }
-        div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) > div:nth-child(4) p::before {
+        div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) > div:nth-child(3) p::before {
             background-image: url("./app/static/GooberShot/goober_shot_favicon.png");
         }
-        div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) > div:nth-child(5) p::before {
+        div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) > div:nth-child(4) p::before {
             background-image: url("./app/static/MoonrockMiners/moonrock_miners_favicon.png");
         }
         div[data-testid="stVerticalBlock"] div:nth-child(10) > div p::before {
@@ -77,15 +78,16 @@ st.markdown(
 """
 )
 
-col1, col2, col3, col4, col5 = st.columns(5)
+col1, col2, col3, col4 = st.columns(4)
+# col1, col2, col3, col4, col5 = st.columns(5)
 col1.link_button("Rocket Bot Royale", "https://staging-rocketbotroyale.winterpixel.io/")
-col2.link_button("Goober Dash", "https://upguys-staging.winterpixel.io/")
-col3.link_button(
+# col2.link_button("Goober Dash", "https://upguys-staging.winterpixel.io/")
+col2.link_button(
     "Goober Royale",
     "https://gooberroyale-staging.winterpixel.io/",
 )
-col4.link_button("Goober Shot", "https://gooberfall-staging.winterpixel.io/")
-col5.link_button("Moonrock Miners", "https://staging-asteroids.winterpixel.io/")
+col3.link_button("Goober Shot", "https://gooberfall-staging.winterpixel.io/")
+col4.link_button("Moonrock Miners", "https://staging-asteroids.winterpixel.io/")
 
 st.error(
     "**Staging Servers** use seperate databases. **DO NOT** spend money on **Staging Server** as items cannot be transferred.",
