@@ -61,21 +61,10 @@ def refresh_goober_dash_token():
             time.sleep(5)
 
 
-def clear_cache():
-    while True:
-        try:
-            st.cache_resource.clear()
-            time.sleep(10800)
-        except Exception as e:
-            print(f"Failed to clear cache: {e}")
-            time.sleep(5)
-
-
 if __name__ == "__main__":
     run_threaded_functions(
         [
             GooberDash_update_time_trials_leaderboard,
             refresh_goober_dash_token,
-            clear_cache,
         ]
     )

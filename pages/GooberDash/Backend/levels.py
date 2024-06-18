@@ -7,12 +7,12 @@ import re
 email = st.secrets.goober_dash_credentials.email
 password = st.secrets.goober_dash_credentials.password
 
-with open("../storage/goober_dash_token.txt", "r") as f:
-    token = f.readline()  # goober_dash_token
-
 
 def download_level(level_id):
     try:
+        with open("../storage/goober_dash_token.txt", "r") as f:
+            token = f.readline()  # goober_dash_token
+
         headers = {"authorization": f"Bearer {token}"}
 
         response = requests.post(
@@ -30,6 +30,9 @@ def download_level(level_id):
 
 def upload_level(response, output):
     try:
+        with open("../storage/goober_dash_token.txt", "r") as f:
+            token = f.readline()  # goober_dash_token
+
         headers = {"authorization": f"Bearer {token}"}
         current_time = str(int(datetime.datetime.now().timestamp()))
         level_name = response["name"]

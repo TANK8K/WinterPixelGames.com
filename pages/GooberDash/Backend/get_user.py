@@ -1,14 +1,7 @@
-import streamlit as st
 import websocket
 import json
 import requests
 import re
-
-email = st.secrets.goober_dash_credentials.email
-password = st.secrets.goober_dash_credentials.password
-
-with open("../storage/goober_dash_token.txt", "r") as f:
-    token = f.readline()  # goober_dash_token
 
 # async def refresh_config():
 #    """Refresh Goober Dash game configuration"""
@@ -96,28 +89,6 @@ with open("../storage/goober_dash_token.txt", "r") as f:
 #    return goober_dash_all_season_info
 #
 #
-# def refresh_token():
-#    data = {
-#        "email": email,
-#        "password": password,
-#        "vars": {
-#            "client_version": "99999",
-#        },
-#    }
-#
-#    headers = {"authorization": "Basic OTAyaXViZGFmOWgyZTlocXBldzBmYjlhZWIzOTo="}
-#
-#    try:
-#        response = requests.post(
-#            "https://gooberdash-api.winterpixel.io/v2/account/authenticate/email?create=false",
-#            data=json.dumps(data),
-#            headers=headers,
-#        )
-#        token = json.loads(response.content)["token"]
-#        return token
-#    except Exception:
-#        print("Invalid credentials!")
-#
 #
 # def get_user():
 #    try:
@@ -172,6 +143,9 @@ with open("../storage/goober_dash_token.txt", "r") as f:
 
 
 def user_info(user_id: str):
+    with open("../storage/goober_dash_token.txt", "r") as f:
+        token = f.readline()  # goober_dash_token
+
     ws = websocket.create_connection(
         f"wss://gooberdash-api.winterpixel.io/ws?lang=en&status=true&token={token}"
     )
@@ -193,6 +167,9 @@ def user_info(user_id: str):
 
 
 def user_info_2(username_or_id):
+    with open("../storage/goober_dash_token.txt", "r") as f:
+        token = f.readline()  # goober_dash_token
+
     is_uuid = bool(
         re.compile(
             r"^[0-9a-f]{8}-?[0-9a-f]{4}-?4[0-9a-f]{3}-?[89ab][0-9a-f]{3}-?[0-9a-f]{12}$",
