@@ -588,7 +588,7 @@ def load_page():
                     else:
                         metric_cols[6].metric(
                             label="Completed Levels",
-                            value=f"{completed_levels}/{129}",
+                            value=f"{completed_levels}/{level_counts}",
                         )
                     if delta_average_percentile != 0:
                         metric_cols[7].metric(

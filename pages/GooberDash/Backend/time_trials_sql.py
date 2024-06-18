@@ -13,7 +13,7 @@ from pages.GooberDash.Backend.fetch_full_time_trials_leaderboard import (
 def update_leaderboard():
     while True:
         try:
-            # time.sleep(43200)
+            time.sleep(43200)
 
             connection = psycopg.connect(**st.secrets.sql_credentials)
 
@@ -394,7 +394,7 @@ def update_leaderboard():
             connection.close()
             st.cache_resource.clear()
 
-            time.sleep(43200)
+            # time.sleep(43200)
 
         except Exception as e:
             print("Error:", e)
