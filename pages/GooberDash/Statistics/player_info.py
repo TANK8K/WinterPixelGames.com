@@ -129,6 +129,7 @@ def load_page():
 
             if len(users_found_combined) == 1:
                 user_id = users_found_combined.iloc[0]["User ID"]
+                player_name = users_found_combined.iloc[0]["Player"]
 
             elif len(users_found_combined) > 1:
                 with user_columns[2]:
@@ -159,16 +160,6 @@ def load_page():
                 ]
             )
 
-            users_info_api_res = user_info(user_id)
-            cosmetics_dict = json.loads(users_info_api_res)["skin"]
-            goober_file_path = generate_goober(
-                cosmetics_dict["hat"],
-                cosmetics_dict["suit"],
-                cosmetics_dict["hand"],
-                cosmetics_dict["color"],
-            )
-            st.image(goober_file_path)
-            os.remove(goober_file_path)
             ###################################################################################################
             # async def user_info(
             #    self,
@@ -482,6 +473,18 @@ def load_page():
             ###################################################################################################
             with tab1:
                 st.write("WIP")
+                st.write(f"Display Name: {player_name}")
+                st.write(f"User ID: {user_id}")
+                users_info_api_res = user_info(user_id)
+                cosmetics_dict = json.loads(users_info_api_res)["skin"]
+                goober_file_path = generate_goober(
+                    cosmetics_dict["hat"],
+                    cosmetics_dict["suit"],
+                    cosmetics_dict["hand"],
+                    cosmetics_dict["color"],
+                )
+                st.image(goober_file_path)
+                os.remove(goober_file_path)
             with tab2:
                 st.write("WIP")
             with tab3:
@@ -495,7 +498,7 @@ def load_page():
 
                 user_leaderboard = query_df_user_leaderboard(user_id)
 
-                metric_cols = st.columns((4, 4, 1, 1, 1, 4))
+                metric_cols = st.columns((3, 3, 2, 1, 1, 1, 2, 2))
 
                 try:
                     performance_points = user_leaderboard.loc[0, "total_points"]
@@ -505,6 +508,7 @@ def load_page():
                     second = user_leaderboard.loc[0, "second"]
                     third = user_leaderboard.loc[0, "third"]
                     completed_levels = user_leaderboard.loc[0, "count"]
+                    average_percentile = user_leaderboard.loc[0, "average_percentile"]
 
                     delta_performance_points = int(
                         user_leaderboard.loc[0, "total_points_diff"]
@@ -514,6 +518,9 @@ def load_page():
                     delta_second = int(user_leaderboard.loc[0, "second_diff"])
                     delta_third = int(user_leaderboard.loc[0, "third_diff"])
                     delta_completed_levels = int(user_leaderboard.loc[0, "count_diff"])
+                    delta_average_percentile = int(
+                        user_leaderboard.loc[0, "average_percentile_diff"]
+                    )
 
                     if delta_performance_points != 0:
                         metric_cols[0].metric(
@@ -554,34 +561,45 @@ def load_page():
                         )
 
                     if delta_first != 0:
-                        metric_cols[2].metric(
+                        metric_cols[3].metric(
                             label="🥇", value=f"{first}", delta=delta_first
                         )
                     else:
-                        metric_cols[2].metric(label="🥇", value=f"{first}")
+                        metric_cols[3].metric(label="🥇", value=f"{first}")
 
                     if delta_second != 0:
-                        metric_cols[3].metric(
+                        metric_cols[4].metric(
                             label="🥈", value=f"{second}", delta=delta_second
                         )
                     else:
-                        metric_cols[3].metric(label="🥈", value=f"{second}")
+                        metric_cols[4].metric(label="🥈", value=f"{second}")
                     if delta_third != 0:
-                        metric_cols[4].metric(
+                        metric_cols[5].metric(
                             label="🥉", value=f"{third}", delta=delta_third
                         )
                     else:
-                        metric_cols[4].metric(label="🥉", value=f"{third}")
+                        metric_cols[5].metric(label="🥉", value=f"{third}")
                     if delta_completed_levels != 0:
-                        metric_cols[5].metric(
+                        metric_cols[6].metric(
                             label="Completed Levels",
                             value=f"{completed_levels}/{level_counts}",
                             delta=delta_completed_levels,
                         )
                     else:
-                        metric_cols[5].metric(
+                        metric_cols[6].metric(
                             label="Completed Levels",
                             value=f"{completed_levels}/{129}",
+                        )
+                    if delta_average_percentile != 0:
+                        metric_cols[7].metric(
+                            label="Average Percentile",
+                            value=f"{average_percentile}",
+                            delta=delta_average_percentile,
+                        )
+                    else:
+                        metric_cols[7].metric(
+                            label="Average Percentile",
+                            value=f"{average_percentile}",
                         )
 
                     st.divider()
@@ -952,7 +970,8 @@ def load_page():
                             fig = px.line(df, x="Rank", y="Performance Points")
                             st.plotly_chart(fig, use_container_width=True)
 
-                except KeyError:
+                except KeyError as e:
+                    print(e)
                     st.error("❌ No Records Found")
 
     except Exception as e:

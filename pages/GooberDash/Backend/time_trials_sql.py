@@ -203,7 +203,7 @@ def update_leaderboard():
                                 cur.rank - prev.rank AS rank_diff,
                                 cur.point - prev.point AS point_diff,
                                 cur.rank_out_of - prev.rank_out_of AS rank_out_of_diff,
-                                cur.percentile - prev.percentile AS percentile_diff
+                                ROUND((cur.percentile - prev.percentile)::numeric, 2) AS percentile_diff
                             FROM
                                 goober_dash_time_trials_records AS cur
                             JOIN
@@ -327,6 +327,22 @@ def update_leaderboard():
 
                     conn.commit()
 
+                    # Calculate average_percentile
+                    cur.execute(
+                        """
+                    UPDATE goober_dash_time_trials_leaderboard l
+                    SET average_percentile = sub.avg_percentile
+                    FROM (
+                        SELECT user_id, ROUND(AVG(percentile)::numeric, 2) AS avg_percentile
+                        FROM goober_dash_time_trials_records
+                        GROUP BY user_id
+                    ) sub
+                    WHERE l.user_id = sub.user_id;
+                        """
+                    )
+
+                    conn.commit()
+
                     # Calculate changes
                     cur.execute(
                         """
@@ -336,12 +352,13 @@ def update_leaderboard():
                                 cur.total_points - prev.total_points AS total_points_diff,
                                 cur.count - prev.count AS count_diff,
                                 cur.rank - prev.rank AS rank_diff,
-                                cur.top_percentile - prev.top_percentile AS top_percentile_diff,
+                                ROUND((cur.top_percentile - prev.top_percentile)::numeric, 2) AS top_percentile_diff,
                                 cur.first - prev.first AS first_diff,
                                 cur.second - prev.second AS second_diff,
                                 cur.third - prev.third AS third_diff,
                                 cur.rank_local - prev.rank_local AS rank_local_diff,
-                                cur.top_percentile_local - prev.top_percentile_local AS top_percentile_local_diff
+                                ROUND((cur.top_percentile_local - prev.top_percentile_local)::numeric, 2) AS top_percentile_local_diff,
+                                ROUND((cur.average_percentile - prev.average_percentile)::numeric, 2) as average_percentile_diff
                             FROM
                                 goober_dash_time_trials_leaderboard AS cur
                             JOIN
@@ -359,7 +376,8 @@ def update_leaderboard():
                             second_diff = diffs.second_diff,
                             third_diff = diffs.third_diff,
                             rank_local_diff = diffs.rank_local_diff,
-                            top_percentile_local_diff = diffs.top_percentile_local_diff
+                            top_percentile_local_diff = diffs.top_percentile_local_diff,
+                            average_percentile_diff = diffs.average_percentile_diff
                         FROM diffs
                         WHERE cur.user_id = diffs.user_id;
                     """

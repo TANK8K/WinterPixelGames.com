@@ -2,6 +2,15 @@ from PIL import Image
 import os
 
 
+def trim_transparent_space(image):
+    # Get the bounding box of the non-transparent regions
+    bbox = image.getbbox()
+    if bbox:
+        # Crop the image to the bounding box
+        image = image.crop(bbox)
+    return image
+
+
 # For ear of devil hat
 def apply_color_tint(image, tint_color):
     image = image.convert("RGBA")
@@ -167,7 +176,20 @@ def generate_goober(hat, suit, hand, color):
         # Display the final image
         final_output_path = "/tmp/output.png"
         final_canvas.save(final_output_path)
+        os.remove(intermediate_output_path)
     else:
         final_output_path = intermediate_output_path
 
-    return final_output_path
+    img = Image.open(final_output_path)
+
+    if img.mode in ("RGBA", "LA") or (img.mode == "P" and "transparency" in img.info):
+        img = img.convert("RGBA")
+        trimmed_img = trim_transparent_space(img)
+    else:
+        trimmed_img = img
+
+    trimmed_final_output_path = "/tmp/trimmed_final_output.png"
+    trimmed_img.save(trimmed_final_output_path)
+    os.remove(final_output_path)
+
+    return trimmed_final_output_path
