@@ -148,7 +148,7 @@ def generate_goober(hat, suit, hand, color):
     if suit in suit_front_list:
         layers.append(f"13_suit_front/{suit}")
 
-    base_path = "./static/GooberDash/goober"
+    base_path = "./static/GooberDash/goober_overlay"
 
     # Compose images without tint
     canvas, images = compose_images(layers, base_path)
