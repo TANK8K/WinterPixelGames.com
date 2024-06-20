@@ -385,6 +385,27 @@ def update_leaderboard():
 
                     conn.commit()
 
+                # Table 'goober_dash_time_trials_world_records'
+                # Store world records
+                with conn.cursor() as cur:
+                    cur.execute(
+                        """
+                        SELECT level_id, user_id, time, upload_time, rank, username, level_name, rank_out_of
+                        FROM goober_dash_time_trials_records
+                        WHERE rank = 1
+                    """
+                    )
+                    records = cur.fetchall()
+
+                    insert_query = """
+                    INSERT INTO goober_dash_time_trials_world_records (level_id, user_id, time, upload_time, rank, username, level_name, rank_out_of)
+                    VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+                    ON CONFLICT DO NOTHING
+                    """
+
+                    cur.executemany(insert_query, records)
+                    conn.commit()
+
             with open("../storage/last_update.txt", "w") as f:
                 f.write(str(time.time()))
 
