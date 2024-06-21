@@ -1,9 +1,8 @@
 import streamlit as st
-import pandas as pd
 import os
-from math import ceil
+import glob
+from math import floor, log, pow
 from streamlit_image_select import image_select
-from pages.GooberDash.Backend.get_config import get_config
 from pages.GooberDash.Backend.goober_generator import generate_goober
 
 
@@ -48,107 +47,25 @@ def load_page():
     )
     tab1, tab2 = st.tabs(["🏭 **Goober Generator**", "🖼️ **Gallery**"])
 
-    gd_config = get_config()
-
-    def get_cosmetics_name(filename):
-        cosmetics_name = gd_config["cosmetics"][filename]["name"]
-        return cosmetics_name
+    def get_images_of_type(type):
+        directory = f"./static/GooberDash/goober_item/{type.lower()}"
+        images = [os.path.join(directory, file) for file in os.listdir(directory)]
+        return sorted(images, key=lambda x: ("default" not in x, x))
 
     with tab1:
-        # directories = [
-        #    "./static/GooberDash/goober_item/color",
-        #    "./static/GooberDash/goober_item/hand",
-        #    "./static/GooberDash/goober_item/hat",
-        #    "./static/GooberDash/goober_item/suit",
-        # ]
-
-        # all_files = []
-
-        # for directory in directories:
-        #    try:
-        #        files = os.listdir(directory)
-        #        all_files.extend([os.path.join(directory, file) for file in files])
-        #    except FileNotFoundError:
-        #        st.error(f"Directory not found: {directory}")
-
-        # def process_file_path(file_path):
-        #    filename_with_extension = os.path.basename(file_path)
-        #    filename_without_extension = os.path.splitext(filename_with_extension)[0]
-        #    return filename_without_extension
-
-        # def initialize():
-        #    df = pd.DataFrame(
-        #        {
-        #            "file": all_files,
-        #            "cosmetics_name": all_files,
-        #            "select": [False] * len(all_files),
-        #            "label": [""] * len(all_files),
-        #        }
-        #    )
-        #    df.set_index("file", inplace=True)
-        #    df["cosmetics_name"] = df["cosmetics_name"].apply(process_file_path)
-        #    return df
-
-        # if "df" not in st.session_state:
-        #    df = initialize()
-        #    st.session_state.df = df
-        # else:
-        #    df = st.session_state.df
-
-        # controls = st.columns(3)
-        # with controls[0]:
-        #    batch_size = st.select_slider("Batch size:", range(10, 110, 10))
-        # with controls[1]:
-        #    row_size = st.select_slider("Row size:", range(1, 10), value=5)
-        # num_batches = ceil(len(all_files) / batch_size)
-        # with controls[2]:
-        #    page = st.selectbox("Page", range(1, num_batches + 1))
-
-        # def update(image, col):
-        #    if image in df.index:
-        #        df.at[image, col] = st.session_state[f"{col}_{image}"]
-        #        if not st.session_state[f"select_{image}"]:
-        #            st.session_state[f"label_{image}"] = ""
-        #            df.at[image, "label"] = ""
-
-        # batch = all_files[(page - 1) * batch_size : page * batch_size]
-
-        # grid = st.columns(row_size)
-        # col = 0
-        # for image in batch:
-        #    with grid[col]:
-        #        st.image(image)  # , caption=f"{image}")
-        #        st.checkbox(
-        #            # f"{os.path.basename(image)}",
-        #            f"{get_cosmetics_name(os.path.splitext(os.path.basename(image))[0])}",
-        #            key=f"select_{image}",
-        #            value=df.at[image, "select"] if image in df.index else False,
-        #            on_change=update,
-        #            args=(image, "select"),
-        #        )
-        #    col = (col + 1) % row_size
-
-        # st.write("## Selections")
-        # st.dataframe(df[["cosmetics_name", "select"]])
-
-        def get_images_of_type(type):
-            directory = f"./static/GooberDash/goober_item/{type.lower()}"
-            images = [os.path.join(directory, file) for file in os.listdir(directory)]
-            return sorted(images, key=lambda x: ("default" not in x, x))
-
-        types = ["Color", "Suit", "Hat", "Hand"]
+        types = ["🎨 Color", "👕 Suit", "🎩 Hat", "⛏️  Hand", "👀 Eyes"]
 
         cosmetics_dict = {}
 
         tabs = st.tabs(types)
-        for i in range(4):
+        for i in range(5):
             with tabs[i]:
                 img = image_select(
                     label="",
-                    images=get_images_of_type(types[i]),
+                    images=get_images_of_type(types[i].split()[1]),
                     use_container_width=False,
                 )
-                cosmetics_dict[types[i].lower()] = (
+                cosmetics_dict[types[i].split()[1].lower()] = (
                     f"{os.path.splitext(os.path.basename(img))[0]}"
                 )
 
@@ -159,6 +76,7 @@ def load_page():
             cosmetics_dict["suit"],
             cosmetics_dict["hand"],
             cosmetics_dict["color"],
+            cosmetics_dict["eyes"],
         )
         st.image(goober_file_path)
         st.write("")
@@ -174,4 +92,86 @@ def load_page():
 
         os.remove(goober_file_path)
 
-        st.markdown("######")
+        st.markdown("###")
+
+    with tab2:
+        zip_path = "./static/GooberDash/gooberdash_image_assets_20240615.zip"
+        file_size = os.path.getsize(zip_path)
+
+        def convert_size(size_bytes):
+            if size_bytes == 0:
+                return "0B"
+            size_name = ("B", "KB", "MB", "GB", "TB")
+            i = int(floor(log(size_bytes, 1024)))
+            p = pow(1024, i)
+            s = round(size_bytes / p, 2)
+            return f"{s} {size_name[i]}"
+
+        with open(zip_path, "rb") as file:
+            st.download_button(
+                label=f"**Download All Image Assets ({convert_size(file_size)})**",
+                data=file,
+                file_name="goober_dash_image_assets.zip",
+                mime="application/zip",
+                type="primary",
+            )
+
+        st.markdown("#")
+
+        types = [
+            "🏅 Badge",
+            "🎨 Color",
+            "👕 Suit",
+            "🎩 Hat",
+            "⛏️  Hand",
+            "👀 Eyes",
+            "❔ Other Stuff",
+        ]
+
+        cosmetics_dict = {}
+
+        tabs = st.tabs(types)
+
+        with tabs[0]:
+            badges_directory = "./static/GooberDash/awards"
+            badges = sorted(
+                [
+                    os.path.join(badges_directory, file)
+                    for file in os.listdir(badges_directory)
+                ]
+            )
+
+            n_rows = 1 + len(badges) // int(10)
+            rows = [st.container() for _ in range(n_rows)]
+            cols_per_row = [r.columns(10) for r in rows]
+            cols = [column for row in cols_per_row for column in row]
+
+            for image_index, badge in enumerate(badges):
+                cols[image_index].image(badge)
+
+        for i in range(5):
+            with tabs[i + 1]:
+                test_images = get_images_of_type(types[i + 1].split()[1])
+
+                n_rows = 1 + len(test_images) // int(5)
+                rows = [st.container() for _ in range(n_rows)]
+                cols_per_row = [r.columns(10) for r in rows]
+                cols = [column for row in cols_per_row for column in row]
+
+                for image_index, test_image in enumerate(test_images):
+                    cols[image_index].image(test_image)
+
+        with tabs[6]:
+            png_images = glob.glob(
+                os.path.join(
+                    "./static/GooberDash/png_decompile_20240615", "**", "*.png"
+                ),
+                recursive=True,
+            )
+            n_rows = 1 + len(png_images) // int(10)
+            rows = [st.container() for _ in range(n_rows)]
+            cols_per_row = [r.columns(10) for r in rows]
+            cols = [column for row in cols_per_row for column in row]
+
+            for image_index, png_image in enumerate(png_images):
+                cols[image_index].image(png_image)

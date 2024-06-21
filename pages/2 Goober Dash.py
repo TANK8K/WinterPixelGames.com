@@ -157,7 +157,7 @@ if st.session_state.game == "GooberDash" and st.session_state.page == "menu":
         col2.button(
             "Maze Generator (WIP)", on_click=to_maze_generator_page, type="primary"
         )
-        col3.button("Image Assets (WIP)", on_click=to_image_assets_page, type="primary")
+        col3.button("Image Assets", on_click=to_image_assets_page, type="primary")
         "---"
         st.html("<h3><i class='fa-solid fa-chart-simple'></i>&nbsp;Statistics</h3>")
         col1, col2, col3, col4 = st.columns(4)

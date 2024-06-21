@@ -47,7 +47,7 @@ def compose_images(layers, base_path):
     return canvas, images
 
 
-def generate_goober(hat, suit, hand, color):
+def generate_goober(hat, suit, hand, color, eyes="eyes"):
     layers = []
 
     # 1_left_hand_and_leg
@@ -106,7 +106,7 @@ def generate_goober(hat, suit, hand, color):
 
     # 7_eyes
     if color != "color_skelly":
-        layers.append("7_eyes/eyes")
+        layers.append(f"7_eyes/{eyes}")
 
     # 8_suit
     try:
