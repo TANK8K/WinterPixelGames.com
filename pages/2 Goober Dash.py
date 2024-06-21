@@ -20,6 +20,10 @@ def to_maze_generator_page():
     st.session_state.page = "maze_generator"
 
 
+def to_goober_generator_page():
+    st.session_state.page = "goober_generator"
+
+
 def to_image_assets_page():
     st.session_state.page = "image_assets"
 
@@ -103,6 +107,10 @@ if st.session_state.game == "GooberDash" and st.session_state.page == "menu":
                     }
                     div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(10) > div:nth-child(3) p::before {
                         font-family: "font awesome 5 Free" !important;
+                        content: "\\f544";
+                    }
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(10) > div:nth-child(4) p::before {
+                        font-family: "font awesome 5 Free" !important;
                         content: "\\f03e";
                     }
                     div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(13) > div:nth-child(1) p::before {
@@ -152,12 +160,15 @@ if st.session_state.game == "GooberDash" and st.session_state.page == "menu":
         col4.link_button("Reddit", "https://www.reddit.com/r/gooberdash")
         "---"
         st.html("<h3><i class='fa-solid fa-screwdriver-wrench'></i>&nbsp;Tools</h3>")
-        col1, col2, col3 = st.columns(3)
+        col1, col2, col3, col4 = st.columns(4)
         col1.button("Flip Level", on_click=to_flip_level_page, type="primary")
         col2.button(
             "Maze Generator (WIP)", on_click=to_maze_generator_page, type="primary"
         )
-        col3.button("Image Assets", on_click=to_image_assets_page, type="primary")
+        col3.button(
+            "Goober Generator", on_click=to_goober_generator_page, type="primary"
+        )
+        col4.button("Image Assets", on_click=to_image_assets_page, type="primary")
         "---"
         st.html("<h3><i class='fa-solid fa-chart-simple'></i>&nbsp;Statistics</h3>")
         col1, col2, col3, col4 = st.columns(4)
@@ -191,6 +202,18 @@ elif (
         )
 
         GooberDash_maze_generator()
+        back_to_menu()
+
+elif (
+    st.session_state.game == "GooberDash"
+    and st.session_state.page == "goober_generator"
+):
+    with ph.container():
+        from pages.GooberDash.Tools.goober_generator import (
+            load_page as GooberDash_goober_generator,
+        )
+
+        GooberDash_goober_generator()
         back_to_menu()
 
 elif st.session_state.game == "GooberDash" and st.session_state.page == "image_assets":
