@@ -330,14 +330,14 @@ def update_leaderboard():
                     # Calculate average_percentile
                     cur.execute(
                         """
-                    UPDATE goober_dash_time_trials_leaderboard l
-                    SET average_percentile = sub.avg_percentile
-                    FROM (
-                        SELECT user_id, ROUND(AVG(percentile)::numeric, 2) AS avg_percentile
-                        FROM goober_dash_time_trials_records
-                        GROUP BY user_id
-                    ) sub
-                    WHERE l.user_id = sub.user_id;
+                        UPDATE goober_dash_time_trials_leaderboard l
+                        SET average_percentile = sub.avg_percentile
+                        FROM (
+                            SELECT user_id, ROUND(AVG(percentile)::numeric, 2) AS avg_percentile
+                            FROM goober_dash_time_trials_records
+                            GROUP BY user_id
+                        ) sub
+                        WHERE l.user_id = sub.user_id;
                         """
                     )
 
@@ -380,7 +380,7 @@ def update_leaderboard():
                             average_percentile_diff = diffs.average_percentile_diff
                         FROM diffs
                         WHERE cur.user_id = diffs.user_id;
-                    """
+                        """
                     )
 
                     conn.commit()
@@ -393,14 +393,14 @@ def update_leaderboard():
                         SELECT level_id, user_id, time, upload_time, rank, username, level_name, rank_out_of
                         FROM goober_dash_time_trials_records
                         WHERE rank = 1
-                    """
+                        """
                     )
                     records = cur.fetchall()
 
                     insert_query = """
                     INSERT INTO goober_dash_time_trials_world_records (level_id, user_id, time, upload_time, rank, username, level_name, rank_out_of)
                     VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
-                    ON CONFLICT DO NOTHING
+                    ON CONFLICT (user_id, upload_time) DO NOTHING
                     """
 
                     cur.executemany(insert_query, records)

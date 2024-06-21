@@ -300,9 +300,9 @@ def load_page():
         )
         tab1, tab2, tab3 = st.tabs(
             [
-                "🏆 Performance Points Leaderboard",
-                "🥇 World Records",
-                "🥧 WRs Distribution",
+                "🏆 **Performance Points Leaderboard**",
+                "🥇 **World Records**",
+                "🥧 **WRs Distribution**",
             ]
         )
 

@@ -160,7 +160,7 @@ def generate_goober(hat, suit, hand, color):
 
     if hat == "hat_devil":
         # Extract tint color from the final output
-        coord = (190, 210)
+        coord = (190, 220)
         tint_color = get_pixel_color(composed_image, coord)
 
         # Apply tint to the specific layer

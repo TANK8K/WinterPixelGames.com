@@ -152,11 +152,11 @@ def load_page():
         if user_id not in [None, ""]:
             tab1, tab2, tab3, tab4, tab5 = st.tabs(
                 [
-                    "📓 General Info",
-                    "📊 Season Records",
-                    "🏅 Medals",
-                    "🗒️ Stats",
-                    "⏳ Time Trials Records",
+                    "📓 **General Info**",
+                    "📊 **Season Records**",
+                    "🏅 **Medals**",
+                    "🗒️ **Stats**",
+                    "⏳ **Time Trials Records**",
                 ]
             )
 
@@ -518,7 +518,7 @@ def load_page():
                     delta_second = int(user_leaderboard.loc[0, "second_diff"])
                     delta_third = int(user_leaderboard.loc[0, "third_diff"])
                     delta_completed_levels = int(user_leaderboard.loc[0, "count_diff"])
-                    delta_average_percentile = int(
+                    delta_average_percentile = float(
                         user_leaderboard.loc[0, "average_percentile_diff"]
                     )
 

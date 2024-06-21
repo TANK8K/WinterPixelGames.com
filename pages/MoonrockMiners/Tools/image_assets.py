@@ -18,4 +18,4 @@ def load_page():
         """,
         icon="⚠️",
     )
-    tab1 = st.tabs(["Gallery"])
+    tab1 = st.tabs(["🖼️ **Gallery**"])

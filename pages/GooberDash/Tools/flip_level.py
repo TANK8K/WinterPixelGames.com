@@ -160,8 +160,8 @@ def load_page():
             if method == "Level ID":
                 uuid = upload_level(response, output)
                 url = f"https://gooberdash.winterpixel.io?play={uuid}"
-                st.write(f"The Level ID of the output Level is {uuid}.")
-                st.link_button("**Play Level on Browser**", url)
+                st.write(f"The Level ID of the output Level is {uuid}")
+                st.link_button("**Play Level on Browser**", url, type="primary")
             elif method == "JSON":
                 st.download_button(
                     label="Download Output",
