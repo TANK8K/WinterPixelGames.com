@@ -1,5 +1,6 @@
 from PIL import Image
 import os
+import datetime
 
 
 def trim_transparent_space(image):
@@ -188,7 +189,8 @@ def generate_goober(hat, suit, hand, color, eyes="eyes"):
     else:
         trimmed_img = img
 
-    trimmed_final_output_path = "/tmp/trimmed_final_output.png"
+    current_time = str(int(datetime.datetime.now().timestamp()))
+    trimmed_final_output_path = f"/tmp/trimmed_final_output_{current_time}.png"
     trimmed_img.save(trimmed_final_output_path)
     os.remove(final_output_path)
 
