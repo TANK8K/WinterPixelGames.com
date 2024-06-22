@@ -1,7 +1,5 @@
 import streamlit as st
-from common_config import common_config, back_to_home, back_to_menu
-
-common_config()
+from common_config import back_to_home, back_to_menu
 
 try:
     if st.session_state.game != "RocketBotRoyale":
@@ -151,7 +149,7 @@ elif (
     and st.session_state.page == "optimize_crate"
 ):
     with ph.container():
-        from pages.RocketBotRoyale.Tools.optimize_crate import (
+        from all_pages.RocketBotRoyale.Tools.optimize_crate import (
             load_page as RocketBotRoyale_optimize_crate,
         )
 
@@ -163,7 +161,7 @@ elif (
     and st.session_state.page == "image_assets"
 ):
     with ph.container():
-        from pages.RocketBotRoyale.Tools.image_assets import (
+        from all_pages.RocketBotRoyale.Tools.image_assets import (
             load_page as RocketBotRoyale_image_assets,
         )
 
@@ -175,7 +173,7 @@ elif (
     and st.session_state.page == "player_info"
 ):
     with ph.container():
-        from pages.RocketBotRoyale.Statistics.player_info import (
+        from all_pages.RocketBotRoyale.Statistics.player_info import (
             load_page as RocketBotRoyale_player_info,
         )
 
@@ -187,7 +185,7 @@ elif (
     and st.session_state.page == "season_leaderboard"
 ):
     with ph.container():
-        from pages.RocketBotRoyale.Statistics.season_leaderboard import (
+        from all_pages.RocketBotRoyale.Statistics.season_leaderboard import (
             load_page as RocketBotRoyale_season_leaderboard,
         )
 

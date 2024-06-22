@@ -3,7 +3,7 @@ import re
 import streamlit as st
 import numpy as np
 from io import StringIO
-from pages.GooberDash.Backend.levels import upload_level, download_level
+from all_pages.GooberDash.Backend.levels import upload_level, download_level
 
 
 def flip_json(file_name, data):

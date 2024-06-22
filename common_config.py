@@ -36,7 +36,7 @@ def back_to_home():
             }</style>"""
     )
     st.divider()
-    st.page_link("Home.py", label="Back to Home")
+    st.page_link("./all_pages/0 Home.py", label="Back to Home")
 
 
 def back_to_menu():

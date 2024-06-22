@@ -1,8 +1,5 @@
 import streamlit as st
-from common_config import common_config, back_to_home, back_to_menu
-
-
-common_config()
+from common_config import back_to_home, back_to_menu
 
 try:
     if st.session_state.game != "GooberDash":
@@ -188,7 +185,9 @@ if st.session_state.game == "GooberDash" and st.session_state.page == "menu":
 
 elif st.session_state.game == "GooberDash" and st.session_state.page == "flip_level":
     with ph.container():
-        from pages.GooberDash.Tools.flip_level import load_page as GooberDash_flip_level
+        from all_pages.GooberDash.Tools.flip_level import (
+            load_page as GooberDash_flip_level,
+        )
 
         GooberDash_flip_level()
         back_to_menu()
@@ -197,7 +196,7 @@ elif (
     st.session_state.game == "GooberDash" and st.session_state.page == "maze_generator"
 ):
     with ph.container():
-        from pages.GooberDash.Tools.maze_generator import (
+        from all_pages.GooberDash.Tools.maze_generator import (
             load_page as GooberDash_maze_generator,
         )
 
@@ -209,7 +208,7 @@ elif (
     and st.session_state.page == "goober_generator"
 ):
     with ph.container():
-        from pages.GooberDash.Tools.goober_generator import (
+        from all_pages.GooberDash.Tools.goober_generator import (
             load_page as GooberDash_goober_generator,
         )
 
@@ -218,7 +217,7 @@ elif (
 
 elif st.session_state.game == "GooberDash" and st.session_state.page == "image_assets":
     with ph.container():
-        from pages.GooberDash.Tools.image_assets import (
+        from all_pages.GooberDash.Tools.image_assets import (
             load_page as GooberDash_image_assets,
         )
 
@@ -230,7 +229,7 @@ elif (
     and st.session_state.page == "time_trials_certified_levels"
 ):
     with ph.container():
-        from pages.GooberDash.Statistics.time_trials_certified_levels import (
+        from all_pages.GooberDash.Statistics.time_trials_certified_levels import (
             load_page as GooberDash_time_trials_certified_levels,
         )
 
@@ -239,7 +238,7 @@ elif (
 
 elif st.session_state.game == "GooberDash" and st.session_state.page == "player_info":
     with ph.container():
-        from pages.GooberDash.Statistics.player_info import (
+        from all_pages.GooberDash.Statistics.player_info import (
             load_page as GooberDash_player_info,
         )
 
@@ -248,7 +247,7 @@ elif st.session_state.game == "GooberDash" and st.session_state.page == "player_
 
 elif st.session_state.game == "GooberDash" and st.session_state.page == "level_info":
     with ph.container():
-        from pages.GooberDash.Statistics.level_info import (
+        from all_pages.GooberDash.Statistics.level_info import (
             load_page as GooberDash_level_info,
         )
 
@@ -260,7 +259,7 @@ elif (
     and st.session_state.page == "season_leaderboard"
 ):
     with ph.container():
-        from pages.GooberDash.Statistics.season_leaderboard import (
+        from all_pages.GooberDash.Statistics.season_leaderboard import (
             load_page as GooberDash_season_leaderboard,
         )
 

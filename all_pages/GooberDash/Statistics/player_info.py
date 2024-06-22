@@ -7,8 +7,8 @@ import datetime
 import json
 import os
 from math import floor, ceil, log10, isnan
-from pages.GooberDash.Backend.get_user import user_info, user_info_2
-from pages.GooberDash.Backend.goober_generator import generate_goober
+from all_pages.GooberDash.Backend.get_user import user_info, user_info_2
+from all_pages.GooberDash.Backend.goober_generator import generate_goober
 
 conn = st.connection("postgresql", type="sql")
 

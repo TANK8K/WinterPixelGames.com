@@ -4,7 +4,7 @@ import streamlit as st
 import flag
 import re
 from datetime import datetime
-from pages.GooberDash.Backend.fetch_full_time_trials_leaderboard import (
+from all_pages.GooberDash.Backend.fetch_full_time_trials_leaderboard import (
     fetch_leaderboard,
     list_levels,
 )

@@ -1,14 +1,12 @@
 import streamlit as st
-from common_config import common_config, back_to_home, back_to_menu
-
-common_config()
+from common_config import back_to_home, back_to_menu
 
 try:
-    if st.session_state.game != "GooberRoyale":
+    if st.session_state.game != "GooberShot":
         st.session_state.page = "menu"
 except Exception:
     st.session_state.page = "menu"
-st.session_state.game = "GooberRoyale"
+st.session_state.game = "GooberShot"
 
 
 def to_image_assets_page():
@@ -25,7 +23,7 @@ def to_season_leaderboard_page():
 
 ph = st.empty()
 
-if st.session_state.game == "GooberRoyale" and st.session_state.page == "menu":
+if st.session_state.game == "GooberShot" and st.session_state.page == "menu":
     with ph.container():
         st.html(
             """<style>
@@ -66,17 +64,17 @@ if st.session_state.game == "GooberRoyale" and st.session_state.page == "menu":
                     }
                     </style>"""
         )
-        st.image("static/GooberRoyale/goober_royale_logo_text.png", width=330)
+        st.image("static/GooberShot/goober_shot_logo_text.png", width=330)
         st.markdown(
-            """**Goober Royale** is a multiplayer battle royale game in which each player controls a character (called a "goober") and must collect weapons, power-ups and other items to eliminate their opponents. The clashes bring together 16 players on a map and the objective will be to be the last survivor of the game. You can play alone or in a team of 4 players. Your Goober will have several weapons, a main missile that reloads at regular intervals and a secondary accessory such as mines, a tornado, a drill and many others. Also use your jetpack to move around the map more easily, reach high places and surprise your opponents. Completing games and missions will earn you gold coins that you can spend either to improve your Goober's skills or to buy cosmetics that will give your character a unique style. An online ranking will allow you to see the 100 best players in the world and in your region."""
+            """**Goober Shot** throws you into thrilling online archery battles against three other players! Prepare your bow, sharpen your arrows, enter the arena, and unleash your skills as a master archer. Remember, every arrow counts! Show off your precision and reflexes as you aim, shoot, and dodge with finesse. Rise through the ranks, climb the global leaderboards, and prove yourself as the ultimate archery champion. Will you emerge as the greatest archer in the realm? """
         )
         st.info(
-            " **Goober Royale** is in **beta** currently (Bugs are expected and Data may be reset in future) ",
+            " **Goober Shot** is in **beta** currently (Bugs are expected and Data may be reset in future) ",
             icon="ℹ️",
         )
         st.html("<h4>Platform</h4>")
         col1, col2 = st.columns(2)
-        col1.link_button("Browser", "https://gooberroyale.winterpixel.io")
+        col1.link_button("Browser", "https://goobershot.winterpixel.io")
         st.html("<h4>Community</h4>")
         col1, col2 = st.columns(2)
         col1.link_button("Discord", "https://discord.com/invite/kdGuBhXz2r")
@@ -95,34 +93,32 @@ if st.session_state.game == "GooberRoyale" and st.session_state.page == "menu":
         )
         back_to_home()
 
-elif (
-    st.session_state.game == "GooberRoyale" and st.session_state.page == "image_assets"
-):
+elif st.session_state.game == "GooberShot" and st.session_state.page == "image_assets":
     with ph.container():
-        from pages.GooberRoyale.Tools.image_assets import (
-            load_page as GooberRoyale_image_assets,
+        from all_pages.GooberShot.Tools.image_assets import (
+            load_page as GooberShot_image_assets,
         )
 
-        GooberRoyale_image_assets()
+        GooberShot_image_assets()
         back_to_menu()
 
-elif st.session_state.game == "GooberRoyale" and st.session_state.page == "player_info":
+elif st.session_state.game == "GooberShot" and st.session_state.page == "player_info":
     with ph.container():
-        from pages.GooberRoyale.Statistics.player_info import (
-            load_page as GooberRoyale_player_info,
+        from all_pages.GooberShot.Statistics.player_info import (
+            load_page as GooberShot_player_info,
         )
 
-        GooberRoyale_player_info()
+        GooberShot_player_info()
         back_to_menu()
 
 elif (
-    st.session_state.game == "GooberRoyale"
+    st.session_state.game == "GooberShot"
     and st.session_state.page == "season_leaderboard"
 ):
     with ph.container():
-        from pages.GooberRoyale.Statistics.season_leaderboard import (
-            load_page as GooberRoyale_season_leaderboard,
+        from all_pages.GooberShot.Statistics.season_leaderboard import (
+            load_page as GooberShot_season_leaderboard,
         )
 
-        GooberRoyale_season_leaderboard()
+        GooberShot_season_leaderboard()
         back_to_menu()

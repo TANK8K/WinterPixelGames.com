@@ -1,7 +1,7 @@
 import streamlit as st
 import os
 from streamlit_image_select import image_select
-from pages.GooberDash.Backend.goober_generator import generate_goober
+from all_pages.GooberDash.Backend.goober_generator import generate_goober
 
 
 def load_page():

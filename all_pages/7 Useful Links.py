@@ -1,11 +1,5 @@
 import streamlit as st
-from common_config import common_config, back_to_home
-
-common_config()
-
-# div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) > div:nth-child(2) p::before {
-#    background-image: url("./app/static/GooberDash/goober_dash_favicon.png");
-# }
+from common_config import back_to_home
 
 st.html(
     """

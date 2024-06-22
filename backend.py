@@ -3,7 +3,7 @@ import time
 import requests
 import json
 import threading
-from pages.GooberDash.Backend.time_trials_sql import (
+from all_pages.GooberDash.Backend.time_trials_sql import (
     update_leaderboard as GooberDash_update_time_trials_leaderboard,
 )
 

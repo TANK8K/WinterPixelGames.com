@@ -1,7 +1,5 @@
 import streamlit as st
-from common_config import common_config, back_to_home
-
-common_config()
+from common_config import back_to_home
 
 st.html(
     """

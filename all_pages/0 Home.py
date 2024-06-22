@@ -1,10 +1,7 @@
 import streamlit as st
-from common_config import common_config
-
-common_config()
 
 
-def load_website():
+def home_page():
     st.image("static/streamlit_banner_v4.png")
     st.markdown(
         '<span id="welcome" style="font-weight: 800; text-align: center; display: inline-block; width: 100%;"><span style="display: inline-block;">Welcome to :blue-background[WinterPixelGames]&nbsp;!</span><span style="display: inline-block;">A website which provides useful Tools & Statistics of games made by [Winterpixel Games](https://www.winterpixel.com/)</span></span>',
@@ -108,19 +105,66 @@ def load_website():
 
     col1, col2, col3, col4, col5 = st.columns(5)
     if col1.button("​", key="RBR"):
-        st.switch_page("pages/1 Rocket Bot Royale.py")
+        st.switch_page("all_pages/1 Rocket Bot Royale.py")
 
     if col2.button("​", key="GD"):
-        st.switch_page("pages/2 Goober Dash.py")
+        st.switch_page("all_pages/2 Goober Dash.py")
 
     if col3.button("​", key="GR"):
-        st.switch_page("pages/3 Goober Royale.py")
+        st.switch_page("all_pages/3 Goober Royale.py")
 
     if col4.button("​", key="GS"):
-        st.switch_page("pages/4 Goober Shot.py")
+        st.switch_page("all_pages/4 Goober Shot.py")
 
     if col5.button("​", key="MM"):
-        st.switch_page("pages/5 Moonrock Miners.py")
+        st.switch_page("all_pages/5 Moonrock Miners.py")
 
 
-load_website()
+pg = st.navigation(
+    {
+        "": [
+            st.Page(home_page, title="Home", default=True, url_path=""),
+            st.Page(
+                "all_pages/1 Rocket Bot Royale.py",
+                title="Rocket Bot Royale",
+                url_path="Rocket_Bot_Royale",
+            ),
+            st.Page(
+                "all_pages/2 Goober Dash.py",
+                title="Goober Dash",
+                url_path="Goober_Dash",
+            ),
+            st.Page(
+                "all_pages/3 Goober Royale.py",
+                title="Goober Royale",
+                url_path="Goober_Royale",
+            ),
+            st.Page(
+                "all_pages/4 Goober Shot.py",
+                title="Goober Shot",
+                url_path="Goober_Shot",
+            ),
+            st.Page(
+                "all_pages/5 Moonrock Miners.py",
+                title="Moonrock Miners",
+                url_path="Moonrock_Miners",
+            ),
+            st.Page(
+                "all_pages/6 About.py",
+                title="About",
+                url_path="About",
+            ),
+            st.Page(
+                "all_pages/7 Useful Links.py",
+                title="Useful Links",
+                url_path="Userful_Links",
+            ),
+        ],
+    }
+)
+
+
+try:
+    pg.run()
+except Exception as e:
+    print(e)
