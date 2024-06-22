@@ -151,9 +151,12 @@ def generate_goober(hat, suit, hand, color, eyes="eyes"):
 
     base_path = "./static/GooberDash/goober_overlay"
 
+    # Unique timestamp to prevent bug
+    current_time = str(datetime.datetime.now().timestamp())
+
     # Compose images without tint
     canvas, images = compose_images(layers, base_path)
-    intermediate_output_path = "/tmp/intermediate_output.png"
+    intermediate_output_path = f"/tmp/intermediate_output_{current_time}.png"
     canvas.save(intermediate_output_path)
 
     # Load the intermediate composed image
@@ -189,7 +192,6 @@ def generate_goober(hat, suit, hand, color, eyes="eyes"):
     else:
         trimmed_img = img
 
-    current_time = str(int(datetime.datetime.now().timestamp()))
     trimmed_final_output_path = f"/tmp/trimmed_final_output_{current_time}.png"
     trimmed_img.save(trimmed_final_output_path)
     os.remove(final_output_path)
