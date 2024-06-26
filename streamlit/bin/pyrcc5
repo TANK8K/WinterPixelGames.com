@@ -1,2 +1,0 @@
-#!/bin/sh
-exec /root/miniconda3/envs/streamlit/bin/python -m PyQt5.pyrcc_main ${1+"$@"}

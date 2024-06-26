@@ -1,8 +1,0 @@
-    using gcc : : x86_64-conda-linux-gnu-c++
-              : # options
-                  <archiver>x86_64-conda-linux-gnu-ar
-                  <cflags>"-march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /root/miniconda3/envs/streamlit/include -fdebug-prefix-map=/croot/boost-split_1696761760337/work=/usr/local/src/conda/boost-split-1.82.0 -fdebug-prefix-map=/root/miniconda3/envs/streamlit=/usr/local/src/conda-prefix"
-                  <cxxflags>"-fvisibility-inlines-hidden -std=c++17 -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /root/miniconda3/envs/streamlit/include -fdebug-prefix-map=/croot/boost-split_1696761760337/work=/usr/local/src/conda/boost-split-1.82.0 -fdebug-prefix-map=/root/miniconda3/envs/streamlit=/usr/local/src/conda-prefix"
-                  <linkflags>"-Wl,-O2 -Wl,--sort-common -Wl,--as-needed -Wl,-z,relro -Wl,-z,now -Wl,--disable-new-dtags -Wl,--gc-sections -Wl,-rpath,/root/miniconda3/envs/streamlit/lib -Wl,-rpath-link,/root/miniconda3/envs/streamlit/lib -L/root/miniconda3/envs/streamlit/lib"
-                  <ranlib>x86_64-conda-linux-gnu-ranlib
-              ;

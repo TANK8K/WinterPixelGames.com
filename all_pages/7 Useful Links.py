@@ -1,5 +1,7 @@
 import streamlit as st
-from common_config import back_to_home
+from common_config import back_to_home, set_localization, footer_and_language
+
+_ = set_localization(st.session_state.language)
 
 st.html(
     """
@@ -32,7 +34,7 @@ st.html(
         div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) > div:nth-child(4) p::before {
             background-image: url("./app/static/MoonrockMiners/moonrock_miners_favicon.png");
         }
-        div[data-testid="stVerticalBlock"] div:nth-child(10) > div p::before {
+        p::before {
             background-image: url("./app/static/wph_logo.png");
         }
         div[data-testid="stVerticalBlock"] div:nth-child(10) > div p::before, div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) > div p::before {
@@ -62,49 +64,58 @@ st.html(
 )
 
 st.html(
-    """
-    <h4><i class="fa-solid fa-arrow-up-right-from-square" style="display: inline; margin: 0 5px 8px 0; width: 25px"></i>Useful Links</h4><h3><span style="font-size: 25px;">Staging Servers<span></h3>
-    """
+    '<h4><i class="fa-solid fa-arrow-up-right-from-square" style="display: inline; margin: 0 5px 8px 0; width: 25px"></i>'
+    + _("Useful Links")
+    + '</h4><h3><span style="font-size: 25px;">'
+    + _("Staging Servers")
+    + "<span></h3>"
 )
 
 st.markdown(
-    """**Staging Servers** are seperate servers which are used for testing new features before releasing. Usually updates are released on **Staging Servers** a few days before public release. Developers invite members to test out some upcoming features and ask for feedbacks in **Offcial Winterpixel Games Discord server** occasionally.
+    _(
+        """**Staging Servers** are seperate servers which are used for testing new features before releasing. Usually updates are released on **Staging Servers** a few days before public release. Developers invite members to test out some upcoming features and ask for feedbacks in **Offcial Winterpixel Games Discord server** occasionally.
 """
+    )
 )
 
 col1, col2, col3, col4 = st.columns(4)
 # col1, col2, col3, col4, col5 = st.columns(5)
-col1.link_button("Rocket Bot Royale", "https://staging-rocketbotroyale.winterpixel.io/")
+col1.link_button(
+    _("Rocket Bot Royale"), "https://staging-rocketbotroyale.winterpixel.io/"
+)
 # col2.link_button("Goober Dash", "https://upguys-staging.winterpixel.io/")
 col2.link_button(
-    "Goober Royale",
+    _("Goober Royale"),
     "https://gooberroyale-staging.winterpixel.io/",
 )
-col3.link_button("Goober Shot", "https://gooberfall-staging.winterpixel.io/")
-col4.link_button("Moonrock Miners", "https://staging-asteroids.winterpixel.io/")
+col3.link_button(_("Goober Shot"), "https://gooberfall-staging.winterpixel.io/")
+col4.link_button(_("Moonrock Miners"), "https://staging-asteroids.winterpixel.io/")
 
 st.error(
-    "**Staging Servers** use seperate databases. **DO NOT** spend money on **Staging Server** as items cannot be transferred.",
+    _(
+        "**Staging Servers** use seperate databases. **DO NOT** spend money on **Staging Server** as items cannot be transferred."
+    ),
     icon="🚨",
 )
 
 "---"
 
-st.html(
-    """
-    <h3><span style="font-size: 25px;">Friendly Websites<span></h3>
-    """
-)
+st.html('<h3><span style="font-size: 25px;">' + _("Friendly Websites") + "<span></h3>")
 
 st.markdown(
-    """[**WinterPixel Helper** (WpH)](https://wph.ambersys.app/) is a community-driven site made by [**thehermit**](https://ambersys.app/) which provides useful **Scripts** of games made by **[Winterpixel Games](https://www.winterpixel.com/)**, including **[Rocket Bot Royale](./Rocket_Bot_Royale)**, **[Goober Dash](./Goober_Dash)**, **[Goober Royale](./Goober_Royale)**.
+    _(
+        """[**WinterPixel Helper** (WpH)](https://wph.ambersys.app/) is a community-driven site made by [**thehermit**](https://ambersys.app/) which provides useful **Scripts** of games made by **[Winterpixel Games](https://www.winterpixel.com/)**, including **[Rocket Bot Royale](./Rocket_Bot_Royale)**, **[Goober Dash](./Goober_Dash)**, **[Goober Royale](./Goober_Royale)**.
 """
+    )
 )
 
-st.link_button("WinterPixel Helper", "https://wph.ambersys.app/")
+st.link_button(_("WinterPixel Helper"), "https://wph.ambersys.app/")
 
 st.warning(
-    "The scripts in **WinterPixel Helper** should **NOT** be discussed on the **Official Winterpixel Games Discord server** as Moderators **DO NOT APPROVE** promoting non-official tools and scripts. Member who breaks the rules may result in a ban. However, you can enlighten people to this project through DMs and the such.",
+    _(
+        "The scripts in **WinterPixel Helper** should **NOT** be discussed on the **Official Winterpixel Games Discord server** as Moderators **DO NOT APPROVE** promoting non-official tools and scripts. Member who breaks the rules may result in a ban. However, you can enlighten people to this project through DMs and the such."
+    ),
     icon="⚠️",
 )
-back_to_home()
+back_to_home(st.session_state.language)
+footer_and_language(st.session_state.language)

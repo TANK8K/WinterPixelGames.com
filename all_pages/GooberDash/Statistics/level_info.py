@@ -1,4 +1,7 @@
 import streamlit as st
+from common_config import set_localization
+
+_ = set_localization(st.session_state.language)
 
 
 def load_page():
@@ -7,5 +10,7 @@ def load_page():
         width=280,
     )
     st.html(
-        '<span style="font-size: 25px; font-weight: bold;"><i class="fa-solid fa-map" style="display: inline; margin: 0 5px 8px 0; width: 25px"></i>Level Info<span>'
+        '<span style="font-size: 25px; font-weight: bold;"><i class="fa-solid fa-map" style="display: inline; margin: 0 5px 8px 0; width: 25px"></i>'
+        + _("Level Info")
+        + "<span>"
     )

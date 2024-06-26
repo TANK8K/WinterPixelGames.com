@@ -1,5 +1,13 @@
 import streamlit as st
-from common_config import back_to_home, back_to_menu
+from common_config import (
+    back_to_home,
+    back_to_menu,
+    set_localization,
+    footer_and_language,
+)
+
+_ = set_localization(st.session_state.language)
+footer_and_language(st.session_state.language)
 
 try:
     if st.session_state.game != "RocketBotRoyale":
@@ -98,12 +106,14 @@ if st.session_state.game == "RocketBotRoyale" and st.session_state.page == "menu
         )
         st.image("static/RocketBotRoyale/rocket_bot_royale_banner_v2.png")
         st.markdown(
-            """**ROCKET BOT ROYALE** is a fun new take on the online battle royale formula. Powerful, wall-climbing, rocket-jumping, artillery-pumping Robo-Tanks are the vehicle of choice in this fast-paced shootout, where the goal is to survive longer than the competition. Collect the loot to upgrade your arsenal, tunnel into the terrain to take cover and collect buried treasure, and avoid the rising water levels to be the blast one standing!"""
+            _(
+                """**ROCKET BOT ROYALE** is a fun new take on the online battle royale formula. Powerful, wall-climbing, rocket-jumping, artillery-pumping Robo-Tanks are the vehicle of choice in this fast-paced shootout, where the goal is to survive longer than the competition. Collect the loot to upgrade your arsenal, tunnel into the terrain to take cover and collect buried treasure, and avoid the rising water levels to be the blast one standing!"""
+            )
         )
 
-        st.html("<h4>Platforms</h4>")
+        st.html("<h4>" + _("Platforms") + "</h4>")
         col1, col2, col3, col4 = st.columns(4)
-        col1.link_button("Browser", "https://rocketbotroyale.winterpixel.io")
+        col1.link_button(_("Browser"), "https://rocketbotroyale.winterpixel.io")
         col2.link_button(
             "Steam", "https://store.steampowered.com/app/1748390/Rocket_Bot_Royale"
         )
@@ -116,7 +126,7 @@ if st.session_state.game == "RocketBotRoyale" and st.session_state.page == "menu
             "https://apps.apple.com/us/app/rocket-bot-royale/id1585995080",
         )
 
-        st.html("<h4>Communities</h4>")
+        st.html("<h4>" + _("Communities") + "</h4>")
         col1, col2, col3, col4 = st.columns(4)
         col1.link_button("Discord", "https://discord.com/invite/kdGuBhXz2r")
         col2.link_button("Steam", "https://steamcommunity.com/app/1748390/discussions")
@@ -126,22 +136,40 @@ if st.session_state.game == "RocketBotRoyale" and st.session_state.page == "menu
         )
         col4.link_button("Reddit", "https://www.reddit.com/r/RocketBotRoyale")
         "---"
-        st.html("<h3><i class='fa-solid fa-screwdriver-wrench'></i>&nbsp;Tools</h3>")
+        st.html(
+            "<h3><i class='fa-solid fa-screwdriver-wrench'></i>&nbsp;"
+            + _("Tools")
+            + "</h3>"
+        )
         col1, col2 = st.columns(2)
         col1.button(
-            "Optimize Crate (WIP)", on_click=to_optimize_crate_page, type="primary"
+            _("Optimize Crate") + " (" + _("WIP") + ")",
+            on_click=to_optimize_crate_page,
+            type="primary",
         )
-        col2.button("Image Assets (WIP)", on_click=to_image_assets_page, type="primary")
-        "---"
-        st.html("<h3><i class='fa-solid fa-chart-simple'></i>&nbsp;Statistics</h3>")
-        col1, col2 = st.columns(2)
-        col1.button("Player Info (WIP)", on_click=to_player_info_page, type="primary")
         col2.button(
-            "Season Leaderboard (WIP)",
+            _("Image Assets") + " (" + _("WIP") + ")",
+            on_click=to_image_assets_page,
+            type="primary",
+        )
+        "---"
+        st.html(
+            "<h3><i class='fa-solid fa-chart-simple'></i>&nbsp;"
+            + _("Statistics")
+            + "</h3>"
+        )
+        col1, col2 = st.columns(2)
+        col1.button(
+            _("Player Info") + " (" + _("WIP") + ")",
+            on_click=to_player_info_page,
+            type="primary",
+        )
+        col2.button(
+            _("Season Leaderboard") + " (" + _("WIP") + ")",
             on_click=to_season_leaderboard_page,
             type="primary",
         )
-        back_to_home()
+        back_to_home(st.session_state.language)
 
 
 elif (
@@ -154,7 +182,7 @@ elif (
         )
 
         RocketBotRoyale_optimize_crate()
-        back_to_menu()
+        back_to_menu(st.session_state.language)
 
 elif (
     st.session_state.game == "RocketBotRoyale"
@@ -166,7 +194,7 @@ elif (
         )
 
         RocketBotRoyale_image_assets()
-        back_to_menu()
+        back_to_menu(st.session_state.language)
 
 elif (
     st.session_state.game == "RocketBotRoyale"
@@ -178,7 +206,7 @@ elif (
         )
 
         RocketBotRoyale_player_info()
-        back_to_menu()
+        back_to_menu(st.session_state.language)
 
 elif (
     st.session_state.game == "RocketBotRoyale"
@@ -190,4 +218,4 @@ elif (
         )
 
         RocketBotRoyale_season_leaderboard()
-        back_to_menu()
+        back_to_menu(st.session_state.language)

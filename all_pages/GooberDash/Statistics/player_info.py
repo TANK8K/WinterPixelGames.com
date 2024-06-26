@@ -9,6 +9,9 @@ import os
 from math import floor, ceil, log10, isnan
 from all_pages.GooberDash.Backend.get_user import user_info, user_info_2
 from all_pages.GooberDash.Backend.goober_generator import generate_goober
+from common_config import set_localization
+
+_ = set_localization(st.session_state.language)
 
 conn = st.connection("postgresql", type="sql")
 
@@ -74,15 +77,17 @@ def load_page():
             width=280,
         )
         st.html(
-            '<span style="font-size: 25px; font-weight: bold;"><i class="fa-solid fa-user" style="display: inline; margin: 0 5px 8px 0; width: 25px"></i>Player Info<span>'
+            '<span style="font-size: 25px; font-weight: bold;"><i class="fa-solid fa-user" style="display: inline; margin: 0 5px 8px 0; width: 25px"></i>'
+            + _("Player Info")
+            + "<span>"
         )
 
         user_columns = st.columns((5, 1, 5))
 
         with user_columns[0]:
             user = st.text_input(
-                "Search Player",
-                placeholder="Username or User ID",
+                _("Search Player"),
+                placeholder=_("Username or User ID"),
                 value=None,
             )
 
@@ -134,10 +139,11 @@ def load_page():
             elif len(users_found_combined) > 1:
                 with user_columns[2]:
                     player_name = st.selectbox(
-                        "Select Player",
+                        _("Select Player"),
                         users_found_combined["Player"],
                         index=None,
-                        placeholder=f"{len(users_found_combined)} Players found",
+                        placeholder=f"{len(users_found_combined)} "
+                        + _("Players found"),
                     )
                     if player_name is not None:
                         user_id = users_found_combined.loc[
@@ -146,17 +152,17 @@ def load_page():
                     else:
                         user_id = None
             else:
-                st.error("❌ No Players Found")
+                st.error("❌ " + _("No Players Found"))
                 user_id = None
 
         if user_id not in [None, ""]:
             tab1, tab2, tab3, tab4, tab5 = st.tabs(
                 [
-                    "📓 **General Info**",
-                    "📊 **Season Records**",
-                    "🏅 **Medals**",
-                    "🗒️ **Stats**",
-                    "⏳ **Time Trials Records**",
+                    "📓 **" + _("General Info") + "**",
+                    "📊 **" + _("Season Records") + "**",
+                    "🏅 **" + _("Medals") + "**",
+                    "🗒️ **" + _("Stats") + "**",
+                    "⏳ **" + _("Time Trials Records") + "**",
                 ]
             )
 
@@ -472,9 +478,9 @@ def load_page():
             #    )
             ###################################################################################################
             with tab1:
-                st.write("WIP")
-                st.write(f"Display Name: {player_name}")
-                st.write(f"User ID: {user_id}")
+                st.write(_("WIP"))
+                st.write(_("Display Name") + f": {player_name.replace('-','')}")
+                st.write(_("User ID") + f": {user_id}")
                 users_info_api_res = user_info(user_id)
                 cosmetics_dict = json.loads(users_info_api_res)["skin"]
                 goober_file_path = generate_goober(
@@ -486,14 +492,17 @@ def load_page():
                 st.image(goober_file_path)
                 os.remove(goober_file_path)
             with tab2:
-                st.write("WIP")
+                st.write(_("WIP"))
             with tab3:
-                st.write("WIP")
+                st.write(_("WIP"))
             with tab4:
-                st.write("WIP")
+                st.write(_("WIP"))
             with tab5:
                 st.caption(
-                    f"Last Update: {datetime.datetime.fromtimestamp(last_update).strftime('%Y-%m-%d %H:%M:%S')} UTC (Updated Every 12 Hours)"
+                    _("Last Update")
+                    + f": {datetime.datetime.fromtimestamp(last_update).strftime('%Y-%m-%d %H:%M:%S')} UTC ("
+                    + _("Updated Every 12 Hours")
+                    + ")"
                 )
 
                 user_leaderboard = query_df_user_leaderboard(user_id)
@@ -524,24 +533,24 @@ def load_page():
 
                     if delta_performance_points != 0:
                         metric_cols[0].metric(
-                            label="Total Performance Points",
+                            label=_("Total Performance Points"),
                             value=f"{performance_points} pp",
                             delta=f"{delta_performance_points} pp",
                         )
                     else:
                         metric_cols[0].metric(
-                            label="Total Performance Points",
+                            label=_("Total Performance Points"),
                             value=f"{performance_points} pp",
                         )
                     if delta_global_rank != 0:
                         metric_cols[1].metric(
-                            label="Global Rank",
+                            label=_("Global Rank"),
                             value=(
                                 f"#{global_rank} "
                                 + (
-                                    f"(Top {top_percent:.2f}%)"
+                                    "(" + _("Top") + f"{top_percent:.2f}%)"
                                     if global_rank != 1
-                                    else "(First)"
+                                    else "(" + _("First") + ")"
                                 )
                             ),
                             delta=delta_global_rank,
@@ -549,13 +558,13 @@ def load_page():
                         )
                     else:
                         metric_cols[1].metric(
-                            label="Global Rank",
+                            label=_("Global Rank"),
                             value=(
                                 f"#{global_rank} "
                                 + (
-                                    f"(Top {top_percent:.2f}%)"
+                                    "(" + _("Top") + f"{top_percent:.2f}%)"
                                     if global_rank != 1
-                                    else "(First)"
+                                    else "(" + _("First") + ")"
                                 )
                             ),
                         )
@@ -581,24 +590,24 @@ def load_page():
                         metric_cols[5].metric(label="🥉", value=f"{third}")
                     if delta_completed_levels != 0:
                         metric_cols[6].metric(
-                            label="Completed Levels",
+                            label=_("Completed Levels"),
                             value=f"{completed_levels}/{level_counts}",
                             delta=delta_completed_levels,
                         )
                     else:
                         metric_cols[6].metric(
-                            label="Completed Levels",
+                            label=_("Completed Levels"),
                             value=f"{completed_levels}/{level_counts}",
                         )
                     if delta_average_percentile != 0:
                         metric_cols[7].metric(
-                            label="Average Percentile",
+                            label=_("Average Percentile"),
                             value=f"{average_percentile}",
                             delta=delta_average_percentile,
                         )
                     else:
                         metric_cols[7].metric(
-                            label="Average Percentile",
+                            label=_("Average Percentile"),
                             value=f"{average_percentile}",
                         )
 
@@ -667,22 +676,22 @@ def load_page():
                     def format_time(x):
                         if pd.isnull(x):
                             return None
-                        if isinstance(x, str) and x.endswith(" s"):
+                        if isinstance(x, str) and x.endswith(" " + _("s")):
                             return x
                         if isinstance(x, float) and x.is_integer():
                             x = int(x)
-                        return f"{x} s"
+                        return f"{x} " + _("s")
 
                     df_user_records["Time"] = df_user_records["Time"].apply(format_time)
 
                     def format_performance_points(x):
                         if pd.isnull(x):
                             return None
-                        if isinstance(x, str) and x.endswith(" pp"):
+                        if isinstance(x, str) and x.endswith(" " + _("pp")):
                             return x
                         if isinstance(x, float) and x.is_integer():
                             x = int(x)
-                        return f"{x} pp"
+                        return f"{x} " + _("pp")
 
                     df_user_records["Performance Points"] = df_user_records[
                         "Performance Points"
@@ -737,18 +746,18 @@ def load_page():
                     checkboxes = st.columns(3)
                     with checkboxes[0]:
                         display_level_id = st.checkbox(
-                            "Display Level ID",
+                            _("Display Level ID"),
                             value=False,
                             key="first_display_level_id",
                         )
                     with checkboxes[1]:
                         display_incompleted_levels = st.checkbox(
-                            "Display Incompleted Levels",
+                            _("Display Incompleted Levels"),
                             value=False,
                         )
                     with checkboxes[2]:
                         display_changes = st.checkbox(
-                            "Display Changes",
+                            _("Display Changes"),
                             value=False,
                         )
 
@@ -795,7 +804,7 @@ def load_page():
                             if column_name == "Time diff":
                                 symbol = "▲" if val > 0 else "▼"
                                 formatted_value = f"{abs(val):.2f}"
-                                suffix = " s"
+                                suffix = " " + _("s")
                                 return f"{symbol} {formatted_value}{suffix}"
                             elif column_name == "Performance Points diff":
                                 symbol = "▲" if val > 0 else "▼"
@@ -892,14 +901,28 @@ def load_page():
                         use_container_width=True,
                         column_order=tuple(column_order_config),
                         column_config={
-                            "Level ID": st.column_config.ListColumn(),
-                            "Watch Replay": st.column_config.LinkColumn(width="small"),
-                            "Race Ghost": st.column_config.LinkColumn(width="small"),
+                            "Level": st.column_config.TextColumn(_("Level")),
+                            "Level ID": st.column_config.ListColumn(_("Level ID")),
+                            "Time": st.column_config.TextColumn(_("Time")),
                             "Performance Points": st.column_config.TextColumn(
-                                help="Total Performance Points (pp) in all levels combined",
+                                _("Performance Points"),
+                                help=_(
+                                    "Total Performance Points (pp) in all levels combined"
+                                ),
                             ),
+                            "Rank": st.column_config.TextColumn(_("Rank")),
+                            "Out of": st.column_config.NumberColumn(_("Out of")),
                             "Percentile": st.column_config.ProgressColumn(
-                                format="%f", min_value=0, max_value=100
+                                _("Percentile"), format="%f", min_value=0, max_value=100
+                            ),
+                            "Upload Time": st.column_config.TextColumn(
+                                _("Upload Time")
+                            ),
+                            "Watch Replay": st.column_config.LinkColumn(
+                                _("Watch Replay"), width="small"
+                            ),
+                            "Race Ghost": st.column_config.LinkColumn(
+                                _("Race Ghost"), width="small"
                             ),
                             "Out of diff": st.column_config.TextColumn(
                                 "", width="small"
@@ -917,21 +940,39 @@ def load_page():
                     )
 
                     with st.expander(
-                        "**❔ How Performance Points (pp) are calculated**"
+                        "**❔ " + _("How Performance Points (pp) are calculated") + "**"
                     ):
                         st.latex(
                             r"""
-                            \textrm{Performance \ Points} = 
+                            \textrm{"""
+                            + _("Performance Points")
+                            + r"""} = 
                             \left\{
                             \begin{array}{lr}
-                            \lfloor \frac{10000}{\textrm{Rank}} \rfloor & \textrm{if \ } 1 \leq \textrm{Rank} \leq 10\\
-                            \lfloor \frac{1000}{2^{\left \lceil log_{10}\textrm{Rank} \right \rceil - 1}} \times (\frac{10^{\left \lceil log_{10}\textrm{Rank} \right \rceil - 1}}{\textrm{Rank}}+0.9) \rfloor & \textrm{if \ Rank} \gt 10
+                            \lfloor \frac{10000}{\textrm{"""
+                            + _("Rank")
+                            + r"""}} \rfloor & \textrm{"""
+                            + _("if")
+                            + r""" \ } 1 \leq \textrm{"""
+                            + _("Rank")
+                            + r"""} \leq 10\\
+                            \lfloor \frac{1000}{2^{\left \lceil log_{10}\textrm{"""
+                            + _("Rank")
+                            + r"""} \right \rceil - 1}} \times (\frac{10^{\left \lceil log_{10}\textrm{"""
+                            + _("Rank")
+                            + r"""} \right \rceil - 1}}{\textrm{"""
+                            + _("Rank")
+                            + r"""}}+0.9) \rfloor & \textrm{"""
+                            + _("if")
+                            + r""" \ """
+                            + _("Rank")
+                            + r"""} \gt 10
                             \end{array}
                             \right.
                             """
                         )
 
-                        st.markdown("Top 100 Rank to Performance Points conversion")
+                        st.markdown(_("Top 100 Rank to Performance Points conversion"))
 
                         def pp_formula(i):
                             if i <= 10:
@@ -947,19 +988,22 @@ def load_page():
                         with split[0]:
                             df = pd.DataFrame(
                                 {
-                                    "Rank": [i for i in range(1, 101)],
-                                    "Performance Points": [
+                                    _("Rank"): [i for i in range(1, 101)],
+                                    _("Performance Points"): [
                                         pp_formula(i) for i in range(1, 101)
                                     ],
-                                    "Performance Points pp": [
-                                        f"{pp_formula(i)} pp" for i in range(1, 101)
+                                    _("Performance Points pp"): [
+                                        f"{pp_formula(i)} " + _("pp")
+                                        for i in range(1, 101)
                                     ],
                                 }
                             )
                             st.dataframe(
-                                df.drop(columns=["Performance Points"]).rename(
+                                df.drop(columns=[_("Performance Points")]).rename(
                                     columns={
-                                        "Performance Points pp": "Performance Points"
+                                        _("Performance Points pp"): _(
+                                            "Performance Points"
+                                        )
                                     }
                                 ),
                                 hide_index=True,
@@ -967,12 +1011,12 @@ def load_page():
                             )
 
                         with split[2]:
-                            fig = px.line(df, x="Rank", y="Performance Points")
+                            fig = px.line(df, x=_("Rank"), y=_("Performance Points"))
                             st.plotly_chart(fig, use_container_width=True)
 
                 except KeyError as e:
                     print(e)
-                    st.error("❌ No Records Found")
+                    st.error("❌ " + _("No Records Found"))
 
     except Exception as e:
         print(e)

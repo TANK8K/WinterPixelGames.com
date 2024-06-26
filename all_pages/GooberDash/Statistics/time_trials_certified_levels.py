@@ -5,259 +5,262 @@ import numpy as np
 import plotly.express as px
 import time
 import datetime
+from common_config import set_localization
+
+_ = set_localization(st.session_state.language)
 
 conn = st.connection("postgresql", type="sql")
 
 country_region_list = [
-    "🌐 Global",
-    "🇦🇫 Afghanistan",
-    "🇦🇱 Albania",
-    "🇩🇿 Algeria",
-    "🇼🇸 American Samoa",
-    "🇦🇩 Andorra",
-    "🇦🇴 Angola",
-    "🇦🇮 Anguilla",
-    "🇦🇬 Antigua and Barbuda",
-    "🇦🇷 Argentina",
-    "🇦🇲 Armenia",
-    "🇦🇼 Aruba",
-    "🇦🇺 Australia",
-    "🇦🇹 Austria",
-    "🇦🇿 Azerbaijan",
-    "🇧🇸 Bahamas",
-    "🇧🇭 Bahrain",
-    "🇧🇩 Bangladesh",
-    "🇧🇧 Barbados",
-    "🇧🇾 Belarus",
-    "🇧🇪 Belgium",
-    "🇧🇿 Belize",
-    "🇧🇯 Benin",
-    "🇧🇲 Bermuda",
-    "🇧🇹 Bhutan",
-    "🇧🇴 Bolivia",
-    "🇧🇦 Bosnia and Herzegovina",
-    "🇧🇼 Botswana",
-    "🇧🇻 Bouvet Island",
-    "🇧🇷 Brazil",
-    "🇮🇴 British Indian Ocean Territory",
-    "🇧🇳 Brunei Darussalam",
-    "🇧🇬 Bulgaria",
-    "🇧🇫 Burkina Faso",
-    "🇧🇮 Burundi",
-    "🇰🇭 Cambodia",
-    "🇨🇲 Cameroon",
-    "🇨🇦 Canada",
-    "🇨🇻 Cape Verde",
-    "🇰🇾 Cayman Islands",
-    "🇨🇫 Central African Republic",
-    "🇹🇩 Chad",
-    "🇨🇱 Chile",
-    "🇨🇳 China",
-    "🇨🇽 Christmas Island",
-    "🇨🇨 Cocos (Keeling) Islands",
-    "🇨🇴 Colombia",
-    "🇰🇲 Comoros",
-    "🇨🇬 Congo",
-    "🇨🇩 Congo, the Democratic Republic of the",
-    "🇨🇰 Cook Islands",
-    "🇨🇷 Costa Rica",
-    "🇭🇷 Croatia",
-    "🇨🇺 Cuba",
-    "🇨🇼 Curaçao",
-    "🇨🇾 Cyprus",
-    "🇨🇿 Czech Republic",
-    "🇨🇮 Côte d'Ivoire",
-    "🇩🇰 Denmark",
-    "🇩🇯 Djibouti",
-    "🇩🇲 Dominica",
-    "🇩🇴 Dominican Republic",
-    "🇪🇨 Ecuador",
-    "🇪🇬 Egypt",
-    "🇸🇻 El Salvador",
-    "🇬🇶 Equatorial Guinea",
-    "🇪🇷 Eritrea",
-    "🇪🇪 Estonia",
-    "🇪🇹 Ethiopia",
-    "🇫🇰 Falkland Islands (Malvinas)",
-    "🇫🇴 Faroe Islands",
-    "🇫🇯 Fiji",
-    "🇫🇮 Finland",
-    "🇫🇷 France",
-    "🇬🇫 French Guiana",
-    "🇵🇫 French Polynesia",
-    "🇹🇫 French Southern Territories",
-    "🇬🇦 Gabon",
-    "🇬🇲 Gambia",
-    "🇬🇪 Georgia",
-    "🇩🇪 Germany",
-    "🇬🇭 Ghana",
-    "🇬🇮 Gibraltar",
-    "🇬🇷 Greece",
-    "🇬🇱 Greenland",
-    "🇬🇩 Grenada",
-    "🇬🇵 Guadeloupe",
-    "🇬🇺 Guam",
-    "🇬🇹 Guatemala",
-    "🇬🇬 Guernsey",
-    "🇬🇳 Guinea",
-    "🇬🇼 Guinea-Bissau",
-    "🇬🇾 Guyana",
-    "🇭🇹 Haiti",
-    "🇭🇲 Heard Island and Mcdonald Islands",
-    "🇭🇳 Honduras",
-    "🇭🇰 Hong Kong",
-    "🇭🇺 Hungary",
-    "🇮🇸 Iceland",
-    "🇮🇳 India",
-    "🇮🇩 Indonesia",
-    "🇮🇷 Iran",
-    "🇮🇶 Iraq",
-    "🇮🇪 Ireland",
-    "🇮🇲 Isle of Man",
-    "🇮🇱 Israel",
-    "🇮🇹 Italy",
-    "🇯🇲 Jamaica",
-    "🇯🇵 Japan",
-    "🇯🇪 Jersey",
-    "🇯🇴 Jordan",
-    "🇰🇿 Kazakhstan",
-    "🇰🇪 Kenya",
-    "🇰🇮 Kiribati",
-    "🇽🇰 Kosovo",
-    "🇰🇼 Kuwait",
-    "🇰🇬 Kyrgyzstan",
-    "🇱🇦 Lao People's Democratic Republic",
-    "🇱🇻 Latvia",
-    "🇱🇧 Lebanon",
-    "🇱🇸 Lesotho",
-    "🇱🇷 Liberia",
-    "🇱🇾 Libya",
-    "🇱🇮 Liechtenstein",
-    "🇱🇹 Lithuania",
-    "🇱🇺 Luxembourg",
-    "🇲🇴 Macao",
-    "🇲🇰 Macedonia",
-    "🇲🇬 Madagascar",
-    "🇲🇼 Malawi",
-    "🇲🇾 Malaysia",
-    "🇲🇻 Maldives",
-    "🇲🇱 Mali",
-    "🇲🇹 Malta",
-    "🇲🇭 Marshall Islands",
-    "🇲🇶 Martinique",
-    "🇲🇷 Mauritania",
-    "🇲🇺 Mauritius",
-    "🇾🇹 Mayotte",
-    "🇲🇽 Mexico",
-    "🇫🇲 Micronesia",
-    "🇲🇩 Moldova",
-    "🇲🇨 Monaco",
-    "🇲🇳 Mongolia",
-    "🇲🇪 Montenegro",
-    "🇲🇸 Montserrat",
-    "🇲🇦 Morocco",
-    "🇲🇿 Mozambique",
-    "🇲🇲 Myanmar",
-    "🇳🇦 Namibia",
-    "🇳🇷 Nauru",
-    "🇳🇵 Nepal",
-    "🇳🇱 Netherlands",
-    "🇳🇨 New Caledonia",
-    "🇳🇿 New Zealand",
-    "🇳🇮 Nicaragua",
-    "🇳🇪 Niger",
-    "🇳🇬 Nigeria",
-    "🇳🇺 Niue",
-    "🇳🇫 Norfolk Island",
-    "🇰🇵 North Korea",
-    "🇲🇵 Northern Mariana Islands",
-    "🇳🇴 Norway",
-    "🇴🇲 Oman",
-    "🇵🇰 Pakistan",
-    "🇵🇼 Palau",
-    "🇵🇸 Palestine",
-    "🇵🇦 Panama",
-    "🇵🇬 Papua New Guinea",
-    "🇵🇾 Paraguay",
-    "🇵🇪 Peru",
-    "🇵🇭 Philippines",
-    "🇵🇳 Pitcairn",
-    "🇵🇱 Poland",
-    "🇵🇹 Portugal",
-    "🇵🇷 Puerto Rico",
-    "🇶🇦 Qatar",
-    "🇷🇴 Romania",
-    "🇷🇺 Russia",
-    "🇷🇼 Rwanda",
-    "🇷🇪 Réunion",
-    "🇧🇱 Saint Barthélemy",
-    "🇸🇭 Saint Helena, Ascension and Tristan Da Cunha",
-    "🇰🇳 Saint Kitts and Nevis",
-    "🇱🇨 marSaint Lucia",
-    "🇲🇫 Saint Martin (French Part)",
-    "🇵🇲 Saint Pierre and Miquelon",
-    "🇻🇨 Saint Vincent and The Grenadines",
-    "🇼🇸 Samoa",
-    "🇸🇲 San Marino",
-    "🇸🇹 Sao Tome and Principe",
-    "🇸🇦 Saudi Arabia",
-    "🇸🇳 Senegal",
-    "🇷🇸 Serbia",
-    "🇸🇨 Seychelles",
-    "🇸🇱 Sierra Leone",
-    "🇸🇬 Singapore",
-    "🇸🇽 Sint Maarten (Dutch Part)",
-    "🇸🇰 Slovakia",
-    "🇸🇮 Slovenia",
-    "🇸🇧 Solomon Islands",
-    "🇸🇴 Somalia",
-    "🇿🇦 South Africa",
-    "🇬🇸 South Georgia",
-    "🇰🇷 South Korea",
-    "🇸🇸 South Sudan",
-    "🇪🇸 Spain",
-    "🇱🇰 Sri Lanka",
-    "🇸🇩 Sudan",
-    "🇸🇷 Suriname",
-    "🇸🇯 Svalbard and Jan Mayen",
-    "🇸🇿 Swaziland",
-    "🇸🇪 Sweden",
-    "🇨🇭 Switzerland",
-    "🇸🇾 Syrian Arab Republic",
-    "🇹🇼 Taiwan",
-    "🇹🇯 Tajikistan",
-    "🇹🇿 Tanzania",
-    "🇹🇭 Thailand",
-    "🇹🇱 Timor-Leste",
-    "🇹🇬 Togo",
-    "🇹🇰 Tokelau",
-    "🇹🇴 Tonga",
-    "🇹🇹 Trinidad and Tobago",
-    "🇹🇳 Tunisia",
-    "🇹🇷 Turkey",
-    "🇹🇲 Turkmenistan",
-    "🇹🇨 Turks and Caicos Islands",
-    "🇹🇻 Tuvalu",
-    "🇺🇬 Uganda",
-    "🇺🇦 Ukraine",
-    "🇦🇪 United Arab Emirates",
-    "🇬🇧 United Kingdom",
-    "🇺🇸 United States",
-    "🇺🇲 United States Minor Outlying Islands",
-    "🇺🇾 Uruguay",
-    "🇺🇿 Uzbekistan",
-    "🇻🇺 Vanuatu",
-    "🇻🇦 Vatican City",
-    "🇻🇪 Venezuela",
-    "🇻🇳 Vietnam",
-    "🇻🇬 Virgin Islands, British",
-    "🇻🇮 Virgin Islands, U.S.",
-    "🇼🇫 Wallis and Futuna",
-    "🇪🇭 Western Sahara",
-    "🇾🇪 Yemen",
-    "🇿🇲 Zambia",
-    "🇿🇼 Zimbabwe",
-    "🇦🇽 Åland Islands",
+    "🌐 " + _("Global"),
+    "🇦🇫 " + _("Afghanistan"),
+    "🇦🇱 " + _("Albania"),
+    "🇩🇿 " + _("Algeria"),
+    "🇼🇸 " + _("American Samoa"),
+    "🇦🇩 " + _("Andorra"),
+    "🇦🇴 " + _("Angola"),
+    "🇦🇮 " + _("Anguilla"),
+    "🇦🇬 " + _("Antigua and Barbuda"),
+    "🇦🇷 " + _("Argentina"),
+    "🇦🇲 " + _("Armenia"),
+    "🇦🇼 " + _("Aruba"),
+    "🇦🇺 " + _("Australia"),
+    "🇦🇹 " + _("Austria"),
+    "🇦🇿 " + _("Azerbaijan"),
+    "🇧🇸 " + _("Bahamas"),
+    "🇧🇭 " + _("Bahrain"),
+    "🇧🇩 " + _("Bangladesh"),
+    "🇧🇧 " + _("Barbados"),
+    "🇧🇾 " + _("Belarus"),
+    "🇧🇪 " + _("Belgium"),
+    "🇧🇿 " + _("Belize"),
+    "🇧🇯 " + _("Benin"),
+    "🇧🇲 " + _("Bermuda"),
+    "🇧🇹 " + _("Bhutan"),
+    "🇧🇴 " + _("Bolivia"),
+    "🇧🇦 " + _("Bosnia and Herzegovina"),
+    "🇧🇼 " + _("Botswana"),
+    "🇧🇻 " + _("Bouvet Island"),
+    "🇧🇷 " + _("Brazil"),
+    "🇮🇴 " + _("British Indian Ocean Territory"),
+    "🇧🇳 " + _("Brunei Darussalam"),
+    "🇧🇬 " + _("Bulgaria"),
+    "🇧🇫 " + _("Burkina Faso"),
+    "🇧🇮 " + _("Burundi"),
+    "🇰🇭 " + _("Cambodia"),
+    "🇨🇲 " + _("Cameroon"),
+    "🇨🇦 " + _("Canada"),
+    "🇨🇻 " + _("Cape Verde"),
+    "🇰🇾 " + _("Cayman Islands"),
+    "🇨🇫 " + _("Central African Republic"),
+    "🇹🇩 " + _("Chad"),
+    "🇨🇱 " + _("Chile"),
+    "🇨🇳 " + _("China"),
+    "🇨🇽 " + _("Christmas Island"),
+    "🇨🇨 " + _("Cocos (Keeling) Islands"),
+    "🇨🇴 " + _("Colombia"),
+    "🇰🇲 " + _("Comoros"),
+    "🇨🇬 " + _("Congo"),
+    "🇨🇩 " + _("Congo, the Democratic Republic of the"),
+    "🇨🇰 " + _("Cook Islands"),
+    "🇨🇷 " + _("Costa Rica"),
+    "🇭🇷 " + _("Croatia"),
+    "🇨🇺 " + _("Cuba"),
+    "🇨🇼 " + _("Curaçao"),
+    "🇨🇾 " + _("Cyprus"),
+    "🇨🇿 " + _("Czech Republic"),
+    "🇨🇮 " + _("Côte d'Ivoire"),
+    "🇩🇰 " + _("Denmark"),
+    "🇩🇯 " + _("Djibouti"),
+    "🇩🇲 " + _("Dominica"),
+    "🇩🇴 " + _("Dominican Republic"),
+    "🇪🇨 " + _("Ecuador"),
+    "🇪🇬 " + _("Egypt"),
+    "🇸🇻 " + _("El Salvador"),
+    "🇬🇶 " + _("Equatorial Guinea"),
+    "🇪🇷 " + _("Eritrea"),
+    "🇪🇪 " + _("Estonia"),
+    "🇪🇹 " + _("Ethiopia"),
+    "🇫🇰 " + _("Falkland Islands (Malvinas)"),
+    "🇫🇴 " + _("Faroe Islands"),
+    "🇫🇯 " + _("Fiji"),
+    "🇫🇮 " + _("Finland"),
+    "🇫🇷 " + _("France"),
+    "🇬🇫 " + _("French Guiana"),
+    "🇵🇫 " + _("French Polynesia"),
+    "🇹🇫 " + _("French Southern Territories"),
+    "🇬🇦 " + _("Gabon"),
+    "🇬🇲 " + _("Gambia"),
+    "🇬🇪 " + _("Georgia"),
+    "🇩🇪 " + _("Germany"),
+    "🇬🇭 " + _("Ghana"),
+    "🇬🇮 " + _("Gibraltar"),
+    "🇬🇷 " + _("Greece"),
+    "🇬🇱 " + _("Greenland"),
+    "🇬🇩 " + _("Grenada"),
+    "🇬🇵 " + _("Guadeloupe"),
+    "🇬🇺 " + _("Guam"),
+    "🇬🇹 " + _("Guatemala"),
+    "🇬🇬 " + _("Guernsey"),
+    "🇬🇳 " + _("Guinea"),
+    "🇬🇼 " + _("Guinea-Bissau"),
+    "🇬🇾 " + _("Guyana"),
+    "🇭🇹 " + _("Haiti"),
+    "🇭🇲 " + _("Heard Island and Mcdonald Islands"),
+    "🇭🇳 " + _("Honduras"),
+    "🇭🇰 " + _("Hong Kong"),
+    "🇭🇺 " + _("Hungary"),
+    "🇮🇸 " + _("Iceland"),
+    "🇮🇳 " + _("India"),
+    "🇮🇩 " + _("Indonesia"),
+    "🇮🇷 " + _("Iran"),
+    "🇮🇶 " + _("Iraq"),
+    "🇮🇪 " + _("Ireland"),
+    "🇮🇲 " + _("Isle of Man"),
+    "🇮🇱 " + _("Israel"),
+    "🇮🇹 " + _("Italy"),
+    "🇯🇲 " + _("Jamaica"),
+    "🇯🇵 " + _("Japan"),
+    "🇯🇪 " + _("Jersey"),
+    "🇯🇴 " + _("Jordan"),
+    "🇰🇿 " + _("Kazakhstan"),
+    "🇰🇪 " + _("Kenya"),
+    "🇰🇮 " + _("Kiribati"),
+    "🇽🇰 " + _("Kosovo"),
+    "🇰🇼 " + _("Kuwait"),
+    "🇰🇬 " + _("Kyrgyzstan"),
+    "🇱🇦 " + _("Lao People's Democratic Republic"),
+    "🇱🇻 " + _("Latvia"),
+    "🇱🇧 " + _("Lebanon"),
+    "🇱🇸 " + _("Lesotho"),
+    "🇱🇷 " + _("Liberia"),
+    "🇱🇾 " + _("Libya"),
+    "🇱🇮 " + _("Liechtenstein"),
+    "🇱🇹 " + _("Lithuania"),
+    "🇱🇺 " + _("Luxembourg"),
+    "🇲🇴 " + _("Macao"),
+    "🇲🇰 " + _("Macedonia"),
+    "🇲🇬 " + _("Madagascar"),
+    "🇲🇼 " + _("Malawi"),
+    "🇲🇾 " + _("Malaysia"),
+    "🇲🇻 " + _("Maldives"),
+    "🇲🇱 " + _("Mali"),
+    "🇲🇹 " + _("Malta"),
+    "🇲🇭 " + _("Marshall Islands"),
+    "🇲🇶 " + _("Martinique"),
+    "🇲🇷 " + _("Mauritania"),
+    "🇲🇺 " + _("Mauritius"),
+    "🇾🇹 " + _("Mayotte"),
+    "🇲🇽 " + _("Mexico"),
+    "🇫🇲 " + _("Micronesia"),
+    "🇲🇩 " + _("Moldova"),
+    "🇲🇨 " + _("Monaco"),
+    "🇲🇳 " + _("Mongolia"),
+    "🇲🇪 " + _("Montenegro"),
+    "🇲🇸 " + _("Montserrat"),
+    "🇲🇦 " + _("Morocco"),
+    "🇲🇿 " + _("Mozambique"),
+    "🇲🇲 " + _("Myanmar"),
+    "🇳🇦 " + _("Namibia"),
+    "🇳🇷 " + _("Nauru"),
+    "🇳🇵 " + _("Nepal"),
+    "🇳🇱 " + _("Netherlands"),
+    "🇳🇨 " + _("New Caledonia"),
+    "🇳🇿 " + _("New Zealand"),
+    "🇳🇮 " + _("Nicaragua"),
+    "🇳🇪 " + _("Niger"),
+    "🇳🇬 " + _("Nigeria"),
+    "🇳🇺 " + _("Niue"),
+    "🇳🇫 " + _("Norfolk Island"),
+    "🇰🇵 " + _("North Korea"),
+    "🇲🇵 " + _("Northern Mariana Islands"),
+    "🇳🇴 " + _("Norway"),
+    "🇴🇲 " + _("Oman"),
+    "🇵🇰 " + _("Pakistan"),
+    "🇵🇼 " + _("Palau"),
+    "🇵🇸 " + _("Palestine"),
+    "🇵🇦 " + _("Panama"),
+    "🇵🇬 " + _("Papua New Guinea"),
+    "🇵🇾 " + _("Paraguay"),
+    "🇵🇪 " + _("Peru"),
+    "🇵🇭 " + _("Philippines"),
+    "🇵🇳 " + _("Pitcairn"),
+    "🇵🇱 " + _("Poland"),
+    "🇵🇹 " + _("Portugal"),
+    "🇵🇷 " + _("Puerto Rico"),
+    "🇶🇦 " + _("Qatar"),
+    "🇷🇴 " + _("Romania"),
+    "🇷🇺 " + _("Russia"),
+    "🇷🇼 " + _("Rwanda"),
+    "🇷🇪 " + _("Réunion"),
+    "🇧🇱 " + _("Saint Barthélemy"),
+    "🇸🇭 " + _("Saint Helena, Ascension and Tristan Da Cunha"),
+    "🇰🇳 " + _("Saint Kitts and Nevis"),
+    "🇱🇨 " + _("Saint Lucia"),
+    "🇲🇫 " + _("Saint Martin (French Part)"),
+    "🇵🇲 " + _("Saint Pierre and Miquelon"),
+    "🇻🇨 " + _("Saint Vincent and The Grenadines"),
+    "🇼🇸 " + _("Samoa"),
+    "🇸🇲 " + _("San Marino"),
+    "🇸🇹 " + _("Sao Tome and Principe"),
+    "🇸🇦 " + _("Saudi Arabia"),
+    "🇸🇳 " + _("Senegal"),
+    "🇷🇸 " + _("Serbia"),
+    "🇸🇨 " + _("Seychelles"),
+    "🇸🇱 " + _("Sierra Leone"),
+    "🇸🇬 " + _("Singapore"),
+    "🇸🇽 " + _("Sint Maarten (Dutch Part)"),
+    "🇸🇰 " + _("Slovakia"),
+    "🇸🇮 " + _("Slovenia"),
+    "🇸🇧 " + _("Solomon Islands"),
+    "🇸🇴 " + _("Somalia"),
+    "🇿🇦 " + _("South Africa"),
+    "🇬🇸 " + _("South Georgia"),
+    "🇰🇷 " + _("South Korea"),
+    "🇸🇸 " + _("South Sudan"),
+    "🇪🇸 " + _("Spain"),
+    "🇱🇰 " + _("Sri Lanka"),
+    "🇸🇩 " + _("Sudan"),
+    "🇸🇷 " + _("Suriname"),
+    "🇸🇯 " + _("Svalbard and Jan Mayen"),
+    "🇸🇿 " + _("Swaziland"),
+    "🇸🇪 " + _("Sweden"),
+    "🇨🇭 " + _("Switzerland"),
+    "🇸🇾 " + _("Syrian Arab Republic"),
+    "🇹🇼 " + _("Taiwan"),
+    "🇹🇯 " + _("Tajikistan"),
+    "🇹🇿 " + _("Tanzania"),
+    "🇹🇭 " + _("Thailand"),
+    "🇹🇱 " + _("Timor-Leste"),
+    "🇹🇬 " + _("Togo"),
+    "🇹🇰 " + _("Tokelau"),
+    "🇹🇴 " + _("Tonga"),
+    "🇹🇹 " + _("Trinidad and Tobago"),
+    "🇹🇳 " + _("Tunisia"),
+    "🇹🇷 " + _("Turkey"),
+    "🇹🇲 " + _("Turkmenistan"),
+    "🇹🇨 " + _("Turks and Caicos Islands"),
+    "🇹🇻 " + _("Tuvalu"),
+    "🇺🇬 " + _("Uganda"),
+    "🇺🇦 " + _("Ukraine"),
+    "🇦🇪 " + _("United Arab Emirates"),
+    "🇬🇧 " + _("United Kingdom"),
+    "🇺🇸 " + _("United States"),
+    "🇺🇲 " + _("United States Minor Outlying Islands"),
+    "🇺🇾 " + _("Uruguay"),
+    "🇺🇿 " + _("Uzbekistan"),
+    "🇻🇺 " + _("Vanuatu"),
+    "🇻🇦 " + _("Vatican City"),
+    "🇻🇪 " + _("Venezuela"),
+    "🇻🇳 " + _("Vietnam"),
+    "🇻🇬 " + _("Virgin Islands, British"),
+    "🇻🇮 " + _("Virgin Islands, U.S."),
+    "🇼🇫 " + _("Wallis and Futuna"),
+    "🇪🇭 " + _("Western Sahara"),
+    "🇾🇪 " + _("Yemen"),
+    "🇿🇲 " + _("Zambia"),
+    "🇿🇼 " + _("Zimbabwe"),
+    "🇦🇽 " + _("Åland Islands"),
 ]
 
 
@@ -293,16 +296,25 @@ def load_page():
             width=280,
         )
         st.html(
-            '<span style="font-size: 25px; font-weight: bold;"><i class="fa-solid fa-flag-checkered" style="display: inline; margin: 0 5px 8px 0; width: 25px"></i>Time Trials (Certified Levels)<br><img style="display: inline; margin: 0 5px 8px 0; width: 25px" src="./app/static/GooberDash/medal_1st.png">World Records Statistics<span>'
+            '<span style="font-size: 25px; font-weight: bold;"><i class="fa-solid fa-flag-checkered" style="display: inline; margin: 0 5px 8px 0; width: 25px"></i>'
+            + _("Time Trials")
+            + " ("
+            + _("Certified Levels")
+            + ')<br><img style="display: inline; margin: 0 5px 8px 0; width: 25px" src="./app/static/GooberDash/medal_1st.png">'
+            + _("World Records Statistics")
+            + "<span>"
         )
         st.caption(
-            f"Last Update: {datetime.datetime.fromtimestamp(last_update).strftime('%Y-%m-%d %H:%M:%S')} UTC (Updated Every 12 Hours)"
+            _("Last Update")
+            + f": {datetime.datetime.fromtimestamp(last_update).strftime('%Y-%m-%d %H:%M:%S')} UTC ("
+            + _("Updated Every 12 Hours")
+            + ")"
         )
         tab1, tab2, tab3 = st.tabs(
             [
-                "🏆 **Performance Points Leaderboard**",
-                "🥇 **World Records**",
-                "🥧 **WRs Distribution**",
+                "🏆 **" + _("Performance Points Leaderboard") + "**",
+                "🥇 **" + _("World Records") + "**",
+                "🥧 **" + _("WRs Distribution") + "**",
             ]
         )
 
@@ -368,40 +380,47 @@ def load_page():
             )
 
             top_menu = st.columns(5)
+
+            options_dict = {
+                "Global Rank": _("Global Rank"),
+                "Global Rank diff": _("Global Rank diff"),
+                "Local Rank": _("Local Rank"),
+                "Local Rank diff": _("Local Rank diff"),
+                "Completed Levels": _("Completed Levels"),
+                "Completed Levels diff": _("Completed Levels diff"),
+                "Performance Points": _("Performance Points"),
+                "Performance Points diff": _("Performance Points diff"),
+                "Global Top %": _("Global Top %"),
+                "Global Top % diff": _("Global Top % diff"),
+                "Local Top %": _("Local Top %"),
+                "Local Top % diff": _("Local Top % diff"),
+                "🥇": "🥇",
+                "🥇 diff": _("🥇 diff"),
+                "🥈": "🥈",
+                "🥈 diff": _("🥈 diff"),
+                "🥉": "🥉",
+                "🥉 diff": _("🥉 diff"),
+                "Player": _("Player"),
+                "User ID": _("User ID"),
+            }
+
             with top_menu[0]:
+                options = [option for option in options_dict]
                 sort_field = st.selectbox(
-                    "Sort By",
-                    options=[
-                        "Global Rank",
-                        "Global Rank diff",
-                        "Local Rank",
-                        "Local Rank diff",
-                        "Completed Levels",
-                        "Completed Levels diff",
-                        "Performance Points",
-                        "Performance Points diff",
-                        "Global Top %",
-                        "Global Top % diff",
-                        "Local Top %",
-                        "Local Top % diff",
-                        "🥇",
-                        "🥇 diff",
-                        "🥈",
-                        "🥈 diff",
-                        "🥉",
-                        "🥉 diff",
-                        "Player",
-                        "User ID",
-                    ],
+                    _("Sort By"),
+                    options,
+                    format_func=lambda x: options_dict.get(x),
                 )
             with top_menu[1]:
-                sort_direction = st.radio("Order", options=["▲", "▼"], horizontal=True)
+                sort_direction = st.radio(
+                    _("Order"), options=["▲", "▼"], horizontal=True
+                )
             with top_menu[2]:
                 filter_country = st.selectbox(
-                    "Country/Region",
+                    _("Country/Region"),
                     options=country_region_list,
                 )
-                if filter_country != "🌐 Global":
+                if filter_country != "🌐 " + _("Global"):
                     display_local_rank_value = True
                     display_global_rank_value = False
                 else:
@@ -409,19 +428,21 @@ def load_page():
                     display_global_rank_value = True
             with top_menu[3]:
                 filter_user = st.text_input(
-                    "Search Player", placeholder="Username or User ID"
+                    _("Search Player"), placeholder=_("Username or User ID")
                 )
             with top_menu[4]:
                 display_global_rank = st.checkbox(
-                    "Display Global Rank", value=display_global_rank_value
+                    _("Display Global Rank"), value=display_global_rank_value
                 )
                 display_local_rank = st.checkbox(
-                    "Display Local Rank", value=display_local_rank_value
+                    _("Display Local Rank"), value=display_local_rank_value
                 )
                 display_user_id = st.checkbox(
-                    "Display User ID", value=display_user_id_value
+                    _("Display User ID"), value=display_user_id_value
                 )
-                display_changes = st.checkbox("Display Changes", value=display_changes)
+                display_changes = st.checkbox(
+                    _("Display Changes"), value=display_changes
+                )
 
             def search_dataframe(filter_country, filter_user):
                 if filter_user != "":
@@ -440,7 +461,7 @@ def load_page():
                         .drop_duplicates()
                         .reset_index(drop=True)
                     )
-                if filter_country != "🌐 Global":
+                if filter_country != "🌐 " + _("Global"):
                     if filter_user == "":
                         result = df_leaderboard
                     result = result[
@@ -450,11 +471,11 @@ def load_page():
                     ]
                 return result
 
-            if filter_country != "🌐 Global" or filter_user:
+            if filter_country != "🌐 " + _("Global") or filter_user:
                 df_leaderboard = search_dataframe(filter_country, filter_user)
 
             if df_leaderboard.empty:
-                st.error("No Records Found", icon="❌")
+                st.error(_("No Records Found"), icon="❌")
 
             df_leaderboard = df_leaderboard.sort_values(
                 by=sort_field,
@@ -465,7 +486,7 @@ def load_page():
 
             bottom_menu = st.columns((5, 1, 1))
             with bottom_menu[2]:
-                batch_size = st.selectbox("Page Size", options=[25, 50, 100])
+                batch_size = st.selectbox(_("Page Size"), options=[25, 50, 100])
             with bottom_menu[1]:
                 total_pages = (
                     int(len(df_leaderboard) / batch_size) + 1
@@ -473,7 +494,7 @@ def load_page():
                     else 1
                 )
                 current_page = st.number_input(
-                    "Page", min_value=1, max_value=total_pages, step=1
+                    _("Page"), min_value=1, max_value=total_pages, step=1
                 )
 
             pages = split_frame(df_leaderboard, batch_size)
@@ -484,13 +505,30 @@ def load_page():
             max_local_rank = data["Local Rank"].max()
             with bottom_menu[0]:
                 bottom_info = (
-                    f"Page **{current_page}** of **{total_pages}**{'&nbsp;'*5}"
+                    _("Page")
+                    + f" **{current_page}** "
+                    + _("of")
+                    + f" **{total_pages}**{'&nbsp;'*5}"
                 )
-                if filter_country == "🌐 Global":
-                    bottom_info += f"{filter_country} Rank **{min_global_rank}** to **{max_global_rank}** "
+                if filter_country == "🌐 " + _("Global"):
+                    bottom_info += (
+                        f"{filter_country} "
+                        + _("Rank")
+                        + f"**{min_global_rank}** "
+                        + _("to")
+                        + f" **{max_global_rank}** "
+                    )
                 else:
-                    bottom_info += f"{filter_country} Rank **{min_local_rank}** to **{max_local_rank}** "
-                bottom_info += f"(Total number of Players: **{len(df_leaderboard)}**)"
+                    bottom_info += (
+                        f"{filter_country} "
+                        + _("Rank")
+                        + f" **{min_local_rank}** "
+                        + _("to")
+                        + f" **{max_local_rank}** "
+                    )
+                bottom_info += (
+                    "(" + _("Total number of Players") + f": **{len(df_leaderboard)}**)"
+                )
                 st.markdown(bottom_info)
 
             column_order_config = [
@@ -699,17 +737,26 @@ def load_page():
                 column_order=tuple(column_order_config),
                 column_config={
                     "Completed Levels": st.column_config.ProgressColumn(
-                        help="Total Number of Levels with Records",
+                        _("Completed Levels"),
+                        help=_("Total Number of Levels with Records"),
                         format=f"%f/{level_counts}",
                         min_value=0,
                         max_value=level_counts,
                     ),
-                    "User ID": st.column_config.ListColumn(),
+                    "User ID": st.column_config.ListColumn(_("User ID")),
+                    "Global Rank": st.column_config.TextColumn(_("Global Rank")),
+                    "Local Rank": st.column_config.TextColumn(_("Local Rank")),
+                    "Player": st.column_config.TextColumn(_("Player")),
                     "Performance Points": st.column_config.NumberColumn(
-                        help="Total Performance Points (pp) in all levels combined",
+                        _("Performance Points"),
+                        help=_("Total Performance Points (pp) in all levels combined"),
                     ),
-                    "Global Rank diff": st.column_config.TextColumn("", width="small"),
-                    "Local Rank diff": st.column_config.TextColumn("", width="small"),
+                    "Global Top %": st.column_config.NumberColumn(_("Global Top %")),
+                    "Local Top %": st.column_config.NumberColumn(_("Local Top %")),
+                    "Global Rank diff": st.column_config.NumberColumn(
+                        "", width="small"
+                    ),
+                    "Local Rank diff": st.column_config.NumberColumn("", width="small"),
                     "Performance Points diff": st.column_config.TextColumn(
                         "", width="small"
                     ),
@@ -725,20 +772,40 @@ def load_page():
                 hide_index=True,
             )
 
-            with st.expander("**❔ How Performance Points (pp) are calculated**"):
+            with st.expander(
+                "**❔ " + _("How Performance Points (pp) are calculated") + "**"
+            ):
                 st.latex(
                     r"""
-                    \textrm{Performance \ Points} = 
+                    \textrm{"""
+                    + _("Performance Points")
+                    + r"""} = 
                     \left\{
                     \begin{array}{lr}
-                    \lfloor \frac{10000}{\textrm{Rank}} \rfloor & \textrm{if \ } 1 \leq \textrm{Rank} \leq 10\\
-                    \lfloor \frac{1000}{2^{\left \lceil log_{10}\textrm{Rank} \right \rceil - 1}} \times (\frac{10^{\left \lceil log_{10}\textrm{Rank} \right \rceil - 1}}{\textrm{Rank}}+0.9) \rfloor & \textrm{if \ Rank} \gt 10
+                    \lfloor \frac{10000}{\textrm{"""
+                    + _("Rank")
+                    + r"""}} \rfloor & \textrm{"""
+                    + _("if")
+                    + r""" \ } 1 \leq \textrm{"""
+                    + _("Rank")
+                    + r"""} \leq 10\\
+                    \lfloor \frac{1000}{2^{\left \lceil log_{10}\textrm{"""
+                    + _("Rank")
+                    + r"""} \right \rceil - 1}} \times (\frac{10^{\left \lceil log_{10}\textrm{"""
+                    + _("Rank")
+                    + r"""} \right \rceil - 1}}{\textrm{"""
+                    + _("Rank")
+                    + r"""}}+0.9) \rfloor & \textrm{"""
+                    + _("if")
+                    + r""" \ """
+                    + _("Rank")
+                    + r"""} \gt 10
                     \end{array}
                     \right.
                     """
                 )
 
-                st.markdown("Top 100 Rank to Performance Points conversion")
+                st.markdown(_("Top 100 Rank to Performance Points conversion"))
 
                 def pp_formula(i):
                     if i <= 10:
@@ -754,25 +821,27 @@ def load_page():
                 with split[0]:
                     df = pd.DataFrame(
                         {
-                            "Rank": [i for i in range(1, 101)],
-                            "Performance Points": [
+                            _("Rank"): [i for i in range(1, 101)],
+                            _("Performance Points"): [
                                 pp_formula(i) for i in range(1, 101)
                             ],
-                            "Performance Points pp": [
-                                f"{pp_formula(i)} pp" for i in range(1, 101)
+                            _("Performance Points pp"): [
+                                f"{pp_formula(i)} " + _("pp") for i in range(1, 101)
                             ],
                         }
                     )
                     st.dataframe(
-                        df.drop(columns=["Performance Points"]).rename(
-                            columns={"Performance Points pp": "Performance Points"}
+                        df.drop(columns=[_("Performance Points")]).rename(
+                            columns={
+                                _("Performance Points pp"): _("Performance Points")
+                            }
                         ),
                         hide_index=True,
                         use_container_width=True,
                     )
 
                 with split[2]:
-                    fig = px.line(df, x="Rank", y="Performance Points")
+                    fig = px.line(df, x=_("Rank"), y=_("Performance Points"))
                     st.plotly_chart(fig, use_container_width=True)
 
         with tab2:
@@ -820,19 +889,19 @@ def load_page():
             checkboxes = st.columns(3)
             with checkboxes[0]:
                 display_level_id = st.checkbox(
-                    "Display Level ID",
+                    _("Display Level ID"),
                     value=display_level_id_value,
                     key="first_display_level_id",
                 )
             with checkboxes[1]:
                 display_user_id = st.checkbox(
-                    "Display User ID",
+                    _("Display User ID"),
                     value=display_user_id_value,
                     key="first_display_user_id",
                 )
             with checkboxes[2]:
                 display_records_count = st.checkbox(
-                    "Display Records Count",
+                    _("Display Records Count"),
                     value=display_records_count_value,
                     key="first_display_records_count",
                 )
@@ -868,14 +937,22 @@ def load_page():
                 use_container_width=True,
                 column_order=tuple(column_order_config),
                 column_config={
-                    "User ID": st.column_config.ListColumn(),
-                    "Level ID": st.column_config.ListColumn(),
-                    "Time": st.column_config.NumberColumn(format="%f s"),
+                    "Level": st.column_config.TextColumn(_("Level")),
+                    "Level ID": st.column_config.ListColumn(_("Leve ID")),
+                    "Player": st.column_config.TextColumn(_("Player")),
+                    "User ID": st.column_config.ListColumn(_("User ID")),
+                    "Time": st.column_config.NumberColumn(
+                        _("Time"), format="%f " + _("s")
+                    ),
+                    "Upload Time": st.column_config.TextColumn(_("Upload Time")),
+                    "Level Records Count": st.column_config.TextColumn(
+                        _("Level Records Count")
+                    ),
                     "Watch Replay": st.column_config.LinkColumn(
-                        display_text="▶️", width="small"
+                        _("Watch Replay"), display_text="▶️", width="small"
                     ),
                     "Race Ghost": st.column_config.LinkColumn(
-                        display_text="👻", width="small"
+                        _("Race Ghost"), display_text="👻", width="small"
                     ),
                 },
                 hide_index=True,
@@ -896,7 +973,12 @@ def load_page():
             fig.update_layout(
                 annotations=[
                     {
-                        "text": f"{level_counts} Levels<br>{len(df_first_records_2.index)} WR Holders<br>{df_first_records_2['Counts'].sum()} WRs",
+                        "text": f"{level_counts} "
+                        + _("Levels")
+                        + f"<br>{len(df_first_records_2.index)} "
+                        + _("WR Holders")
+                        + f"<br>{df_first_records_2['Counts'].sum()} "
+                        + _("WRs"),
                         "showarrow": False,
                     }
                 ]

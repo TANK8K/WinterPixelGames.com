@@ -4,6 +4,9 @@ import streamlit as st
 import numpy as np
 from io import StringIO
 from all_pages.GooberDash.Backend.levels import upload_level, download_level
+from common_config import set_localization
+
+_ = set_localization(st.session_state.language)
 
 
 def flip_json(file_name, data):
@@ -124,29 +127,34 @@ def load_page():
             content: "\\f11b";
         }
         </style>
-        <span style="font-size: 25px; font-weight: bold;"><i class="fa-solid fa-left-right" style="display: inline; margin: 0 5px 8px 0; width: 25px"></i>Flip Level<span>
-        """
+        <span style="font-size: 25px; font-weight: bold;"><i class="fa-solid fa-left-right" style="display: inline; margin: 0 5px 8px 0; width: 25px"></i>"""
+        + _("Flip Level")
+        + "<span>"
     )
     data = None
 
-    method = st.selectbox("Upload and Download Level by", ("Level ID", "JSON"))
+    method = st.selectbox(_("Upload and Download Level by"), (_("Level ID"), "JSON"))
 
     with st.form("input_form"):
-        if method == "Level ID":
+        if method == _("Level ID"):
             level_id = (
-                st.text_input("**Level ID (Full URL supported)**")
+                st.text_input(
+                    "**" + _("Level ID") + "(" + _("Full URL supported") + ")**"
+                )
                 .replace("https://gooberdash.winterpixel.io/?play=", "")
                 .split("&ghost")[0]
             )
         elif method == "JSON":
             uploaded_file = st.file_uploader(
-                "**Upload the Json File**", accept_multiple_files=False, type="json"
+                "**" + _("Upload the JSON File") + "**",
+                accept_multiple_files=False,
+                type="json",
             )
-        submit = st.form_submit_button("**Submit**")
+        submit = st.form_submit_button("**" + _("Submit") + "**")
 
     if submit:
         try:
-            if method == "Level ID":
+            if method == _("Level ID"):
                 response = download_level(level_id)
                 level_name = response["name"]
                 data = json.loads(response["data"])
@@ -157,22 +165,26 @@ def load_page():
 
             output = flip_json(level_name, data)
 
-            if method == "Level ID":
+            if method == _("Level ID"):
                 uuid = upload_level(response, output)
                 url = f"https://gooberdash.winterpixel.io?play={uuid}"
-                st.write(f"The Level ID of the output Level is {uuid}")
-                st.link_button("**Play Level on Browser**", url, type="primary")
+                st.write(_("The Level ID of the output Level is") + f" {uuid}")
+                st.link_button(
+                    "**" + _("Play Level on Browser") + "**", url, type="primary"
+                )
             elif method == "JSON":
                 st.download_button(
-                    label="Download Output",
+                    label=_("Download Output"),
                     data=output,
-                    file_name=f"{level_name.replace('.json','')} flipped.json",
+                    file_name=f"{level_name.replace('.json','')} "
+                    + _("flipped")
+                    + ".json",
                     mime="text/json",
                     type="primary",
                 )
 
         except Exception as e:
-            if method == "Level ID":
+            if method == _("Level ID"):
                 st.error("Level not found")
                 print(e)
             elif method == "JSON":

@@ -2,6 +2,9 @@ import streamlit as st
 import os
 from streamlit_image_select import image_select
 from all_pages.GooberDash.Backend.goober_generator import generate_goober
+from common_config import set_localization
+
+_ = set_localization(st.session_state.language)
 
 
 def load_page():
@@ -31,7 +34,9 @@ def load_page():
         """
     )
     st.markdown(
-        '<span style="font-size: 25px; font-weight: bold;"><i class="fa-solid fa-robot" style="display: inline; margin: 0 5px 8px 0; width: 25px"></i>Goober Generator<span>',
+        '<span style="font-size: 25px; font-weight: bold;"><i class="fa-solid fa-robot" style="display: inline; margin: 0 5px 8px 0; width: 25px"></i>'
+        + _("Goober Generator")
+        + "<span>",
         unsafe_allow_html=True,
     )
 
@@ -40,19 +45,27 @@ def load_page():
         images = [os.path.join(directory, file) for file in os.listdir(directory)]
         return sorted(images, key=lambda x: ("default" not in x, x))
 
-    types = ["🎨 Color", "👕 Suit", "🎩 Hat", "⛏️  Hand", "👀 Eyes"]
+    types = ["Color", "Suit", "Hat", "Hand", "Eyes"]
 
     cosmetics_dict = {}
 
-    tabs = st.tabs(types)
+    tabs = st.tabs(
+        [
+            "🎨 " + _("Color"),
+            "👕 " + _("Suit"),
+            "🎩 " + _("Hat"),
+            "⛏️  " + _("Hand"),
+            "👀 " + _("Eyes"),
+        ]
+    )
     for i in range(5):
         with tabs[i]:
             img = image_select(
                 label="",
-                images=get_images_of_type(types[i].split()[1]),
+                images=get_images_of_type(types[i]),
                 use_container_width=False,
             )
-            cosmetics_dict[types[i].split()[1].lower()] = (
+            cosmetics_dict[types[i].lower()] = (
                 f"{os.path.splitext(os.path.basename(img))[0]}"
             )
 
@@ -70,7 +83,7 @@ def load_page():
 
     with open(goober_file_path, "rb") as file:
         st.download_button(
-            label="**Download**",
+            label="**" + _("Download") + "**",
             data=file,
             file_name="generated_goober.png",
             mime="image/png",

@@ -1,5 +1,13 @@
 import streamlit as st
-from common_config import back_to_home, back_to_menu
+from common_config import (
+    back_to_home,
+    back_to_menu,
+    set_localization,
+    footer_and_language,
+)
+
+_ = set_localization(st.session_state.language)
+footer_and_language(st.session_state.language)
 
 try:
     if st.session_state.game != "MoonrockMiners":
@@ -58,35 +66,49 @@ if st.session_state.game == "MoonrockMiners" and st.session_state.page == "menu"
         )
         st.image("static/MoonrockMiners/moonrock_miners_banner.png", width=500)
         st.markdown(
-            """**Moonrock Miners** is a gravity-defying multiplayer space battle game set in an asteroid field. Blast other players, collect powerups and crystals, and avoid the asteroids. Try to survive until the end to win the match. Compete against players around the world in real-time to rank in every season. You can also create your own custom lobbies to play private games online with your friends!"""
+            _(
+                """**MOONROCK MINERS** is a gravity-defying multiplayer space battle game set in an asteroid field. Blast other players, collect powerups and crystals, and avoid the asteroids. Try to survive until the end to win the match. Compete against players around the world in real-time to rank in every season. You can also create your own custom lobbies to play private games online with your friends!"""
+            )
         )
         st.info(
-            "**Moonrock Miners** is **no longer in development**",
+            _("**Moonrock Miners** is **no longer in development**"),
             icon="ℹ️",
         )
-        st.html("<h4>Platform</h4>")
+        st.html("<h4>" + _("Platform") + "</h4>")
         col1, col2 = st.columns(2)
-        col1.link_button("Browser", "https://moonrockminers.com")
-        st.html("<h4>Community</h4>")
+        col1.link_button(_("Browser"), "https://moonrockminers.com")
+        st.html("<h4>" + _("Community") + "</h4>")
         col1, col2 = st.columns(2)
         col1.link_button("Discord", "https://discord.com/invite/kdGuBhXz2r")
         "---"
-        st.html("<h3><i class='fa-solid fa-screwdriver-wrench'></i>&nbsp;Tools</h3>")
-        col1, col2 = st.columns(2)
-        col1.button("Image Assets (WIP)", on_click=to_image_assets_page, type="primary")
-        "---"
-        st.html("<h3><i class='fa-solid fa-chart-simple'></i>&nbsp;Statistics</h3>")
+        st.html(
+            "<h3><i class='fa-solid fa-screwdriver-wrench'></i>&nbsp;"
+            + _("Tools")
+            + "</h3>"
+        )
         col1, col2 = st.columns(2)
         col1.button(
-            "Season Leaderboard (WIP)",
+            _("Image Assets") + " (" + _("WIP") + ")",
+            on_click=to_image_assets_page,
+            type="primary",
+        )
+        "---"
+        st.html(
+            "<h3><i class='fa-solid fa-chart-simple'></i>&nbsp;"
+            + _("Statistics")
+            + "</h3>"
+        )
+        col1, col2 = st.columns(2)
+        col1.button(
+            _("Season Leaderboard") + " (" + _("WIP") + ")",
             on_click=to_season_leaderboard_page,
             type="primary",
         )
         st.info(
-            "**Leaderboard** is **disabled** currently",
+            _("**Leaderboard** is **disabled** currently"),
             icon="ℹ️",
         )
-        back_to_home()
+        back_to_home(st.session_state.language)
 
 elif (
     st.session_state.game == "MoonrockMiners"
@@ -98,7 +120,7 @@ elif (
         )
 
         MoonrockMiners_image_assets()
-        back_to_menu()
+        back_to_menu(st.session_state.language)
 
 elif (
     st.session_state.game == "MoonrockMiners"
@@ -110,4 +132,4 @@ elif (
         )
 
         MoonrockMiners_season_leaderboard()
-        back_to_menu()
+        back_to_menu(st.session_state.language)

@@ -1,14 +1,55 @@
 import streamlit as st
+import gettext
 
 
-def back_to_home():
+# Function to set up the localizator
+def set_localization(language):
+    try:
+        localizator = gettext.translation(
+            f"base_{language}", localedir="locales", languages=[language]
+        )
+        localizator.install()
+        _ = localizator.gettext
+    except Exception:
+        # st.error(f"Translation error: {e}")
+        _ = gettext.gettext
+    return _
+
+
+def available_languages():
+    languages_dict = {
+        "english": "🇺🇸 English",
+        "zh-TW": "🇹🇼 繁體中文",
+        "zh-CN": "🇨🇳 簡体中文",
+        # "ja": "🇯🇵 日本語",
+    }
+
+    languages = [language for language in languages_dict]
+    st.session_state.language = st.sidebar.selectbox(
+        " ",
+        languages,
+        format_func=lambda x: languages_dict.get(x),
+    )
+
+    _ = set_localization(st.session_state.language)
+
+
+try:
+    _ = set_localization(st.session_state.language)
+except Exception:
+    _ = set_localization("english")
+
+
+def back_to_home(selected_language):
+    _ = set_localization(selected_language)
     st.html(
         """<style>
             div[data-testid="stPageLink"] p::before { 
                 font-family: "Font Awesome 5 Free" !important;
                 content: "\\f015";
                 display: inline-block;
-                vertical-align: middle; font-weight: 700;
+                vertical-align: middle;
+                font-weight: 700;
                 font-size: 18px;
                 font-family: 'Baloo 2';
                 color: white;
@@ -36,10 +77,12 @@ def back_to_home():
             }</style>"""
     )
     st.divider()
-    st.page_link("./all_pages/0 Home.py", label="Back to Home")
+    st.page_link("./all_pages/0 Home.py", label=_("Back to Home"))
 
 
-def back_to_menu():
+def back_to_menu(selected_language):
+    _ = set_localization(selected_language)
+
     def to_menu_page():
         st.session_state.page = "menu"
 
@@ -76,7 +119,7 @@ def back_to_menu():
             }</style>"""
     )
     st.divider()
-    st.button("Back to Menu", on_click=to_menu_page)
+    st.button(_("Back to Menu"), on_click=to_menu_page)
 
 
 def common_config():
@@ -97,9 +140,6 @@ def common_config():
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
-        <div class="footer">
-            <p><span style="display:inline-block;">This website is NOT affiliated with or endorsed by Winterpixel Games Inc.</span><span style="display:inline-block;">&nbsp;All relevant trademarks belong to their respective owners.</span><br>Developed with 💖 by <a style="text-decoration:none" href="https://tank8k.com/" target="_blank">TANK8K</a></p>
-        </div>
         <style>
         *:hover {
             cursor: url('./app/static/cursor_v5.png'), auto !important;
@@ -393,6 +433,36 @@ def common_config():
             color: rgb(48, 151, 230) !important;
         }
         </style>
+    """,
+        unsafe_allow_html=True,
+    )
+
+
+def footer_and_language(selected_language):
+    _ = set_localization(selected_language)
+    st.markdown(
+        """
+            <div class="footer">
+            <p><span style="display:inline-block;">"""
+        + _("This website is NOT affiliated with or endorsed by Winterpixel Games Inc.")
+        + """</span><span style="display:inline-block;">&nbsp;"""
+        + _("All relevant trademarks belong to their respective owners.")
+        + """</span><br>"""
+        + _(
+            'Developed with 💖 by <a style="text-decoration:none" href="https://tank8k.com/" target="_blank">TANK8K</a>'
+        )
+        + """</p>
+            <style>
+            div[data-testid="stSidebarContent"] div[data-testid="stSelectbox"] label[data-testid="stWidgetLabel"]::before {
+                content: '💬 """
+        + _("Language")
+        + """';
+                font-family: 'Baloo 2';
+                font-weight: 700;
+                font-size: 20px;
+            }
+            </style>
+        </div>
     """,
         unsafe_allow_html=True,
     )

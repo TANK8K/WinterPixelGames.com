@@ -2,6 +2,9 @@ import streamlit as st
 import os
 import glob
 from math import floor, log, pow
+from common_config import set_localization
+
+_ = set_localization(st.session_state.language)
 
 
 def load_page():
@@ -31,16 +34,20 @@ def load_page():
         """
     )
     st.markdown(
-        '<span style="font-size: 25px; font-weight: bold;"><i class="fa-solid fa-image" style="display: inline; margin: 0 5px 8px 0; width: 25px"></i>Image Assets<span>',
+        '<span style="font-size: 25px; font-weight: bold;"><i class="fa-solid fa-image" style="display: inline; margin: 0 5px 8px 0; width: 25px"></i>'
+        + _("Image Assets")
+        + "<span>",
         unsafe_allow_html=True,
     )
 
     st.warning(
-        """
+        _(
+            """
         The image assets in this page are for **promotional purpose** and/or **content creation** only (e.g. video thumbnails, wikis)
 
-        Using content in derogatory fashions or for commercial purposes is prohibited.
-        """,
+        Using content in derogatory fashions or for commericial purposes are prohibited.
+        """
+        ),
         icon="⚠️",
     )
 
@@ -62,8 +69,14 @@ def load_page():
         return f"{s} {size_name[i]}"
 
     with open(zip_path, "rb") as file:
+        label = (
+            "**"
+            + _("Download All Image Assets")
+            + f" ({convert_size(file_size)})"
+            + "**"
+        )
         st.download_button(
-            label=f"**Download All Image Assets ({convert_size(file_size)})**",
+            label=label,
             data=file,
             file_name="goober_dash_image_assets.zip",
             mime="application/zip",
@@ -73,16 +86,26 @@ def load_page():
     st.markdown("#")
 
     types = [
-        "🏅 Badge",
-        "🎨 Color",
-        "👕 Suit",
-        "🎩 Hat",
-        "⛏️  Hand",
-        "👀 Eyes",
-        "❔ Other Stuff",
+        "Badge",
+        "Color",
+        "Suit",
+        "Hat",
+        "Hand",
+        "Eyes",
+        "Other Stuff",
     ]
 
-    tabs = st.tabs(types)
+    tabs = st.tabs(
+        [
+            "🏅 " + _("Badge"),
+            "🎨 " + _("Color"),
+            "👕 " + _("Suit"),
+            "🎩 " + _("Hat"),
+            "⛏️  " + _("Hand"),
+            "👀 " + _("Eyes"),
+            "❔ " + _("Other Stuff"),
+        ]
+    )
 
     with tabs[0]:
         badges_directory = "./static/GooberDash/awards"
@@ -103,7 +126,7 @@ def load_page():
 
     for i in range(5):
         with tabs[i + 1]:
-            test_images = get_images_of_type(types[i + 1].split()[1])
+            test_images = get_images_of_type(types[i + 1])
 
             n_rows = 1 + len(test_images) // int(5)
             rows = [st.container() for _ in range(n_rows)]
