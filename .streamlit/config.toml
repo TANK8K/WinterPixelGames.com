@@ -9,8 +9,8 @@ enableStaticServing = true
 maxUploadSize = 1
 runOnSave = true
 
-[client]
-toolbarMode = "minimal"
+#[client]
+#toolbarMode = "minimal"
 
 [browser]
 gatherUsageStats = false
