@@ -1,0 +1,63 @@
+{
+  "build": "h5eee18b_1",
+  "build_number": 1,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libgcc-ng >=11.2.0"
+  ],
+  "extracted_package_dir": "/root/miniconda3/pkgs/utf8proc-2.6.1-h5eee18b_1",
+  "files": [
+    "include/utf8proc.h",
+    "lib/libutf8proc.so",
+    "lib/libutf8proc.so.2",
+    "lib/libutf8proc.so.2.4.1"
+  ],
+  "fn": "utf8proc-2.6.1-h5eee18b_1.conda",
+  "license": "MIT",
+  "link": {
+    "source": "/root/miniconda3/pkgs/utf8proc-2.6.1-h5eee18b_1",
+    "type": 1
+  },
+  "md5": "70584a9ac726e2f362e229edb7375da4",
+  "name": "utf8proc",
+  "package_tarball_full_path": "/root/miniconda3/pkgs/utf8proc-2.6.1-h5eee18b_1.conda",
+  "paths_data": {
+    "paths": [
+      {
+        "_path": "include/utf8proc.h",
+        "path_type": "hardlink",
+        "sha256": "01958a0a4c23c17aeb20a9a297df61b8541dd87aa90d04007e2742fd8eed3269",
+        "sha256_in_prefix": "01958a0a4c23c17aeb20a9a297df61b8541dd87aa90d04007e2742fd8eed3269",
+        "size_in_bytes": 31001
+      },
+      {
+        "_path": "lib/libutf8proc.so",
+        "path_type": "softlink",
+        "sha256": "88881b3055142dea25b047a0ee90317b6331c934c754c82cf8567afa0d7fca50",
+        "size_in_bytes": 344808
+      },
+      {
+        "_path": "lib/libutf8proc.so.2",
+        "path_type": "softlink",
+        "sha256": "88881b3055142dea25b047a0ee90317b6331c934c754c82cf8567afa0d7fca50",
+        "size_in_bytes": 344808
+      },
+      {
+        "_path": "lib/libutf8proc.so.2.4.1",
+        "path_type": "hardlink",
+        "sha256": "88881b3055142dea25b047a0ee90317b6331c934c754c82cf8567afa0d7fca50",
+        "sha256_in_prefix": "88881b3055142dea25b047a0ee90317b6331c934c754c82cf8567afa0d7fca50",
+        "size_in_bytes": 344808
+      }
+    ],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "94bf0b9b81047535098d574d5f1d9a7861247cb8feb77faa5828d82c69bb3be0",
+  "size": 94982,
+  "subdir": "linux-64",
+  "timestamp": 1706894675000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/utf8proc-2.6.1-h5eee18b_1.conda",
+  "version": "2.6.1"
+}

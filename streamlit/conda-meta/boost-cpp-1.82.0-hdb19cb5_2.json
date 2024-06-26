@@ -1,0 +1,33 @@
+{
+  "build": "hdb19cb5_2",
+  "build_number": 2,
+  "channel": "https://repo.anaconda.com/pkgs/main/linux-64",
+  "constrains": [],
+  "depends": [
+    "libboost 1.82.0 h109eef0_2",
+    "libgcc-ng >=11.2.0",
+    "libstdcxx-ng >=11.2.0"
+  ],
+  "extracted_package_dir": "/root/miniconda3/pkgs/boost-cpp-1.82.0-hdb19cb5_2",
+  "files": [],
+  "fn": "boost-cpp-1.82.0-hdb19cb5_2.conda",
+  "license": "BSL-1.0",
+  "link": {
+    "source": "/root/miniconda3/pkgs/boost-cpp-1.82.0-hdb19cb5_2",
+    "type": 1
+  },
+  "md5": "126e68decc2907288d2787529a945570",
+  "name": "boost-cpp",
+  "package_tarball_full_path": "/root/miniconda3/pkgs/boost-cpp-1.82.0-hdb19cb5_2.conda",
+  "paths_data": {
+    "paths": [],
+    "paths_version": 1
+  },
+  "requested_spec": "None",
+  "sha256": "e729894d44146071cd66ec125008255bd6278a030a094d981c0e322d85c1b0fe",
+  "size": 11092,
+  "subdir": "linux-64",
+  "timestamp": 1696762269000,
+  "url": "https://repo.anaconda.com/pkgs/main/linux-64/boost-cpp-1.82.0-hdb19cb5_2.conda",
+  "version": "1.82.0"
+}
