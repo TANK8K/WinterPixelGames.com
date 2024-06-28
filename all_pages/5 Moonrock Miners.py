@@ -119,7 +119,7 @@ elif (
             load_page as MoonrockMiners_image_assets,
         )
 
-        MoonrockMiners_image_assets()
+        MoonrockMiners_image_assets(st.session_state.language)
         back_to_menu(st.session_state.language)
 
 elif (
@@ -131,5 +131,5 @@ elif (
             load_page as MoonrockMiners_season_leaderboard,
         )
 
-        MoonrockMiners_season_leaderboard()
+        MoonrockMiners_season_leaderboard(st.session_state.language)
         back_to_menu(st.session_state.language)

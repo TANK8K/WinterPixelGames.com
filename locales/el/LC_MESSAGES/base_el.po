@@ -1,0 +1,1835 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: winterpixelgames\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-29 07:07+0800\n"
+"PO-Revision-Date: 2024-06-28 23:12\n"
+"Last-Translator: \n"
+"Language-Team: Greek\n"
+"Language: el_GR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Crowdin-Project: winterpixelgames\n"
+"X-Crowdin-Project-ID: 688441\n"
+"X-Crowdin-Language: el\n"
+"X-Crowdin-File: base.pot\n"
+"X-Crowdin-File-ID: 10\n"
+
+#: all_pages/5 Moonrock Miners.py:70
+msgid "**MOONROCK MINERS** is a gravity-defying multiplayer space battle game set in an asteroid field. Blast other players, collect powerups and crystals, and avoid the asteroids. Try to survive until the end to win the match. Compete against players around the world in real-time to rank in every season. You can also create your own custom lobbies to play private games online with your friends!"
+msgstr "Το **MOONROCK MINERS** είναι ένα παιχνίδι διαστημικής μάχης πολλαπλών παικτών που αψηφά τη βαρύτητα και διαδραματίζεται σε ένα πεδίο αστεροειδών. Ανατινάξτε άλλους παίκτες, συλλέξτε powerups και κρυστάλλους και αποφύγετε τους αστεροειδείς. Προσπαθήστε να επιβιώσετε μέχρι το τέλος για να κερδίσετε τον αγώνα. Ανταγωνίζεστε παίκτες από όλο τον κόσμο σε πραγματικό χρόνο για να καταταγείτε σε κάθε εποχή. Μπορείτε επίσης να δημιουργήσετε τα δικά σας προσαρμοσμένα λόμπι για να παίξετε ιδιωτικά παιχνίδια online με τους φίλους σας!"
+
+#: all_pages/5 Moonrock Miners.py:74
+msgid "**Moonrock Miners** is **no longer in development**"
+msgstr "Το **Moonrock Miners** είναι **δεν βρίσκεται πλέον σε εξέλιξη**"
+
+#: all_pages/5 Moonrock Miners.py:77 all_pages/4 Goober Shot.py:87
+#: all_pages/3 Goober Royale.py:87
+msgid "Platform"
+msgstr "Πλατφόρμα"
+
+#: all_pages/5 Moonrock Miners.py:79 all_pages/4 Goober Shot.py:89
+#: all_pages/3 Goober Royale.py:89 all_pages/1 Rocket Bot Royale.py:116
+#: all_pages/2 Goober Dash.py:148
+msgid "Browser"
+msgstr "Πρόγραμμα περιήγησης"
+
+#: all_pages/5 Moonrock Miners.py:80 all_pages/4 Goober Shot.py:90
+msgid "Community"
+msgstr "Κοινότητα"
+
+#: all_pages/5 Moonrock Miners.py:86 all_pages/4 Goober Shot.py:96
+#: all_pages/3 Goober Royale.py:96 all_pages/1 Rocket Bot Royale.py:141
+#: all_pages/2 Goober Dash.py:171
+msgid "Tools"
+msgstr "Εργαλεία"
+
+#: all_pages/5 Moonrock Miners.py:91
+#: all_pages/RocketBotRoyale/Tools/image_assets.py:12
+#: all_pages/4 Goober Shot.py:101 all_pages/GooberDash/Tools/image_assets.py:39
+#: all_pages/MoonrockMiners/Tools/image_assets.py:15
+#: all_pages/GooberRoyale/Tools/image_assets.py:15
+#: all_pages/GooberShot/Tools/image_assets.py:15
+#: all_pages/3 Goober Royale.py:100 all_pages/1 Rocket Bot Royale.py:151
+#: all_pages/2 Goober Dash.py:184
+msgid "Image Assets"
+msgstr "Στοιχεία εικόνας"
+
+#: all_pages/5 Moonrock Miners.py:91 all_pages/5 Moonrock Miners.py:103
+#: all_pages/4 Goober Shot.py:101 all_pages/4 Goober Shot.py:113
+#: all_pages/4 Goober Shot.py:118
+#: all_pages/GooberDash/Statistics/player_info.py:482
+#: all_pages/GooberDash/Statistics/player_info.py:496
+#: all_pages/GooberDash/Statistics/player_info.py:498
+#: all_pages/GooberDash/Statistics/player_info.py:500
+#: all_pages/3 Goober Royale.py:109 all_pages/3 Goober Royale.py:114
+#: all_pages/1 Rocket Bot Royale.py:146 all_pages/1 Rocket Bot Royale.py:151
+#: all_pages/1 Rocket Bot Royale.py:163 all_pages/1 Rocket Bot Royale.py:168
+#: all_pages/2 Goober Dash.py:177 all_pages/2 Goober Dash.py:198
+#: all_pages/2 Goober Dash.py:203 all_pages/2 Goober Dash.py:208
+msgid "WIP"
+msgstr "WIP"
+
+#: all_pages/5 Moonrock Miners.py:98 all_pages/4 Goober Shot.py:108
+#: all_pages/3 Goober Royale.py:104 all_pages/1 Rocket Bot Royale.py:158
+#: all_pages/2 Goober Dash.py:188
+msgid "Statistics"
+msgstr "Στατιστικά στοιχεία"
+
+#: all_pages/5 Moonrock Miners.py:103
+#: all_pages/RocketBotRoyale/Statistics/season_leaderboard.py:12
+#: all_pages/4 Goober Shot.py:118
+#: all_pages/GooberDash/Statistics/season_leaderboard.py:15
+#: all_pages/MoonrockMiners/Statistics/season_leaderboard.py:12
+#: all_pages/GooberRoyale/Statistics/season_leaderboard.py:12
+#: all_pages/GooberShot/Statistics/season_leaderboard.py:12
+#: all_pages/3 Goober Royale.py:114 all_pages/1 Rocket Bot Royale.py:168
+#: all_pages/2 Goober Dash.py:208
+msgid "Season Leaderboard"
+msgstr "Πίνακας κατάταξης σεζόν"
+
+#: all_pages/5 Moonrock Miners.py:108
+msgid "**Leaderboard** is **disabled** currently"
+msgstr "Το **Leaderboard** είναι **απενεργοποιημένο** επί του παρόντος"
+
+#: all_pages/RocketBotRoyale/Tools/image_assets.py:18
+#: all_pages/GooberDash/Tools/image_assets.py:46
+#: all_pages/MoonrockMiners/Tools/image_assets.py:21
+#: all_pages/GooberRoyale/Tools/image_assets.py:21
+#: all_pages/GooberShot/Tools/image_assets.py:21
+msgid "\n"
+"        The image assets in this page are for **promotional purpose** and/or **content creation** only (e.g. video thumbnails, wikis)\n\n"
+"        Using content in derogatory fashions or for commercial purposes are prohibited.\n"
+"        "
+msgstr "\n"
+"        Τα στοιχεία εικόνας σε αυτή τη σελίδα προορίζονται μόνο για **προωθητικούς σκοπούς** ή/και **δημιουργία περιεχομένου** (π.χ. μικρογραφίες βίντεο, wikis)\n\n"
+"        Απαγορεύεται η χρήση περιεχομένου με υποτιμητικό τρόπο ή για εμπορικούς σκοπούς.\n"
+"        "
+
+#: all_pages/RocketBotRoyale/Tools/image_assets.py:26
+#: all_pages/MoonrockMiners/Tools/image_assets.py:29
+#: all_pages/GooberRoyale/Tools/image_assets.py:29
+#: all_pages/GooberShot/Tools/image_assets.py:29
+msgid "Gallery"
+msgstr "Γκαλερί"
+
+#: all_pages/RocketBotRoyale/Tools/optimize_crate.py:12
+#: all_pages/1 Rocket Bot Royale.py:146
+msgid "Optimize Crate"
+msgstr "Βελτιστοποίηση κλουβιού"
+
+#: all_pages/RocketBotRoyale/Statistics/player_info.py:12
+#: all_pages/4 Goober Shot.py:113
+#: all_pages/GooberDash/Statistics/player_info.py:82
+#: all_pages/GooberRoyale/Statistics/player_info.py:12
+#: all_pages/GooberShot/Statistics/player_info.py:12
+#: all_pages/3 Goober Royale.py:109 all_pages/1 Rocket Bot Royale.py:163
+#: all_pages/2 Goober Dash.py:198
+msgid "Player Info"
+msgstr "Πληροφορίες παίκτη"
+
+#: all_pages/7 Useful Links.py:68 all_pages/0 Home.py:183
+msgid "Useful Links"
+msgstr "Χρήσιμοι σύνδεσμοι"
+
+#: all_pages/7 Useful Links.py:70
+msgid "Staging Servers"
+msgstr "Διακομιστές σταδιοποίησης"
+
+#: all_pages/7 Useful Links.py:76
+msgid "**Staging Servers** are seperate servers which are used for testing new features before releasing. Usually updates are released on **Staging Servers** a few days before public release. Developers invite members to test out some upcoming features and ask for feedbacks in **Offcial Winterpixel Games Discord server** occasionally.\n"
+msgstr "Οι **Staging Servers** είναι ξεχωριστοί διακομιστές που χρησιμοποιούνται για τη δοκιμή νέων χαρακτηριστικών πριν από την κυκλοφορία. Συνήθως οι ενημερώσεις κυκλοφορούν στους **Staging Servers** λίγες ημέρες πριν από τη δημόσια κυκλοφορία. Οι προγραμματιστές προσκαλούν τα μέλη να δοκιμάσουν κάποια επερχόμενα χαρακτηριστικά και να ζητούν σχόλια στον **Επίσημο διακομιστή Discord των Winterpixel Games** περιστασιακά.\n"
+
+#: all_pages/7 Useful Links.py:84 all_pages/0 Home.py:59
+#: all_pages/0 Home.py:153
+msgid "Rocket Bot Royale"
+msgstr "Rocket Bot Royale"
+
+#: all_pages/7 Useful Links.py:88 all_pages/0 Home.py:69
+#: all_pages/0 Home.py:163
+msgid "Goober Royale"
+msgstr "Goober Royale"
+
+#: all_pages/7 Useful Links.py:91 all_pages/0 Home.py:74
+#: all_pages/0 Home.py:168
+msgid "Goober Shot"
+msgstr "Goober Shot"
+
+#: all_pages/7 Useful Links.py:92 all_pages/0 Home.py:79
+#: all_pages/0 Home.py:173
+msgid "Moonrock Miners"
+msgstr "Μεταλλωρύχοι Moonrock"
+
+#: all_pages/7 Useful Links.py:96
+msgid "**Staging Servers** use seperate databases. **DO NOT** spend money on **Staging Server** as items cannot be transferred."
+msgstr "**Οι διακομιστές σταδιοποίησης** χρησιμοποιούν ξεχωριστές βάσεις δεδομένων. **ΜΗΝ** ξοδεύετε χρήματα σε **Staging Server** καθώς τα στοιχεία δεν μπορούν να μεταφερθούν."
+
+#: all_pages/7 Useful Links.py:103
+msgid "Friendly Websites"
+msgstr "Φιλικοί ιστότοποι"
+
+#: all_pages/7 Useful Links.py:107
+msgid "[**WinterPixel Helper** (WpH)](https://wph.ambersys.app/) is a community-driven site made by [**thehermit**](https://ambersys.app/) which provides useful **Scripts** of games made by **[Winterpixel Games](https://www.winterpixel.com/)**, including **[Rocket Bot Royale](./Rocket_Bot_Royale)**, **[Goober Dash](./Goober_Dash)**, **[Goober Royale](./Goober_Royale)**.\n"
+msgstr "Το [**WinterPixel Helper** (WpH)](https://wph.ambersys.app/) είναι ένας ιστότοπος με γνώμονα την κοινότητα, φτιαγμένος από τον [**thehermit**](https://ambersys.app/), ο οποίος παρέχει χρήσιμα **Σενάρια** των παιχνιδιών που κατασκευάστηκαν από την **[Winterpixel Games](https://www.winterpixel.com/)**, συμπεριλαμβανομένων των **[Rocket Bot Royale](./Rocket_Bot_Royale)**, **[Goober Dash](./Goober_Dash)**, **[Goober Royale](./Goober_Royale)**.\n"
+
+#: all_pages/7 Useful Links.py:112
+msgid "WinterPixel Helper"
+msgstr "Βοηθός WinterPixel"
+
+#: all_pages/7 Useful Links.py:116
+msgid "The scripts in **WinterPixel Helper** should **NOT** be discussed on the **Official Winterpixel Games Discord server** as Moderators **DO NOT APPROVE** promoting non-official tools and scripts. Member who breaks the rules may result in a ban. However, you can enlighten people to this project through DMs and the such."
+msgstr "Τα σενάρια του **WinterPixel Helper** δεν πρέπει να **ΔΕΝ** συζητούνται στον **επίσημο διακομιστή Discord των Winterpixel Games** καθώς οι Συντονιστές **ΔΕΝ ΕΓΚΡΙΝΟΥΝ** την προώθηση μη-επίσημων εργαλείων και σεναρίων. Μέλος που παραβιάζει τους κανόνες μπορεί να οδηγήσει σε αποκλεισμό. Ωστόσο, μπορείτε να διαφωτίσετε τους ανθρώπους για αυτό το έργο μέσω DMs και άλλα τέτοια."
+
+#: all_pages/4 Goober Shot.py:78
+msgid "**GOOBER SHOT** throws you into thrilling online archery battles against three other players! Prepare your bow, sharpen your arrows, enter the arena, and unleash your skills as a master archer. Remember, every arrow counts! Show off your precision and reflexes as you aim, shoot, and dodge with finesse. Rise through the ranks, climb the global leaderboards, and prove yourself as the ultimate archery champion. Will you emerge as the greatest archer in the realm?"
+msgstr "**GOOBER SHOT** σας ρίχνει σε συναρπαστικές online μάχες τοξοβολίας εναντίον τριών άλλων παικτών! Ετοιμάστε το τόξο σας, ακονίστε τα βέλη σας, μπείτε στην αρένα και ξεδιπλώστε τις ικανότητές σας ως αριστοτέχνης τοξότης. Θυμηθείτε, κάθε βέλος μετράει! Επιδείξτε την ακρίβεια και τα αντανακλαστικά σας καθώς σημαδεύετε, πυροβολείτε και αποφεύγετε με φινέτσα. Ανεβείτε στην ιεραρχία, σκαρφαλώστε στους παγκόσμιους πίνακες κατάταξης και αποδείξτε ότι είστε ο απόλυτος πρωταθλητής της τοξοβολίας. Θα αναδειχθείτε ως ο μεγαλύτερος τοξότης στο βασίλειο;"
+
+#: all_pages/4 Goober Shot.py:83
+msgid "**Goober Shot** is in **beta** currently (Bugs are expected and Data may be reset in future)"
+msgstr "Το **Goober Shot** είναι σε **beta** αυτή τη στιγμή (Αναμένονται σφάλματα και τα δεδομένα μπορεί να επαναρυθμιστούν στο μέλλον)"
+
+#: all_pages/GooberDash/Tools/goober_generator.py:39
+#: all_pages/2 Goober Dash.py:182
+msgid "Goober Generator"
+msgstr "Γεννήτρια Goober"
+
+#: all_pages/GooberDash/Tools/goober_generator.py:55
+#: all_pages/GooberDash/Tools/image_assets.py:102
+msgid "Color"
+msgstr "Χρώμα"
+
+#: all_pages/GooberDash/Tools/goober_generator.py:56
+#: all_pages/GooberDash/Tools/image_assets.py:103
+msgid "Suit"
+msgstr "Κοστούμι"
+
+#: all_pages/GooberDash/Tools/goober_generator.py:57
+#: all_pages/GooberDash/Tools/image_assets.py:104
+msgid "Hat"
+msgstr "Καπέλο"
+
+#: all_pages/GooberDash/Tools/goober_generator.py:58
+#: all_pages/GooberDash/Tools/image_assets.py:105
+msgid "Hand"
+msgstr "Χέρι"
+
+#: all_pages/GooberDash/Tools/goober_generator.py:59
+#: all_pages/GooberDash/Tools/image_assets.py:106
+msgid "Eyes"
+msgstr "Μάτια"
+
+#: all_pages/GooberDash/Tools/goober_generator.py:87
+msgid "Download"
+msgstr "Λήψη"
+
+#: all_pages/GooberDash/Tools/image_assets.py:75
+msgid "Download All Image Assets"
+msgstr "Λήψη όλων των στοιχείων εικόνας"
+
+#: all_pages/GooberDash/Tools/image_assets.py:101
+msgid "Badge"
+msgstr "Κονκάρδα"
+
+#: all_pages/GooberDash/Tools/image_assets.py:107
+msgid "Other Stuff"
+msgstr "Άλλα πράγματα"
+
+#: all_pages/GooberDash/Tools/flip_level.py:132 all_pages/2 Goober Dash.py:175
+msgid "Flip Level"
+msgstr "Επίπεδο Flip"
+
+#: all_pages/GooberDash/Tools/flip_level.py:137
+msgid "Upload and Download Level by"
+msgstr "Ανέβασμα και Λήψη επιπέδου από"
+
+#: all_pages/GooberDash/Tools/flip_level.py:137
+#: all_pages/GooberDash/Tools/flip_level.py:140
+#: all_pages/GooberDash/Tools/flip_level.py:143
+#: all_pages/GooberDash/Tools/flip_level.py:158
+#: all_pages/GooberDash/Tools/flip_level.py:169
+#: all_pages/GooberDash/Tools/flip_level.py:188
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:942
+#: all_pages/GooberDash/Statistics/player_info.py:906
+msgid "Level ID"
+msgstr "Αναγνωριστικό επιπέδου"
+
+#: all_pages/GooberDash/Tools/flip_level.py:143
+msgid "Full URL supported"
+msgstr "Υποστηρίζεται πλήρης διεύθυνση URL"
+
+#: all_pages/GooberDash/Tools/flip_level.py:150
+msgid "Upload the JSON File"
+msgstr "Ανεβάστε το αρχείο JSON"
+
+#: all_pages/GooberDash/Tools/flip_level.py:154
+msgid "Submit"
+msgstr "Υποβολή"
+
+#: all_pages/GooberDash/Tools/flip_level.py:172
+msgid "The Level ID of the output Level is"
+msgstr "Το αναγνωριστικό επιπέδου του επιπέδου εξόδου είναι"
+
+#: all_pages/GooberDash/Tools/flip_level.py:174
+msgid "Play Level on Browser"
+msgstr "Αναπαραγωγή επιπέδου στο πρόγραμμα περιήγησης"
+
+#: all_pages/GooberDash/Tools/flip_level.py:178
+msgid "Download Output"
+msgstr "Λήψη εξόδου"
+
+#: all_pages/GooberDash/Tools/flip_level.py:181
+msgid "flipped"
+msgstr "flipped"
+
+#: all_pages/GooberDash/Tools/maze_generator.py:15
+#: all_pages/2 Goober Dash.py:177
+msgid "Maze Generator"
+msgstr "Γεννήτρια λαβύρινθου"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:39
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:424
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:465
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:475
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:514
+msgid "Global"
+msgstr "Παγκόσμια"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:40
+msgid "Afghanistan"
+msgstr "Αφγανιστάν"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:41
+msgid "Albania"
+msgstr "Αλβανία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:42
+msgid "Algeria"
+msgstr "Αλγερία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:43
+msgid "American Samoa"
+msgstr "Αμερικανική Σαμόα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:44
+msgid "Andorra"
+msgstr "Ανδόρα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:45
+msgid "Angola"
+msgstr "Αγκόλα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:46
+msgid "Anguilla"
+msgstr "Ανγκουίλα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:47
+msgid "Antigua and Barbuda"
+msgstr "Αντίγκουα και Μπαρμπούντα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:48
+msgid "Argentina"
+msgstr "Αργεντινή"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:49
+msgid "Armenia"
+msgstr "Αρμενία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:50
+msgid "Aruba"
+msgstr "Αρούμπα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:51
+msgid "Australia"
+msgstr "Αυστραλία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:52
+msgid "Austria"
+msgstr "Αυστρία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:53
+msgid "Azerbaijan"
+msgstr "Αζερμπαϊτζάν"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:54
+msgid "Bahamas"
+msgstr "Μπαχάμες"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:55
+msgid "Bahrain"
+msgstr "Μπαχρέιν"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:56
+msgid "Bangladesh"
+msgstr "Μπαγκλαντές"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:57
+msgid "Barbados"
+msgstr "Μπαρμπάντος"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:58
+msgid "Belarus"
+msgstr "Λευκορωσία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:59
+msgid "Belgium"
+msgstr "Βέλγιο"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:60
+msgid "Belize"
+msgstr "Μπελίζ"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:61
+msgid "Benin"
+msgstr "Μπενίν"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:62
+msgid "Bermuda"
+msgstr "Βερμούδες"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:63
+msgid "Bhutan"
+msgstr "Μπουτάν"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:64
+msgid "Bolivia"
+msgstr "Βολιβία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:65
+msgid "Bosnia and Herzegovina"
+msgstr "Βοσνία-Ερζεγοβίνη"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:66
+msgid "Botswana"
+msgstr "Μποτσουάνα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:67
+msgid "Bouvet Island"
+msgstr "Νήσος Μπουβέ"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:68
+msgid "Brazil"
+msgstr "Βραζιλία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:69
+msgid "British Indian Ocean Territory"
+msgstr "Βρετανικό έδαφος του Ινδικού Ωκεανού"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:70
+msgid "Brunei Darussalam"
+msgstr "Μπρουνέι Νταρουσαλάμ"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:71
+msgid "Bulgaria"
+msgstr "Βουλγαρία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:72
+msgid "Burkina Faso"
+msgstr "Μπουρκίνα Φάσο"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:73
+msgid "Burundi"
+msgstr "Μπουρούντι"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:74
+msgid "Cambodia"
+msgstr "Καμπότζη"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:75
+msgid "Cameroon"
+msgstr "Καμερούν"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:76
+msgid "Canada"
+msgstr "Καναδάς"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:77
+msgid "Cape Verde"
+msgstr "Πράσινο Ακρωτήριο"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:78
+msgid "Cayman Islands"
+msgstr "Νησιά Κέιμαν"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:79
+msgid "Central African Republic"
+msgstr "Κεντροαφρικανική Δημοκρατία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:80
+msgid "Chad"
+msgstr "Τσαντ"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:81
+msgid "Chile"
+msgstr "Χιλή"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:82
+msgid "China"
+msgstr "Κίνα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:83
+msgid "Christmas Island"
+msgstr "Νησί των Χριστουγέννων"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:84
+msgid "Cocos (Keeling) Islands"
+msgstr "Νήσοι Κόκος (Keeling)"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:85
+msgid "Colombia"
+msgstr "Κολομβία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:86
+msgid "Comoros"
+msgstr "Κομόρες"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:87
+msgid "Congo"
+msgstr "Κονγκό"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:88
+msgid "Congo, the Democratic Republic of the"
+msgstr "Κονγκό, Λαϊκή Δημοκρατία του"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:89
+msgid "Cook Islands"
+msgstr "Νήσοι Κουκ"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:90
+msgid "Costa Rica"
+msgstr "Κόστα Ρίκα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:91
+msgid "Croatia"
+msgstr "Κροατία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:92
+msgid "Cuba"
+msgstr "Κούβα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:93
+msgid "Curaçao"
+msgstr "Κουρασάο"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:94
+msgid "Cyprus"
+msgstr "Κύπρος"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:95
+msgid "Czech Republic"
+msgstr "Τσεχική Δημοκρατία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:96
+msgid "Côte d'Ivoire"
+msgstr "Ακτή Ελεφαντοστού"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:97
+msgid "Denmark"
+msgstr "Δανία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:98
+msgid "Djibouti"
+msgstr "Τζιμπουτί"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:99
+msgid "Dominica"
+msgstr "Ντομίνικα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:100
+msgid "Dominican Republic"
+msgstr "Δομινικανή Δημοκρατία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:101
+msgid "Ecuador"
+msgstr "Εκουαδόρ"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:102
+msgid "Egypt"
+msgstr "Αίγυπτος"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:103
+msgid "El Salvador"
+msgstr "Ελ Σαλβαδόρ"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:104
+msgid "Equatorial Guinea"
+msgstr "Ισημερινή Γουινέα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:105
+msgid "Eritrea"
+msgstr "Ερυθραία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:106
+msgid "Estonia"
+msgstr "Εσθονία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:107
+msgid "Ethiopia"
+msgstr "Αιθιοπία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:108
+msgid "Falkland Islands (Malvinas)"
+msgstr "Νήσοι Φόκλαντ (Μαλβίνες)"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:109
+msgid "Faroe Islands"
+msgstr "Νήσοι Φερόε"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:110
+msgid "Fiji"
+msgstr "Φίτζι"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:111
+msgid "Finland"
+msgstr "Φινλανδία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:112
+msgid "France"
+msgstr "Γαλλία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:113
+msgid "French Guiana"
+msgstr "Γαλλική Γουιάνα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:114
+msgid "French Polynesia"
+msgstr "Γαλλική Πολυνησία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:115
+msgid "French Southern Territories"
+msgstr "Γαλλικά νότια εδάφη"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:116
+msgid "Gabon"
+msgstr "Γκαμπόν"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:117
+msgid "Gambia"
+msgstr "Γκάμπια"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:118
+msgid "Georgia"
+msgstr "Γεωργία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:119
+msgid "Germany"
+msgstr "Γερμανία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:120
+msgid "Ghana"
+msgstr "Γκάνα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:121
+msgid "Gibraltar"
+msgstr "Γιβραλτάρ"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:122
+msgid "Greece"
+msgstr "Ελλάδα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:123
+msgid "Greenland"
+msgstr "Γροιλανδία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:124
+msgid "Grenada"
+msgstr "Γρενάδα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:125
+msgid "Guadeloupe"
+msgstr "Γουαδελούπη"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:126
+msgid "Guam"
+msgstr "Γκουάμ"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:127
+msgid "Guatemala"
+msgstr "Γουατεμάλα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:128
+msgid "Guernsey"
+msgstr "Guernsey"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:129
+msgid "Guinea"
+msgstr "Γουινέα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:130
+msgid "Guinea-Bissau"
+msgstr "Γουινέα-Μπισσάου"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:131
+msgid "Guyana"
+msgstr "Γουιάνα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:132
+msgid "Haiti"
+msgstr "Αϊτή"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:133
+msgid "Heard Island and Mcdonald Islands"
+msgstr "Νήσος Heard και νησιά Mcdonald"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:134
+msgid "Honduras"
+msgstr "Ονδούρα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:135
+msgid "Hong Kong"
+msgstr "Χονγκ Κονγκ"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:136
+msgid "Hungary"
+msgstr "Ουγγαρία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:137
+msgid "Iceland"
+msgstr "Ισλανδία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:138
+msgid "India"
+msgstr "Ινδία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:139
+msgid "Indonesia"
+msgstr "Ινδονησία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:140
+msgid "Iran"
+msgstr "Ιράν"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:141
+msgid "Iraq"
+msgstr "Ιράκ"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:142
+msgid "Ireland"
+msgstr "Ιρλανδία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:143
+msgid "Isle of Man"
+msgstr "Νήσος Μαν"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:144
+msgid "Israel"
+msgstr "Ισραήλ"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:145
+msgid "Italy"
+msgstr "Ιταλία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:146
+msgid "Jamaica"
+msgstr "Τζαμάικα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:147
+msgid "Japan"
+msgstr "Ιαπωνία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:148
+msgid "Jersey"
+msgstr "Τζέρσεϊ"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:149
+msgid "Jordan"
+msgstr "Ιορδανία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:150
+msgid "Kazakhstan"
+msgstr "Καζακστάν"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:151
+msgid "Kenya"
+msgstr "Κένυα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:152
+msgid "Kiribati"
+msgstr "Κιριμπάτι"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:153
+msgid "Kosovo"
+msgstr "Κόσοβο"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:154
+msgid "Kuwait"
+msgstr "Κουβέιτ"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:155
+msgid "Kyrgyzstan"
+msgstr "Κιργιστάν"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:156
+msgid "Lao People's Democratic Republic"
+msgstr "Λαϊκή Δημοκρατία του Λάος"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:157
+msgid "Latvia"
+msgstr "Λετονία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:158
+msgid "Lebanon"
+msgstr "Λίβανος"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:159
+msgid "Lesotho"
+msgstr "Λεσότο"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:160
+msgid "Liberia"
+msgstr "Λιβερία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:161
+msgid "Libya"
+msgstr "Λιβύη"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:162
+msgid "Liechtenstein"
+msgstr "Λιχτενστάιν"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:163
+msgid "Lithuania"
+msgstr "Λιθουανία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:164
+msgid "Luxembourg"
+msgstr "Λουξεμβούργο"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:165
+msgid "Macao"
+msgstr "Μακάο"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:166
+msgid "Macedonia"
+msgstr "Μακεδονία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:167
+msgid "Madagascar"
+msgstr "Μαδαγασκάρη"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:168
+msgid "Malawi"
+msgstr "Μαλάουι"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:169
+msgid "Malaysia"
+msgstr "Μαλαισία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:170
+msgid "Maldives"
+msgstr "Μαλδίβες"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:171
+msgid "Mali"
+msgstr "Μάλι"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:172
+msgid "Malta"
+msgstr "Μάλτα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:173
+msgid "Marshall Islands"
+msgstr "Νήσοι Μάρσαλ"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:174
+msgid "Martinique"
+msgstr "Μαρτινίκα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:175
+msgid "Mauritania"
+msgstr "Μαυριτανία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:176
+msgid "Mauritius"
+msgstr "Μαυρίκιος"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:177
+msgid "Mayotte"
+msgstr "Μαγιότ"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:178
+msgid "Mexico"
+msgstr "Μεξικό"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:179
+msgid "Micronesia"
+msgstr "Μικρονησία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:180
+msgid "Moldova"
+msgstr "Μολδαβία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:181
+msgid "Monaco"
+msgstr "Μονακό"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:182
+msgid "Mongolia"
+msgstr "Μογγολία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:183
+msgid "Montenegro"
+msgstr "Μαυροβούνιο"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:184
+msgid "Montserrat"
+msgstr "Montserrat"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:185
+msgid "Morocco"
+msgstr "Μαρόκο"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:186
+msgid "Mozambique"
+msgstr "Μοζαμβίκη"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:187
+msgid "Myanmar"
+msgstr "Μιανμάρ"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:188
+msgid "Namibia"
+msgstr "Ναμίμπια"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:189
+msgid "Nauru"
+msgstr "Ναούρου"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:190
+msgid "Nepal"
+msgstr "Νεπάλ"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:191
+msgid "Netherlands"
+msgstr "Ολλανδία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:192
+msgid "New Caledonia"
+msgstr "Νέα Καληδονία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:193
+msgid "New Zealand"
+msgstr "Νέα Ζηλανδία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:194
+msgid "Nicaragua"
+msgstr "Νικαράγουα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:195
+msgid "Niger"
+msgstr "Νίγηρας"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:196
+msgid "Nigeria"
+msgstr "Νιγηρία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:197
+msgid "Niue"
+msgstr "Niue"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:198
+msgid "Norfolk Island"
+msgstr "Νήσος Νόρφολκ"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:199
+msgid "North Korea"
+msgstr "Βόρεια Κορέα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:200
+msgid "Northern Mariana Islands"
+msgstr "Βόρειες Μαριάνες"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:201
+msgid "Norway"
+msgstr "Νορβηγία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:202
+msgid "Oman"
+msgstr "Ομάν"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:203
+msgid "Pakistan"
+msgstr "Πακιστάν"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:204
+msgid "Palau"
+msgstr "Παλάου"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:205
+msgid "Palestine"
+msgstr "Παλαιστίνη"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:206
+msgid "Panama"
+msgstr "Παναμάς"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:207
+msgid "Papua New Guinea"
+msgstr "Παπούα Νέα Γουινέα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:208
+msgid "Paraguay"
+msgstr "Παραγουάη"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:209
+msgid "Peru"
+msgstr "Περού"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:210
+msgid "Philippines"
+msgstr "Φιλιππίνες"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:211
+msgid "Pitcairn"
+msgstr "Pitcairn"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:212
+msgid "Poland"
+msgstr "Πολωνία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:213
+msgid "Portugal"
+msgstr "Πορτογαλία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:214
+msgid "Puerto Rico"
+msgstr "Πουέρτο Ρίκο"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:215
+msgid "Qatar"
+msgstr "Κατάρ"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:216
+msgid "Romania"
+msgstr "Ρουμανία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:217
+msgid "Russia"
+msgstr "Ρωσία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:218
+msgid "Rwanda"
+msgstr "Ρουάντα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:219
+msgid "Réunion"
+msgstr "Ρεϋνιόν"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:220
+msgid "Saint Barthélemy"
+msgstr "Saint Barthélemy"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:221
+msgid "Saint Helena, Ascension and Tristan Da Cunha"
+msgstr "Αγία Ελένη, Ανάληψη και Tristan Da Cunha"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:222
+msgid "Saint Kitts and Nevis"
+msgstr "Άγιος Χριστόφορος και Νέβις"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:223
+msgid "Saint Lucia"
+msgstr "Αγία Λουκία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:224
+msgid "Saint Martin (French Part)"
+msgstr "Άγιος Μαρτίνος (Γαλλικό τμήμα)"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:225
+msgid "Saint Pierre and Miquelon"
+msgstr "Σαιν Πιερ και Μικελόν"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:226
+msgid "Saint Vincent and The Grenadines"
+msgstr "Άγιος Βικέντιος και Γρεναδίνες"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:227
+msgid "Samoa"
+msgstr "Σαμόα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:228
+msgid "San Marino"
+msgstr "Άγιος Μαρίνος"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:229
+msgid "Sao Tome and Principe"
+msgstr "Σάο Τομέ και Πρίνσιπε"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:230
+msgid "Saudi Arabia"
+msgstr "Σαουδική Αραβία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:231
+msgid "Senegal"
+msgstr "Σενεγάλη"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:232
+msgid "Serbia"
+msgstr "Σερβία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:233
+msgid "Seychelles"
+msgstr "Σεϋχέλλες"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:234
+msgid "Sierra Leone"
+msgstr "Σιέρα Λεόνε"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:235
+msgid "Singapore"
+msgstr "Σιγκαπούρη"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:236
+msgid "Sint Maarten (Dutch Part)"
+msgstr "Sint Maarten (Ολλανδικό τμήμα)"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:237
+msgid "Slovakia"
+msgstr "Σλοβακία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:238
+msgid "Slovenia"
+msgstr "Σλοβενία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:239
+msgid "Solomon Islands"
+msgstr "Νήσοι Σολομώντος"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:240
+msgid "Somalia"
+msgstr "Σομαλία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:241
+msgid "South Africa"
+msgstr "Νότια Αφρική"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:242
+msgid "South Georgia"
+msgstr "Νότια Γεωργία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:243
+msgid "South Korea"
+msgstr "Νότια Κορέα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:244
+msgid "South Sudan"
+msgstr "Νότιο Σουδάν"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:245
+msgid "Spain"
+msgstr "Ισπανία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:246
+msgid "Sri Lanka"
+msgstr "Σρι Λάνκα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:247
+msgid "Sudan"
+msgstr "Σουδάν"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:248
+msgid "Suriname"
+msgstr "Σουρινάμ"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:249
+msgid "Svalbard and Jan Mayen"
+msgstr "Svalbard και Jan Mayen"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:250
+msgid "Swaziland"
+msgstr "Σουαζιλάνδη"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:251
+msgid "Sweden"
+msgstr "Σουηδία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:252
+msgid "Switzerland"
+msgstr "Ελβετία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:253
+msgid "Syrian Arab Republic"
+msgstr "Συριακή Αραβική Δημοκρατία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:254
+msgid "Taiwan"
+msgstr "Ταϊβάν"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:255
+msgid "Tajikistan"
+msgstr "Τατζικιστάν"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:256
+msgid "Tanzania"
+msgstr "Τανζανία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:257
+msgid "Thailand"
+msgstr "Ταϊλάνδη"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:258
+msgid "Timor-Leste"
+msgstr "Τιμόρ-Λέστε"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:259
+msgid "Togo"
+msgstr "Τόγκο"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:260
+msgid "Tokelau"
+msgstr "Τοκελάου"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:261
+msgid "Tonga"
+msgstr "Τόνγκα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:262
+msgid "Trinidad and Tobago"
+msgstr "Τρινιντάντ και Τομπάγκο"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:263
+msgid "Tunisia"
+msgstr "Τυνησία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:264
+msgid "Turkey"
+msgstr "Τουρκία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:265
+msgid "Turkmenistan"
+msgstr "Τουρκμενιστάν"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:266
+msgid "Turks and Caicos Islands"
+msgstr "Νήσοι Τερκς και Κάικος"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:267
+msgid "Tuvalu"
+msgstr "Τουβαλού"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:268
+msgid "Uganda"
+msgstr "Ουγκάντα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:269
+msgid "Ukraine"
+msgstr "Ουκρανία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:270
+msgid "United Arab Emirates"
+msgstr "Ηνωμένα Αραβικά Εμιράτα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:271
+msgid "United Kingdom"
+msgstr "Ηνωμένο Βασίλειο"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:272
+msgid "United States"
+msgstr "Ηνωμένες Πολιτείες"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:273
+msgid "United States Minor Outlying Islands"
+msgstr "Μικρά απομακρυσμένα νησιά των Ηνωμένων Πολιτειών"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:274
+msgid "Uruguay"
+msgstr "Ουρουγουάη"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:275
+msgid "Uzbekistan"
+msgstr "Ουζμπεκιστάν"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:276
+msgid "Vanuatu"
+msgstr "Βανουάτου"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:277
+msgid "Vatican City"
+msgstr "Πόλη του Βατικανού"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:278
+msgid "Venezuela"
+msgstr "Βενεζουέλα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:279
+msgid "Vietnam"
+msgstr "Βιετνάμ"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:280
+msgid "Virgin Islands, British"
+msgstr "Παρθένοι Νήσοι, Βρετανικές"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:281
+msgid "Virgin Islands, U.S."
+msgstr "Παρθένοι Νήσοι, ΗΠΑ"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:282
+msgid "Wallis and Futuna"
+msgstr "Wallis και Futuna"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:283
+msgid "Western Sahara"
+msgstr "Δυτική Σαχάρα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:284
+msgid "Yemen"
+msgstr "Υεμένη"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:285
+msgid "Zambia"
+msgstr "Ζάμπια"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:286
+msgid "Zimbabwe"
+msgstr "Ζιμπάμπουε"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:287
+msgid "Åland Islands"
+msgstr "Νησιά Åland"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:301
+msgid "Time Trials"
+msgstr "Δοκιμές χρόνου"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:303
+msgid "Certified Levels"
+msgstr "Πιστοποιημένα επίπεδα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:305
+msgid "World Records Statistics"
+msgstr "Στατιστικά στοιχεία παγκόσμιων ρεκόρ"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:309
+#: all_pages/GooberDash/Statistics/player_info.py:503
+msgid "Last Update"
+msgstr "Τελευταία ενημέρωση"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:311
+#: all_pages/GooberDash/Statistics/player_info.py:505
+msgid "Updated Every 12 Hours"
+msgstr "Ενημέρωση κάθε 12 ώρες"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:316
+msgid "Performance Points Leaderboard"
+msgstr "Πίνακας πόντων απόδοσης"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:317
+msgid "World Records"
+msgstr "Παγκόσμια ρεκόρ"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:318
+msgid "WRs Distribution"
+msgstr "Κατανομή WRs"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:386
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:748
+#: all_pages/GooberDash/Statistics/player_info.py:548
+#: all_pages/GooberDash/Statistics/player_info.py:562
+msgid "Global Rank"
+msgstr "Παγκόσμια κατάταξη"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:387
+msgid "Global Rank diff"
+msgstr "Παγκόσμια κατάταξη diff"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:388
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:749
+msgid "Local Rank"
+msgstr "Τοπική κατάταξη"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:389
+msgid "Local Rank diff"
+msgstr "Τοπική κατάταξη diff"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:390
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:741
+#: all_pages/GooberDash/Statistics/player_info.py:594
+#: all_pages/GooberDash/Statistics/player_info.py:600
+msgid "Completed Levels"
+msgstr "Ολοκληρωμένα επίπεδα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:391
+msgid "Completed Levels diff"
+msgstr "Ολοκληρωμένα επίπεδα diff"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:392
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:752
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:782
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:826
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:835
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:837
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:845
+#: all_pages/GooberDash/Statistics/player_info.py:909
+#: all_pages/GooberDash/Statistics/player_info.py:949
+#: all_pages/GooberDash/Statistics/player_info.py:993
+#: all_pages/GooberDash/Statistics/player_info.py:1003
+#: all_pages/GooberDash/Statistics/player_info.py:1006
+#: all_pages/GooberDash/Statistics/player_info.py:1015
+msgid "Performance Points"
+msgstr "Βαθμοί απόδοσης"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:393
+msgid "Performance Points diff"
+msgstr "Βαθμοί απόδοσης diff"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:394
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:755
+msgid "Global Top %"
+msgstr "Παγκόσμιο Top %"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:395
+#, python-format
+msgid "Global Top % diff"
+msgstr "Παγκόσμια Κορυφαία % diff"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:396
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:756
+msgid "Local Top %"
+msgstr "Τοπική κορυφή %"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:397
+#, python-format
+msgid "Local Top % diff"
+msgstr "Τοπική Κορυφή % diff"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:399
+msgid "🥇 diff"
+msgstr "🥇 diff"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:401
+msgid "🥈 diff"
+msgstr "🥈 diff"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:403
+msgid "🥉 diff"
+msgstr "🥉 diff"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:404
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:750
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:943
+msgid "Player"
+msgstr "Παίκτης"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:405
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:747
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:944
+#: all_pages/GooberDash/Statistics/player_info.py:484
+msgid "User ID"
+msgstr "Αναγνωριστικό χρήστη"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:411
+msgid "Sort By"
+msgstr "Ταξινόμηση κατά"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:417
+msgid "Order"
+msgstr "Παραγγελία"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:421
+msgid "Country/Region"
+msgstr "Χώρα/περιοχή"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:432
+#: all_pages/GooberDash/Statistics/player_info.py:90
+msgid "Search Player"
+msgstr "Αναζήτηση παίκτη"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:432
+#: all_pages/GooberDash/Statistics/player_info.py:91
+msgid "Username or User ID"
+msgstr "Όνομα χρήστη ή αναγνωριστικό χρήστη"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:436
+msgid "Display Global Rank"
+msgstr "Εμφάνιση παγκόσμιας κατάταξης"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:439
+msgid "Display Local Rank"
+msgstr "Εμφάνιση τοπικής κατάταξης"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:442
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:899
+msgid "Display User ID"
+msgstr "Εμφάνιση αναγνωριστικού χρήστη"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:445
+#: all_pages/GooberDash/Statistics/player_info.py:761
+msgid "Display Changes"
+msgstr "Αλλαγές οθόνης"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:479
+#: all_pages/GooberDash/Statistics/player_info.py:1020
+msgid "No Records Found"
+msgstr "Δεν βρέθηκαν εγγραφές"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:490
+msgid "Page Size"
+msgstr "Μέγεθος σελίδας"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:498
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:509
+msgid "Page"
+msgstr "Σελίδα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:511
+msgid "of"
+msgstr "του"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:517
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:525
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:787
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:791
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:794
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:796
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:798
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:802
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:825
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:845
+#: all_pages/GooberDash/Statistics/player_info.py:914
+#: all_pages/GooberDash/Statistics/player_info.py:954
+#: all_pages/GooberDash/Statistics/player_info.py:958
+#: all_pages/GooberDash/Statistics/player_info.py:961
+#: all_pages/GooberDash/Statistics/player_info.py:963
+#: all_pages/GooberDash/Statistics/player_info.py:965
+#: all_pages/GooberDash/Statistics/player_info.py:969
+#: all_pages/GooberDash/Statistics/player_info.py:992
+#: all_pages/GooberDash/Statistics/player_info.py:1015
+msgid "Rank"
+msgstr "Κατάταξη"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:519
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:527
+msgid "to"
+msgstr "στο"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:531
+msgid "Total number of Players"
+msgstr "Συνολικός αριθμός παικτών"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:742
+msgid "Total Number of Levels with Records"
+msgstr "Συνολικός αριθμός επιπέδων με εγγραφές"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:753
+#: all_pages/GooberDash/Statistics/player_info.py:911
+msgid "Total Performance Points (pp) in all levels combined"
+msgstr "Συνολικοί πόντοι απόδοσης (ΠΠ) σε όλα τα επίπεδα μαζί"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:777
+#: all_pages/GooberDash/Statistics/player_info.py:944
+msgid "How Performance Points (pp) are calculated"
+msgstr "Πώς υπολογίζονται οι πόντοι απόδοσης (pp)"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:789
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:800
+#: all_pages/GooberDash/Statistics/player_info.py:956
+#: all_pages/GooberDash/Statistics/player_info.py:967
+msgid "if"
+msgstr "εάν"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:809
+#: all_pages/GooberDash/Statistics/player_info.py:976
+msgid "Top 100 Rank to Performance Points conversion"
+msgstr "Top 100 Κατάταξη σε Βαθμοί Απόδοσης μετατροπή"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:829
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:837
+#: all_pages/GooberDash/Statistics/player_info.py:996
+#: all_pages/GooberDash/Statistics/player_info.py:1005
+msgid "Performance Points pp"
+msgstr "Βαθμοί απόδοσης pp"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:830
+#: all_pages/GooberDash/Statistics/player_info.py:691
+#: all_pages/GooberDash/Statistics/player_info.py:695
+#: all_pages/GooberDash/Statistics/player_info.py:997
+msgid "pp"
+msgstr "σελ"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:893
+#: all_pages/GooberDash/Statistics/player_info.py:750
+msgid "Display Level ID"
+msgstr "Εμφάνιση αναγνωριστικού επιπέδου"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:905
+msgid "Display Records Count"
+msgstr "Εμφάνιση αριθμού εγγραφών"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:941
+#: all_pages/GooberDash/Statistics/player_info.py:905
+msgid "Level"
+msgstr "Επίπεδο"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:946
+#: all_pages/GooberDash/Statistics/player_info.py:907
+msgid "Time"
+msgstr "Χρόνος"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:946
+#: all_pages/GooberDash/Statistics/player_info.py:680
+#: all_pages/GooberDash/Statistics/player_info.py:684
+#: all_pages/GooberDash/Statistics/player_info.py:808
+msgid "s"
+msgstr "s"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:948
+#: all_pages/GooberDash/Statistics/player_info.py:920
+msgid "Upload Time"
+msgstr "Χρόνος φόρτωσης"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:950
+msgid "Level Records Count"
+msgstr "Επίπεδο Εγγραφές Αριθμός εγγραφών"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:953
+#: all_pages/GooberDash/Statistics/player_info.py:923
+msgid "Watch Replay"
+msgstr "Παρακολουθήστε επανάληψη"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:956
+#: all_pages/GooberDash/Statistics/player_info.py:926
+msgid "Race Ghost"
+msgstr "Φάντασμα φυλής"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:978
+msgid "Levels"
+msgstr "Επίπεδα"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:980
+msgid "WR Holders"
+msgstr "Κάτοχοι WR"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:982
+msgid "WRs"
+msgstr "WRs"
+
+#: all_pages/GooberDash/Statistics/player_info.py:143
+msgid "Select Player"
+msgstr "Επιλέξτε παίκτη"
+
+#: all_pages/GooberDash/Statistics/player_info.py:147
+msgid "Players found"
+msgstr "Βρέθηκαν παίκτες"
+
+#: all_pages/GooberDash/Statistics/player_info.py:156
+msgid "No Players Found"
+msgstr "Δεν βρέθηκαν παίκτες"
+
+#: all_pages/GooberDash/Statistics/player_info.py:162
+msgid "General Info"
+msgstr "Γενικές πληροφορίες"
+
+#: all_pages/GooberDash/Statistics/player_info.py:163
+msgid "Season Records"
+msgstr "Ρεκόρ σεζόν"
+
+#: all_pages/GooberDash/Statistics/player_info.py:164
+msgid "Medals"
+msgstr "Μετάλλια"
+
+#: all_pages/GooberDash/Statistics/player_info.py:165
+msgid "Stats"
+msgstr "Στατιστικά στοιχεία"
+
+#: all_pages/GooberDash/Statistics/player_info.py:166
+msgid "Time Trials Records"
+msgstr "Ρεκόρ χρονομετρήσεων"
+
+#: all_pages/GooberDash/Statistics/player_info.py:483
+msgid "Display Name"
+msgstr "Όνομα οθόνης"
+
+#: all_pages/GooberDash/Statistics/player_info.py:537
+#: all_pages/GooberDash/Statistics/player_info.py:543
+msgid "Total Performance Points"
+msgstr "Συνολικοί πόντοι απόδοσης"
+
+#: all_pages/GooberDash/Statistics/player_info.py:552
+#: all_pages/GooberDash/Statistics/player_info.py:566
+msgid "Top"
+msgstr "Κορυφή"
+
+#: all_pages/GooberDash/Statistics/player_info.py:554
+#: all_pages/GooberDash/Statistics/player_info.py:568
+msgid "First"
+msgstr "Πρώτη"
+
+#: all_pages/GooberDash/Statistics/player_info.py:605
+#: all_pages/GooberDash/Statistics/player_info.py:611
+msgid "Average Percentile"
+msgstr "Μέσο εκατοστημόριο"
+
+#: all_pages/GooberDash/Statistics/player_info.py:756
+msgid "Display Incompleted Levels"
+msgstr "Εμφάνιση μη ολοκληρωμένων επιπέδων"
+
+#: all_pages/GooberDash/Statistics/player_info.py:915
+msgid "Out of"
+msgstr "Έξω από"
+
+#: all_pages/GooberDash/Statistics/player_info.py:917
+msgid "Percentile"
+msgstr "Ποσοστό"
+
+#: all_pages/GooberDash/Statistics/level_info.py:15
+#: all_pages/2 Goober Dash.py:203
+msgid "Level Info"
+msgstr "Πληροφορίες επιπέδου"
+
+#: all_pages/6 About.py:55 all_pages/0 Home.py:178
+msgid "About"
+msgstr "Σχετικά με το"
+
+#: all_pages/6 About.py:57
+msgid "What is WinterPixelGames?"
+msgstr "Τι είναι το WinterPixelGames;"
+
+#: all_pages/6 About.py:63
+msgid "**:blue-background[WinterPixelGames]** (WPG) is a community-driven site made by [**TANK8K**](https://tank8k.com/) which provides useful **Tools & Statistics** of games made by **[Winterpixel Games](https://www.winterpixel.com/)**, including **[Rocket Bot Royale](./Rocket_Bot_Royale)**, **[Goober Dash](./Goober_Dash)**, **[Goober Royale](./Goober_Royale)**, **[Goober Shot](./Goober_Shot)**, and **[Moonrock Miners](./Moonrock_Miners)**."
+msgstr "**:blue-background[WinterPixelGames]** (WPG) είναι ένας ιστότοπος με γνώμονα την κοινότητα που δημιουργήθηκε από τον [**TANK8K**](https://tank8k.com/) και παρέχει χρήσιμα **εργαλεία και στατιστικά στοιχεία** των παιχνιδιών που κατασκευάζονται από το **[Winterpixel Games](https://www.winterpixel.com/)**, συμπεριλαμβανομένων των **[Rocket Bot Royale](./Rocket_Bot_Royale)**, **[Goober Dash](./Goober_Dash)**, **[Goober Royale](./Goober_Royale)**, **[Goober Shot](./Goober_Shot)** και **[Moonrock Miners](./Moonrock_Miners)**."
+
+#: all_pages/6 About.py:70
+msgid "Affiliation"
+msgstr "Συνδρομή"
+
+#: all_pages/6 About.py:74
+msgid "This website is **NOT** affiliated with or endorsed by **Winterpixel Games Inc.**"
+msgstr "Αυτός ο ιστότοπος **ΔΕΝ** συνδέεται ή υποστηρίζεται από την **Winterpixel Games Inc.**"
+
+#: all_pages/6 About.py:81
+msgid "Copyright Notice"
+msgstr "Ανακοίνωση πνευματικών δικαιωμάτων"
+
+#: all_pages/6 About.py:85
+msgid "Rocket Bot Royale, Goober Dash, Goober Royale, Goober Shot, Moonrock Miners, Websites and Media **@ Winterpixel Games Inc.**"
+msgstr "Rocket Bot Royale, Goober Dash, Goober Royale, Goober Shot, Moonrock Miners, ιστοσελίδες και μέσα ενημέρωσης **@ Winterpixel Games Inc.**"
+
+#: all_pages/6 About.py:92
+msgid "License"
+msgstr "Άδεια"
+
+#: all_pages/6 About.py:95
+msgid "The source code is licensed under **MIT license**."
+msgstr "Ο πηγαίος κώδικας διατίθεται με την άδεια **MIT**."
+
+#: all_pages/6 About.py:101
+msgid "Technology"
+msgstr "Τεχνολογία"
+
+#: all_pages/6 About.py:108
+msgid "Framework"
+msgstr "Πλαίσιο"
+
+#: all_pages/6 About.py:111 common_config.py:546 common_config.py:624
+msgid "Language"
+msgstr "Γλώσσα"
+
+#: all_pages/6 About.py:114
+msgid "Database"
+msgstr "Βάση δεδομένων"
+
+#: all_pages/6 About.py:117
+msgid "Cloud Vendor"
+msgstr "Προμηθευτής Cloud"
+
+#: all_pages/6 About.py:120
+msgid "Web Server"
+msgstr "Διακομιστής Web"
+
+#: all_pages/6 About.py:123
+msgid "Source Code"
+msgstr "Πηγαίος κώδικας"
+
+#: all_pages/6 About.py:130
+msgid "Developer"
+msgstr "Προγραμματιστής"
+
+#: all_pages/6 About.py:141
+msgid "Personal Website"
+msgstr "Προσωπική ιστοσελίδα"
+
+#: all_pages/6 About.py:146
+msgid "Developed with 💖 by **[:blue[TANK8K]](https://tank8k.com/)**"
+msgstr "Αναπτύχθηκε με 💖 από **[:blue[TANK8K]](https://tank8k.com/)**"
+
+#: all_pages/3 Goober Royale.py:78
+msgid "**GOOBER ROYALE** is a multiplayer battle royale game in which each player controls a character (called a \"goober\") and must collect weapons, power-ups and other items to eliminate their opponents. The clashes bring together 16 players on a map and the objective will be to be the last survivor of the game. You can play alone or in a team of 4 players. Your Goober will have several weapons, a main missile that reloads at regular intervals and a secondary accessory such as mines, a tornado, a drill and many others. Also use your jetpack to move around the map more easily, reach high places and surprise your opponents. Completing games and missions will earn you gold coins that you can spend either to improve your Goober's skills or to buy cosmetics that will give your character a unique style. An online ranking will allow you to see the 100 best players in the world and in your region."
+msgstr "Το **GOOBER ROYALE** είναι ένα παιχνίδι battle royale για πολλούς παίκτες στο οποίο κάθε παίκτης ελέγχει έναν χαρακτήρα (που ονομάζεται \"goober\") και πρέπει να συλλέξει όπλα, power-ups και άλλα αντικείμενα για να εξοντώσει τους αντιπάλους του. Οι συγκρούσεις συγκεντρώνουν 16 παίκτες σε έναν χάρτη και ο στόχος θα είναι να είστε ο τελευταίος επιζών του παιχνιδιού. Μπορείτε να παίξετε μόνοι σας ή σε μια ομάδα 4 παικτών. Το Goober σας θα διαθέτει διάφορα όπλα, έναν κύριο πύραυλο που επαναφορτίζεται σε τακτά χρονικά διαστήματα και ένα δευτερεύον εξάρτημα όπως νάρκες, ανεμοστρόβιλο, τρυπάνι και πολλά άλλα. Χρησιμοποιήστε επίσης το jetpack σας για να μετακινείστε πιο εύκολα στο χάρτη, να φτάνετε σε ψηλά σημεία και να αιφνιδιάζετε τους αντιπάλους σας. Ολοκληρώνοντας παιχνίδια και αποστολές θα κερδίσετε χρυσά νομίσματα που μπορείτε να ξοδέψετε είτε για να βελτιώσετε τις ικανότητες του Goober σας είτε για να αγοράσετε καλλυντικά που θα δώσουν στον χαρακτήρα σας ένα μοναδικό στυλ. Μια online κατάταξη θα σας επιτρέψει να δείτε τους 100 καλύτερους παίκτες στον κόσμο και στην περιοχή σας."
+
+#: all_pages/3 Goober Royale.py:83
+msgid "**Goober Royale** is in **beta** currently (Bugs are expected and Data may be reset in future)"
+msgstr "Το **Goober Royale** είναι σε **beta** αυτή τη στιγμή (αναμένονται σφάλματα και τα δεδομένα μπορεί να επαναρυθμιστούν στο μέλλον)"
+
+#: all_pages/1 Rocket Bot Royale.py:110
+msgid "**ROCKET BOT ROYALE** is a fun new take on the online battle royale formula. Powerful, wall-climbing, rocket-jumping, artillery-pumping Robo-Tanks are the vehicle of choice in this fast-paced shootout, where the goal is to survive longer than the competition. Collect the loot to upgrade your arsenal, tunnel into the terrain to take cover and collect buried treasure, and avoid the rising water levels to be the blast one standing!"
+msgstr "Το **ROCKET BOT ROYALE** είναι μια νέα διασκεδαστική εκδοχή της φόρμουλας του online battle royale. Τα πανίσχυρα, αναρριχώμενα στους τοίχους, πηδώντας με πυραύλους και αντλώντας πυροβολικό Robo-Tanks είναι το όχημα επιλογής σε αυτή τη γρήγορη μάχη, όπου ο στόχος είναι να επιβιώσετε περισσότερο από τον ανταγωνισμό. Συλλέξτε τα λάφυρα για να αναβαθμίσετε το οπλοστάσιό σας, ανοίξτε σήραγγες στο έδαφος για να καλυφθείτε και να συλλέξετε θαμμένους θησαυρούς και αποφύγετε την άνοδο της στάθμης του νερού για να μείνετε όρθιοι!"
+
+#: all_pages/1 Rocket Bot Royale.py:114 all_pages/2 Goober Dash.py:146
+msgid "Platforms"
+msgstr "Πλατφόρμες"
+
+#: all_pages/1 Rocket Bot Royale.py:129 all_pages/2 Goober Dash.py:160
+msgid "Communities"
+msgstr "Κοινότητες"
+
+#: all_pages/0 Home.py:12
+msgid "Welcome to"
+msgstr "Καλώς ήρθατε στην"
+
+#: all_pages/0 Home.py:15
+msgid "A website which provides useful Tools & Statistics of games made by [Winterpixel Games](https://www.winterpixel.com/)"
+msgstr "Ένας ιστότοπος που παρέχει χρήσιμα εργαλεία & στατιστικά στοιχεία για τα παιχνίδια που κατασκευάστηκαν από την [Winterpixel Games](https://www.winterpixel.com/)"
+
+#: all_pages/0 Home.py:64 all_pages/0 Home.py:158
+msgid "Goober Dash"
+msgstr "Goober Dash"
+
+#: all_pages/0 Home.py:150
+msgid "Home"
+msgstr "Αρχική σελίδα"
+
+#: all_pages/2 Goober Dash.py:142
+msgid "**GOOBER DASH** is a multiplayer battle royale game that you can play online. Dash your opponents into deadly spikes, gather precious coins, and unlock a plethora of unique costumes as you strive to outlast the competition. Invite your friends to engage in epic battles in custom private lobbies. Unleash your creativity with the level editor, crafting and conquering your very own battlegrounds. Climb the global and country-based seasonal leaderboards to prove your dominance in this thrilling contest."
+msgstr "Το **GOOBER DASH** είναι ένα παιχνίδι battle royale για πολλούς παίκτες που μπορείτε να παίξετε online. Ρίξτε τους αντιπάλους σας σε θανατηφόρα καρφιά, συγκεντρώστε πολύτιμα νομίσματα και ξεκλειδώστε μια πληθώρα από μοναδικές στολές, καθώς προσπαθείτε να ξεπεράσετε τον ανταγωνισμό. Προσκαλέστε τους φίλους σας να συμμετάσχουν σε επικές μάχες σε προσαρμοσμένα ιδιωτικά λόμπι. Απελευθερώστε τη δημιουργικότητά σας με τον επεξεργαστή επιπέδων, δημιουργώντας και κατακτώντας τα δικά σας πεδία μάχης. Ανεβείτε στους παγκόσμιους και εποχικούς πίνακες κατάταξης ανά χώρα για να αποδείξετε την κυριαρχία σας σε αυτόν τον συναρπαστικό διαγωνισμό."
+
+#: all_pages/2 Goober Dash.py:193
+msgid "Time Trials (Certified Levels)"
+msgstr "Δοκιμές χρόνου (πιστοποιημένα επίπεδα)"
+
+#: common_config.py:69
+msgid "Apply"
+msgstr "Εφαρμογή"
+
+#: common_config.py:73
+msgid "Contributors"
+msgstr "Συντελεστές"
+
+#: common_config.py:77
+msgid "In no particular order"
+msgstr "Δεν υπάρχει συγκεκριμένη σειρά"
+
+#: common_config.py:95
+msgid "Contribute"
+msgstr "Συνεισφέρετε"
+
+#: common_config.py:145
+msgid "Back to Home"
+msgstr "Επιστροφή στην αρχική σελίδα"
+
+#: common_config.py:187
+msgid "Back to Menu"
+msgstr "Πίσω στο μενού"
+
+#: common_config.py:522
+msgid "This website is NOT affiliated with or endorsed by Winterpixel Games Inc."
+msgstr "Αυτός ο ιστότοπος ΔΕΝ συνδέεται ή υποστηρίζεται από την Winterpixel Games Inc."
+
+#: common_config.py:524
+msgid "All relevant trademarks belong to their respective owners."
+msgstr "Όλα τα σχετικά εμπορικά σήματα ανήκουν στους αντίστοιχους ιδιοκτήτες τους."
+
+#: common_config.py:527
+msgid "Developed with 💖 by <a style=\"text-decoration:none\" href=\"https://tank8k.com/\" target=\"_blank\">TANK8K</a>"
+msgstr "Αναπτύχθηκε με 💖 από <a style=\"text-decoration:none\" href=\"https://tank8k.com/\" target=\"_blank\">TANK8K</a>"
+

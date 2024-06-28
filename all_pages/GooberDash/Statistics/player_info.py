@@ -11,12 +11,10 @@ from all_pages.GooberDash.Backend.get_user import user_info, user_info_2
 from all_pages.GooberDash.Backend.goober_generator import generate_goober
 from common_config import set_localization
 
-_ = set_localization(st.session_state.language)
-
 conn = st.connection("postgresql", type="sql")
 
 
-@st.cache_resource(show_spinner=True, ttl=21600)
+@st.cache_data(show_spinner=True, ttl=21600)
 def query_df_user(user):
     df_user_records = conn.query(
         f"""
@@ -28,7 +26,7 @@ def query_df_user(user):
     return df_user_records
 
 
-@st.cache_resource(show_spinner=True, ttl=21600)
+@st.cache_data(show_spinner=True, ttl=21600)
 def query_df_user_records(user_id):
     df_user_records = conn.query(
         f"""
@@ -41,7 +39,7 @@ def query_df_user_records(user_id):
     return df_user_records
 
 
-@st.cache_resource(show_spinner=True, ttl=21600)
+@st.cache_data(show_spinner=True, ttl=21600)
 def query_df_user_leaderboard(user_id):
     df_user_leaderboard = conn.query(
         f"""
@@ -53,7 +51,7 @@ def query_df_user_leaderboard(user_id):
     return df_user_leaderboard
 
 
-@st.cache_resource(show_spinner=True, ttl=21600)
+@st.cache_data(show_spinner=True, ttl=21600)
 def query_df_level_ids():
     df_level_ids = conn.query(
         """
@@ -64,7 +62,8 @@ def query_df_level_ids():
     return df_level_ids
 
 
-def load_page():
+def load_page(selected_language):
+    _ = set_localization(selected_language)
     try:
         with open("../storage/last_update.txt", "r") as f:
             last_update = float(f.readline())
@@ -548,7 +547,7 @@ def load_page():
                             value=(
                                 f"#{global_rank} "
                                 + (
-                                    "(" + _("Top") + f"{top_percent:.2f}%)"
+                                    "(" + _("Top ") + f"{top_percent:.2f}%)"
                                     if global_rank != 1
                                     else "(" + _("First") + ")"
                                 )
@@ -562,7 +561,7 @@ def load_page():
                             value=(
                                 f"#{global_rank} "
                                 + (
-                                    "(" + _("Top") + f"{top_percent:.2f}%)"
+                                    "(" + _("Top ") + f"{top_percent:.2f}%)"
                                     if global_rank != 1
                                     else "(" + _("First") + ")"
                                 )

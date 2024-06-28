@@ -33,7 +33,7 @@ def func_wrapper(func):
 def clear_cache():
     while True:
         try:
-            st.cache_resource.clear()
+            st.cache_data.clear()
             time.sleep(10800)
         except Exception as e:
             print(f"Failed to clear cache: {e}")

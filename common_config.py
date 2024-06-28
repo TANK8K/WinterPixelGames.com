@@ -1,8 +1,9 @@
 import streamlit as st
 import gettext
 
+from streamlit.elements.exception import ExceptionMixin
 
-# Function to set up the localizator
+
 def set_localization(language):
     try:
         localizator = gettext.translation(
@@ -11,27 +12,97 @@ def set_localization(language):
         localizator.install()
         _ = localizator.gettext
     except Exception:
-        # st.error(f"Translation error: {e}")
         _ = gettext.gettext
     return _
 
 
 def available_languages():
+    if "language" not in st.session_state:
+        st.session_state.language = "english"
+    if st.sidebar.button("​", use_container_width=True):
+        pop(_)
+
+
+@st.experimental_dialog(" ")
+def pop(_):
+    _ = set_localization(st.session_state.language)
     languages_dict = {
-        "english": "🇺🇸 English",
-        "zh-TW": "🇹🇼 繁體中文",
-        "zh-CN": "🇨🇳 簡体中文",
-        # "ja": "🇯🇵 日本語",
+        "english": "🇺🇸 English ✅",
+        "fr": "🇫🇷 Français ✅",
+        "zh-CN": "🇨🇳 簡体中文 ✅",
+        "zh-TW": "🇹🇼 繁體中文 ✅",
+        "es-ES": "🇪🇸 Español 🚧",
+        "it": "🇮🇹 Italiano 🚧",
+        "de": "🇩🇪 Deutsch 🚧",
+        "nl": "🇳🇱 Nederlands 🚧",
+        "pt-PT": "🇵🇹 Português 🚧",
+        "pt-BR": "🇧🇷 Português brasileir 🚧",
+        "da": "🇩🇰 Dansk 🚧",
+        "nb": "🇳🇴 Norsk bokmål 🚧",
+        "no": "🇳🇴 Norsk 🚧",
+        "sv-SE": "🇸🇪 Svenska 🚧",
+        "fi": "🇫🇮 Suomi 🚧",
+        "pl": "🇵🇱 Polski 🚧",
+        "uk": "🇺🇦 Українська 🚧",
+        "ru": "🇷🇺 Русский 🚧",
+        "sk": "🇸🇰 Slovenský 🚧",
+        "sl": "🇸🇮 Slovenščina 🚧",
+        "bg": "🇧🇬 Български 🚧",
+        "cs": "🇨🇿 Čeština 🚧",
+        "ro": "🇷🇴 Română 🚧",
+        "et": "🇪🇪 Eesti 🚧",
+        "el": "🇬🇷 Ελληνική 🚧",
+        "hu": "🇭🇺 Magyar 🚧",
+        "lv": "🇱🇻 Latviešu 🚧",
+        "lt": "🇱🇹 Lietuvių 🚧",
+        "tr": "🇹🇷 Türkçe 🚧",
+        "id": "🇮🇩 Bahasa Indonesia 🚧",
+        "ar": "🇸🇦 العربية 🚧",
+        "ko": "🇰🇷 한국어 🚧",
+        "ja": "🇯🇵 日本語 🚧",
     }
 
     languages = [language for language in languages_dict]
-    st.session_state.language = st.sidebar.selectbox(
+    languages.insert(0, languages.pop(languages.index(st.session_state.language)))
+    languages.insert(0, languages.pop(languages.index(st.session_state.language)))
+
+    st.session_state.language = st.selectbox(
         " ",
         languages,
         format_func=lambda x: languages_dict.get(x),
+        label_visibility="collapsed",
     )
+    if st.button("**" + _("Apply") + "**", use_container_width=True):
+        st.rerun()
 
-    _ = set_localization(st.session_state.language)
+    with st.expander(
+        _("Contributors")
+        + """
+
+("""
+        + _("In no particular order")
+        + ")"
+    ):
+        st.link_button(
+            "Stickman A",
+            "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        )
+        st.link_button(
+            "shimobri",
+            "./",
+            disabled=True,
+        )
+        st.link_button(
+            "TANK8K",
+            "https://github.com/TANK8K/",
+        )
+
+    st.link_button(
+        _("Contribute"),
+        "https://translate.winterpixelgames.com/",
+        type="primary",
+        use_container_width=True,
+    )
 
 
 try:
@@ -167,7 +238,7 @@ def common_config():
             padding: 0;
         }
         section[data-testid="stSidebar"] {
-            width: fit-content !important;
+            #width: 350px !important;
             padding-right: 3px !important;
             user-select: none !important;
         }
@@ -432,6 +503,16 @@ def common_config():
         summary:hover {
             color: rgb(48, 151, 230) !important;
         }
+        ul[data-testid="stSidebarNavItems"] {
+            max-height: none !important;
+            list-style: none !important;
+            overflow: auto !important;
+            margin: 0px !important;
+            padding-bottom: 0.125rem !important;
+        }
+        div[data-testid="stSidebarNavSeparator"] {
+            display: none;
+        }
         </style>
     """,
         unsafe_allow_html=True,
@@ -453,14 +534,109 @@ def footer_and_language(selected_language):
         )
         + """</p>
             <style>
-            div[data-testid="stSidebarContent"] div[data-testid="stSelectbox"] label[data-testid="stWidgetLabel"]::before {
+            div[data-testid="stSidebarContent"] button p::before {
                 content: '💬 """
+        + """';
+                font-family: "Font Awesome 5 Free" !important;
+                content: "\\f1ab";
+                display: inline-block;
+                vertical-align: middle;
+                font-weight: 800;
+                font-size: 20px;
+                color: white;
+                min-width: 35px;
+                padding-right: 7px;
+            }
+            div[data-testid="stSidebarContent"] button p::after {
+                content: '"""
         + _("Language")
         + """';
                 font-family: 'Baloo 2';
                 font-weight: 700;
                 font-size: 20px;
             }
+            div[role="dialog"] div[data-testid="stLinkButton"] > a[kind="primary"]::before{
+                font-family: "Font Awesome 5 Free" !important;
+                content: "\\f2b5";
+                display: inline-block;
+                vertical-align: middle;
+                font-weight: 800;
+                font-size: 18px;
+                color: white;
+                min-width: 35px;
+                padding-left: 7px;
+            }
+            div[role="dialog"] div[data-testid="stLinkButton"] button p, div[role="dialog"] div[data-testid="stLinkButton"] a p  {
+                font-family: 'Baloo 2';
+                font-weight: 700;
+                font-size: 18px;
+            }
+            div[role="dialog"] div[data-testid="stExpander"] a {
+                border: none;
+                box-shadow: none;
+                background: transparent;
+                color: white;
+                padding: 0;
+                margin: 0;
+            }
+            div[role="dialog"] div[data-testid="stExpander"] p {
+                font-family: 'Baloo 2' !impotant;
+                font-weight: 700 !important;
+                font-size: 18px !important;
+            }
+            div[role="dialog"] div[data-testid="stExpander"] .row-widget.stLinkButton p::after {
+                font-family: "Font Awesome 5 Free" !important;
+                content: "\\f0c1";
+                display: inline-block;
+                vertical-align: middle;
+                font-weight: 800;
+                font-size: 15px;
+                color: white;
+                min-width: 35px;
+                padding-left: 7px;
+            }
+            div[role="dialog"] div[data-testid="stExpander"] a:hover {
+                border: none;
+                box-shadow: none;
+                background: transparent;
+                color: rgb(48, 151, 230);
+                text-decoration: underline !important;
+            }
+            div[role="dialog"] div[data-testid="stExpander"] .row-widget.stLinkButton {
+                height: 18px;
+            }
+            div[role="dialog"] button[data-testid="baseButton-secondary"]::before {
+                font-family: "Font Awesome 5 Free" !important;
+                content: "\\f058";
+                display: inline-block;
+                vertical-align: middle;
+                font-weight: 800;
+                font-size: 18px;
+                color: white;
+                padding-right: 7px;
+            }
+            div[role="dialog"] > div:first-child::before {
+                font-family: "Font Awesome 5 Free" !important;
+                content: "\\f1ab";
+                display: inline-block;
+                vertical-align: middle;
+                font-weight: 800;
+                font-size: 18px;
+                color: white;
+                padding-right: 7px;
+            }
+            div[role="dialog"] > div:first-child::after {
+                content: '"""
+        + _("Language")
+        + """';
+                font-family: 'Baloo 2';
+                font-weight: 700;
+                font-size: 20px;
+            }
+            div[data-testid="stExpanderDetails"] .row-widget.stLinkButton::before {
+                content: "- ";
+            }
+        }
             </style>
         </div>
     """,

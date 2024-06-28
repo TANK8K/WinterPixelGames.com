@@ -1,10 +1,9 @@
 import streamlit as st
 from common_config import set_localization
 
-_ = set_localization(st.session_state.language)
 
-
-def load_page():
+def load_page(selected_language):
+    _ = set_localization(selected_language)
     st.image(
         "static/MoonrockMiners/moonrock_miners_logo_text.png",
         width=280,

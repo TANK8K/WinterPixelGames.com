@@ -1,0 +1,1835 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: winterpixelgames\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-29 07:07+0800\n"
+"PO-Revision-Date: 2024-06-28 23:12\n"
+"Last-Translator: \n"
+"Language-Team: Ukrainian\n"
+"Language: uk_UA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 && n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 && n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
+"X-Crowdin-Project: winterpixelgames\n"
+"X-Crowdin-Project-ID: 688441\n"
+"X-Crowdin-Language: uk\n"
+"X-Crowdin-File: base.pot\n"
+"X-Crowdin-File-ID: 10\n"
+
+#: all_pages/5 Moonrock Miners.py:70
+msgid "**MOONROCK MINERS** is a gravity-defying multiplayer space battle game set in an asteroid field. Blast other players, collect powerups and crystals, and avoid the asteroids. Try to survive until the end to win the match. Compete against players around the world in real-time to rank in every season. You can also create your own custom lobbies to play private games online with your friends!"
+msgstr "**MOONROCK MINERS - це багатокористувацька гравітаційна космічна баталія, дія якої розгортається в астероїдному полі. Підривайте інших гравців, збирайте бонуси та кристали і уникайте астероїдів. Спробуйте вижити до кінця, щоб виграти матч. Змагайтеся з гравцями по всьому світу в режимі реального часу, щоб зайняти перше місце в кожному сезоні. Ви також можете створювати власні лобі, щоб грати в приватні ігри онлайн з друзями!"
+
+#: all_pages/5 Moonrock Miners.py:74
+msgid "**Moonrock Miners** is **no longer in development**"
+msgstr "**Moonrock Miners** більше не розробляється**"
+
+#: all_pages/5 Moonrock Miners.py:77 all_pages/4 Goober Shot.py:87
+#: all_pages/3 Goober Royale.py:87
+msgid "Platform"
+msgstr "Платформа"
+
+#: all_pages/5 Moonrock Miners.py:79 all_pages/4 Goober Shot.py:89
+#: all_pages/3 Goober Royale.py:89 all_pages/1 Rocket Bot Royale.py:116
+#: all_pages/2 Goober Dash.py:148
+msgid "Browser"
+msgstr "Браузер"
+
+#: all_pages/5 Moonrock Miners.py:80 all_pages/4 Goober Shot.py:90
+msgid "Community"
+msgstr "Спільнота"
+
+#: all_pages/5 Moonrock Miners.py:86 all_pages/4 Goober Shot.py:96
+#: all_pages/3 Goober Royale.py:96 all_pages/1 Rocket Bot Royale.py:141
+#: all_pages/2 Goober Dash.py:171
+msgid "Tools"
+msgstr "Інструменти"
+
+#: all_pages/5 Moonrock Miners.py:91
+#: all_pages/RocketBotRoyale/Tools/image_assets.py:12
+#: all_pages/4 Goober Shot.py:101 all_pages/GooberDash/Tools/image_assets.py:39
+#: all_pages/MoonrockMiners/Tools/image_assets.py:15
+#: all_pages/GooberRoyale/Tools/image_assets.py:15
+#: all_pages/GooberShot/Tools/image_assets.py:15
+#: all_pages/3 Goober Royale.py:100 all_pages/1 Rocket Bot Royale.py:151
+#: all_pages/2 Goober Dash.py:184
+msgid "Image Assets"
+msgstr "Активи зображень"
+
+#: all_pages/5 Moonrock Miners.py:91 all_pages/5 Moonrock Miners.py:103
+#: all_pages/4 Goober Shot.py:101 all_pages/4 Goober Shot.py:113
+#: all_pages/4 Goober Shot.py:118
+#: all_pages/GooberDash/Statistics/player_info.py:482
+#: all_pages/GooberDash/Statistics/player_info.py:496
+#: all_pages/GooberDash/Statistics/player_info.py:498
+#: all_pages/GooberDash/Statistics/player_info.py:500
+#: all_pages/3 Goober Royale.py:109 all_pages/3 Goober Royale.py:114
+#: all_pages/1 Rocket Bot Royale.py:146 all_pages/1 Rocket Bot Royale.py:151
+#: all_pages/1 Rocket Bot Royale.py:163 all_pages/1 Rocket Bot Royale.py:168
+#: all_pages/2 Goober Dash.py:177 all_pages/2 Goober Dash.py:198
+#: all_pages/2 Goober Dash.py:203 all_pages/2 Goober Dash.py:208
+msgid "WIP"
+msgstr "WIP"
+
+#: all_pages/5 Moonrock Miners.py:98 all_pages/4 Goober Shot.py:108
+#: all_pages/3 Goober Royale.py:104 all_pages/1 Rocket Bot Royale.py:158
+#: all_pages/2 Goober Dash.py:188
+msgid "Statistics"
+msgstr "Статистика"
+
+#: all_pages/5 Moonrock Miners.py:103
+#: all_pages/RocketBotRoyale/Statistics/season_leaderboard.py:12
+#: all_pages/4 Goober Shot.py:118
+#: all_pages/GooberDash/Statistics/season_leaderboard.py:15
+#: all_pages/MoonrockMiners/Statistics/season_leaderboard.py:12
+#: all_pages/GooberRoyale/Statistics/season_leaderboard.py:12
+#: all_pages/GooberShot/Statistics/season_leaderboard.py:12
+#: all_pages/3 Goober Royale.py:114 all_pages/1 Rocket Bot Royale.py:168
+#: all_pages/2 Goober Dash.py:208
+msgid "Season Leaderboard"
+msgstr "Сезонний лідерборд"
+
+#: all_pages/5 Moonrock Miners.py:108
+msgid "**Leaderboard** is **disabled** currently"
+msgstr "Наразі **Leaderboard** є **вимкненим** на даний момент"
+
+#: all_pages/RocketBotRoyale/Tools/image_assets.py:18
+#: all_pages/GooberDash/Tools/image_assets.py:46
+#: all_pages/MoonrockMiners/Tools/image_assets.py:21
+#: all_pages/GooberRoyale/Tools/image_assets.py:21
+#: all_pages/GooberShot/Tools/image_assets.py:21
+msgid "\n"
+"        The image assets in this page are for **promotional purpose** and/or **content creation** only (e.g. video thumbnails, wikis)\n\n"
+"        Using content in derogatory fashions or for commercial purposes are prohibited.\n"
+"        "
+msgstr "\n"
+"        Зображення на цій сторінці призначені лише для **рекламних цілей** та/або **створення контенту** (наприклад, мініатюри відео, вікі)\n\n"
+"        Використання контенту в принизливій формі або в комерційних цілях заборонено.\n"
+"        "
+
+#: all_pages/RocketBotRoyale/Tools/image_assets.py:26
+#: all_pages/MoonrockMiners/Tools/image_assets.py:29
+#: all_pages/GooberRoyale/Tools/image_assets.py:29
+#: all_pages/GooberShot/Tools/image_assets.py:29
+msgid "Gallery"
+msgstr "Галерея"
+
+#: all_pages/RocketBotRoyale/Tools/optimize_crate.py:12
+#: all_pages/1 Rocket Bot Royale.py:146
+msgid "Optimize Crate"
+msgstr "Оптимізувати ящик"
+
+#: all_pages/RocketBotRoyale/Statistics/player_info.py:12
+#: all_pages/4 Goober Shot.py:113
+#: all_pages/GooberDash/Statistics/player_info.py:82
+#: all_pages/GooberRoyale/Statistics/player_info.py:12
+#: all_pages/GooberShot/Statistics/player_info.py:12
+#: all_pages/3 Goober Royale.py:109 all_pages/1 Rocket Bot Royale.py:163
+#: all_pages/2 Goober Dash.py:198
+msgid "Player Info"
+msgstr "Інформація про гравця"
+
+#: all_pages/7 Useful Links.py:68 all_pages/0 Home.py:183
+msgid "Useful Links"
+msgstr "Корисні посилання"
+
+#: all_pages/7 Useful Links.py:70
+msgid "Staging Servers"
+msgstr "Стейдж-сервери"
+
+#: all_pages/7 Useful Links.py:76
+msgid "**Staging Servers** are seperate servers which are used for testing new features before releasing. Usually updates are released on **Staging Servers** a few days before public release. Developers invite members to test out some upcoming features and ask for feedbacks in **Offcial Winterpixel Games Discord server** occasionally.\n"
+msgstr "**Staging Servers** - це окремі сервери, які використовуються для тестування нових функцій перед випуском. Зазвичай оновлення виходять на **Staging Servers** за кілька днів до публічного релізу. Розробники запрошують учасників протестувати деякі майбутні функції та час від часу просять відгуків на **Офіційному сервері розбіжностей Winterpixel Games Discord**.\n"
+
+#: all_pages/7 Useful Links.py:84 all_pages/0 Home.py:59
+#: all_pages/0 Home.py:153
+msgid "Rocket Bot Royale"
+msgstr "Ракетний Бот Рояль"
+
+#: all_pages/7 Useful Links.py:88 all_pages/0 Home.py:69
+#: all_pages/0 Home.py:163
+msgid "Goober Royale"
+msgstr "Губер Рояль."
+
+#: all_pages/7 Useful Links.py:91 all_pages/0 Home.py:74
+#: all_pages/0 Home.py:168
+msgid "Goober Shot"
+msgstr "Губер Шот."
+
+#: all_pages/7 Useful Links.py:92 all_pages/0 Home.py:79
+#: all_pages/0 Home.py:173
+msgid "Moonrock Miners"
+msgstr "Гірники місячного каменю"
+
+#: all_pages/7 Useful Links.py:96
+msgid "**Staging Servers** use seperate databases. **DO NOT** spend money on **Staging Server** as items cannot be transferred."
+msgstr "**Staging Servers** використовують окремі бази даних. **НЕ витрачайте гроші на **Staging Server**, оскільки їх не можна передати."
+
+#: all_pages/7 Useful Links.py:103
+msgid "Friendly Websites"
+msgstr "Дружні веб-сайти"
+
+#: all_pages/7 Useful Links.py:107
+msgid "[**WinterPixel Helper** (WpH)](https://wph.ambersys.app/) is a community-driven site made by [**thehermit**](https://ambersys.app/) which provides useful **Scripts** of games made by **[Winterpixel Games](https://www.winterpixel.com/)**, including **[Rocket Bot Royale](./Rocket_Bot_Royale)**, **[Goober Dash](./Goober_Dash)**, **[Goober Royale](./Goober_Royale)**.\n"
+msgstr "[**WinterPixel Helper** (WpH)](https://wph.ambersys.app/) - це сайт спільноти, створений [**thehermit**](https://ambersys.app/), який надає корисні **скрипти** ігор від **[Winterpixel Games](https://www.winterpixel.com/)**, зокрема **[Rocket Bot Royale](./Rocket_Bot_Royal)**, **[Goober Dash](./Goober_Dash)**, **[Goober Royale](./Goober_Royal)**.\n"
+
+#: all_pages/7 Useful Links.py:112
+msgid "WinterPixel Helper"
+msgstr "WinterPixel Helper"
+
+#: all_pages/7 Useful Links.py:116
+msgid "The scripts in **WinterPixel Helper** should **NOT** be discussed on the **Official Winterpixel Games Discord server** as Moderators **DO NOT APPROVE** promoting non-official tools and scripts. Member who breaks the rules may result in a ban. However, you can enlighten people to this project through DMs and the such."
+msgstr "Скрипти в **WinterPixel Helper** не повинні обговорюватися на **Офіційному сервері розбіжностей Winterpixel Games Discord**, оскільки Модератори **НЕ СХВАЛЮЮТЬ** просування неофіційних інструментів і скриптів. Порушення правил може призвести до бану учасника. Однак ви можете розповідати людям про цей проект за допомогою DM і т.п."
+
+#: all_pages/4 Goober Shot.py:78
+msgid "**GOOBER SHOT** throws you into thrilling online archery battles against three other players! Prepare your bow, sharpen your arrows, enter the arena, and unleash your skills as a master archer. Remember, every arrow counts! Show off your precision and reflexes as you aim, shoot, and dodge with finesse. Rise through the ranks, climb the global leaderboards, and prove yourself as the ultimate archery champion. Will you emerge as the greatest archer in the realm?"
+msgstr "Гра **GOOBER SHOT** занурює вас у захопливі онлайн-баталії зі стрільби з лука проти трьох інших гравців! Готуйте лук, наточуйте стріли, виходьте на арену та розкривайте свої навички майстерного стрільця. Пам'ятайте, кожна стріла має значення! Продемонструйте свою влучність та рефлекси, цілячись, стріляючи та витончено ухиляючись. Просувайтеся по кар'єрних сходах, піднімайтеся на вершини світових рейтингів і доведіть, що ви - абсолютний чемпіон зі стрільби з лука. Чи станете ви найкращим лучником у королівстві?"
+
+#: all_pages/4 Goober Shot.py:83
+msgid "**Goober Shot** is in **beta** currently (Bugs are expected and Data may be reset in future)"
+msgstr "**Goober Shot** наразі перебуває на стадії **бета** (очікуються помилки і дані можуть бути скинуті в майбутньому)"
+
+#: all_pages/GooberDash/Tools/goober_generator.py:39
+#: all_pages/2 Goober Dash.py:182
+msgid "Goober Generator"
+msgstr "Генератор Губера"
+
+#: all_pages/GooberDash/Tools/goober_generator.py:55
+#: all_pages/GooberDash/Tools/image_assets.py:102
+msgid "Color"
+msgstr "Колір"
+
+#: all_pages/GooberDash/Tools/goober_generator.py:56
+#: all_pages/GooberDash/Tools/image_assets.py:103
+msgid "Suit"
+msgstr "Костюм."
+
+#: all_pages/GooberDash/Tools/goober_generator.py:57
+#: all_pages/GooberDash/Tools/image_assets.py:104
+msgid "Hat"
+msgstr "Капелюх"
+
+#: all_pages/GooberDash/Tools/goober_generator.py:58
+#: all_pages/GooberDash/Tools/image_assets.py:105
+msgid "Hand"
+msgstr "Рука."
+
+#: all_pages/GooberDash/Tools/goober_generator.py:59
+#: all_pages/GooberDash/Tools/image_assets.py:106
+msgid "Eyes"
+msgstr "Очі."
+
+#: all_pages/GooberDash/Tools/goober_generator.py:87
+msgid "Download"
+msgstr "Завантажити"
+
+#: all_pages/GooberDash/Tools/image_assets.py:75
+msgid "Download All Image Assets"
+msgstr "Завантажити всі ресурси зображень"
+
+#: all_pages/GooberDash/Tools/image_assets.py:101
+msgid "Badge"
+msgstr "Значок."
+
+#: all_pages/GooberDash/Tools/image_assets.py:107
+msgid "Other Stuff"
+msgstr "Інше"
+
+#: all_pages/GooberDash/Tools/flip_level.py:132 all_pages/2 Goober Dash.py:175
+msgid "Flip Level"
+msgstr "Фліп-рівень"
+
+#: all_pages/GooberDash/Tools/flip_level.py:137
+msgid "Upload and Download Level by"
+msgstr "Завантажуйте та завантажуйте рівень за"
+
+#: all_pages/GooberDash/Tools/flip_level.py:137
+#: all_pages/GooberDash/Tools/flip_level.py:140
+#: all_pages/GooberDash/Tools/flip_level.py:143
+#: all_pages/GooberDash/Tools/flip_level.py:158
+#: all_pages/GooberDash/Tools/flip_level.py:169
+#: all_pages/GooberDash/Tools/flip_level.py:188
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:942
+#: all_pages/GooberDash/Statistics/player_info.py:906
+msgid "Level ID"
+msgstr "Ідентифікатор рівня"
+
+#: all_pages/GooberDash/Tools/flip_level.py:143
+msgid "Full URL supported"
+msgstr "Підтримується повна URL-адреса"
+
+#: all_pages/GooberDash/Tools/flip_level.py:150
+msgid "Upload the JSON File"
+msgstr "Завантажити файл JSON"
+
+#: all_pages/GooberDash/Tools/flip_level.py:154
+msgid "Submit"
+msgstr "Надіслати"
+
+#: all_pages/GooberDash/Tools/flip_level.py:172
+msgid "The Level ID of the output Level is"
+msgstr "Ідентифікатор рівня вихідного рівня має вигляд"
+
+#: all_pages/GooberDash/Tools/flip_level.py:174
+msgid "Play Level on Browser"
+msgstr "Відтворення рівня в браузері"
+
+#: all_pages/GooberDash/Tools/flip_level.py:178
+msgid "Download Output"
+msgstr "Завантажити вихідні дані"
+
+#: all_pages/GooberDash/Tools/flip_level.py:181
+msgid "flipped"
+msgstr "перевернулася."
+
+#: all_pages/GooberDash/Tools/maze_generator.py:15
+#: all_pages/2 Goober Dash.py:177
+msgid "Maze Generator"
+msgstr "Генератор лабіринту"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:39
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:424
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:465
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:475
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:514
+msgid "Global"
+msgstr "Глобальний"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:40
+msgid "Afghanistan"
+msgstr "Афганістан"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:41
+msgid "Albania"
+msgstr "Албанія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:42
+msgid "Algeria"
+msgstr "Алжир"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:43
+msgid "American Samoa"
+msgstr "Американське Самоа"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:44
+msgid "Andorra"
+msgstr "Андорра"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:45
+msgid "Angola"
+msgstr "Ангола"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:46
+msgid "Anguilla"
+msgstr "Ангілья"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:47
+msgid "Antigua and Barbuda"
+msgstr "Антигуа і Барбуда"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:48
+msgid "Argentina"
+msgstr "Аргентина"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:49
+msgid "Armenia"
+msgstr "Вірменія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:50
+msgid "Aruba"
+msgstr "Аруба"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:51
+msgid "Australia"
+msgstr "Австралія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:52
+msgid "Austria"
+msgstr "Австрія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:53
+msgid "Azerbaijan"
+msgstr "Азербайджан"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:54
+msgid "Bahamas"
+msgstr "Багамські острови"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:55
+msgid "Bahrain"
+msgstr "Бахрейн"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:56
+msgid "Bangladesh"
+msgstr "Бангладеш"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:57
+msgid "Barbados"
+msgstr "Барбадос"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:58
+msgid "Belarus"
+msgstr "Білорусь"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:59
+msgid "Belgium"
+msgstr "Бельгія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:60
+msgid "Belize"
+msgstr "Беліз"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:61
+msgid "Benin"
+msgstr "Бенін"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:62
+msgid "Bermuda"
+msgstr "Бермудські острови"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:63
+msgid "Bhutan"
+msgstr "Бутан"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:64
+msgid "Bolivia"
+msgstr "Болівія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:65
+msgid "Bosnia and Herzegovina"
+msgstr "Боснія і Герцеговина"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:66
+msgid "Botswana"
+msgstr "Ботсвана"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:67
+msgid "Bouvet Island"
+msgstr "Острів Буве"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:68
+msgid "Brazil"
+msgstr "Бразилія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:69
+msgid "British Indian Ocean Territory"
+msgstr "Британська територія в Індійському океані"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:70
+msgid "Brunei Darussalam"
+msgstr "Бруней-Даруссалам"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:71
+msgid "Bulgaria"
+msgstr "Болгарія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:72
+msgid "Burkina Faso"
+msgstr "Буркіна-Фасо"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:73
+msgid "Burundi"
+msgstr "Бурунді"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:74
+msgid "Cambodia"
+msgstr "Камбоджа"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:75
+msgid "Cameroon"
+msgstr "Камерун"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:76
+msgid "Canada"
+msgstr "Канада"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:77
+msgid "Cape Verde"
+msgstr "Кабо-Верде"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:78
+msgid "Cayman Islands"
+msgstr "Кайманові острови"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:79
+msgid "Central African Republic"
+msgstr "Центральноафриканська Республіка"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:80
+msgid "Chad"
+msgstr "Чад."
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:81
+msgid "Chile"
+msgstr "Чилі"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:82
+msgid "China"
+msgstr "Китай"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:83
+msgid "Christmas Island"
+msgstr "Острів Різдва"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:84
+msgid "Cocos (Keeling) Islands"
+msgstr "Кокосові (Кілінг) острови"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:85
+msgid "Colombia"
+msgstr "Колумбія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:86
+msgid "Comoros"
+msgstr "Коморські острови"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:87
+msgid "Congo"
+msgstr "Конго"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:88
+msgid "Congo, the Democratic Republic of the"
+msgstr "Конго, Демократична Республіка Конго"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:89
+msgid "Cook Islands"
+msgstr "Острови Кука"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:90
+msgid "Costa Rica"
+msgstr "Коста-Ріка"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:91
+msgid "Croatia"
+msgstr "Хорватія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:92
+msgid "Cuba"
+msgstr "Куба"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:93
+msgid "Curaçao"
+msgstr "Кюрасао"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:94
+msgid "Cyprus"
+msgstr "Кіпр"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:95
+msgid "Czech Republic"
+msgstr "Чеська Республіка"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:96
+msgid "Côte d'Ivoire"
+msgstr "Кот-д'Івуар"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:97
+msgid "Denmark"
+msgstr "Данія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:98
+msgid "Djibouti"
+msgstr "Джибуті"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:99
+msgid "Dominica"
+msgstr "Домініка"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:100
+msgid "Dominican Republic"
+msgstr "Домініканська Республіка"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:101
+msgid "Ecuador"
+msgstr "Еквадор"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:102
+msgid "Egypt"
+msgstr "Єгипет"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:103
+msgid "El Salvador"
+msgstr "Сальвадор"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:104
+msgid "Equatorial Guinea"
+msgstr "Екваторіальна Гвінея"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:105
+msgid "Eritrea"
+msgstr "Еритрея"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:106
+msgid "Estonia"
+msgstr "Естонія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:107
+msgid "Ethiopia"
+msgstr "Ефіопія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:108
+msgid "Falkland Islands (Malvinas)"
+msgstr "Фолклендські (Мальвінські) острови"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:109
+msgid "Faroe Islands"
+msgstr "Фарерські острови"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:110
+msgid "Fiji"
+msgstr "Фіджі"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:111
+msgid "Finland"
+msgstr "Фінляндія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:112
+msgid "France"
+msgstr "Франція"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:113
+msgid "French Guiana"
+msgstr "Французька Гвіана"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:114
+msgid "French Polynesia"
+msgstr "Французька Полінезія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:115
+msgid "French Southern Territories"
+msgstr "Південні території Франції"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:116
+msgid "Gabon"
+msgstr "Габон"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:117
+msgid "Gambia"
+msgstr "Гамбія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:118
+msgid "Georgia"
+msgstr "Грузія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:119
+msgid "Germany"
+msgstr "Німеччина"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:120
+msgid "Ghana"
+msgstr "Гана"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:121
+msgid "Gibraltar"
+msgstr "Гібралтар"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:122
+msgid "Greece"
+msgstr "Греція"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:123
+msgid "Greenland"
+msgstr "Гренландія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:124
+msgid "Grenada"
+msgstr "Гренада"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:125
+msgid "Guadeloupe"
+msgstr "Гваделупа"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:126
+msgid "Guam"
+msgstr "Гуам"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:127
+msgid "Guatemala"
+msgstr "Гватемала"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:128
+msgid "Guernsey"
+msgstr "Гернсі"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:129
+msgid "Guinea"
+msgstr "Гвінея"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:130
+msgid "Guinea-Bissau"
+msgstr "Гвінея-Бісау"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:131
+msgid "Guyana"
+msgstr "Гайана"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:132
+msgid "Haiti"
+msgstr "Гаїті"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:133
+msgid "Heard Island and Mcdonald Islands"
+msgstr "Острів Херд та острови Макдональд"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:134
+msgid "Honduras"
+msgstr "Гондурас"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:135
+msgid "Hong Kong"
+msgstr "Гонконг"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:136
+msgid "Hungary"
+msgstr "Угорщина"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:137
+msgid "Iceland"
+msgstr "Ісландія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:138
+msgid "India"
+msgstr "Індія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:139
+msgid "Indonesia"
+msgstr "Індонезія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:140
+msgid "Iran"
+msgstr "Іран"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:141
+msgid "Iraq"
+msgstr "Ірак"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:142
+msgid "Ireland"
+msgstr "Ірландія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:143
+msgid "Isle of Man"
+msgstr "Острів Мен"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:144
+msgid "Israel"
+msgstr "Ізраїль"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:145
+msgid "Italy"
+msgstr "Італія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:146
+msgid "Jamaica"
+msgstr "Ямайка"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:147
+msgid "Japan"
+msgstr "Японія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:148
+msgid "Jersey"
+msgstr "Джерсі"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:149
+msgid "Jordan"
+msgstr "Йорданія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:150
+msgid "Kazakhstan"
+msgstr "Казахстан"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:151
+msgid "Kenya"
+msgstr "Кенія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:152
+msgid "Kiribati"
+msgstr "Кірібаті"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:153
+msgid "Kosovo"
+msgstr "Косово"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:154
+msgid "Kuwait"
+msgstr "Кувейт"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:155
+msgid "Kyrgyzstan"
+msgstr "Киргизстан"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:156
+msgid "Lao People's Democratic Republic"
+msgstr "Лаоська Народно-Демократична Республіка"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:157
+msgid "Latvia"
+msgstr "Латвія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:158
+msgid "Lebanon"
+msgstr "Ліван"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:159
+msgid "Lesotho"
+msgstr "Лесото"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:160
+msgid "Liberia"
+msgstr "Ліберія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:161
+msgid "Libya"
+msgstr "Лівія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:162
+msgid "Liechtenstein"
+msgstr "Ліхтенштейн"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:163
+msgid "Lithuania"
+msgstr "Литва"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:164
+msgid "Luxembourg"
+msgstr "Люксембург"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:165
+msgid "Macao"
+msgstr "Макао"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:166
+msgid "Macedonia"
+msgstr "Македонія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:167
+msgid "Madagascar"
+msgstr "Мадагаскар"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:168
+msgid "Malawi"
+msgstr "Малаві"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:169
+msgid "Malaysia"
+msgstr "Малайзія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:170
+msgid "Maldives"
+msgstr "Мальдіви"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:171
+msgid "Mali"
+msgstr "Малі"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:172
+msgid "Malta"
+msgstr "Мальта"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:173
+msgid "Marshall Islands"
+msgstr "Маршаллові острови"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:174
+msgid "Martinique"
+msgstr "Мартініка"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:175
+msgid "Mauritania"
+msgstr "Мавританія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:176
+msgid "Mauritius"
+msgstr "Маврикій"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:177
+msgid "Mayotte"
+msgstr "Майотта"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:178
+msgid "Mexico"
+msgstr "Мексика"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:179
+msgid "Micronesia"
+msgstr "Мікронезія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:180
+msgid "Moldova"
+msgstr "Молдова"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:181
+msgid "Monaco"
+msgstr "Монако"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:182
+msgid "Mongolia"
+msgstr "Монголія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:183
+msgid "Montenegro"
+msgstr "Чорногорія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:184
+msgid "Montserrat"
+msgstr "Монтсеррат"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:185
+msgid "Morocco"
+msgstr "Марокко"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:186
+msgid "Mozambique"
+msgstr "Мозамбік"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:187
+msgid "Myanmar"
+msgstr "М'янма"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:188
+msgid "Namibia"
+msgstr "Намібія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:189
+msgid "Nauru"
+msgstr "Науру"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:190
+msgid "Nepal"
+msgstr "Непал"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:191
+msgid "Netherlands"
+msgstr "Нідерланди"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:192
+msgid "New Caledonia"
+msgstr "Нова Каледонія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:193
+msgid "New Zealand"
+msgstr "Нова Зеландія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:194
+msgid "Nicaragua"
+msgstr "Нікарагуа"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:195
+msgid "Niger"
+msgstr "Нігер"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:196
+msgid "Nigeria"
+msgstr "Нігерія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:197
+msgid "Niue"
+msgstr "Ніуе"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:198
+msgid "Norfolk Island"
+msgstr "Острів Норфолк"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:199
+msgid "North Korea"
+msgstr "Північна Корея"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:200
+msgid "Northern Mariana Islands"
+msgstr "Північні Маріанські острови"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:201
+msgid "Norway"
+msgstr "Норвегія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:202
+msgid "Oman"
+msgstr "Оман"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:203
+msgid "Pakistan"
+msgstr "Пакистан"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:204
+msgid "Palau"
+msgstr "Палау"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:205
+msgid "Palestine"
+msgstr "Палестина"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:206
+msgid "Panama"
+msgstr "Панама"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:207
+msgid "Papua New Guinea"
+msgstr "Папуа-Нова Гвінея"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:208
+msgid "Paraguay"
+msgstr "Парагвай"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:209
+msgid "Peru"
+msgstr "Перу"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:210
+msgid "Philippines"
+msgstr "Філіппіни"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:211
+msgid "Pitcairn"
+msgstr "Піткерн"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:212
+msgid "Poland"
+msgstr "Польща"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:213
+msgid "Portugal"
+msgstr "Португалія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:214
+msgid "Puerto Rico"
+msgstr "Пуерто-Ріко"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:215
+msgid "Qatar"
+msgstr "Катар"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:216
+msgid "Romania"
+msgstr "Румунія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:217
+msgid "Russia"
+msgstr "Росія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:218
+msgid "Rwanda"
+msgstr "Руанда"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:219
+msgid "Réunion"
+msgstr "Возз'єднання"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:220
+msgid "Saint Barthélemy"
+msgstr "Святий Варфоломій"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:221
+msgid "Saint Helena, Ascension and Tristan Da Cunha"
+msgstr "Свята Єлена, Вознесіння і Трістан-да-Кунья"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:222
+msgid "Saint Kitts and Nevis"
+msgstr "Сент-Кітс і Невіс"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:223
+msgid "Saint Lucia"
+msgstr "Сент-Люсія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:224
+msgid "Saint Martin (French Part)"
+msgstr "Сен-Мартен (французька частина)"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:225
+msgid "Saint Pierre and Miquelon"
+msgstr "Сен-П'єр і Мікелон"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:226
+msgid "Saint Vincent and The Grenadines"
+msgstr "Сент-Вінсент і Гренадини"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:227
+msgid "Samoa"
+msgstr "Самоа"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:228
+msgid "San Marino"
+msgstr "Сан-Марино"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:229
+msgid "Sao Tome and Principe"
+msgstr "Сан-Томе і Принсіпі"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:230
+msgid "Saudi Arabia"
+msgstr "Саудівська Аравія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:231
+msgid "Senegal"
+msgstr "Сенегал"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:232
+msgid "Serbia"
+msgstr "Сербія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:233
+msgid "Seychelles"
+msgstr "Сейшельські острови"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:234
+msgid "Sierra Leone"
+msgstr "Сьєрра-Леоне"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:235
+msgid "Singapore"
+msgstr "Сінгапур"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:236
+msgid "Sint Maarten (Dutch Part)"
+msgstr "Сінт-Мартен (голландська частина)"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:237
+msgid "Slovakia"
+msgstr "Словаччина"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:238
+msgid "Slovenia"
+msgstr "Словенія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:239
+msgid "Solomon Islands"
+msgstr "Соломонові острови"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:240
+msgid "Somalia"
+msgstr "Сомалі"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:241
+msgid "South Africa"
+msgstr "Південна Африка"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:242
+msgid "South Georgia"
+msgstr "Південна Джорджія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:243
+msgid "South Korea"
+msgstr "Південна Корея"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:244
+msgid "South Sudan"
+msgstr "Південний Судан"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:245
+msgid "Spain"
+msgstr "Іспанія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:246
+msgid "Sri Lanka"
+msgstr "Шрі-Ланка"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:247
+msgid "Sudan"
+msgstr "Судан"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:248
+msgid "Suriname"
+msgstr "Суринам"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:249
+msgid "Svalbard and Jan Mayen"
+msgstr "Шпіцберген і Ян-Майєн"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:250
+msgid "Swaziland"
+msgstr "Свазіленд"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:251
+msgid "Sweden"
+msgstr "Швеція"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:252
+msgid "Switzerland"
+msgstr "Швейцарія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:253
+msgid "Syrian Arab Republic"
+msgstr "Сирійська Арабська Республіка"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:254
+msgid "Taiwan"
+msgstr "Тайвань"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:255
+msgid "Tajikistan"
+msgstr "Таджикистан"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:256
+msgid "Tanzania"
+msgstr "Танзанія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:257
+msgid "Thailand"
+msgstr "Таїланд"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:258
+msgid "Timor-Leste"
+msgstr "Тимор-Лешті"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:259
+msgid "Togo"
+msgstr "Того"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:260
+msgid "Tokelau"
+msgstr "Токелау"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:261
+msgid "Tonga"
+msgstr "Тонга"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:262
+msgid "Trinidad and Tobago"
+msgstr "Тринідад і Тобаго"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:263
+msgid "Tunisia"
+msgstr "Туніс"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:264
+msgid "Turkey"
+msgstr "Туреччина"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:265
+msgid "Turkmenistan"
+msgstr "Туркменістан"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:266
+msgid "Turks and Caicos Islands"
+msgstr "Острови Теркс і Кайкос"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:267
+msgid "Tuvalu"
+msgstr "Тувалу"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:268
+msgid "Uganda"
+msgstr "Уганда"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:269
+msgid "Ukraine"
+msgstr "Україна"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:270
+msgid "United Arab Emirates"
+msgstr "Об'єднані Арабські Емірати"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:271
+msgid "United Kingdom"
+msgstr "Сполучене Королівство"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:272
+msgid "United States"
+msgstr "Сполучені Штати"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:273
+msgid "United States Minor Outlying Islands"
+msgstr "Малі віддалені острови Сполучених Штатів"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:274
+msgid "Uruguay"
+msgstr "Уругвай"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:275
+msgid "Uzbekistan"
+msgstr "Узбекистан"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:276
+msgid "Vanuatu"
+msgstr "Вануату"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:277
+msgid "Vatican City"
+msgstr "Ватикан"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:278
+msgid "Venezuela"
+msgstr "Венесуела"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:279
+msgid "Vietnam"
+msgstr "В'єтнам"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:280
+msgid "Virgin Islands, British"
+msgstr "Віргінські острови, Британські"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:281
+msgid "Virgin Islands, U.S."
+msgstr "Віргінські острови, США"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:282
+msgid "Wallis and Futuna"
+msgstr "Уолліс і Футуна"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:283
+msgid "Western Sahara"
+msgstr "Західна Сахара"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:284
+msgid "Yemen"
+msgstr "Ємен"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:285
+msgid "Zambia"
+msgstr "Замбія"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:286
+msgid "Zimbabwe"
+msgstr "Зімбабве"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:287
+msgid "Åland Islands"
+msgstr "Аландські острови"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:301
+msgid "Time Trials"
+msgstr "Випробування часом"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:303
+msgid "Certified Levels"
+msgstr "Сертифіковані рівні"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:305
+msgid "World Records Statistics"
+msgstr "Статистика світових рекордів"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:309
+#: all_pages/GooberDash/Statistics/player_info.py:503
+msgid "Last Update"
+msgstr "Останнє оновлення"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:311
+#: all_pages/GooberDash/Statistics/player_info.py:505
+msgid "Updated Every 12 Hours"
+msgstr "Оновлюється кожні 12 годин"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:316
+msgid "Performance Points Leaderboard"
+msgstr "Таблиця лідерів за балами ефективності"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:317
+msgid "World Records"
+msgstr "Світові рекорди"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:318
+msgid "WRs Distribution"
+msgstr "Розподіл ЗП"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:386
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:748
+#: all_pages/GooberDash/Statistics/player_info.py:548
+#: all_pages/GooberDash/Statistics/player_info.py:562
+msgid "Global Rank"
+msgstr "Глобальний рейтинг"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:387
+msgid "Global Rank diff"
+msgstr "Різниця в глобальному рейтингу"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:388
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:749
+msgid "Local Rank"
+msgstr "Місцевий ранг"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:389
+msgid "Local Rank diff"
+msgstr "Локальна різниця рангів"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:390
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:741
+#: all_pages/GooberDash/Statistics/player_info.py:594
+#: all_pages/GooberDash/Statistics/player_info.py:600
+msgid "Completed Levels"
+msgstr "Завершені рівні"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:391
+msgid "Completed Levels diff"
+msgstr "Completed Levels diff"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:392
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:752
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:782
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:826
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:835
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:837
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:845
+#: all_pages/GooberDash/Statistics/player_info.py:909
+#: all_pages/GooberDash/Statistics/player_info.py:949
+#: all_pages/GooberDash/Statistics/player_info.py:993
+#: all_pages/GooberDash/Statistics/player_info.py:1003
+#: all_pages/GooberDash/Statistics/player_info.py:1006
+#: all_pages/GooberDash/Statistics/player_info.py:1015
+msgid "Performance Points"
+msgstr "Бали ефективності"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:393
+msgid "Performance Points diff"
+msgstr "Різниця в балах ефективності"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:394
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:755
+msgid "Global Top %"
+msgstr "Глобальний топ %"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:395
+#, python-format
+msgid "Global Top % diff"
+msgstr "Глобальний топ % різниця"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:396
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:756
+msgid "Local Top %"
+msgstr "Локальний топ % від загальної кількості"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:397
+#, python-format
+msgid "Local Top % diff"
+msgstr "Місцевий топ % різниця"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:399
+msgid "🥇 diff"
+msgstr "🥇 diff"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:401
+msgid "🥈 diff"
+msgstr "🥈 diff"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:403
+msgid "🥉 diff"
+msgstr "🥉 diff"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:404
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:750
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:943
+msgid "Player"
+msgstr "Плеєр"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:405
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:747
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:944
+#: all_pages/GooberDash/Statistics/player_info.py:484
+msgid "User ID"
+msgstr "Ідентифікатор користувача"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:411
+msgid "Sort By"
+msgstr "Сортувати за"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:417
+msgid "Order"
+msgstr "Порядок"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:421
+msgid "Country/Region"
+msgstr "Країна/регіон"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:432
+#: all_pages/GooberDash/Statistics/player_info.py:90
+msgid "Search Player"
+msgstr "Пошуковий програвач"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:432
+#: all_pages/GooberDash/Statistics/player_info.py:91
+msgid "Username or User ID"
+msgstr "Ім'я користувача або ідентифікатор користувача"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:436
+msgid "Display Global Rank"
+msgstr "Відобразити глобальний рейтинг"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:439
+msgid "Display Local Rank"
+msgstr "Відобразити місцевий ранг"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:442
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:899
+msgid "Display User ID"
+msgstr "Відобразити ідентифікатор користувача"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:445
+#: all_pages/GooberDash/Statistics/player_info.py:761
+msgid "Display Changes"
+msgstr "Відображення змін"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:479
+#: all_pages/GooberDash/Statistics/player_info.py:1020
+msgid "No Records Found"
+msgstr "Не знайдено жодного запису"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:490
+msgid "Page Size"
+msgstr "Розмір сторінки"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:498
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:509
+msgid "Page"
+msgstr "Сторінка"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:511
+msgid "of"
+msgstr "з"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:517
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:525
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:787
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:791
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:794
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:796
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:798
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:802
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:825
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:845
+#: all_pages/GooberDash/Statistics/player_info.py:914
+#: all_pages/GooberDash/Statistics/player_info.py:954
+#: all_pages/GooberDash/Statistics/player_info.py:958
+#: all_pages/GooberDash/Statistics/player_info.py:961
+#: all_pages/GooberDash/Statistics/player_info.py:963
+#: all_pages/GooberDash/Statistics/player_info.py:965
+#: all_pages/GooberDash/Statistics/player_info.py:969
+#: all_pages/GooberDash/Statistics/player_info.py:992
+#: all_pages/GooberDash/Statistics/player_info.py:1015
+msgid "Rank"
+msgstr "Звання"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:519
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:527
+msgid "to"
+msgstr "до"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:531
+msgid "Total number of Players"
+msgstr "Загальна кількість гравців"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:742
+msgid "Total Number of Levels with Records"
+msgstr "Загальна кількість рівнів із записами"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:753
+#: all_pages/GooberDash/Statistics/player_info.py:911
+msgid "Total Performance Points (pp) in all levels combined"
+msgstr "Загальна кількість балів ефективності (бали) на всіх рівнях разом узятих"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:777
+#: all_pages/GooberDash/Statistics/player_info.py:944
+msgid "How Performance Points (pp) are calculated"
+msgstr "Як розраховуються бали результативності (pp)"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:789
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:800
+#: all_pages/GooberDash/Statistics/player_info.py:956
+#: all_pages/GooberDash/Statistics/player_info.py:967
+msgid "if"
+msgstr "якщо"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:809
+#: all_pages/GooberDash/Statistics/player_info.py:976
+msgid "Top 100 Rank to Performance Points conversion"
+msgstr "Конвертація топ-100 рейтингів у бали ефективності"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:829
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:837
+#: all_pages/GooberDash/Statistics/player_info.py:996
+#: all_pages/GooberDash/Statistics/player_info.py:1005
+msgid "Performance Points pp"
+msgstr "Бали ефективності pp"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:830
+#: all_pages/GooberDash/Statistics/player_info.py:691
+#: all_pages/GooberDash/Statistics/player_info.py:695
+#: all_pages/GooberDash/Statistics/player_info.py:997
+msgid "pp"
+msgstr "pp"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:893
+#: all_pages/GooberDash/Statistics/player_info.py:750
+msgid "Display Level ID"
+msgstr "Ідентифікатор рівня відображення"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:905
+msgid "Display Records Count"
+msgstr "Відобразити кількість записів"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:941
+#: all_pages/GooberDash/Statistics/player_info.py:905
+msgid "Level"
+msgstr "Рівень"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:946
+#: all_pages/GooberDash/Statistics/player_info.py:907
+msgid "Time"
+msgstr "Час"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:946
+#: all_pages/GooberDash/Statistics/player_info.py:680
+#: all_pages/GooberDash/Statistics/player_info.py:684
+#: all_pages/GooberDash/Statistics/player_info.py:808
+msgid "s"
+msgstr "s"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:948
+#: all_pages/GooberDash/Statistics/player_info.py:920
+msgid "Upload Time"
+msgstr "Час завантаження"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:950
+msgid "Level Records Count"
+msgstr "Кількість записів рівня"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:953
+#: all_pages/GooberDash/Statistics/player_info.py:923
+msgid "Watch Replay"
+msgstr "Дивитися повтор"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:956
+#: all_pages/GooberDash/Statistics/player_info.py:926
+msgid "Race Ghost"
+msgstr "Привид раси"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:978
+msgid "Levels"
+msgstr "Рівні"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:980
+msgid "WR Holders"
+msgstr "Тримачі WR"
+
+#: all_pages/GooberDash/Statistics/time_trials_certified_levels.py:982
+msgid "WRs"
+msgstr "WRs"
+
+#: all_pages/GooberDash/Statistics/player_info.py:143
+msgid "Select Player"
+msgstr "Виберіть плеєр"
+
+#: all_pages/GooberDash/Statistics/player_info.py:147
+msgid "Players found"
+msgstr "Гравці знайшли"
+
+#: all_pages/GooberDash/Statistics/player_info.py:156
+msgid "No Players Found"
+msgstr "Гравців не знайдено"
+
+#: all_pages/GooberDash/Statistics/player_info.py:162
+msgid "General Info"
+msgstr "Загальна інформація"
+
+#: all_pages/GooberDash/Statistics/player_info.py:163
+msgid "Season Records"
+msgstr "Рекорди сезону"
+
+#: all_pages/GooberDash/Statistics/player_info.py:164
+msgid "Medals"
+msgstr "Медалі"
+
+#: all_pages/GooberDash/Statistics/player_info.py:165
+msgid "Stats"
+msgstr "Статистика"
+
+#: all_pages/GooberDash/Statistics/player_info.py:166
+msgid "Time Trials Records"
+msgstr "Записи часових випробувань"
+
+#: all_pages/GooberDash/Statistics/player_info.py:483
+msgid "Display Name"
+msgstr "Ім'я користувача"
+
+#: all_pages/GooberDash/Statistics/player_info.py:537
+#: all_pages/GooberDash/Statistics/player_info.py:543
+msgid "Total Performance Points"
+msgstr "Загальна кількість балів ефективності"
+
+#: all_pages/GooberDash/Statistics/player_info.py:552
+#: all_pages/GooberDash/Statistics/player_info.py:566
+msgid "Top"
+msgstr "Верхня частина"
+
+#: all_pages/GooberDash/Statistics/player_info.py:554
+#: all_pages/GooberDash/Statistics/player_info.py:568
+msgid "First"
+msgstr "По-перше."
+
+#: all_pages/GooberDash/Statistics/player_info.py:605
+#: all_pages/GooberDash/Statistics/player_info.py:611
+msgid "Average Percentile"
+msgstr "Середній перцентиль"
+
+#: all_pages/GooberDash/Statistics/player_info.py:756
+msgid "Display Incompleted Levels"
+msgstr "Показати незавершені рівні"
+
+#: all_pages/GooberDash/Statistics/player_info.py:915
+msgid "Out of"
+msgstr "З"
+
+#: all_pages/GooberDash/Statistics/player_info.py:917
+msgid "Percentile"
+msgstr "Процентиль"
+
+#: all_pages/GooberDash/Statistics/level_info.py:15
+#: all_pages/2 Goober Dash.py:203
+msgid "Level Info"
+msgstr "Інформація про рівень"
+
+#: all_pages/6 About.py:55 all_pages/0 Home.py:178
+msgid "About"
+msgstr "Про"
+
+#: all_pages/6 About.py:57
+msgid "What is WinterPixelGames?"
+msgstr "Що таке WinterPixelGames?"
+
+#: all_pages/6 About.py:63
+msgid "**:blue-background[WinterPixelGames]** (WPG) is a community-driven site made by [**TANK8K**](https://tank8k.com/) which provides useful **Tools & Statistics** of games made by **[Winterpixel Games](https://www.winterpixel.com/)**, including **[Rocket Bot Royale](./Rocket_Bot_Royale)**, **[Goober Dash](./Goober_Dash)**, **[Goober Royale](./Goober_Royale)**, **[Goober Shot](./Goober_Shot)**, and **[Moonrock Miners](./Moonrock_Miners)**."
+msgstr "**:blue-background[WinterPixelGames]** (WPG) - це сайт спільноти [**TANK8K**](https://tank8k.com/), який надає корисні **Tools & Statistics** ігор від **[Winterpixel Games](https://www.winterpixel.com/)**, зокрема **[Rocket Bot Royale](./Rocket_Bot_Royale)**, **[Goober Dash](./Goober_Dash)**, **[Goober Royale](./Goober_Royale)**, **[Goober Shot](./Goober_Shot)** та **[Moonrock Miners](./Moonrock_Miners)**."
+
+#: all_pages/6 About.py:70
+msgid "Affiliation"
+msgstr "Приналежність"
+
+#: all_pages/6 About.py:74
+msgid "This website is **NOT** affiliated with or endorsed by **Winterpixel Games Inc.**"
+msgstr "Цей веб-сайт **НЕ** пов'язаний з **Winterpixel Games Inc.** і не схвалюється нею."
+
+#: all_pages/6 About.py:81
+msgid "Copyright Notice"
+msgstr "Повідомлення про авторське право"
+
+#: all_pages/6 About.py:85
+msgid "Rocket Bot Royale, Goober Dash, Goober Royale, Goober Shot, Moonrock Miners, Websites and Media **@ Winterpixel Games Inc.**"
+msgstr "Rocket Bot Royale, Goober Dash, Goober Royale, Goober Shot, Moonrock Miners, веб-сайти та медіа **@ Winterpixel Games Inc.**."
+
+#: all_pages/6 About.py:92
+msgid "License"
+msgstr "Ліцензія"
+
+#: all_pages/6 About.py:95
+msgid "The source code is licensed under **MIT license**."
+msgstr "Вихідний код ліцензовано згідно з **ліцензією MIT**."
+
+#: all_pages/6 About.py:101
+msgid "Technology"
+msgstr "Технологія"
+
+#: all_pages/6 About.py:108
+msgid "Framework"
+msgstr "Фреймворк"
+
+#: all_pages/6 About.py:111 common_config.py:546 common_config.py:624
+msgid "Language"
+msgstr "Мова"
+
+#: all_pages/6 About.py:114
+msgid "Database"
+msgstr "База даних"
+
+#: all_pages/6 About.py:117
+msgid "Cloud Vendor"
+msgstr "Хмарний постачальник"
+
+#: all_pages/6 About.py:120
+msgid "Web Server"
+msgstr "Веб-сервер"
+
+#: all_pages/6 About.py:123
+msgid "Source Code"
+msgstr "Вихідний код"
+
+#: all_pages/6 About.py:130
+msgid "Developer"
+msgstr "Розробник"
+
+#: all_pages/6 About.py:141
+msgid "Personal Website"
+msgstr "Персональний сайт"
+
+#: all_pages/6 About.py:146
+msgid "Developed with 💖 by **[:blue[TANK8K]](https://tank8k.com/)**"
+msgstr "Розроблено з 💖 by **[:blue[TANK8K]](https://tank8k.com/)**."
+
+#: all_pages/3 Goober Royale.py:78
+msgid "**GOOBER ROYALE** is a multiplayer battle royale game in which each player controls a character (called a \"goober\") and must collect weapons, power-ups and other items to eliminate their opponents. The clashes bring together 16 players on a map and the objective will be to be the last survivor of the game. You can play alone or in a team of 4 players. Your Goober will have several weapons, a main missile that reloads at regular intervals and a secondary accessory such as mines, a tornado, a drill and many others. Also use your jetpack to move around the map more easily, reach high places and surprise your opponents. Completing games and missions will earn you gold coins that you can spend either to improve your Goober's skills or to buy cosmetics that will give your character a unique style. An online ranking will allow you to see the 100 best players in the world and in your region."
+msgstr "**GOOBER ROYALE - це багатокористувацька королівська битва, в якій кожен гравець керує персонажем (так званим \"губером\") і повинен збирати зброю, бонуси та інші предмети, щоб знищити своїх супротивників. Сутички об'єднують 16 гравців на карті, і мета полягає в тому, щоб стати останнім, хто вижив у грі. Ви можете грати поодинці або в команді з 4 гравців. Ваш Губер матиме кілька видів зброї, основну ракету, яка перезаряджається через певні проміжки часу, та другорядні аксесуари, такі як міни, торнадо, дриль та багато іншого. Також використовуйте реактивний ранець, щоб легше пересуватися по карті, досягати високих місць і дивувати своїх супротивників. Виконуючи ігри та місії, ви зароблятимете золоті монети, які зможете витратити або на покращення навичок Губера, або на косметику, що додасть вашому персонажу унікального стилю. Онлайн-рейтинг дозволить вам побачити 100 найкращих гравців у світі та у вашому регіоні."
+
+#: all_pages/3 Goober Royale.py:83
+msgid "**Goober Royale** is in **beta** currently (Bugs are expected and Data may be reset in future)"
+msgstr "**Goober Royale** наразі перебуває на стадії **бета** (очікуються помилки і дані можуть бути скинуті в майбутньому)"
+
+#: all_pages/1 Rocket Bot Royale.py:110
+msgid "**ROCKET BOT ROYALE** is a fun new take on the online battle royale formula. Powerful, wall-climbing, rocket-jumping, artillery-pumping Robo-Tanks are the vehicle of choice in this fast-paced shootout, where the goal is to survive longer than the competition. Collect the loot to upgrade your arsenal, tunnel into the terrain to take cover and collect buried treasure, and avoid the rising water levels to be the blast one standing!"
+msgstr "**\"Королівська битва роботів\" - це новий веселий погляд на формулу онлайнової королівської битви. Потужні, здатні лазити по стінах, стрибати з ракетами та артилерійськими снарядами робо-танки - найкращий засіб пересування у цій швидкій перестрілці, де мета - протриматися довше за суперників. Збирайте здобич, щоб покращити свій арсенал, прокладайте тунелі в місцевості, щоб сховатися і зібрати закопані скарби, а також уникайте підвищення рівня води, щоб залишитися єдиним, хто вижив!"
+
+#: all_pages/1 Rocket Bot Royale.py:114 all_pages/2 Goober Dash.py:146
+msgid "Platforms"
+msgstr "Платформи"
+
+#: all_pages/1 Rocket Bot Royale.py:129 all_pages/2 Goober Dash.py:160
+msgid "Communities"
+msgstr "Спільноти"
+
+#: all_pages/0 Home.py:12
+msgid "Welcome to"
+msgstr "Ласкаво просимо до"
+
+#: all_pages/0 Home.py:15
+msgid "A website which provides useful Tools & Statistics of games made by [Winterpixel Games](https://www.winterpixel.com/)"
+msgstr "Веб-сайт, який надає корисні інструменти та статистику ігор, створених [Winterpixel Games] (https://www.winterpixel.com/)"
+
+#: all_pages/0 Home.py:64 all_pages/0 Home.py:158
+msgid "Goober Dash"
+msgstr "Губер Даш."
+
+#: all_pages/0 Home.py:150
+msgid "Home"
+msgstr "Головна"
+
+#: all_pages/2 Goober Dash.py:142
+msgid "**GOOBER DASH** is a multiplayer battle royale game that you can play online. Dash your opponents into deadly spikes, gather precious coins, and unlock a plethora of unique costumes as you strive to outlast the competition. Invite your friends to engage in epic battles in custom private lobbies. Unleash your creativity with the level editor, crafting and conquering your very own battlegrounds. Climb the global and country-based seasonal leaderboards to prove your dominance in this thrilling contest."
+msgstr "**GOOBER DASH - це багатокористувацька королівська битва, в яку можна грати онлайн. Збивайте своїх супротивників смертоносними шипами, збирайте дорогоцінні монети та відкривайте безліч унікальних костюмів, прагнучи випередити конкурентів. Запрошуйте друзів до епічних битв в індивідуальних приватних лобі. Розкрийте свій творчий потенціал за допомогою редактора рівнів, створюючи та завойовуючи власні поля битв. Підніміться на світові та національні сезонні таблиці лідерів, щоб довести свою перевагу в цьому захопливому змаганні."
+
+#: all_pages/2 Goober Dash.py:193
+msgid "Time Trials (Certified Levels)"
+msgstr "Випробування на час (сертифіковані рівні)"
+
+#: common_config.py:69
+msgid "Apply"
+msgstr "Прийняти"
+
+#: common_config.py:73
+msgid "Contributors"
+msgstr "Учасники проекту"
+
+#: common_config.py:77
+msgid "In no particular order"
+msgstr "Немає конкретного порядку"
+
+#: common_config.py:95
+msgid "Contribute"
+msgstr "Зробити свій внесок"
+
+#: common_config.py:145
+msgid "Back to Home"
+msgstr "Додому"
+
+#: common_config.py:187
+msgid "Back to Menu"
+msgstr "Повернутися до меню"
+
+#: common_config.py:522
+msgid "This website is NOT affiliated with or endorsed by Winterpixel Games Inc."
+msgstr "Цей веб-сайт НЕ пов'язаний з компанією Winterpixel Games Inc. і не схвалюється нею."
+
+#: common_config.py:524
+msgid "All relevant trademarks belong to their respective owners."
+msgstr "Усі відповідні торгові марки належать їхнім власникам."
+
+#: common_config.py:527
+msgid "Developed with 💖 by <a style=\"text-decoration:none\" href=\"https://tank8k.com/\" target=\"_blank\">TANK8K</a>"
+msgstr "Розроблено з 💖 компанією <a style=\"text-decoration:none\" href=\"https://tank8k.com/\" target=\"_blank\">TANK8K</a>"
+

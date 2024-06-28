@@ -87,7 +87,7 @@ if st.session_state.game == "GooberRoyale" and st.session_state.page == "menu":
         st.html("<h4>" + _("Platform") + "</h4>")
         col1, col2 = st.columns(2)
         col1.link_button(_("Browser"), "https://gooberroyale.winterpixel.io")
-        st.html("<h4>Community</h4>")
+        st.html("<h4>" + _("Community") + "</h4>")
         col1, col2 = st.columns(2)
         col1.link_button("Discord", "https://discord.com/invite/kdGuBhXz2r")
         "---"
@@ -125,7 +125,7 @@ elif (
             load_page as GooberRoyale_image_assets,
         )
 
-        GooberRoyale_image_assets()
+        GooberRoyale_image_assets(st.session_state.language)
         back_to_menu(st.session_state.language)
 
 elif st.session_state.game == "GooberRoyale" and st.session_state.page == "player_info":
@@ -134,7 +134,7 @@ elif st.session_state.game == "GooberRoyale" and st.session_state.page == "playe
             load_page as GooberRoyale_player_info,
         )
 
-        GooberRoyale_player_info()
+        GooberRoyale_player_info(st.session_state.language)
         back_to_menu(st.session_state.language)
 
 elif (
@@ -146,5 +146,5 @@ elif (
             load_page as GooberRoyale_season_leaderboard,
         )
 
-        GooberRoyale_season_leaderboard()
+        GooberRoyale_season_leaderboard(st.session_state.language)
         back_to_menu(st.session_state.language)

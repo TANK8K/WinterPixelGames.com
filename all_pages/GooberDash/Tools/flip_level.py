@@ -6,8 +6,6 @@ from io import StringIO
 from all_pages.GooberDash.Backend.levels import upload_level, download_level
 from common_config import set_localization
 
-_ = set_localization(st.session_state.language)
-
 
 def flip_json(file_name, data):
     class NpEncoder(json.JSONEncoder):
@@ -98,7 +96,8 @@ def flip_json(file_name, data):
     return res
 
 
-def load_page():
+def load_page(selected_language):
+    _ = set_localization(selected_language)
     st.image(
         "static/GooberDash/goober_dash_logo_text.png",
         width=280,
@@ -116,7 +115,7 @@ def load_page():
             font-family: "Font Awesome 5 Free" !important;
             content: "\\f019";
         }
-        div[data-testid="stLinkButton"] p::before {
+        div[data-testid="stAppViewBlockContainer"] div[data-testid="stLinkButton"] p::before {
             display: inline-block;
             vertical-align: middle;
             font-weight: 900;

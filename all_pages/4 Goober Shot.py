@@ -115,7 +115,7 @@ if st.session_state.game == "GooberShot" and st.session_state.page == "menu":
             type="primary",
         )
         col2.button(
-            _("Season Leaderboard") + "(" + _("WIP") + ")",
+            _("Season Leaderboard") + " (" + _("WIP") + ")",
             on_click=to_season_leaderboard_page,
             type="primary",
         )
@@ -127,7 +127,7 @@ elif st.session_state.game == "GooberShot" and st.session_state.page == "image_a
             load_page as GooberShot_image_assets,
         )
 
-        GooberShot_image_assets()
+        GooberShot_image_assets(st.session_state.language)
         back_to_menu(st.session_state.language)
 
 elif st.session_state.game == "GooberShot" and st.session_state.page == "player_info":
@@ -136,7 +136,7 @@ elif st.session_state.game == "GooberShot" and st.session_state.page == "player_
             load_page as GooberShot_player_info,
         )
 
-        GooberShot_player_info()
+        GooberShot_player_info(st.session_state.language)
         back_to_menu(st.session_state.language)
 
 elif (
@@ -148,5 +148,5 @@ elif (
             load_page as GooberShot_season_leaderboard,
         )
 
-        GooberShot_season_leaderboard()
+        GooberShot_season_leaderboard(st.session_state.language)
         back_to_menu(st.session_state.language)

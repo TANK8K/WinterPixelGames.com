@@ -181,7 +181,7 @@ elif (
             load_page as RocketBotRoyale_optimize_crate,
         )
 
-        RocketBotRoyale_optimize_crate()
+        RocketBotRoyale_optimize_crate(st.session_state.language)
         back_to_menu(st.session_state.language)
 
 elif (
@@ -193,7 +193,7 @@ elif (
             load_page as RocketBotRoyale_image_assets,
         )
 
-        RocketBotRoyale_image_assets()
+        RocketBotRoyale_image_assets(st.session_state.language)
         back_to_menu(st.session_state.language)
 
 elif (
@@ -205,7 +205,7 @@ elif (
             load_page as RocketBotRoyale_player_info,
         )
 
-        RocketBotRoyale_player_info()
+        RocketBotRoyale_player_info(st.session_state.language)
         back_to_menu(st.session_state.language)
 
 elif (
@@ -217,5 +217,5 @@ elif (
             load_page as RocketBotRoyale_season_leaderboard,
         )
 
-        RocketBotRoyale_season_leaderboard()
+        RocketBotRoyale_season_leaderboard(st.session_state.language)
         back_to_menu(st.session_state.language)

@@ -4,10 +4,9 @@ from streamlit_image_select import image_select
 from all_pages.GooberDash.Backend.goober_generator import generate_goober
 from common_config import set_localization
 
-_ = set_localization(st.session_state.language)
 
-
-def load_page():
+def load_page(selected_language):
+    _ = set_localization(selected_language)
     st.image(
         "static/GooberDash/goober_dash_logo_text.png",
         width=280,

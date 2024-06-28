@@ -34,7 +34,7 @@ st.html(
         div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) > div:nth-child(4) p::before {
             background-image: url("./app/static/MoonrockMiners/moonrock_miners_favicon.png");
         }
-        p::before {
+        div[data-testid="stVerticalBlock"] div[data-testid="stLinkButton"] p::before {
             background-image: url("./app/static/wph_logo.png");
         }
         div[data-testid="stVerticalBlock"] div:nth-child(10) > div p::before, div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) > div p::before {

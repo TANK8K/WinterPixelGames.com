@@ -413,7 +413,7 @@ def update_leaderboard():
                 f.write(str(len(level_ids)))
 
             connection.close()
-            st.cache_resource.clear()
+            st.cache_data.clear()
 
             # time.sleep(43200)
 

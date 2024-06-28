@@ -217,7 +217,7 @@ elif st.session_state.game == "GooberDash" and st.session_state.page == "flip_le
             load_page as GooberDash_flip_level,
         )
 
-        GooberDash_flip_level()
+        GooberDash_flip_level(st.session_state.language)
         back_to_menu(st.session_state.language)
 
 elif (
@@ -228,7 +228,7 @@ elif (
             load_page as GooberDash_maze_generator,
         )
 
-        GooberDash_maze_generator()
+        GooberDash_maze_generator(st.session_state.language)
         back_to_menu(st.session_state.language)
 
 elif (
@@ -240,7 +240,7 @@ elif (
             load_page as GooberDash_goober_generator,
         )
 
-        GooberDash_goober_generator()
+        GooberDash_goober_generator(st.session_state.language)
         back_to_menu(st.session_state.language)
 
 elif st.session_state.game == "GooberDash" and st.session_state.page == "image_assets":
@@ -249,7 +249,7 @@ elif st.session_state.game == "GooberDash" and st.session_state.page == "image_a
             load_page as GooberDash_image_assets,
         )
 
-        GooberDash_image_assets()
+        GooberDash_image_assets(st.session_state.language)
         back_to_menu(st.session_state.language)
 
 elif (
@@ -261,7 +261,7 @@ elif (
             load_page as GooberDash_time_trials_certified_levels,
         )
 
-        GooberDash_time_trials_certified_levels()
+        GooberDash_time_trials_certified_levels(st.session_state.language)
         back_to_menu(st.session_state.language)
 
 elif st.session_state.game == "GooberDash" and st.session_state.page == "player_info":
@@ -270,7 +270,7 @@ elif st.session_state.game == "GooberDash" and st.session_state.page == "player_
             load_page as GooberDash_player_info,
         )
 
-        GooberDash_player_info()
+        GooberDash_player_info(st.session_state.language)
         back_to_menu(st.session_state.language)
 
 elif st.session_state.game == "GooberDash" and st.session_state.page == "level_info":
@@ -279,7 +279,7 @@ elif st.session_state.game == "GooberDash" and st.session_state.page == "level_i
             load_page as GooberDash_level_info,
         )
 
-        GooberDash_level_info()
+        GooberDash_level_info(st.session_state.language)
         back_to_menu(st.session_state.language)
 
 elif (
@@ -291,5 +291,5 @@ elif (
             load_page as GooberDash_season_leaderboard,
         )
 
-        GooberDash_season_leaderboard()
+        GooberDash_season_leaderboard(st.session_state.language)
         back_to_menu(st.session_state.language)
