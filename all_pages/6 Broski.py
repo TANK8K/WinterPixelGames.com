@@ -10,24 +10,20 @@ _ = set_localization(st.session_state.language)
 footer_account_language(st.session_state.language)
 
 try:
-    if st.session_state.game != "MoonrockMiners":
+    if st.session_state.game != "Broski":
         st.session_state.page = "menu"
 except Exception:
     st.session_state.page = "menu"
-st.session_state.game = "MoonrockMiners"
+st.session_state.game = "Broski"
 
 
 def to_image_assets_page():
     st.session_state.page = "image_assets"
 
 
-def to_season_leaderboard_page():
-    st.session_state.page = "season_leaderboard"
-
-
 ph = st.empty()
 
-if st.session_state.game == "MoonrockMiners" and st.session_state.page == "menu":
+if st.session_state.game == "Broski" and st.session_state.page == "menu":
     with ph.container():
         st.html(
             """<style>
@@ -58,25 +54,21 @@ if st.session_state.game == "MoonrockMiners" and st.session_state.page == "menu"
                         font-family: "font awesome 5 Free" !important;
                         content: "\\f03e";
                     }
-                    div[data-testid="stHorizontalBlock"]:nth-child(14) > div:nth-child(1) p::before {
-                        font-family: "font awesome 5 Free" !important;
-                        content: "\\f073";
-                    }
                     </style>"""
         )
-        st.image("static/MoonrockMiners/moonrock_miners_banner.png", width=500)
+        st.image("static/Broski/broski_logo_text.png", width=500)
         st.markdown(
             _(
-                """**MOONROCK MINERS** is a gravity-defying multiplayer space battle game set in an asteroid field. Blast other players, collect powerups and crystals, and avoid the asteroids. Try to survive until the end to win the match. Compete against players around the world in real-time to rank in every season. You can also create your own custom lobbies to play private games online with your friends!"""
+                """**BROSKI** is an arcade pixel style skiing game, it is a fun and has a unique visual style that allows you to enjoy skiing even in summer. In the game, you will play as a skier who races down a snowy mountain. Your goal is to ski the furthest distance possible. As you slide down the hill faster and faster, you have to avoid more and more obstacles on the way, which makes the game challenging. To test how far you can go, take the challenge!"""
             )
         )
         st.info(
-            _("**Moonrock Miners** is **no longer in development**"),
+            _("**Broski** is a **prototype single-player game** currently"),
             icon="ℹ️",
         )
         st.html("<h4>" + _("Platform") + "</h4>")
         col1, col2 = st.columns(2)
-        col1.link_button(_("Browser"), "https://moonrockminers.com")
+        col1.link_button(_("Browser"), "https://skier-staging.winterpixel.io/")
         st.html("<h4>" + _("Community") + "</h4>")
         col1, col2 = st.columns(2)
         col1.link_button("Discord", "https://discord.com/invite/kdGuBhXz2r")
@@ -92,44 +84,13 @@ if st.session_state.game == "MoonrockMiners" and st.session_state.page == "menu"
             on_click=to_image_assets_page,
             type="primary",
         )
-        "---"
-        st.html(
-            "<h3><i class='fa-solid fa-chart-simple'></i>&nbsp;"
-            + _("Statistics")
-            + "</h3>"
-        )
-        col1, col2 = st.columns(2)
-        col1.button(
-            _("Season Leaderboard") + " (" + _("WIP") + ")",
-            on_click=to_season_leaderboard_page,
-            type="primary",
-        )
-        st.info(
-            _("**Leaderboard** is **disabled** currently"),
-            icon="ℹ️",
-        )
         back_to_home(st.session_state.language)
 
-elif (
-    st.session_state.game == "MoonrockMiners"
-    and st.session_state.page == "image_assets"
-):
+elif st.session_state.game == "Broski" and st.session_state.page == "image_assets":
     with ph.container():
-        from all_pages.MoonrockMiners.Tools.image_assets import (
-            load_page as MoonrockMiners_image_assets,
+        from all_pages.Broski.Tools.image_assets import (
+            load_page as Broski_image_assets,
         )
 
-        MoonrockMiners_image_assets(st.session_state.language)
-        back_to_menu(st.session_state.language)
-
-elif (
-    st.session_state.game == "MoonrockMiners"
-    and st.session_state.page == "season_leaderboard"
-):
-    with ph.container():
-        from all_pages.MoonrockMiners.Statistics.season_leaderboard import (
-            load_page as MoonrockMiners_season_leaderboard,
-        )
-
-        MoonrockMiners_season_leaderboard(st.session_state.language)
+        Broski_image_assets(st.session_state.language)
         back_to_menu(st.session_state.language)

@@ -944,7 +944,7 @@ def load_page(selected_language):
                         _("Time"), format="%f " + _("s")
                     ),
                     "Upload Time": st.column_config.TextColumn(_("Upload Time")),
-                    "Level Records Count": st.column_config.TextColumn(
+                    "Level Records Count": st.column_config.NumberColumn(
                         _("Level Records Count")
                     ),
                     "Watch Replay": st.column_config.LinkColumn(

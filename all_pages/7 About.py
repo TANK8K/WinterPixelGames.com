@@ -1,8 +1,8 @@
 import streamlit as st
-from common_config import back_to_home, set_localization, footer_and_language
+from common_config import back_to_home, set_localization, footer_account_language
 
 _ = set_localization(st.session_state.language)
-footer_and_language(st.session_state.language)
+footer_account_language(st.session_state.language)
 
 st.html(
     """

@@ -1,8 +1,8 @@
 import streamlit as st
-from common_config import set_localization, footer_and_language
+from common_config import set_localization, footer_account_language
 
 _ = set_localization(st.session_state.language)
-footer_and_language(st.session_state.language)
+footer_account_language(st.session_state.language)
 
 
 def home_page():
@@ -20,70 +20,75 @@ def home_page():
     st.html(
         """
    <style>
-       #welcome a {
+       div[data-testid="stAppViewBlockContainer"] #welcome a {
            text-decoration: none;
        }
-       .row-widget.stButton {
+       div[data-testid="stAppViewBlockContainer"] .row-widget.stButton {
            display: flex;
            justify-content: center;
        }
-       div[data-testid="column"] {
+       div[data-testid="stAppViewBlockContainer"] div[data-testid="column"] {
            display: inline-block !important;
        }
-       div[data-testid="stHorizontalBlock"] div button {
+       div[data-testid="stAppViewBlockContainer"] div[data-testid="stHorizontalBlock"] div button {
            border: none;
            background: transparent;
            padding: 2vh;
            margin: 8px;
        }
-       div[data-testid="stHorizontalBlock"] div button:hover {
+       div[data-testid="stAppViewBlockContainer"] div[data-testid="stHorizontalBlock"] div button:hover {
            border: none !important;
            box-shadow: 0 0 0px transparent !important;
        }
-       div[data-testid="stHorizontalBlock"] div button:active {
+       div[data-testid="stAppViewBlockContainer"] div[data-testid="stHorizontalBlock"] div button:active {
            background: transparent;
        }
-       div[data-testid="stHorizontalBlock"] div button p:hover:before {
+       div[data-testid="stAppViewBlockContainer"] div[data-testid="stHorizontalBlock"] div button p:hover:before {
            box-shadow: 0 0 30px #158fd8;
        }
        @media screen and (min-width: 1100px) and (orientation: landscape) {
-           #welcome {
+           div[data-testid="stAppViewBlockContainer"] #welcome {
                padding-top: 4rem !important;
                font-size: 2vw !important;
            }
-           div[data-testid="stHorizontalBlock"] {
+           div[data-testid="stAppViewBlockContainer"] div[data-testid="stHorizontalBlock"] {
                padding-top: 4rem !important;
            }
-           div[data-testid="stHorizontalBlock"] > div:nth-child(1) button:after {
+           div[data-testid="stAppViewBlockContainer"] div[data-testid="stHorizontalBlock"] > div:nth-child(1) button:after {
                content: '"""
         + _("Rocket Bot Royale")
         + """' !important;
            }
-           div[data-testid="stHorizontalBlock"] > div:nth-child(2) button:after {
+           div[data-testid="stAppViewBlockContainer"] div[data-testid="stHorizontalBlock"] > div:nth-child(2) button:after {
                content: '"""
         + _("Goober Dash")
         + """' !important;
            }
-           div[data-testid="stHorizontalBlock"] > div:nth-child(3) button:after {
+           div[data-testid="stAppViewBlockContainer"] div[data-testid="stHorizontalBlock"] > div:nth-child(3) button:after {
                content: '"""
         + _("Goober Royale")
         + """' !important;
            }
-           div[data-testid="stHorizontalBlock"] > div:nth-child(4) button:after {
+           div[data-testid="stAppViewBlockContainer"] div[data-testid="stHorizontalBlock"] > div:nth-child(4) button:after {
                content: '"""
         + _("Goober Shot")
         + """' !important;
            }
-           div[data-testid="stHorizontalBlock"] > div:nth-child(5) button:after {
+           div[data-testid="stAppViewBlockContainer"] div[data-testid="stHorizontalBlock"] > div:nth-child(5) button:after {
                content: '"""
         + _("Moonrock Miners")
         + """' !important;
            }
+           div[data-testid="stAppViewBlockContainer"] div[data-testid="stHorizontalBlock"] > div:nth-child(6) button:after {
+               content: '"""
+        + _("Broski")
+        + """' !important;
+           }
        }
-       div[data-testid="stHorizontalBlock"] div button:after {
+       div[data-testid="stAppViewBlockContainer"] div[data-testid="stHorizontalBlock"] div button:after {
            visibility: hidden;
        }
-       div[data-testid="stHorizontalBlock"] div button:hover:after {
+       div[data-testid="stAppViewBlockContainer"] div[data-testid="stHorizontalBlock"] div button:hover:after {
            visibility: visible;
            position: relative;
            top: 15rem;
@@ -91,7 +96,7 @@ def home_page():
            font-weight: 700;
            font-size: 2rem;
        }
-       div[data-testid="stHorizontalBlock"] div button p:before {
+       div[data-testid="stAppViewBlockContainer"] div[data-testid="stHorizontalBlock"] div button p:before {
            border: 5px solid #0196ee;
            max-width: 25vw;
            border-radius: 2.8rem;
@@ -108,26 +113,29 @@ def home_page():
            transform: translateX(-50%) scale(0.9);
            aspect-ratio: 1/1;
        }
-       div[data-testid="stHorizontalBlock"] > div:nth-child(1) button p::before {
+       div[data-testid="stAppViewBlockContainer"] div[data-testid="stHorizontalBlock"] > div:nth-child(1) button p::before {
            background-image: url("./app/static/RocketBotRoyale/rocket_bot_royale_favicon.png");
        }
-       div[data-testid="stHorizontalBlock"] > div:nth-child(2) button p::before {
+       div[data-testid="stAppViewBlockContainer"] div[data-testid="stHorizontalBlock"] > div:nth-child(2) button p::before {
            background-image: url("./app/static/GooberDash/goober_dash_favicon.png");
        }
-       div[data-testid="stHorizontalBlock"] > div:nth-child(3) button p::before {
+       div[data-testid="stAppViewBlockContainer"] div[data-testid="stHorizontalBlock"] > div:nth-child(3) button p::before {
            background-image: url("./app/static/GooberRoyale/goober_royale_favicon.png");
        }
-       div[data-testid="stHorizontalBlock"] > div:nth-child(4) button p::before {
+       div[data-testid="stAppViewBlockContainer"] div[data-testid="stHorizontalBlock"] > div:nth-child(4) button p::before {
            background-image: url("./app/static/GooberShot/goober_shot_favicon.png");
        }
-       div[data-testid="stHorizontalBlock"] > div:nth-child(5) button p::before {
+       div[data-testid="stAppViewBlockContainer"] div[data-testid="stHorizontalBlock"] > div:nth-child(5) button p::before {
            background-image: url("./app/static/MoonrockMiners/moonrock_miners_favicon.png");
+       }
+       div[data-testid="stAppViewBlockContainer"] div[data-testid="stHorizontalBlock"] > div:nth-child(6) button p::before {
+           background-image: url("./app/static/Broski/broski_favicon.png");
        }
    </style>
    """
     )
 
-    col1, col2, col3, col4, col5 = st.columns(5)
+    col1, col2, col3, col4, col5, col6 = st.columns(6)
     if col1.button("​", key="RBR"):
         st.switch_page("all_pages/1 Rocket Bot Royale.py")
 
@@ -142,6 +150,9 @@ def home_page():
 
     if col5.button("​", key="MM"):
         st.switch_page("all_pages/5 Moonrock Miners.py")
+
+    if col6.button("​", key="BS"):
+        st.switch_page("all_pages/6 Broski.py")
 
 
 pg = st.navigation(
@@ -174,12 +185,17 @@ pg = st.navigation(
                 url_path="Moonrock_Miners",
             ),
             st.Page(
-                "all_pages/6 About.py",
+                "all_pages/6 Broski.py",
+                title=_("Broski"),
+                url_path="Broski",
+            ),
+            st.Page(
+                "all_pages/7 About.py",
                 title=_("About"),
                 url_path="About",
             ),
             st.Page(
-                "all_pages/7 Useful Links.py",
+                "all_pages/8 Useful Links.py",
                 title=_("Useful Links"),
                 url_path="Userful_Links",
             ),

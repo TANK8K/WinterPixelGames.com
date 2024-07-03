@@ -1,8 +1,22 @@
 import streamlit as st
-from common_config import common_config, available_languages, set_localization
+import extra_streamlit_components as stx
+from common_config import (
+    main_config,
+    available_languages,
+    set_localization,
+    account_system,
+)
 
-common_config()
+st.set_page_config(
+    page_title="WinterPixelGames » Tools and Stats",
+    page_icon="static/wpg_hex_logo_144.png",
+    layout="wide",
+    initial_sidebar_state="auto",
+)
+
+main_config()
 available_languages()
+account_system()
 
 try:
     _ = set_localization(st.session_state.language)
@@ -39,12 +53,17 @@ pg = st.navigation(
                 url_path="Moonrock_Miners",
             ),
             st.Page(
-                "all_pages/6 About.py",
+                "all_pages/6 Broski.py",
+                title=_("Broski"),
+                url_path="Broski",
+            ),
+            st.Page(
+                "all_pages/7 About.py",
                 title=_("About"),
                 url_path="About",
             ),
             st.Page(
-                "all_pages/7 Useful Links.py",
+                "all_pages/8 Useful Links.py",
                 title=_("Useful Links"),
                 url_path="Userful_Links",
             ),

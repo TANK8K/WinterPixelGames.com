@@ -155,5 +155,9 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-# Dummy account credentials
+# secrets and credentials
 .streamlit/secrets.toml
+
+# account system
+config.yaml
+config_backup.yaml

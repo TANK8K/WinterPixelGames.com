@@ -3,11 +3,11 @@ from common_config import (
     back_to_home,
     back_to_menu,
     set_localization,
-    footer_and_language,
+    footer_account_language,
 )
 
 _ = set_localization(st.session_state.language)
-footer_and_language(st.session_state.language)
+footer_account_language(st.session_state.language)
 
 try:
     if st.session_state.game != "RocketBotRoyale":
@@ -39,11 +39,11 @@ if st.session_state.game == "RocketBotRoyale" and st.session_state.page == "menu
     with ph.container():
         st.html(
             """<style>
-                    div[data-testid="column"] {
+                    div[data-testid="stAppViewBlockContainer"] div[data-testid="column"] {
                         width: fit-content !important;
                         flex: unset;
                     }
-                    div[data-testid="column"] * {
+                    div[data-testid="stAppViewBlockContainer"] div[data-testid="column"] * {
                         width: fit-content !important;
                     }
                     div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"] p::before {
