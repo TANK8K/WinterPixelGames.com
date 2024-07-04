@@ -91,7 +91,7 @@ def home_page():
        div[data-testid="stAppViewBlockContainer"] div[data-testid="stHorizontalBlock"] div button:hover:after {
            visibility: visible;
            position: relative;
-           top: 15rem;
+           top: 200px;
            font-family: 'Baloo 2';
            font-weight: 700;
            font-size: 2rem;

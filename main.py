@@ -16,12 +16,13 @@ st.set_page_config(
 
 main_config()
 available_languages()
-account_system()
 
 try:
     _ = set_localization(st.session_state.language)
 except Exception:
     _ = set_localization("english")
+
+account_system(_)
 
 pg = st.navigation(
     {

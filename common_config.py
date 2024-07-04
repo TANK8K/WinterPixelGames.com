@@ -17,6 +17,10 @@ yaml.indent(mapping=2, sequence=4, offset=2)
 yaml.preserve_quotes = True
 
 
+def get_manager(key):
+    return stx.CookieManager(key)
+
+
 def validate_user_id(uuid_str):
     try:
         uuid_obj = uuid.UUID(uuid_str)
@@ -251,9 +255,7 @@ def send_verification_code_email(email, verification_code):
        <p style="line-height: 140%;"><span style="font-family: 'Open Sans', sans-serif; line-height: 25.2px; font-size: 18px; color: #ffffff;">"""
         + _("Happy Gaming!")
         + """</span></p>
-       <p style="line-height: 140%;"><span style="font-family: 'Open Sans', sans-serif; line-height: 25.2px; font-size: 18px; color: #ffffff;">"""
-        + _("WinterPixelGames")
-        + """</span></p>
+       <p style="line-height: 140%;"><span style="font-family: 'Open Sans', sans-serif; line-height: 25.2px; font-size: 18px; color: #ffffff;">WinterPixelGames</span></p>
          </div>
              </td>
            </tr>
@@ -1131,10 +1133,6 @@ def send_forgot_password_email(email, username, new_password):
     return response.status_code
 
 
-def get_manager(key):
-    return stx.CookieManager(key=key)
-
-
 def set_localization(language):
     try:
         localizator = gettext.translation(
@@ -1148,8 +1146,9 @@ def set_localization(language):
 
 
 def available_languages():
-    cookie_manager = get_manager("")
+    cookie_manager = get_manager("available_languages")
     locale = cookie_manager.get(cookie="locale")
+
     if locale is not None:
         st.session_state.language = locale
     else:
@@ -1167,6 +1166,10 @@ _ = set_localization(st.session_state.language)
 
 @st.experimental_dialog(" ")
 def pop_account(selected_language):
+    cookie_manager = get_manager("pop_account")
+    logged_in_user_username = cookie_manager.get(cookie="username")
+    saved_account = cookie_manager.get(cookie="account")
+
     _ = set_localization(selected_language)
 
     with open("config.yaml", "r") as file:
@@ -1182,7 +1185,7 @@ def pop_account(selected_language):
     tab1, tab2, tab3 = st.tabs(
         [
             "**" + _("Linked Game Accounts") + "**",
-            "**" + _("Change Name/Email") + "**",
+            "**" + _("Change Nickname/Email") + "**",
             "**" + _("Change Password") + "**",
         ]
     )
@@ -1190,7 +1193,12 @@ def pop_account(selected_language):
         with st.form("Linked Game Accounts"):
             st.markdown("### " + _("Linked Game Accounts"))
             st.info(
-                "Statistics of Linked Accounts will be tracked daily and displayed in Player Info (WIP)",
+                _(
+                    "Statistics of Linked Accounts will be tracked daily and displayed in Player Info"
+                )
+                + " ("
+                + _("WIP")
+                + ")",
                 icon="ℹ️",
             )
             try:
@@ -1219,22 +1227,22 @@ def pop_account(selected_language):
                 user_id_GS_record = "No Records Found"
 
             user_id_RBR = st.text_input(
-                "**" + "Rocket Bot Royale" + "**",
+                "**" + _("Rocket Bot Royale") + "**",
                 placeholder=user_id_RBR_record,
                 max_chars=36,
             )
             user_id_GD = st.text_input(
-                "**" + "Goober Dash" + "**",
+                "**" + _("Goober Dash") + "**",
                 placeholder=user_id_GD_record,
                 max_chars=36,
             )
             user_id_GR = st.text_input(
-                "**" + "Goober Royale" + "**",
+                "**" + _("Goober Royale") + "**",
                 placeholder=user_id_GR_record,
                 max_chars=36,
             )
             user_id_GS = st.text_input(
-                "**" + "Goober Shot" + "**",
+                "**" + _("Goober Shot") + "**",
                 placeholder=user_id_GS_record,
                 max_chars=36,
             )
@@ -1250,7 +1258,7 @@ def pop_account(selected_language):
                 "user_id_GR": _("Goober Royale"),
                 "user_id_GS": _("Goober Shot"),
             }
-            Update_button = st.form_submit_button("Update")
+            Update_button = st.form_submit_button(_("Update"))
             if Update_button:
                 correct_format_all = True
                 for key in user_id_dict:
@@ -1312,18 +1320,13 @@ def pop_account(selected_language):
 
 @st.experimental_dialog(" ")
 def pop_log_in(selected_language):
+    cookie_manager = get_manager("pop_log_in")
+
     _ = set_localization(selected_language)
 
     with open("config.yaml", "r") as file:
         config = yaml.load(file)
 
-    authenticator = stauth.Authenticate(
-        config["credentials"],
-        config["cookie"]["name"],
-        config["cookie"]["key"],
-        config["cookie"]["expiry_days"],
-        config["pre-authorized"],
-    )
     tab1, tab2, tab3 = st.tabs(
         [
             "**" + _("Login") + "**",
@@ -1332,6 +1335,16 @@ def pop_log_in(selected_language):
         ]
     )
     with tab1:
+        with open("config.yaml", "r") as file:
+            yaml.load(file)
+
+        authenticator = stauth.Authenticate(
+            config["credentials"],
+            config["cookie"]["name"],
+            config["cookie"]["key"],
+            config["cookie"]["expiry_days"],
+            config["pre-authorized"],
+        )
         authenticator.login(
             fields={
                 "Form name": _("Login"),
@@ -1341,17 +1354,13 @@ def pop_log_in(selected_language):
             }
         )
 
-        global logged_in_user_username
-        global logged_in_user_name
-        logged_in_user_username = st.session_state["username"]
-        logged_in_user_name = st.session_state["name"]
+        cookie_manager.set("username", st.session_state["username"], key="15")
+        cookie_manager.set("name", st.session_state["name"], key="16")
 
-        if st.session_state["authentication_status"] is False:
+        if st.session_state["authentication_status"] == False:
             st.error(_("Username or Password is incorrect"))
 
-        elif st.session_state["authentication_status"]:
-            with open("config.yaml", "r") as file:
-                yaml.load(file)
+        elif st.session_state["authentication_status"] == True:
             with open("config.yaml", "w") as file:
                 yaml.dump(config, file)
             time.sleep(0.25)
@@ -1524,13 +1533,13 @@ def pop_sign_up(selected_language):
     with tab2:
         try:
             with open("config.yaml", "r") as file:
-                config3 = yaml.load(file)
+                config = yaml.load(file)
             authenticator = stauth.Authenticate(
-                config3["credentials"],
-                config3["cookie"]["name"],
-                config3["cookie"]["key"],
-                config3["cookie"]["expiry_days"],
-                config3["pre-authorized"],
+                config["credentials"],
+                config["cookie"]["name"],
+                config["cookie"]["key"],
+                config["cookie"]["expiry_days"],
+                config["pre-authorized"],
             )
             (
                 email_of_registered_user,
@@ -1547,30 +1556,31 @@ def pop_sign_up(selected_language):
                     + ")",
                     "Username": _("Username") + " (" + _("used for login") + ")",
                     "Password": _("Password") + " (" + _("used for login") + ")",
-                    "Repeat password": _("Repeat password"),
+                    "Repeat password": _("Repeat Password"),
                     "Register": _("Register"),
                 },
             )
             if name_of_registered_user:
                 st.success(_("User registered successfully"))
                 with open("config.yaml", "w") as file:
-                    yaml.dump(config3, file)
+                    yaml.dump(config, file)
                     time.sleep(1)
                     streamlit_js_eval(js_expressions="parent.window.location.reload()")
         except Exception as e:
             st.error(e)
 
 
-def account_system():
+def account_system(_):
+    cookie_manager = get_manager("account_system")
+    logged_in_user_username = cookie_manager.get(cookie="username")
+    logged_in_user_name = cookie_manager.get(cookie="name")
+    saved_account = cookie_manager.get(cookie="account")
+
     if "logged_in" not in st.session_state:
         st.session_state["logged_in"] = False
 
     if "welcome_sent" not in st.session_state:
         st.session_state["welcome_sent"] = False
-
-    global saved_account
-    cookie_manager = get_manager("get_saved_account")
-    saved_account = cookie_manager.get(cookie="account")
 
     if st.session_state["logged_in"]:
         streamlit_js_eval(js_expressions="parent.window.location.reload()")
@@ -1598,7 +1608,6 @@ def account_system():
                         yaml.dump(config, file)
 
                     st.session_state["logged_in"] = True
-                    cookie_manager = get_manager("delete_saved_account")
                     saved_account = cookie_manager.delete(cookie="account")
 
                 except Exception as e:
@@ -1630,14 +1639,14 @@ def account_system():
 
 @st.experimental_dialog(" ")
 def pop_choose_language(_):
-    cookie_manager = get_manager("set_locale")
+    cookie_manager = get_manager("pop_choose_language")
 
     _ = set_localization(st.session_state.language)
     languages_dict = {
         "english": "🇺🇸 English ✅",
-        "fr": "🇫🇷 Français ✅",
-        "zh-CN": "🇨🇳 簡体中文 ✅",
         "zh-TW": "🇹🇼 繁體中文 ✅",
+        "zh-CN": "🇨🇳 簡体中文 ✅",
+        "fr": "🇫🇷 Français 🚧",
         "es-ES": "🇪🇸 Español 🚧",
         "it": "🇮🇹 Italiano 🚧",
         "de": "🇩🇪 Deutsch 🚧",
@@ -2102,9 +2111,6 @@ def main_config():
         div[data-testid="stNotification"] {
             padding: 10px;
         }
-        div[data-testid="stSidebarContent"] {
-            overflow: hidden;
-        }
         div[data-testid="stAppViewBlockContainer"] div[data-testid="stFullScreenFrame"]:first-child > div {
             justify-content: center;
         }
@@ -2132,6 +2138,10 @@ def main_config():
         div[role="dialog"] div[data-testid="stForm"] {
             border: none;
             padding: 0;
+        }
+        div[data-testid="stAppViewContainer"] section:nth-child(2) div[data-testid="stAppViewBlockContainer"], div[data-testid="stAppViewContainer"] section:nth-child(3) div[data-testid="stAppViewBlockContainer"] {
+            position: relative !important;
+            bottom: 50px !important;
         }
         </style>
     """,

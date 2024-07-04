@@ -64,7 +64,7 @@ if st.session_state.game == "MoonrockMiners" and st.session_state.page == "menu"
                     }
                     </style>"""
         )
-        st.image("static/MoonrockMiners/moonrock_miners_banner.png", width=500)
+        st.image("static/MoonrockMiners/moonrock_miners_banner.png", width=350)
         st.markdown(
             _(
                 """**MOONROCK MINERS** is a gravity-defying multiplayer space battle game set in an asteroid field. Blast other players, collect powerups and crystals, and avoid the asteroids. Try to survive until the end to win the match. Compete against players around the world in real-time to rank in every season. You can also create your own custom lobbies to play private games online with your friends!"""

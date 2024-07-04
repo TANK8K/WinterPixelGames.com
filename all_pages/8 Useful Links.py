@@ -33,23 +33,23 @@ st.html(
             position: relative;
             right: 5px;
         }
-        div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(9) > div:nth-child(1) p::before {
+        div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(11) > div:nth-child(1) p::before {
             background-image: url("./app/static/RocketBotRoyale/rocket_bot_royale_favicon.png");
         }
-        div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(9) > div:nth-child(2) p::before {
+        div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(11) > div:nth-child(2) p::before {
             background-image: url("./app/static/GooberRoyale/goober_royale_favicon.png");
         }
-        div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(9) > div:nth-child(3) p::before {
+        div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(11) > div:nth-child(3) p::before {
             background-image: url("./app/static/GooberShot/goober_shot_favicon.png");
         }
-        div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(9) > div:nth-child(4) p::before {
+        div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(11) > div:nth-child(4) p::before {
             background-image: url("./app/static/MoonrockMiners/moonrock_miners_favicon.png");
         }
-        div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(9) > div:nth-child(5) p::before {
+        div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(11) > div:nth-child(5) p::before {
             background-image: url("./app/static/Broski/broski_favicon.png");
         }
         div[data-testid="stAppViewBlockContainer"] div[data-testid="stVerticalBlock"] div[data-testid="stLinkButton"] p::before {
-            background-image: url("./app/static/wph_logo.png");
+            background-image: url("./app/static/GDLM_favicon.png");
         }
         div[data-testid="stVerticalBlock"] div:nth-child(14) p:nth-child(2) {
             position: relative;
@@ -103,24 +103,20 @@ st.error(
     icon="🚨",
 )
 
-# "---"
-#
-# st.html('<h3><span style="font-size: 25px;">' + _("Friendly Websites") + "<span></h3>")
-#
-# st.markdown(
-#    _(
-#        """[**WinterPixel Helper** (WpH)](https://wph.ambersys.app/) is a community-driven site made by [**thehermit**](https://ambersys.app/) which provides useful **Scripts** of games made by **[Winterpixel Games](https://www.winterpixel.com/)**, including **[Rocket Bot Royale](./Rocket_Bot_Royale)**, **[Goober Dash](./Goober_Dash)**, **[Goober Royale](./Goober_Royale)**.
-# """
-#    )
-# )
-#
-# st.link_button(_("WinterPixel Helper"), "https://wph.ambersys.app/")
-#
-# st.warning(
-#    _(
-#        "The scripts in **WinterPixel Helper** should **NOT** be discussed on the **Official Winterpixel Games Discord server** as Moderators **DO NOT APPROVE** promoting non-official tools and scripts. Member who breaks the rules may result in a ban. However, you can enlighten people to this project through DMs and the such."
-#    ),
-#    icon="⚠️",
-# )
+"---"
+
+st.html('<h3><span style="font-size: 25px;">' + _("Friendly Websites") + "<span></h3>")
+
+st.markdown(
+    _(
+        """[**Goober Dash Level Modding**](https://twhlynch.me/goober-dash-level-modding/) is a website made by [**Tom Lynch (aka index)**](https://twhlynch.me/) which provides useful **scripts** to generate levels for **[Goober Dash](./Goober_Dash)**.
+"""
+    )
+)
+
+st.link_button(
+    _("Goober Dash Level Modding"), "https://twhlynch.me/goober-dash-level-modding/"
+)
+
 back_to_home(st.session_state.language)
 footer_account_language(st.session_state.language)

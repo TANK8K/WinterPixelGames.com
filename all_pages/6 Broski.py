@@ -56,7 +56,7 @@ if st.session_state.game == "Broski" and st.session_state.page == "menu":
                     }
                     </style>"""
         )
-        st.image("static/Broski/broski_logo_text.png", width=500)
+        st.image("static/Broski/broski_logo_text.png", width=350)
         st.markdown(
             _(
                 """**BROSKI** is an arcade pixel style skiing game, it is a fun and has a unique visual style that allows you to enjoy skiing even in summer. In the game, you will play as a skier who races down a snowy mountain. Your goal is to ski the furthest distance possible. As you slide down the hill faster and faster, you have to avoid more and more obstacles on the way, which makes the game challenging. To test how far you can go, take the challenge!"""
