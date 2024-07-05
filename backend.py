@@ -76,6 +76,6 @@ if __name__ == "__main__":
         [
             GooberDash_update_time_trials_leaderboard,
             refresh_goober_dash_token,
-            clear_cache,
+            # clear_cache,
         ]
     )

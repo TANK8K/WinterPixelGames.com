@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: winterpixelgames\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-04 14:26+0800\n"
-"PO-Revision-Date: 2024-07-04 06:28\n"
+"POT-Creation-Date: 2024-07-05 16:37+0800\n"
+"PO-Revision-Date: 2024-07-05 08:41\n"
 "Last-Translator: \n"
 "Language-Team: Swedish\n"
 "Language: sv_SE\n"
@@ -17,90 +17,211 @@ msgstr ""
 "X-Crowdin-File: base.pot\n"
 "X-Crowdin-File-ID: 10\n"
 
-#: all_pages/6 Broski.py:62
+#: all_pages/A Log In.py:32 all_pages/0 Home.py:205
+msgid "Log In"
+msgstr "Logga in"
+
+#: all_pages/A Log In.py:56 all_pages/A Log In.py:215
+msgid "Forgot Username Request"
+msgstr "Glömt användarnamn begäran"
+
+#: all_pages/A Log In.py:244 all_pages/A Log In.py:611
+#: all_pages/B Sign Up.py:246
+msgid "Hello"
+msgstr "Hej"
+
+#: all_pages/A Log In.py:251
+msgid "We have sent you this email in response to your request about forgotting your username on WinterPixelGames."
+msgstr "Vi har skickat dig detta e-postmeddelande som svar på din begäran om att glömma ditt användarnamn på WinterPixelGames."
+
+#: all_pages/A Log In.py:256
+msgid "Your username of the associated email is "
+msgstr "Ditt användarnamn för den associerade e-postadressen är "
+
+#: all_pages/A Log In.py:262
+msgid "You can now login to your account using this username and the corresponding password."
+msgstr "Du kan nu logga in på ditt konto med detta användarnamn och motsvarande lösenord."
+
+#: all_pages/A Log In.py:267 all_pages/A Log In.py:634
+#: all_pages/B Sign Up.py:267
+msgid "Happy Gaming!"
+msgstr "Glad Spelande!"
+
+#: all_pages/A Log In.py:270 all_pages/A Log In.py:637
+msgid "WinterPixelGames"
+msgstr "WinterPixelSpel"
+
+#: all_pages/A Log In.py:286 all_pages/A Log In.py:787
+#: all_pages/A Log In.py:795 all_pages/A Log In.py:798
+msgid "Login"
+msgstr "Inloggning"
+
+#: all_pages/A Log In.py:302
+msgid "Please disregard this email if you did not submit a forgot username request."
+msgstr "Vänligen bortse från detta e-postmeddelande om du inte skickade in en begäran om ett glömt användarnamn."
+
+#: all_pages/A Log In.py:332 all_pages/A Log In.py:699
+#: all_pages/B Sign Up.py:328
+msgid "Problems or questions?"
+msgstr "Problem eller frågor?"
+
+#: all_pages/A Log In.py:422 all_pages/A Log In.py:581
+msgid "Forgot Password Request"
+msgstr "Glömt lösenordsförfrågan"
+
+#: all_pages/A Log In.py:618
+msgid "We have sent you this email in response to your request about forgotting your password on WinterPixelGames."
+msgstr "Vi har skickat dig detta e-postmeddelande som svar på din begäran om att glömma ditt lösenord på WinterPixelGames."
+
+#: all_pages/A Log In.py:623
+msgid "Your new auto-generated password is "
+msgstr "Ditt nya autogenererade lösenord är "
+
+#: all_pages/A Log In.py:629
+msgid "You can now login to your account using this password and change it to a custom password if necessary."
+msgstr "Du kan nu logga in på ditt konto med detta lösenord och ändra det till ett anpassat lösenord om det behövs."
+
+#: all_pages/A Log In.py:653 all_pages/A Log In.py:856
+msgid "Reset Password"
+msgstr "Återställ lösenord"
+
+#: all_pages/A Log In.py:669
+msgid "Please disregard this email if you did not submit a forgot password request."
+msgstr "Vänligen bortse från detta e-postmeddelande om du inte lämnade in en begäran om glömt lösenord."
+
+#: all_pages/A Log In.py:788 all_pages/A Log In.py:829
+msgid "Forgot Username"
+msgstr "Glömt användarnamn"
+
+#: all_pages/A Log In.py:789 all_pages/A Log In.py:854
+msgid "Forgot Password"
+msgstr "Glömt lösenord"
+
+#: all_pages/A Log In.py:796 all_pages/A Log In.py:855
+#: all_pages/B Sign Up.py:527
+msgid "Username"
+msgstr "Användarnamn"
+
+#: all_pages/A Log In.py:797 all_pages/B Sign Up.py:528
+msgid "Password"
+msgstr "Lösenord"
+
+#: all_pages/A Log In.py:802
+msgid "Username or Password is incorrect"
+msgstr "Användarnamn eller lösenord är felaktigt"
+
+#: all_pages/A Log In.py:830 all_pages/B Sign Up.py:446
+#: all_pages/D Account.py:172
+msgid "Email"
+msgstr "E-post"
+
+#: all_pages/A Log In.py:831
+msgid "Send Userename"
+msgstr "Skicka användarnamn"
+
+#: all_pages/A Log In.py:840
+msgid "Username is sent to the associated email successfully"
+msgstr "Användarnamnet har skickats till det associerade e-postmeddelandet"
+
+#: all_pages/A Log In.py:842 all_pages/B Sign Up.py:460
+msgid "Email not found"
+msgstr "E-post hittades inte"
+
+#: all_pages/A Log In.py:870
+msgid "New password is sent to the associated email successfully"
+msgstr "Nytt lösenord har skickats till det associerade e-postmeddelandet"
+
+#: all_pages/A Log In.py:872
+msgid "Username not found"
+msgstr "Användarnamnet hittades inte"
+
+#: all_pages/A Log In.py:876
+msgid "Click the button again if it doesn't work for the first time"
+msgstr "Klicka på knappen igen om det inte fungerar för första gången"
+
+#: all_pages/6 Broski.py:60
 msgid "**BROSKI** is an arcade pixel style skiing game, it is a fun and has a unique visual style that allows you to enjoy skiing even in summer. In the game, you will play as a skier who races down a snowy mountain. Your goal is to ski the furthest distance possible. As you slide down the hill faster and faster, you have to avoid more and more obstacles on the way, which makes the game challenging. To test how far you can go, take the challenge!"
 msgstr "**BROSKI** är ett arkadspel i pixelstil, det är en rolig och har en unik visuell stil som gör att du kan njuta av skidåkning även på sommaren. I spelet kommer du att spela som en skidåkare som tävlar ner ett snöigt berg. Ditt mål är att åka längst möjliga sträcka. När du glider ner för backen snabbare och snabbare, måste du undvika fler och fler hinder på vägen, vilket gör spelet utmanande. För att testa hur långt du kan gå, ta utmaningen!"
 
-#: all_pages/6 Broski.py:66
+#: all_pages/6 Broski.py:64
 msgid "**Broski** is a **prototype single-player game** currently"
 msgstr "**Broski** är ett **prototyp enspelarspelarspel** för närvarande"
 
-#: all_pages/6 Broski.py:69 all_pages/5 Moonrock Miners.py:77
-#: all_pages/4 Goober Shot.py:87 all_pages/3 Goober Royale.py:87
+#: all_pages/6 Broski.py:67 all_pages/5 Moonrock Miners.py:75
+#: all_pages/4 Goober Shot.py:85 all_pages/3 Goober Royale.py:85
 msgid "Platform"
 msgstr "Plattform"
 
-#: all_pages/6 Broski.py:71 all_pages/5 Moonrock Miners.py:79
-#: all_pages/4 Goober Shot.py:89 all_pages/3 Goober Royale.py:89
-#: all_pages/1 Rocket Bot Royale.py:116 all_pages/2 Goober Dash.py:148
+#: all_pages/6 Broski.py:69 all_pages/5 Moonrock Miners.py:77
+#: all_pages/4 Goober Shot.py:87 all_pages/3 Goober Royale.py:87
+#: all_pages/1 Rocket Bot Royale.py:114 all_pages/2 Goober Dash.py:146
 msgid "Browser"
 msgstr "Webbläsare"
 
-#: all_pages/6 Broski.py:72 all_pages/5 Moonrock Miners.py:80
-#: all_pages/4 Goober Shot.py:90 all_pages/3 Goober Royale.py:90
+#: all_pages/6 Broski.py:70 all_pages/5 Moonrock Miners.py:78
+#: all_pages/4 Goober Shot.py:88 all_pages/3 Goober Royale.py:88
 msgid "Community"
 msgstr "Gemenskap"
 
-#: all_pages/6 Broski.py:78 all_pages/5 Moonrock Miners.py:86
-#: all_pages/4 Goober Shot.py:96 all_pages/3 Goober Royale.py:96
-#: all_pages/1 Rocket Bot Royale.py:141 all_pages/2 Goober Dash.py:171
+#: all_pages/6 Broski.py:76 all_pages/5 Moonrock Miners.py:84
+#: all_pages/4 Goober Shot.py:94 all_pages/3 Goober Royale.py:94
+#: all_pages/1 Rocket Bot Royale.py:139 all_pages/2 Goober Dash.py:169
 msgid "Tools"
 msgstr "Verktyg"
 
-#: all_pages/6 Broski.py:83 all_pages/5 Moonrock Miners.py:91
+#: all_pages/6 Broski.py:81 all_pages/5 Moonrock Miners.py:89
 #: all_pages/RocketBotRoyale/Tools/image_assets.py:10
-#: all_pages/4 Goober Shot.py:101 all_pages/GooberDash/Tools/image_assets.py:37
+#: all_pages/4 Goober Shot.py:99 all_pages/GooberDash/Tools/image_assets.py:37
 #: all_pages/MoonrockMiners/Tools/image_assets.py:13
 #: all_pages/GooberRoyale/Tools/image_assets.py:13
 #: all_pages/GooberShot/Tools/image_assets.py:13
-#: all_pages/3 Goober Royale.py:100 all_pages/1 Rocket Bot Royale.py:151
-#: all_pages/Broski/Tools/image_assets.py:13 all_pages/2 Goober Dash.py:184
+#: all_pages/3 Goober Royale.py:98 all_pages/1 Rocket Bot Royale.py:149
+#: all_pages/Broski/Tools/image_assets.py:13 all_pages/2 Goober Dash.py:182
 msgid "Image Assets"
 msgstr "Bildtillgångar"
 
-#: all_pages/6 Broski.py:83 all_pages/5 Moonrock Miners.py:91
-#: all_pages/5 Moonrock Miners.py:103 all_pages/4 Goober Shot.py:101
-#: all_pages/4 Goober Shot.py:113 all_pages/4 Goober Shot.py:118
+#: all_pages/6 Broski.py:81 all_pages/5 Moonrock Miners.py:89
+#: all_pages/5 Moonrock Miners.py:101 all_pages/4 Goober Shot.py:99
+#: all_pages/4 Goober Shot.py:111 all_pages/4 Goober Shot.py:116
 #: all_pages/GooberDash/Statistics/player_info.py:480
 #: all_pages/GooberDash/Statistics/player_info.py:494
 #: all_pages/GooberDash/Statistics/player_info.py:496
-#: all_pages/GooberDash/Statistics/player_info.py:498
-#: all_pages/3 Goober Royale.py:109 all_pages/3 Goober Royale.py:114
-#: all_pages/1 Rocket Bot Royale.py:146 all_pages/1 Rocket Bot Royale.py:151
-#: all_pages/1 Rocket Bot Royale.py:163 all_pages/1 Rocket Bot Royale.py:168
-#: all_pages/2 Goober Dash.py:177 all_pages/2 Goober Dash.py:198
-#: all_pages/2 Goober Dash.py:203 all_pages/2 Goober Dash.py:208
-#: common_config.py:1200
+#: all_pages/GooberDash/Statistics/player_info.py:498 all_pages/D Account.py:78
+#: all_pages/3 Goober Royale.py:107 all_pages/3 Goober Royale.py:112
+#: all_pages/1 Rocket Bot Royale.py:144 all_pages/1 Rocket Bot Royale.py:149
+#: all_pages/1 Rocket Bot Royale.py:161 all_pages/1 Rocket Bot Royale.py:166
+#: all_pages/2 Goober Dash.py:175 all_pages/2 Goober Dash.py:196
+#: all_pages/2 Goober Dash.py:201 all_pages/2 Goober Dash.py:206
 msgid "WIP"
 msgstr "WIP"
 
-#: all_pages/5 Moonrock Miners.py:70
+#: all_pages/5 Moonrock Miners.py:68
 msgid "**MOONROCK MINERS** is a gravity-defying multiplayer space battle game set in an asteroid field. Blast other players, collect powerups and crystals, and avoid the asteroids. Try to survive until the end to win the match. Compete against players around the world in real-time to rank in every season. You can also create your own custom lobbies to play private games online with your friends!"
 msgstr "**MOONROCK MINERS** är ett rymdstridsspel för flera spelare som trotsar gravitationen och utspelar sig på ett asteroidfält. Spräng andra spelare, samla powerups och kristaller, och undvik asteroiderna. Försök att överleva till slutet för att vinna matchen. Tävla mot spelare runt om i världen i realtid för att ranka i varje säsong. Du kan också skapa dina egna lobbys för att spela privata spel online med dina vänner!"
 
-#: all_pages/5 Moonrock Miners.py:74
+#: all_pages/5 Moonrock Miners.py:72
 msgid "**Moonrock Miners** is **no longer in development**"
 msgstr "**Moonrock Miners** är **inte längre under utveckling**"
 
-#: all_pages/5 Moonrock Miners.py:98 all_pages/4 Goober Shot.py:108
-#: all_pages/3 Goober Royale.py:104 all_pages/1 Rocket Bot Royale.py:158
-#: all_pages/2 Goober Dash.py:188
+#: all_pages/5 Moonrock Miners.py:96 all_pages/4 Goober Shot.py:106
+#: all_pages/3 Goober Royale.py:102 all_pages/1 Rocket Bot Royale.py:156
+#: all_pages/2 Goober Dash.py:186
 msgid "Statistics"
 msgstr "Statistik"
 
-#: all_pages/5 Moonrock Miners.py:103
+#: all_pages/5 Moonrock Miners.py:101
 #: all_pages/RocketBotRoyale/Statistics/season_leaderboard.py:10
-#: all_pages/4 Goober Shot.py:118
+#: all_pages/4 Goober Shot.py:116
 #: all_pages/GooberDash/Statistics/season_leaderboard.py:13
 #: all_pages/MoonrockMiners/Statistics/season_leaderboard.py:10
 #: all_pages/GooberRoyale/Statistics/season_leaderboard.py:10
 #: all_pages/GooberShot/Statistics/season_leaderboard.py:10
-#: all_pages/3 Goober Royale.py:114 all_pages/1 Rocket Bot Royale.py:168
-#: all_pages/2 Goober Dash.py:208
+#: all_pages/3 Goober Royale.py:112 all_pages/1 Rocket Bot Royale.py:166
+#: all_pages/2 Goober Dash.py:206
 msgid "Season Leaderboard"
 msgstr "Ledartavla för säsong"
 
-#: all_pages/5 Moonrock Miners.py:108
+#: all_pages/5 Moonrock Miners.py:106
 msgid "**Leaderboard** is **disabled** currently"
 msgstr "**Leaderboard** är **inaktiverad** för närvarande"
 
@@ -128,30 +249,30 @@ msgid "Gallery"
 msgstr "Galleri"
 
 #: all_pages/RocketBotRoyale/Tools/optimize_crate.py:10
-#: all_pages/1 Rocket Bot Royale.py:146
+#: all_pages/1 Rocket Bot Royale.py:144
 msgid "Optimize Crate"
 msgstr "Optimera lådan"
 
 #: all_pages/RocketBotRoyale/Statistics/player_info.py:10
-#: all_pages/4 Goober Shot.py:113
+#: all_pages/4 Goober Shot.py:111
 #: all_pages/GooberDash/Statistics/player_info.py:80
 #: all_pages/GooberRoyale/Statistics/player_info.py:10
 #: all_pages/GooberShot/Statistics/player_info.py:10
-#: all_pages/3 Goober Royale.py:109 all_pages/1 Rocket Bot Royale.py:163
-#: all_pages/2 Goober Dash.py:198
+#: all_pages/3 Goober Royale.py:107 all_pages/1 Rocket Bot Royale.py:161
+#: all_pages/2 Goober Dash.py:196
 msgid "Player Info"
 msgstr "Spelarinformation"
 
-#: all_pages/4 Goober Shot.py:78
+#: all_pages/4 Goober Shot.py:76
 msgid "**GOOBER SHOT** throws you into thrilling online archery battles against three other players! Prepare your bow, sharpen your arrows, enter the arena, and unleash your skills as a master archer. Remember, every arrow counts! Show off your precision and reflexes as you aim, shoot, and dodge with finesse. Rise through the ranks, climb the global leaderboards, and prove yourself as the ultimate archery champion. Will you emerge as the greatest archer in the realm?"
 msgstr "**GOOBER SHOT** kastar dig in i spännande bågskyttestrider online mot tre andra spelare! Förbered din båge, vässa dina pilar, gå in i arenan och släpp loss dina färdigheter som en mästerlig bågskytt. Kom ihåg att varje pil räknas! Visa upp din precision och dina reflexer när du siktar, skjuter och duckar med finess. Stig i graderna, klättra på de globala topplistorna och bevisa att du är den ultimata bågskyttemästaren. Kommer du att framstå som den bästa bågskytten i riket?"
 
-#: all_pages/4 Goober Shot.py:83
+#: all_pages/4 Goober Shot.py:81
 msgid "**Goober Shot** is in **beta** currently (Bugs are expected and Data may be reset in future)"
 msgstr "**Goober Shot** är i **beta** för närvarande (Buggar förväntas och data kan återställas i framtiden)"
 
 #: all_pages/GooberDash/Tools/goober_generator.py:65
-#: all_pages/2 Goober Dash.py:182
+#: all_pages/2 Goober Dash.py:180
 msgid "Goober Generator"
 msgstr "Goober Generator"
 
@@ -204,7 +325,7 @@ msgstr "Badge"
 msgid "Other Stuff"
 msgstr "Andra saker"
 
-#: all_pages/GooberDash/Tools/flip_level.py:130 all_pages/2 Goober Dash.py:175
+#: all_pages/GooberDash/Tools/flip_level.py:130 all_pages/2 Goober Dash.py:173
 msgid "Flip Level"
 msgstr "Vänd nivå"
 
@@ -252,7 +373,7 @@ msgid "flipped"
 msgstr "vänd"
 
 #: all_pages/GooberDash/Tools/maze_generator.py:13
-#: all_pages/2 Goober Dash.py:177
+#: all_pages/2 Goober Dash.py:175
 msgid "Maze Generator"
 msgstr "Labyrintgenerator"
 
@@ -1641,11 +1762,204 @@ msgid "Percentile"
 msgstr "Percentil"
 
 #: all_pages/GooberDash/Statistics/level_info.py:13
-#: all_pages/2 Goober Dash.py:203
+#: all_pages/2 Goober Dash.py:201
 msgid "Level Info"
 msgstr "Nivåinformation"
 
-#: all_pages/8 Useful Links.py:73 all_pages/0 Home.py:199
+#: all_pages/B Sign Up.py:24 all_pages/0 Home.py:210
+msgid "Sign Up"
+msgstr "Registrera dig"
+
+#: all_pages/B Sign Up.py:58 all_pages/B Sign Up.py:217
+msgid "Verify Account"
+msgstr "Verifiera konto"
+
+#: all_pages/B Sign Up.py:251
+msgid "Welcome to WinterPixelGames! We're excited to have you join our community. Before you creating your account, we need to verify your email address to ensure we have the correct information."
+msgstr "Välkommen till WinterPixelspel! Vi är glada att få dig att gå med i vår gemenskap. Innan du skapar ditt konto måste vi verifiera din e-postadress för att säkerställa att vi har rätt information."
+
+#: all_pages/B Sign Up.py:256
+msgid "Your verification code is "
+msgstr "Din verifieringskod är "
+
+#: all_pages/B Sign Up.py:262
+msgid "You can now register your account using this verification code and the corresponding email."
+msgstr "Du kan nu registrera ditt konto med denna verifieringskod och motsvarande e-post."
+
+#: all_pages/B Sign Up.py:284
+msgid "Verify"
+msgstr "Verifiera"
+
+#: all_pages/B Sign Up.py:299
+msgid "Please disregard this email if you did not submit a verify email request."
+msgstr "Vänligen bortse från detta e-postmeddelande om du inte skickade in en verifierad e-postförfrågan."
+
+#: all_pages/B Sign Up.py:437 all_pages/B Sign Up.py:444
+msgid "Verify Email"
+msgstr "Verifiera e-post"
+
+#: all_pages/B Sign Up.py:438 all_pages/B Sign Up.py:524
+#: all_pages/B Sign Up.py:530
+msgid "Register"
+msgstr "Registrera"
+
+#: all_pages/B Sign Up.py:448
+msgid "Verification Code"
+msgstr "Verifieringskod"
+
+#: all_pages/B Sign Up.py:450
+msgid "Leave it blank to send Verification Code"
+msgstr "Lämna det tomt för att skicka verifieringskoden"
+
+#: all_pages/B Sign Up.py:452
+msgid "Send/Verify"
+msgstr "Send/Verify"
+
+#: all_pages/B Sign Up.py:464
+msgid "Wrong verification code"
+msgstr "Fel verifieringskod"
+
+#: all_pages/B Sign Up.py:472
+msgid "Verify success"
+msgstr "Verifiera framgång"
+
+#: all_pages/B Sign Up.py:492
+msgid "Verification code is sent to the email successfully"
+msgstr "Verifieringskoden har skickats till e-postmeddelandet"
+
+#: all_pages/B Sign Up.py:496
+msgid "Email is required"
+msgstr "E-post krävs"
+
+#: all_pages/B Sign Up.py:498
+msgid "Email is not valid"
+msgstr "E-postadressen är inte giltig"
+
+#: all_pages/B Sign Up.py:500
+msgid "Email is already in use"
+msgstr "E-postadressen används redan"
+
+#: all_pages/B Sign Up.py:525 all_pages/D Account.py:171
+msgid "Nickname"
+msgstr "Smeknamn"
+
+#: all_pages/B Sign Up.py:525
+msgid "alphabets only"
+msgstr "Endast alfabet"
+
+#: all_pages/B Sign Up.py:526
+msgid "Verified Email"
+msgstr "Verifierad e-post"
+
+#: all_pages/B Sign Up.py:527 all_pages/B Sign Up.py:528
+msgid "for login"
+msgstr "för inloggning"
+
+#: all_pages/B Sign Up.py:529 all_pages/D Account.py:192
+msgid "Repeat Password"
+msgstr "Upprepa lösenord"
+
+#: all_pages/B Sign Up.py:534
+msgid "User registered successfully"
+msgstr "Användaren har registrerat sig"
+
+#: all_pages/C Log Out.py:13
+msgid "You are now logged out"
+msgstr "Du är nu utloggad"
+
+#: all_pages/D Account.py:33 all_pages/0 Home.py:220
+msgid "Account"
+msgstr "Konto"
+
+#: all_pages/D Account.py:64 all_pages/D Account.py:72
+msgid "Linked Game Accounts"
+msgstr "Länkade spelkonton"
+
+#: all_pages/D Account.py:65
+msgid "Change Nickname/Email"
+msgstr "Ändra Smeknamn/E-post"
+
+#: all_pages/D Account.py:66 all_pages/D Account.py:189
+msgid "Change Password"
+msgstr "Ändra lösenord"
+
+#: all_pages/D Account.py:75
+msgid "Statistics of Linked Accounts will be tracked daily and displayed in Player Info"
+msgstr "Statistik över länkade konton kommer att spåras dagligen och visas i spelarinfo"
+
+#: all_pages/D Account.py:108 all_pages/D Account.py:138
+#: all_pages/8 Useful Links.py:88 all_pages/0 Home.py:58
+#: all_pages/0 Home.py:163
+msgid "Rocket Bot Royale"
+msgstr "Rocket Bot Royale"
+
+#: all_pages/D Account.py:110 all_pages/D Account.py:116
+#: all_pages/D Account.py:122 all_pages/D Account.py:128
+msgid "No User ID Found"
+msgstr "Inget användar-ID hittades"
+
+#: all_pages/D Account.py:114 all_pages/D Account.py:139 all_pages/0 Home.py:63
+#: all_pages/0 Home.py:168
+msgid "Goober Dash"
+msgstr "Goober Dash"
+
+#: all_pages/D Account.py:120 all_pages/D Account.py:140
+#: all_pages/8 Useful Links.py:92 all_pages/0 Home.py:68
+#: all_pages/0 Home.py:173
+msgid "Goober Royale"
+msgstr "Goober Royale"
+
+#: all_pages/D Account.py:126 all_pages/D Account.py:141
+#: all_pages/8 Useful Links.py:95 all_pages/0 Home.py:73
+#: all_pages/0 Home.py:178
+msgid "Goober Shot"
+msgstr "Goober Shot"
+
+#: all_pages/D Account.py:143 all_pages/D Account.py:174
+msgid "Update"
+msgstr "Uppdatera"
+
+#: all_pages/D Account.py:150
+msgid "Wrong User ID format of "
+msgstr "Fel format för användar-ID "
+
+#: all_pages/D Account.py:162
+msgid "User IDs are updated successfully"
+msgstr "Användar-ID har uppdaterats"
+
+#: all_pages/D Account.py:169
+msgid "Change Name/Email"
+msgstr "Ändra namn/e-post"
+
+#: all_pages/D Account.py:170
+msgid "Field"
+msgstr "Fält"
+
+#: all_pages/D Account.py:173
+msgid "New value"
+msgstr "Nytt värde"
+
+#: all_pages/D Account.py:179
+msgid "Entries updated successfully"
+msgstr "Poster har uppdaterats"
+
+#: all_pages/D Account.py:190
+msgid "Current Password"
+msgstr "Nuvarande lösenord"
+
+#: all_pages/D Account.py:191
+msgid "New Password"
+msgstr "Nytt lösenord"
+
+#: all_pages/D Account.py:193
+msgid "Reset"
+msgstr "Reset"
+
+#: all_pages/D Account.py:198
+msgid "Password modified successfully"
+msgstr "Lösenordet har ändrats"
+
+#: all_pages/8 Useful Links.py:73 all_pages/0 Home.py:198
 msgid "Useful Links"
 msgstr "Användbara länkar"
 
@@ -1657,28 +1971,13 @@ msgstr "Server för iscensättning"
 msgid "**Staging Servers** are seperate servers which are used for testing new features before releasing. Usually updates are released on **Staging Servers** a few days before public release. Developers invite members to test out some upcoming features and ask for feedbacks in **Offcial Winterpixel Games Discord server** occasionally.\n"
 msgstr "**Staging-servrar** är separata servrar som används för att testa nya funktioner innan de släpps. Vanligtvis släpps uppdateringar på **Staging-servrar** några dagar innan de släpps för allmänheten. Utvecklare bjuder in medlemmar att testa några kommande funktioner och ber om feedback på **Offcial Winterpixel Games Discord server** ibland.\n"
 
-#: all_pages/8 Useful Links.py:88 all_pages/0 Home.py:59
-#: all_pages/0 Home.py:164 common_config.py:1256
-msgid "Rocket Bot Royale"
-msgstr "Rocket Bot Royale"
-
-#: all_pages/8 Useful Links.py:92 all_pages/0 Home.py:69
-#: all_pages/0 Home.py:174 common_config.py:1258
-msgid "Goober Royale"
-msgstr "Goober Royale"
-
-#: all_pages/8 Useful Links.py:95 all_pages/0 Home.py:74
-#: all_pages/0 Home.py:179 common_config.py:1259
-msgid "Goober Shot"
-msgstr "Goober Shot"
-
-#: all_pages/8 Useful Links.py:96 all_pages/0 Home.py:79
-#: all_pages/0 Home.py:184
+#: all_pages/8 Useful Links.py:96 all_pages/0 Home.py:78
+#: all_pages/0 Home.py:183
 msgid "Moonrock Miners"
 msgstr "Moonrock gruvarbetare"
 
-#: all_pages/8 Useful Links.py:97 all_pages/0 Home.py:84
-#: all_pages/0 Home.py:189
+#: all_pages/8 Useful Links.py:97 all_pages/0 Home.py:83
+#: all_pages/0 Home.py:188
 msgid "Broski"
 msgstr "Broski"
 
@@ -1698,440 +1997,163 @@ msgstr "[**Goober Dash Level Modding**](https://twhlynch.me/goober-dash-level-mo
 msgid "Goober Dash Level Modding"
 msgstr "Goober Dash Nivå Modding"
 
-#: all_pages/3 Goober Royale.py:78
-msgid "**GOOBER ROYALE** is a multiplayer battle royale game in which each player controls a character (called a \"goober\") and must collect weapons, power-ups and other items to eliminate their opponents. The clashes bring together 16 players on a map and the objective will be to be the last survivor of the game. You can play alone or in a team of 4 players. Your Goober will have several weapons, a main missile that reloads at regular intervals and a secondary accessory such as mines, a tornado, a drill and many others. Also use your jetpack to move around the map more easily, reach high places and surprise your opponents. Completing games and missions will earn you gold coins that you can spend either to improve your Goober's skills or to buy cosmetics that will give your character a unique style. An online ranking will allow you to see the 100 best players in the world and in your region."
-msgstr "**GOOBER ROYALE** är ett multiplayer battle royale-spel där varje spelare kontrollerar en karaktär (kallad \"goober\") och måste samla vapen, power-ups och andra föremål för att eliminera sina motståndare. Sammanstötningarna samlar 16 spelare på en karta och målet är att vara den sista överlevande i spelet. Du kan spela ensam eller i ett lag med 4 spelare. Din Goober kommer att ha flera vapen, en huvudmissil som laddas om med jämna mellanrum och ett sekundärt tillbehör som minor, en tornado, en borr och många andra. Använd också din jetpack för att lättare röra dig runt på kartan, nå höga platser och överraska dina motståndare. Genom att slutföra spel och uppdrag tjänar du guldmynt som du kan spendera antingen för att förbättra din Goobers färdigheter eller för att köpa kosmetika som ger din karaktär en unik stil. En online-ranking gör att du kan se de 100 bästa spelarna i världen och i din region."
-
-#: all_pages/3 Goober Royale.py:83
-msgid "**Goober Royale** is in **beta** currently (Bugs are expected and Data may be reset in future)"
-msgstr "**Goober Royale** är i **beta** för närvarande (Buggar förväntas och data kan återställas i framtiden)"
-
-#: all_pages/7 About.py:55 all_pages/0 Home.py:194
-msgid "About"
-msgstr "Om"
-
-#: all_pages/7 About.py:57
-msgid "What is WinterPixelGames?"
-msgstr "Vad är WinterPixelGames?"
-
-#: all_pages/7 About.py:63
-msgid "**:blue-background[WinterPixelGames]** (WPG) is a community-driven site made by [**TANK8K**](https://tank8k.com/) which provides useful **Tools & Statistics** of games made by **[Winterpixel Games](https://www.winterpixel.com/)**, including **[Rocket Bot Royale](./Rocket_Bot_Royale)**, **[Goober Dash](./Goober_Dash)**, **[Goober Royale](./Goober_Royale)**, **[Goober Shot](./Goober_Shot)**, and **[Moonrock Miners](./Moonrock_Miners)**."
-msgstr "**:blue-background[WinterPixelGames]** (WPG) är en community-driven webbplats gjord av [**TANK8K**](https://tank8k.com/) som tillhandahåller användbara **verktyg och statistik** för spel gjorda av **[Winterpixel Games](https://www.winterpixel.com/)**, inklusive **[Rocket Bot Royale](./Rocket_Bot_Royale)**, **[Goober Dash](./Goober_Dash)**, **[Goober Royale](./Goober_Royale)**, **[Goober Shot](./Goober_Shot)** och **[Moonrock Miners](./Moonrock_Miners)**."
-
-#: all_pages/7 About.py:70
-msgid "Affiliation"
-msgstr "Tillhörighet"
-
-#: all_pages/7 About.py:74
-msgid "This website is **NOT** affiliated with or endorsed by **Winterpixel Games Inc.**"
-msgstr "Denna webbplats är ** INTE** ansluten till eller godkänd av **Winterpixel Games Inc.**"
-
-#: all_pages/7 About.py:81
-msgid "Copyright Notice"
-msgstr "Meddelande om upphovsrätt"
-
-#: all_pages/7 About.py:85
-msgid "Rocket Bot Royale, Goober Dash, Goober Royale, Goober Shot, Moonrock Miners, Websites and Media **@ Winterpixel Games Inc.**"
-msgstr "Rocket Bot Royale, Goober Dash, Goober Royale, Goober Shot, Moonrock Miners, Webbplatser och media **@ Winterpixel Games Inc.**"
-
-#: all_pages/7 About.py:92
-msgid "License"
-msgstr "Licens"
-
-#: all_pages/7 About.py:95
-msgid "The source code is licensed under **MIT license**."
-msgstr "Källkoden är licensierad under **MIT-licens**."
-
-#: all_pages/7 About.py:101
-msgid "Technology"
-msgstr "Teknik"
-
-#: all_pages/7 About.py:108
-msgid "Framework"
-msgstr "Ramverk"
-
-#: all_pages/7 About.py:111 common_config.py:2226
+#: all_pages/E Language.py:19 all_pages/7 About.py:110 all_pages/0 Home.py:227
 msgid "Language"
 msgstr "Språk"
 
-#: all_pages/7 About.py:114
-msgid "Database"
-msgstr "Databas"
-
-#: all_pages/7 About.py:117
-msgid "Cloud Vendor"
-msgstr "Molnleverantör"
-
-#: all_pages/7 About.py:120
-msgid "Web Server"
-msgstr "Webbserver"
-
-#: all_pages/7 About.py:123
-msgid "Source Code"
-msgstr "Källkod"
-
-#: all_pages/7 About.py:130
-msgid "Developer"
-msgstr "Utvecklare"
-
-#: all_pages/7 About.py:141
-msgid "Personal Website"
-msgstr "Personlig webbplats"
-
-#: all_pages/7 About.py:146
-msgid "Developed with 💖 by **[:blue[TANK8K]](https://tank8k.com/)**"
-msgstr "Utvecklad med 💖 av **[:blue[TANK8K]](https://tank8k.com/)**"
-
-#: all_pages/1 Rocket Bot Royale.py:110
-msgid "**ROCKET BOT ROYALE** is a fun new take on the online battle royale formula. Powerful, wall-climbing, rocket-jumping, artillery-pumping Robo-Tanks are the vehicle of choice in this fast-paced shootout, where the goal is to survive longer than the competition. Collect the loot to upgrade your arsenal, tunnel into the terrain to take cover and collect buried treasure, and avoid the rising water levels to be the blast one standing!"
-msgstr "**ROCKET BOT ROYALE** är en ny och rolig version av Battle Royale-formeln online. Kraftfulla, väggklättrande, rakethoppande och artilleripumpande Robo-Tanks är det fordon du väljer i denna fartfyllda shootout, där målet är att överleva längre än konkurrenterna. Samla byten för att uppgradera din arsenal, gräv tunnlar i terrängen för att ta skydd och samla begravda skatter, och undvik de stigande vattennivåerna för att vara den sista som står kvar!"
-
-#: all_pages/1 Rocket Bot Royale.py:114 all_pages/2 Goober Dash.py:146
-msgid "Platforms"
-msgstr "Plattformar"
-
-#: all_pages/1 Rocket Bot Royale.py:129 all_pages/2 Goober Dash.py:160
-msgid "Communities"
-msgstr "Samhällen"
-
-#: all_pages/0 Home.py:12
-msgid "Welcome to"
-msgstr "Välkommen till"
-
-#: all_pages/0 Home.py:15
-msgid "A website which provides useful Tools & Statistics of games made by [Winterpixel Games](https://www.winterpixel.com/)"
-msgstr "En webbplats som tillhandahåller användbara verktyg och statistik för spel gjorda av [Winterpixel Games] (https://www.winterpixel.com/)"
-
-#: all_pages/0 Home.py:64 all_pages/0 Home.py:169 common_config.py:1257
-msgid "Goober Dash"
-msgstr "Goober Dash"
-
-#: all_pages/0 Home.py:161
-msgid "Home"
-msgstr "Hem"
-
-#: all_pages/2 Goober Dash.py:142
-msgid "**GOOBER DASH** is a multiplayer battle royale game that you can play online. Dash your opponents into deadly spikes, gather precious coins, and unlock a plethora of unique costumes as you strive to outlast the competition. Invite your friends to engage in epic battles in custom private lobbies. Unleash your creativity with the level editor, crafting and conquering your very own battlegrounds. Climb the global and country-based seasonal leaderboards to prove your dominance in this thrilling contest."
-msgstr "**GOOBER DASH** är ett multiplayer battle royale-spel som du kan spela online. Kör dina motståndare in i dödliga spikar, samla värdefulla mynt och lås upp en uppsjö av unika dräkter när du strävar efter att överleva tävlingen. Bjud in dina vänner att delta i episka strider i anpassade privata lobbyer. Släpp loss din kreativitet med nivåredigeraren, skapa och erövra dina helt egna slagfält. Klättra på de globala och landsbaserade säsongsledartavlorna för att bevisa din dominans i denna spännande tävling."
-
-#: all_pages/2 Goober Dash.py:193
-msgid "Time Trials (Certified Levels)"
-msgstr "Tidskörning (certifierade nivåer)"
-
-#: common_config.py:47 common_config.py:206
-msgid "Verify Account"
-msgstr "Verifiera konto"
-
-#: common_config.py:235 common_config.py:595 common_config.py:962
-msgid "Hello"
-msgstr "Hej"
-
-#: common_config.py:240
-msgid "Welcome to WinterPixelGames! We're excited to have you join our community. Before you creating your account, we need to verify your email address to ensure we have the correct information."
-msgstr "Välkommen till WinterPixelspel! Vi är glada att få dig att gå med i vår gemenskap. Innan du skapar ditt konto måste vi verifiera din e-postadress för att säkerställa att vi har rätt information."
-
-#: common_config.py:245
-msgid "Your verification code is "
-msgstr "Din verifieringskod är "
-
-#: common_config.py:251
-msgid "You can now register your account using this verification code and the corresponding email."
-msgstr "Du kan nu registrera ditt konto med denna verifieringskod och motsvarande e-post."
-
-#: common_config.py:256 common_config.py:618 common_config.py:985
-msgid "Happy Gaming!"
-msgstr "Glad Spelande!"
-
-#: common_config.py:273
-msgid "Verify"
-msgstr "Verifiera"
-
-#: common_config.py:288
-msgid "Please disregard this email if you did not submit a verify email request."
-msgstr "Vänligen bortse från detta e-postmeddelande om du inte skickade in en verifierad e-postförfrågan."
-
-#: common_config.py:317 common_config.py:683 common_config.py:1050
-msgid "Problems or questions?"
-msgstr "Problem eller frågor?"
-
-#: common_config.py:407 common_config.py:566
-msgid "Forgot Username Request"
-msgstr "Glömt användarnamn begäran"
-
-#: common_config.py:602
-msgid "We have sent you this email in response to your request about forgotting your username on WinterPixelGames."
-msgstr "Vi har skickat dig detta e-postmeddelande som svar på din begäran om att glömma ditt användarnamn på WinterPixelGames."
-
-#: common_config.py:607
-msgid "Your username of the associated email is "
-msgstr "Ditt användarnamn för den associerade e-postadressen är "
-
-#: common_config.py:613
-msgid "You can now login to your account using this username and the corresponding password."
-msgstr "Du kan nu logga in på ditt konto med detta användarnamn och motsvarande lösenord."
-
-#: common_config.py:621 common_config.py:988
-msgid "WinterPixelGames"
-msgstr "WinterPixelSpel"
-
-#: common_config.py:637 common_config.py:1332 common_config.py:1350
-#: common_config.py:1353
-msgid "Login"
-msgstr "Inloggning"
-
-#: common_config.py:653
-msgid "Please disregard this email if you did not submit a forgot username request."
-msgstr "Vänligen bortse från detta e-postmeddelande om du inte skickade in en begäran om ett glömt användarnamn."
-
-#: common_config.py:773 common_config.py:932
-msgid "Forgot Password Request"
-msgstr "Glömt lösenordsförfrågan"
-
-#: common_config.py:969
-msgid "We have sent you this email in response to your request about forgotting your password on WinterPixelGames."
-msgstr "Vi har skickat dig detta e-postmeddelande som svar på din begäran om att glömma ditt lösenord på WinterPixelGames."
-
-#: common_config.py:974
-msgid "Your new auto-generated password is "
-msgstr "Ditt nya autogenererade lösenord är "
-
-#: common_config.py:980
-msgid "You can now login to your account using this password and change it to a custom password if necessary."
-msgstr "Du kan nu logga in på ditt konto med detta lösenord och ändra det till ett anpassat lösenord om det behövs."
-
-#: common_config.py:1004 common_config.py:1401
-msgid "Reset Password"
-msgstr "Återställ lösenord"
-
-#: common_config.py:1020
-msgid "Please disregard this email if you did not submit a forgot password request."
-msgstr "Vänligen bortse från detta e-postmeddelande om du inte lämnade in en begäran om glömt lösenord."
-
-#: common_config.py:1187 common_config.py:1194
-msgid "Linked Game Accounts"
-msgstr "Länkade spelkonton"
-
-#: common_config.py:1188
-msgid "Change Nickname/Email"
-msgstr "Ändra Smeknamn/E-post"
-
-#: common_config.py:1189 common_config.py:1307
-msgid "Change Password"
-msgstr "Ändra lösenord"
-
-#: common_config.py:1197
-msgid "Statistics of Linked Accounts will be tracked daily and displayed in Player Info"
-msgstr "Statistik över länkade konton kommer att spåras dagligen och visas i spelarinfo"
-
-#: common_config.py:1261 common_config.py:1292
-msgid "Update"
-msgstr "Uppdatera"
-
-#: common_config.py:1268
-msgid "Wrong User ID format of "
-msgstr "Fel format för användar-ID "
-
-#: common_config.py:1280
-msgid "User IDs are updated successfully"
-msgstr "Användar-ID har uppdaterats"
-
-#: common_config.py:1287
-msgid "Change Name/Email"
-msgstr "Ändra namn/e-post"
-
-#: common_config.py:1288
-msgid "Field"
-msgstr "Fält"
-
-#: common_config.py:1289 common_config.py:1552
-msgid "Nickname"
-msgstr "Smeknamn"
-
-#: common_config.py:1290 common_config.py:1375 common_config.py:1440
-msgid "Email"
-msgstr "E-post"
-
-#: common_config.py:1291
-msgid "New value"
-msgstr "Nytt värde"
-
-#: common_config.py:1297
-msgid "Entries updated successfully"
-msgstr "Poster har uppdaterats"
-
-#: common_config.py:1308
-msgid "Current Password"
-msgstr "Nuvarande lösenord"
-
-#: common_config.py:1309
-msgid "New Password"
-msgstr "Nytt lösenord"
-
-#: common_config.py:1310 common_config.py:1559
-msgid "Repeat Password"
-msgstr "Upprepa lösenord"
-
-#: common_config.py:1311
-msgid "Reset"
-msgstr "Reset"
-
-#: common_config.py:1316
-msgid "Password modified successfully"
-msgstr "Lösenordet har ändrats"
-
-#: common_config.py:1333 common_config.py:1374
-msgid "Forgot Username"
-msgstr "Glömt användarnamn"
-
-#: common_config.py:1334 common_config.py:1399
-msgid "Forgot Password"
-msgstr "Glömt lösenord"
-
-#: common_config.py:1351 common_config.py:1400 common_config.py:1557
-msgid "Username"
-msgstr "Användarnamn"
-
-#: common_config.py:1352 common_config.py:1558
-msgid "Password"
-msgstr "Lösenord"
-
-#: common_config.py:1361
-msgid "Username or Password is incorrect"
-msgstr "Användarnamn eller lösenord är felaktigt"
-
-#: common_config.py:1376
-msgid "Send Userename"
-msgstr "Skicka användarnamn"
-
-#: common_config.py:1385
-msgid "Username is sent to the associated email successfully"
-msgstr "Användarnamnet har skickats till det associerade e-postmeddelandet"
-
-#: common_config.py:1387 common_config.py:1510
-msgid "Email not found"
-msgstr "E-post hittades inte"
-
-#: common_config.py:1416
-msgid "New password is sent to the associated email successfully"
-msgstr "Nytt lösenord har skickats till det associerade e-postmeddelandet"
-
-#: common_config.py:1419
-msgid "Username not found"
-msgstr "Användarnamnet hittades inte"
-
-#: common_config.py:1430 common_config.py:1439 common_config.py:1450
-msgid "Verify Email"
-msgstr "Verifiera e-post"
-
-#: common_config.py:1431 common_config.py:1551 common_config.py:1560
-msgid "Register"
-msgstr "Registrera"
-
-#: common_config.py:1444
-msgid "Send Verification Code"
-msgstr "Skicka verifieringskod"
-
-#: common_config.py:1448
-msgid "Verification Code"
-msgstr "Verifieringskod"
-
-#: common_config.py:1494
-msgid "Verification code is sent to the email successfully"
-msgstr "Verifieringskoden har skickats till e-postmeddelandet"
-
-#: common_config.py:1499
-msgid "Email is required"
-msgstr "E-post krävs"
-
-#: common_config.py:1501
-msgid "Email is not valid"
-msgstr "E-postadressen är inte giltig"
-
-#: common_config.py:1503
-msgid "Email is already in use"
-msgstr "E-postadressen används redan"
-
-#: common_config.py:1515
-msgid "Wrong verification code"
-msgstr "Fel verifieringskod"
-
-#: common_config.py:1526
-msgid "Verify success"
-msgstr "Verifiera framgång"
-
-#: common_config.py:1552
-msgid "alphabets only"
-msgstr "Endast alfabet"
-
-#: common_config.py:1553
-msgid "Verified Email"
-msgstr "Verifierad e-post"
-
-#: common_config.py:1555
-msgid "used for forgot username/password"
-msgstr "används för att glömma användarnamn/lösenord"
-
-#: common_config.py:1557 common_config.py:1558
-msgid "used for login"
-msgstr "används för inloggning"
-
-#: common_config.py:1564
-msgid "User registered successfully"
-msgstr "Användaren har registrerat sig"
-
-#: common_config.py:1591
-msgid "Welcome back"
-msgstr "Välkommen tillbaka"
-
-#: common_config.py:1692
+#: all_pages/E Language.py:148
 msgid "Apply"
 msgstr "Tillämpa"
 
-#: common_config.py:1695
+#: all_pages/E Language.py:154
 msgid "Contributors"
 msgstr "Bidragsgivare"
 
-#: common_config.py:1695
+#: all_pages/E Language.py:154
 msgid "In no particular order"
 msgstr "I ingen särskild ordning"
 
-#: common_config.py:1710
+#: all_pages/E Language.py:169
 msgid "Contribute"
 msgstr "Bidra"
 
-#: common_config.py:1760
-msgid "Back to Home"
-msgstr "Tillbaka till hemsidan"
+#: all_pages/3 Goober Royale.py:76
+msgid "**GOOBER ROYALE** is a multiplayer battle royale game in which each player controls a character (called a \"goober\") and must collect weapons, power-ups and other items to eliminate their opponents. The clashes bring together 16 players on a map and the objective will be to be the last survivor of the game. You can play alone or in a team of 4 players. Your Goober will have several weapons, a main missile that reloads at regular intervals and a secondary accessory such as mines, a tornado, a drill and many others. Also use your jetpack to move around the map more easily, reach high places and surprise your opponents. Completing games and missions will earn you gold coins that you can spend either to improve your Goober's skills or to buy cosmetics that will give your character a unique style. An online ranking will allow you to see the 100 best players in the world and in your region."
+msgstr "**GOOBER ROYALE** är ett multiplayer battle royale-spel där varje spelare kontrollerar en karaktär (kallad \"goober\") och måste samla vapen, power-ups och andra föremål för att eliminera sina motståndare. Sammanstötningarna samlar 16 spelare på en karta och målet är att vara den sista överlevande i spelet. Du kan spela ensam eller i ett lag med 4 spelare. Din Goober kommer att ha flera vapen, en huvudmissil som laddas om med jämna mellanrum och ett sekundärt tillbehör som minor, en tornado, en borr och många andra. Använd också din jetpack för att lättare röra dig runt på kartan, nå höga platser och överraska dina motståndare. Genom att slutföra spel och uppdrag tjänar du guldmynt som du kan spendera antingen för att förbättra din Goobers färdigheter eller för att köpa kosmetika som ger din karaktär en unik stil. En online-ranking gör att du kan se de 100 bästa spelarna i världen och i din region."
 
-#: common_config.py:1802
-msgid "Back to Menu"
-msgstr "Tillbaka till menyn"
+#: all_pages/3 Goober Royale.py:81
+msgid "**Goober Royale** is in **beta** currently (Bugs are expected and Data may be reset in future)"
+msgstr "**Goober Royale** är i **beta** för närvarande (Buggar förväntas och data kan återställas i framtiden)"
 
-#: common_config.py:2160
-msgid "This website is NOT affiliated with or endorsed by Winterpixel Games Inc."
-msgstr "Denna webbplats är INTE ansluten till eller godkänd av Winterpixel Games Inc."
+#: all_pages/7 About.py:54 all_pages/0 Home.py:193
+msgid "About"
+msgstr "Om"
 
-#: common_config.py:2163
-msgid "All relevant trademarks belong to their respective owners."
-msgstr "Alla relevanta varumärken tillhör sina respektive ägare."
+#: all_pages/7 About.py:56
+msgid "What is WinterPixelGames?"
+msgstr "Vad är WinterPixelGames?"
 
-#: common_config.py:2166
-msgid "Developed with 💖 by <a style=\"text-decoration:none\" href=\"https://tank8k.com/\" target=\"_blank\">TANK8K</a>"
-msgstr "Utvecklad med 💖 av <a style=\"text-decoration:none\" href=\"https://tank8k.com/\" target=\"_blank\">TANK8K</a>"
+#: all_pages/7 About.py:62
+msgid "**:blue-background[WinterPixelGames]** (WPG) is a community-driven site made by [**TANK8K**](https://tank8k.com/) which provides useful **Tools & Statistics** of games made by **[Winterpixel Games](https://www.winterpixel.com/)**, including **[Rocket Bot Royale](./Rocket_Bot_Royale)**, **[Goober Dash](./Goober_Dash)**, **[Goober Royale](./Goober_Royale)**, **[Goober Shot](./Goober_Shot)**, and **[Moonrock Miners](./Moonrock_Miners)**."
+msgstr "**:blue-background[WinterPixelGames]** (WPG) är en community-driven webbplats gjord av [**TANK8K**](https://tank8k.com/) som tillhandahåller användbara **verktyg och statistik** för spel gjorda av **[Winterpixel Games](https://www.winterpixel.com/)**, inklusive **[Rocket Bot Royale](./Rocket_Bot_Royale)**, **[Goober Dash](./Goober_Dash)**, **[Goober Royale](./Goober_Royale)**, **[Goober Shot](./Goober_Shot)** och **[Moonrock Miners](./Moonrock_Miners)**."
 
-#: common_config.py:2194 common_config.py:2231
+#: all_pages/7 About.py:69
+msgid "Affiliation"
+msgstr "Tillhörighet"
+
+#: all_pages/7 About.py:73
+msgid "This website is **NOT** affiliated with or endorsed by **Winterpixel Games Inc.**"
+msgstr "Denna webbplats är ** INTE** ansluten till eller godkänd av **Winterpixel Games Inc.**"
+
+#: all_pages/7 About.py:80
+msgid "Copyright Notice"
+msgstr "Meddelande om upphovsrätt"
+
+#: all_pages/7 About.py:84
+msgid "Rocket Bot Royale, Goober Dash, Goober Royale, Goober Shot, Moonrock Miners, Websites and Media **@ Winterpixel Games Inc.**"
+msgstr "Rocket Bot Royale, Goober Dash, Goober Royale, Goober Shot, Moonrock Miners, Webbplatser och media **@ Winterpixel Games Inc.**"
+
+#: all_pages/7 About.py:91
+msgid "License"
+msgstr "Licens"
+
+#: all_pages/7 About.py:94
+msgid "The source code is licensed under **MIT license**."
+msgstr "Källkoden är licensierad under **MIT-licens**."
+
+#: all_pages/7 About.py:100
+msgid "Technology"
+msgstr "Teknik"
+
+#: all_pages/7 About.py:107
+msgid "Framework"
+msgstr "Ramverk"
+
+#: all_pages/7 About.py:113
+msgid "Database"
+msgstr "Databas"
+
+#: all_pages/7 About.py:116
+msgid "Cloud Vendor"
+msgstr "Molnleverantör"
+
+#: all_pages/7 About.py:119
+msgid "Web Server"
+msgstr "Webbserver"
+
+#: all_pages/7 About.py:122
+msgid "Source Code"
+msgstr "Källkod"
+
+#: all_pages/7 About.py:129
+msgid "Developer"
+msgstr "Utvecklare"
+
+#: all_pages/7 About.py:140
+msgid "Personal Website"
+msgstr "Personlig webbplats"
+
+#: all_pages/7 About.py:145
+msgid "Developed with 💖 by **[:blue[TANK8K]](https://tank8k.com/)**"
+msgstr "Utvecklad med 💖 av **[:blue[TANK8K]](https://tank8k.com/)**"
+
+#: all_pages/1 Rocket Bot Royale.py:108
+msgid "**ROCKET BOT ROYALE** is a fun new take on the online battle royale formula. Powerful, wall-climbing, rocket-jumping, artillery-pumping Robo-Tanks are the vehicle of choice in this fast-paced shootout, where the goal is to survive longer than the competition. Collect the loot to upgrade your arsenal, tunnel into the terrain to take cover and collect buried treasure, and avoid the rising water levels to be the blast one standing!"
+msgstr "**ROCKET BOT ROYALE** är en ny och rolig version av Battle Royale-formeln online. Kraftfulla, väggklättrande, rakethoppande och artilleripumpande Robo-Tanks är det fordon du väljer i denna fartfyllda shootout, där målet är att överleva längre än konkurrenterna. Samla byten för att uppgradera din arsenal, gräv tunnlar i terrängen för att ta skydd och samla begravda skatter, och undvik de stigande vattennivåerna för att vara den sista som står kvar!"
+
+#: all_pages/1 Rocket Bot Royale.py:112 all_pages/2 Goober Dash.py:144
+msgid "Platforms"
+msgstr "Plattformar"
+
+#: all_pages/1 Rocket Bot Royale.py:127 all_pages/2 Goober Dash.py:158
+msgid "Communities"
+msgstr "Samhällen"
+
+#: all_pages/0 Home.py:11
+msgid "Welcome to"
+msgstr "Välkommen till"
+
+#: all_pages/0 Home.py:14
+msgid "A website which provides useful Tools & Statistics of games made by [Winterpixel Games](https://www.winterpixel.com/)"
+msgstr "En webbplats som tillhandahåller användbara verktyg och statistik för spel gjorda av [Winterpixel Games] (https://www.winterpixel.com/)"
+
+#: all_pages/0 Home.py:160
+msgid "Home"
+msgstr "Hem"
+
+#: all_pages/0 Home.py:215
 msgid "Log Out"
 msgstr "Logga ut"
 
-#: common_config.py:2202
-msgid "Account"
-msgstr "Konto"
+#: all_pages/2 Goober Dash.py:140
+msgid "**GOOBER DASH** is a multiplayer battle royale game that you can play online. Dash your opponents into deadly spikes, gather precious coins, and unlock a plethora of unique costumes as you strive to outlast the competition. Invite your friends to engage in epic battles in custom private lobbies. Unleash your creativity with the level editor, crafting and conquering your very own battlegrounds. Climb the global and country-based seasonal leaderboards to prove your dominance in this thrilling contest."
+msgstr "**GOOBER DASH** är ett multiplayer battle royale-spel som du kan spela online. Kör dina motståndare in i dödliga spikar, samla värdefulla mynt och lås upp en uppsjö av unika dräkter när du strävar efter att överleva tävlingen. Bjud in dina vänner att delta i episka strider i anpassade privata lobbyer. Släpp loss din kreativitet med nivåredigeraren, skapa och erövra dina helt egna slagfält. Klättra på de globala och landsbaserade säsongsledartavlorna för att bevisa din dominans i denna spännande tävling."
 
-#: common_config.py:2210
-msgid "Log In"
-msgstr "Logga in"
+#: all_pages/2 Goober Dash.py:191
+msgid "Time Trials (Certified Levels)"
+msgstr "Tidskörning (certifierade nivåer)"
 
-#: common_config.py:2218
-msgid "Sign Up"
-msgstr "Registrera dig"
+#: common_config.py:59
+msgid "Welcome back"
+msgstr "Välkommen tillbaka"
+
+#: common_config.py:109
+msgid "Back to Home"
+msgstr "Tillbaka till hemsidan"
+
+#: common_config.py:151
+msgid "Back to Menu"
+msgstr "Tillbaka till menyn"
+
+#: common_config.py:179
+msgid "This website is NOT affiliated with or endorsed by Winterpixel Games Inc."
+msgstr "Denna webbplats är INTE ansluten till eller godkänd av Winterpixel Games Inc."
+
+#: common_config.py:181
+msgid "All relevant trademarks belong to their respective owners."
+msgstr "Alla relevanta varumärken tillhör sina respektive ägare."
+
+#: common_config.py:184
+msgid "Developed with 💖 by <a style=\"text-decoration:none\" href=\"https://tank8k.com/\" target=\"_blank\">TANK8K</a>"
+msgstr "Utvecklad med 💖 av <a style=\"text-decoration:none\" href=\"https://tank8k.com/\" target=\"_blank\">TANK8K</a>"
 

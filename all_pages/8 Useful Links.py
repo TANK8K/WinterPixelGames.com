@@ -1,5 +1,5 @@
 import streamlit as st
-from common_config import back_to_home, set_localization, footer_account_language
+from common_config import back_to_home, set_localization
 
 _ = set_localization(st.session_state.language)
 
@@ -33,19 +33,19 @@ st.html(
             position: relative;
             right: 5px;
         }
-        div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(11) > div:nth-child(1) p::before {
+        div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(13) > div:nth-child(1) p::before {
             background-image: url("./app/static/RocketBotRoyale/rocket_bot_royale_favicon.png");
         }
-        div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(11) > div:nth-child(2) p::before {
+        div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(13) > div:nth-child(2) p::before {
             background-image: url("./app/static/GooberRoyale/goober_royale_favicon.png");
         }
-        div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(11) > div:nth-child(3) p::before {
+        div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(13) > div:nth-child(3) p::before {
             background-image: url("./app/static/GooberShot/goober_shot_favicon.png");
         }
-        div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(11) > div:nth-child(4) p::before {
+        div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(13) > div:nth-child(4) p::before {
             background-image: url("./app/static/MoonrockMiners/moonrock_miners_favicon.png");
         }
-        div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(11) > div:nth-child(5) p::before {
+        div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(13) > div:nth-child(5) p::before {
             background-image: url("./app/static/Broski/broski_favicon.png");
         }
         div[data-testid="stAppViewBlockContainer"] div[data-testid="stVerticalBlock"] div[data-testid="stLinkButton"] p::before {
@@ -69,7 +69,7 @@ st.html(
 )
 
 st.html(
-    '<h4><i class="fa-solid fa-arrow-up-right-from-square" style="display: inline; margin: 0 5px 8px 0; width: 25px"></i>'
+    '<h4><i class="fa-solid fa-arrow-up-right-from-square" style="display: inline; margin: 0 10px 8px 0; width: 25px"></i>'
     + _("Useful Links")
     + '</h4><h3><span style="font-size: 25px;">'
     + _("Staging Servers")
@@ -119,4 +119,3 @@ st.link_button(
 )
 
 back_to_home(st.session_state.language)
-footer_account_language(st.session_state.language)

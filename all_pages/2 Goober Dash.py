@@ -3,11 +3,9 @@ from common_config import (
     back_to_home,
     back_to_menu,
     set_localization,
-    footer_account_language,
 )
 
 _ = set_localization(st.session_state.language)
-footer_account_language(st.session_state.language)
 
 try:
     if st.session_state.game != "GooberDash":

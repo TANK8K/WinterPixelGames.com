@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: winterpixelgames\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-04 14:26+0800\n"
-"PO-Revision-Date: 2024-07-04 06:28\n"
+"POT-Creation-Date: 2024-07-05 16:37+0800\n"
+"PO-Revision-Date: 2024-07-05 08:41\n"
 "Last-Translator: \n"
 "Language-Team: Slovak\n"
 "Language: sk_SK\n"
@@ -17,90 +17,211 @@ msgstr ""
 "X-Crowdin-File: base.pot\n"
 "X-Crowdin-File-ID: 10\n"
 
-#: all_pages/6 Broski.py:62
+#: all_pages/A Log In.py:32 all_pages/0 Home.py:205
+msgid "Log In"
+msgstr "Prihlásenie"
+
+#: all_pages/A Log In.py:56 all_pages/A Log In.py:215
+msgid "Forgot Username Request"
+msgstr "Žiadosť o zabudnuté používateľské meno"
+
+#: all_pages/A Log In.py:244 all_pages/A Log In.py:611
+#: all_pages/B Sign Up.py:246
+msgid "Hello"
+msgstr "Dobrý deň,"
+
+#: all_pages/A Log In.py:251
+msgid "We have sent you this email in response to your request about forgotting your username on WinterPixelGames."
+msgstr "Tento e-mail sme vám poslali v reakcii na vašu žiadosť o zabudnutí vášho používateľského mena na WinterPixelGames."
+
+#: all_pages/A Log In.py:256
+msgid "Your username of the associated email is "
+msgstr "Vaše používateľské meno súvisiaceho e-mailu je "
+
+#: all_pages/A Log In.py:262
+msgid "You can now login to your account using this username and the corresponding password."
+msgstr "Teraz sa môžete prihlásiť do svojho konta pomocou tohto používateľského mena a príslušného hesla."
+
+#: all_pages/A Log In.py:267 all_pages/A Log In.py:634
+#: all_pages/B Sign Up.py:267
+msgid "Happy Gaming!"
+msgstr "Šťastné hranie!"
+
+#: all_pages/A Log In.py:270 all_pages/A Log In.py:637
+msgid "WinterPixelGames"
+msgstr "WinterPixelGames"
+
+#: all_pages/A Log In.py:286 all_pages/A Log In.py:787
+#: all_pages/A Log In.py:795 all_pages/A Log In.py:798
+msgid "Login"
+msgstr "Prihlásenie"
+
+#: all_pages/A Log In.py:302
+msgid "Please disregard this email if you did not submit a forgot username request."
+msgstr "Ak ste nezaslali žiadosť o zabudnuté používateľské meno, neberte tento e-mail do úvahy."
+
+#: all_pages/A Log In.py:332 all_pages/A Log In.py:699
+#: all_pages/B Sign Up.py:328
+msgid "Problems or questions?"
+msgstr "Problémy alebo otázky?"
+
+#: all_pages/A Log In.py:422 all_pages/A Log In.py:581
+msgid "Forgot Password Request"
+msgstr "Žiadosť o zabudnuté heslo"
+
+#: all_pages/A Log In.py:618
+msgid "We have sent you this email in response to your request about forgotting your password on WinterPixelGames."
+msgstr "Tento e-mail sme vám poslali ako odpoveď na vašu žiadosť o zabudnutie hesla na WinterPixelGames."
+
+#: all_pages/A Log In.py:623
+msgid "Your new auto-generated password is "
+msgstr "Vaše nové automaticky vygenerované heslo je "
+
+#: all_pages/A Log In.py:629
+msgid "You can now login to your account using this password and change it to a custom password if necessary."
+msgstr "Teraz sa môžete prihlásiť do svojho konta pomocou tohto hesla a v prípade potreby ho zmeniť na vlastné heslo."
+
+#: all_pages/A Log In.py:653 all_pages/A Log In.py:856
+msgid "Reset Password"
+msgstr "Obnovenie hesla"
+
+#: all_pages/A Log In.py:669
+msgid "Please disregard this email if you did not submit a forgot password request."
+msgstr "Ak ste nezaslali žiadosť o zabudnuté heslo, neberte tento e-mail do úvahy."
+
+#: all_pages/A Log In.py:788 all_pages/A Log In.py:829
+msgid "Forgot Username"
+msgstr "Zabudnuté používateľské meno"
+
+#: all_pages/A Log In.py:789 all_pages/A Log In.py:854
+msgid "Forgot Password"
+msgstr "Zabudnuté heslo"
+
+#: all_pages/A Log In.py:796 all_pages/A Log In.py:855
+#: all_pages/B Sign Up.py:527
+msgid "Username"
+msgstr "Používateľské meno"
+
+#: all_pages/A Log In.py:797 all_pages/B Sign Up.py:528
+msgid "Password"
+msgstr "Heslo"
+
+#: all_pages/A Log In.py:802
+msgid "Username or Password is incorrect"
+msgstr "Používateľské meno alebo heslo je nesprávne"
+
+#: all_pages/A Log In.py:830 all_pages/B Sign Up.py:446
+#: all_pages/D Account.py:172
+msgid "Email"
+msgstr "E-mail"
+
+#: all_pages/A Log In.py:831
+msgid "Send Userename"
+msgstr "Odoslať meno používateľa"
+
+#: all_pages/A Log In.py:840
+msgid "Username is sent to the associated email successfully"
+msgstr "Používateľské meno je úspešne odoslané na súvisiaci e-mail"
+
+#: all_pages/A Log In.py:842 all_pages/B Sign Up.py:460
+msgid "Email not found"
+msgstr "E-mail nebol nájdený"
+
+#: all_pages/A Log In.py:870
+msgid "New password is sent to the associated email successfully"
+msgstr "Nové heslo sa úspešne odošle na priradený e-mail"
+
+#: all_pages/A Log In.py:872
+msgid "Username not found"
+msgstr "Používateľské meno nebolo nájdené"
+
+#: all_pages/A Log In.py:876
+msgid "Click the button again if it doesn't work for the first time"
+msgstr "Ak sa to nepodarí na prvýkrát, kliknite na tlačidlo znova"
+
+#: all_pages/6 Broski.py:60
 msgid "**BROSKI** is an arcade pixel style skiing game, it is a fun and has a unique visual style that allows you to enjoy skiing even in summer. In the game, you will play as a skier who races down a snowy mountain. Your goal is to ski the furthest distance possible. As you slide down the hill faster and faster, you have to avoid more and more obstacles on the way, which makes the game challenging. To test how far you can go, take the challenge!"
 msgstr "**BROSKI** je arkádová lyžiarska hra v pixelovom štýle, ktorá je zábavná a má jedinečný vizuálny štýl, ktorý vám umožní užiť si lyžovanie aj v lete. V hre budete hrať za lyžiara, ktorý sa preháňa po zasneženej hore. Vaším cieľom je zlyžovať čo najväčšiu vzdialenosť. Ako sa budete z kopca šmýkať čoraz rýchlejšie, musíte sa na ceste vyhýbať čoraz väčším prekážkam, čo robí hru náročnou. Ak chcete vyskúšať, ako ďaleko dokážete zájsť, prijmite túto výzvu!"
 
-#: all_pages/6 Broski.py:66
+#: all_pages/6 Broski.py:64
 msgid "**Broski** is a **prototype single-player game** currently"
 msgstr "**Broski** je v súčasnosti **prototyp hry pre jedného hráča**"
 
-#: all_pages/6 Broski.py:69 all_pages/5 Moonrock Miners.py:77
-#: all_pages/4 Goober Shot.py:87 all_pages/3 Goober Royale.py:87
+#: all_pages/6 Broski.py:67 all_pages/5 Moonrock Miners.py:75
+#: all_pages/4 Goober Shot.py:85 all_pages/3 Goober Royale.py:85
 msgid "Platform"
 msgstr "Platforma"
 
-#: all_pages/6 Broski.py:71 all_pages/5 Moonrock Miners.py:79
-#: all_pages/4 Goober Shot.py:89 all_pages/3 Goober Royale.py:89
-#: all_pages/1 Rocket Bot Royale.py:116 all_pages/2 Goober Dash.py:148
+#: all_pages/6 Broski.py:69 all_pages/5 Moonrock Miners.py:77
+#: all_pages/4 Goober Shot.py:87 all_pages/3 Goober Royale.py:87
+#: all_pages/1 Rocket Bot Royale.py:114 all_pages/2 Goober Dash.py:146
 msgid "Browser"
 msgstr "Prehliadač"
 
-#: all_pages/6 Broski.py:72 all_pages/5 Moonrock Miners.py:80
-#: all_pages/4 Goober Shot.py:90 all_pages/3 Goober Royale.py:90
+#: all_pages/6 Broski.py:70 all_pages/5 Moonrock Miners.py:78
+#: all_pages/4 Goober Shot.py:88 all_pages/3 Goober Royale.py:88
 msgid "Community"
 msgstr "Komunita"
 
-#: all_pages/6 Broski.py:78 all_pages/5 Moonrock Miners.py:86
-#: all_pages/4 Goober Shot.py:96 all_pages/3 Goober Royale.py:96
-#: all_pages/1 Rocket Bot Royale.py:141 all_pages/2 Goober Dash.py:171
+#: all_pages/6 Broski.py:76 all_pages/5 Moonrock Miners.py:84
+#: all_pages/4 Goober Shot.py:94 all_pages/3 Goober Royale.py:94
+#: all_pages/1 Rocket Bot Royale.py:139 all_pages/2 Goober Dash.py:169
 msgid "Tools"
 msgstr "Nástroje"
 
-#: all_pages/6 Broski.py:83 all_pages/5 Moonrock Miners.py:91
+#: all_pages/6 Broski.py:81 all_pages/5 Moonrock Miners.py:89
 #: all_pages/RocketBotRoyale/Tools/image_assets.py:10
-#: all_pages/4 Goober Shot.py:101 all_pages/GooberDash/Tools/image_assets.py:37
+#: all_pages/4 Goober Shot.py:99 all_pages/GooberDash/Tools/image_assets.py:37
 #: all_pages/MoonrockMiners/Tools/image_assets.py:13
 #: all_pages/GooberRoyale/Tools/image_assets.py:13
 #: all_pages/GooberShot/Tools/image_assets.py:13
-#: all_pages/3 Goober Royale.py:100 all_pages/1 Rocket Bot Royale.py:151
-#: all_pages/Broski/Tools/image_assets.py:13 all_pages/2 Goober Dash.py:184
+#: all_pages/3 Goober Royale.py:98 all_pages/1 Rocket Bot Royale.py:149
+#: all_pages/Broski/Tools/image_assets.py:13 all_pages/2 Goober Dash.py:182
 msgid "Image Assets"
 msgstr "Obrázok Aktíva"
 
-#: all_pages/6 Broski.py:83 all_pages/5 Moonrock Miners.py:91
-#: all_pages/5 Moonrock Miners.py:103 all_pages/4 Goober Shot.py:101
-#: all_pages/4 Goober Shot.py:113 all_pages/4 Goober Shot.py:118
+#: all_pages/6 Broski.py:81 all_pages/5 Moonrock Miners.py:89
+#: all_pages/5 Moonrock Miners.py:101 all_pages/4 Goober Shot.py:99
+#: all_pages/4 Goober Shot.py:111 all_pages/4 Goober Shot.py:116
 #: all_pages/GooberDash/Statistics/player_info.py:480
 #: all_pages/GooberDash/Statistics/player_info.py:494
 #: all_pages/GooberDash/Statistics/player_info.py:496
-#: all_pages/GooberDash/Statistics/player_info.py:498
-#: all_pages/3 Goober Royale.py:109 all_pages/3 Goober Royale.py:114
-#: all_pages/1 Rocket Bot Royale.py:146 all_pages/1 Rocket Bot Royale.py:151
-#: all_pages/1 Rocket Bot Royale.py:163 all_pages/1 Rocket Bot Royale.py:168
-#: all_pages/2 Goober Dash.py:177 all_pages/2 Goober Dash.py:198
-#: all_pages/2 Goober Dash.py:203 all_pages/2 Goober Dash.py:208
-#: common_config.py:1200
+#: all_pages/GooberDash/Statistics/player_info.py:498 all_pages/D Account.py:78
+#: all_pages/3 Goober Royale.py:107 all_pages/3 Goober Royale.py:112
+#: all_pages/1 Rocket Bot Royale.py:144 all_pages/1 Rocket Bot Royale.py:149
+#: all_pages/1 Rocket Bot Royale.py:161 all_pages/1 Rocket Bot Royale.py:166
+#: all_pages/2 Goober Dash.py:175 all_pages/2 Goober Dash.py:196
+#: all_pages/2 Goober Dash.py:201 all_pages/2 Goober Dash.py:206
 msgid "WIP"
 msgstr "WIP"
 
-#: all_pages/5 Moonrock Miners.py:70
+#: all_pages/5 Moonrock Miners.py:68
 msgid "**MOONROCK MINERS** is a gravity-defying multiplayer space battle game set in an asteroid field. Blast other players, collect powerups and crystals, and avoid the asteroids. Try to survive until the end to win the match. Compete against players around the world in real-time to rank in every season. You can also create your own custom lobbies to play private games online with your friends!"
 msgstr "**MOONROCK MINERS** je vesmírna bojová hra pre viacerých hráčov, ktorá sa odohráva v asteroidovom poli. Odstreľujte ostatných hráčov, zbierajte vylepšenia a kryštály a vyhýbajte sa asteroidom. Pokúste sa prežiť až do konca a vyhrajte zápas. Súťažte s hráčmi z celého sveta v reálnom čase o umiestnenie v každom ročnom období. Môžete si tiež vytvoriť vlastné lobby a hrať súkromné hry online s priateľmi!"
 
-#: all_pages/5 Moonrock Miners.py:74
+#: all_pages/5 Moonrock Miners.py:72
 msgid "**Moonrock Miners** is **no longer in development**"
 msgstr "**Moonrock Miners** už nie je vo vývoji**"
 
-#: all_pages/5 Moonrock Miners.py:98 all_pages/4 Goober Shot.py:108
-#: all_pages/3 Goober Royale.py:104 all_pages/1 Rocket Bot Royale.py:158
-#: all_pages/2 Goober Dash.py:188
+#: all_pages/5 Moonrock Miners.py:96 all_pages/4 Goober Shot.py:106
+#: all_pages/3 Goober Royale.py:102 all_pages/1 Rocket Bot Royale.py:156
+#: all_pages/2 Goober Dash.py:186
 msgid "Statistics"
 msgstr "Štatistika"
 
-#: all_pages/5 Moonrock Miners.py:103
+#: all_pages/5 Moonrock Miners.py:101
 #: all_pages/RocketBotRoyale/Statistics/season_leaderboard.py:10
-#: all_pages/4 Goober Shot.py:118
+#: all_pages/4 Goober Shot.py:116
 #: all_pages/GooberDash/Statistics/season_leaderboard.py:13
 #: all_pages/MoonrockMiners/Statistics/season_leaderboard.py:10
 #: all_pages/GooberRoyale/Statistics/season_leaderboard.py:10
 #: all_pages/GooberShot/Statistics/season_leaderboard.py:10
-#: all_pages/3 Goober Royale.py:114 all_pages/1 Rocket Bot Royale.py:168
-#: all_pages/2 Goober Dash.py:208
+#: all_pages/3 Goober Royale.py:112 all_pages/1 Rocket Bot Royale.py:166
+#: all_pages/2 Goober Dash.py:206
 msgid "Season Leaderboard"
 msgstr "Rebríček sezóny"
 
-#: all_pages/5 Moonrock Miners.py:108
+#: all_pages/5 Moonrock Miners.py:106
 msgid "**Leaderboard** is **disabled** currently"
 msgstr "**Leaderboard** je v súčasnosti **vypnutý**"
 
@@ -128,30 +249,30 @@ msgid "Gallery"
 msgstr "Galéria"
 
 #: all_pages/RocketBotRoyale/Tools/optimize_crate.py:10
-#: all_pages/1 Rocket Bot Royale.py:146
+#: all_pages/1 Rocket Bot Royale.py:144
 msgid "Optimize Crate"
 msgstr "Optimalizácia debny"
 
 #: all_pages/RocketBotRoyale/Statistics/player_info.py:10
-#: all_pages/4 Goober Shot.py:113
+#: all_pages/4 Goober Shot.py:111
 #: all_pages/GooberDash/Statistics/player_info.py:80
 #: all_pages/GooberRoyale/Statistics/player_info.py:10
 #: all_pages/GooberShot/Statistics/player_info.py:10
-#: all_pages/3 Goober Royale.py:109 all_pages/1 Rocket Bot Royale.py:163
-#: all_pages/2 Goober Dash.py:198
+#: all_pages/3 Goober Royale.py:107 all_pages/1 Rocket Bot Royale.py:161
+#: all_pages/2 Goober Dash.py:196
 msgid "Player Info"
 msgstr "Informácie o hráčovi"
 
-#: all_pages/4 Goober Shot.py:78
+#: all_pages/4 Goober Shot.py:76
 msgid "**GOOBER SHOT** throws you into thrilling online archery battles against three other players! Prepare your bow, sharpen your arrows, enter the arena, and unleash your skills as a master archer. Remember, every arrow counts! Show off your precision and reflexes as you aim, shoot, and dodge with finesse. Rise through the ranks, climb the global leaderboards, and prove yourself as the ultimate archery champion. Will you emerge as the greatest archer in the realm?"
 msgstr "**GOOBER SHOT** vás vrhne do napínavých online súbojov v lukostreľbe proti trom ďalším hráčom! Pripravte si luk, nabrúste šípy, vstúpte do arény a rozpútajte svoje schopnosti majstra lukostrelca. Nezabudni, že každý šíp sa počíta! Predveď svoju presnosť a reflexy, keď budeš rafinovane mieriť, strieľať a uhýbať. Stúpajte v rebríčkoch, šplhajte sa nahor v celosvetových rebríčkoch a dokážte, že ste absolútnym majstrom v lukostreľbe. Staneš sa najlepším lukostrelcom v kráľovstve?"
 
-#: all_pages/4 Goober Shot.py:83
+#: all_pages/4 Goober Shot.py:81
 msgid "**Goober Shot** is in **beta** currently (Bugs are expected and Data may be reset in future)"
 msgstr "**Goober Shot** je momentálne v **beta** verzii (očakávajú sa chyby a údaje môžu byť v budúcnosti obnovené)"
 
 #: all_pages/GooberDash/Tools/goober_generator.py:65
-#: all_pages/2 Goober Dash.py:182
+#: all_pages/2 Goober Dash.py:180
 msgid "Goober Generator"
 msgstr "Generátor Goober"
 
@@ -204,7 +325,7 @@ msgstr "Odznak"
 msgid "Other Stuff"
 msgstr "Ostatné veci"
 
-#: all_pages/GooberDash/Tools/flip_level.py:130 all_pages/2 Goober Dash.py:175
+#: all_pages/GooberDash/Tools/flip_level.py:130 all_pages/2 Goober Dash.py:173
 msgid "Flip Level"
 msgstr "Úroveň flipu"
 
@@ -252,7 +373,7 @@ msgid "flipped"
 msgstr "obrátený"
 
 #: all_pages/GooberDash/Tools/maze_generator.py:13
-#: all_pages/2 Goober Dash.py:177
+#: all_pages/2 Goober Dash.py:175
 msgid "Maze Generator"
 msgstr "Generátor bludiska"
 
@@ -1641,11 +1762,204 @@ msgid "Percentile"
 msgstr "Percentil"
 
 #: all_pages/GooberDash/Statistics/level_info.py:13
-#: all_pages/2 Goober Dash.py:203
+#: all_pages/2 Goober Dash.py:201
 msgid "Level Info"
 msgstr "Informácie o úrovni"
 
-#: all_pages/8 Useful Links.py:73 all_pages/0 Home.py:199
+#: all_pages/B Sign Up.py:24 all_pages/0 Home.py:210
+msgid "Sign Up"
+msgstr "Zaregistrujte sa"
+
+#: all_pages/B Sign Up.py:58 all_pages/B Sign Up.py:217
+msgid "Verify Account"
+msgstr "Overenie účtu"
+
+#: all_pages/B Sign Up.py:251
+msgid "Welcome to WinterPixelGames! We're excited to have you join our community. Before you creating your account, we need to verify your email address to ensure we have the correct information."
+msgstr "Vitajte na stránke WinterPixelGames! Tešíme sa, že ste sa pripojili k našej komunite. Pred vytvorením vášho účtu musíme overiť vašu e-mailovú adresu, aby sme sa uistili, že máme správne informácie."
+
+#: all_pages/B Sign Up.py:256
+msgid "Your verification code is "
+msgstr "Váš overovací kód je "
+
+#: all_pages/B Sign Up.py:262
+msgid "You can now register your account using this verification code and the corresponding email."
+msgstr "Teraz môžete zaregistrovať svoje konto pomocou tohto overovacieho kódu a príslušného e-mailu."
+
+#: all_pages/B Sign Up.py:284
+msgid "Verify"
+msgstr "Overiť"
+
+#: all_pages/B Sign Up.py:299
+msgid "Please disregard this email if you did not submit a verify email request."
+msgstr "Ak ste nezaslali žiadosť o overenie e-mailu, neberte tento e-mail do úvahy."
+
+#: all_pages/B Sign Up.py:437 all_pages/B Sign Up.py:444
+msgid "Verify Email"
+msgstr "Overenie e-mailu"
+
+#: all_pages/B Sign Up.py:438 all_pages/B Sign Up.py:524
+#: all_pages/B Sign Up.py:530
+msgid "Register"
+msgstr "Registrácia"
+
+#: all_pages/B Sign Up.py:448
+msgid "Verification Code"
+msgstr "Overovací kód"
+
+#: all_pages/B Sign Up.py:450
+msgid "Leave it blank to send Verification Code"
+msgstr "Ak chcete odoslať overovací kód, nechajte ho prázdny"
+
+#: all_pages/B Sign Up.py:452
+msgid "Send/Verify"
+msgstr "Odoslať/overiť"
+
+#: all_pages/B Sign Up.py:464
+msgid "Wrong verification code"
+msgstr "Nesprávny overovací kód"
+
+#: all_pages/B Sign Up.py:472
+msgid "Verify success"
+msgstr "Overenie úspechu"
+
+#: all_pages/B Sign Up.py:492
+msgid "Verification code is sent to the email successfully"
+msgstr "Overovací kód je úspešne odoslaný na e-mail"
+
+#: all_pages/B Sign Up.py:496
+msgid "Email is required"
+msgstr "Vyžaduje sa e-mail"
+
+#: all_pages/B Sign Up.py:498
+msgid "Email is not valid"
+msgstr "E-mail nie je platný"
+
+#: all_pages/B Sign Up.py:500
+msgid "Email is already in use"
+msgstr "E-mail sa už používa"
+
+#: all_pages/B Sign Up.py:525 all_pages/D Account.py:171
+msgid "Nickname"
+msgstr "Prezývka"
+
+#: all_pages/B Sign Up.py:525
+msgid "alphabets only"
+msgstr "iba abecedy"
+
+#: all_pages/B Sign Up.py:526
+msgid "Verified Email"
+msgstr "Overený e-mail"
+
+#: all_pages/B Sign Up.py:527 all_pages/B Sign Up.py:528
+msgid "for login"
+msgstr "pre prihlásenie"
+
+#: all_pages/B Sign Up.py:529 all_pages/D Account.py:192
+msgid "Repeat Password"
+msgstr "Opakovanie hesla"
+
+#: all_pages/B Sign Up.py:534
+msgid "User registered successfully"
+msgstr "Používateľ sa úspešne zaregistroval"
+
+#: all_pages/C Log Out.py:13
+msgid "You are now logged out"
+msgstr "Teraz ste odhlásený"
+
+#: all_pages/D Account.py:33 all_pages/0 Home.py:220
+msgid "Account"
+msgstr "Účet"
+
+#: all_pages/D Account.py:64 all_pages/D Account.py:72
+msgid "Linked Game Accounts"
+msgstr "Prepojené herné účty"
+
+#: all_pages/D Account.py:65
+msgid "Change Nickname/Email"
+msgstr "Zmena prezývky/e-mailu"
+
+#: all_pages/D Account.py:66 all_pages/D Account.py:189
+msgid "Change Password"
+msgstr "Zmena hesla"
+
+#: all_pages/D Account.py:75
+msgid "Statistics of Linked Accounts will be tracked daily and displayed in Player Info"
+msgstr "Štatistiky prepojených účtov sa budú denne sledovať a zobrazovať v časti Informácie o hráčovi."
+
+#: all_pages/D Account.py:108 all_pages/D Account.py:138
+#: all_pages/8 Useful Links.py:88 all_pages/0 Home.py:58
+#: all_pages/0 Home.py:163
+msgid "Rocket Bot Royale"
+msgstr "Rocket Bot Royale"
+
+#: all_pages/D Account.py:110 all_pages/D Account.py:116
+#: all_pages/D Account.py:122 all_pages/D Account.py:128
+msgid "No User ID Found"
+msgstr "Nenašlo sa žiadne ID používateľa"
+
+#: all_pages/D Account.py:114 all_pages/D Account.py:139 all_pages/0 Home.py:63
+#: all_pages/0 Home.py:168
+msgid "Goober Dash"
+msgstr "Goober Dash"
+
+#: all_pages/D Account.py:120 all_pages/D Account.py:140
+#: all_pages/8 Useful Links.py:92 all_pages/0 Home.py:68
+#: all_pages/0 Home.py:173
+msgid "Goober Royale"
+msgstr "Goober Royale"
+
+#: all_pages/D Account.py:126 all_pages/D Account.py:141
+#: all_pages/8 Useful Links.py:95 all_pages/0 Home.py:73
+#: all_pages/0 Home.py:178
+msgid "Goober Shot"
+msgstr "Goober Shot"
+
+#: all_pages/D Account.py:143 all_pages/D Account.py:174
+msgid "Update"
+msgstr "Aktualizácia"
+
+#: all_pages/D Account.py:150
+msgid "Wrong User ID format of "
+msgstr "Nesprávny formát ID používateľa "
+
+#: all_pages/D Account.py:162
+msgid "User IDs are updated successfully"
+msgstr "ID používateľov sú úspešne aktualizované"
+
+#: all_pages/D Account.py:169
+msgid "Change Name/Email"
+msgstr "Zmena mena/e-mailu"
+
+#: all_pages/D Account.py:170
+msgid "Field"
+msgstr "Pole"
+
+#: all_pages/D Account.py:173
+msgid "New value"
+msgstr "Nová hodnota"
+
+#: all_pages/D Account.py:179
+msgid "Entries updated successfully"
+msgstr "Záznamy boli úspešne aktualizované"
+
+#: all_pages/D Account.py:190
+msgid "Current Password"
+msgstr "Aktuálne heslo"
+
+#: all_pages/D Account.py:191
+msgid "New Password"
+msgstr "Nové heslo"
+
+#: all_pages/D Account.py:193
+msgid "Reset"
+msgstr "Obnovenie"
+
+#: all_pages/D Account.py:198
+msgid "Password modified successfully"
+msgstr "Heslo bolo úspešne zmenené"
+
+#: all_pages/8 Useful Links.py:73 all_pages/0 Home.py:198
 msgid "Useful Links"
 msgstr "Užitočné odkazy"
 
@@ -1657,28 +1971,13 @@ msgstr "Stagingové servery"
 msgid "**Staging Servers** are seperate servers which are used for testing new features before releasing. Usually updates are released on **Staging Servers** a few days before public release. Developers invite members to test out some upcoming features and ask for feedbacks in **Offcial Winterpixel Games Discord server** occasionally.\n"
 msgstr "**Staging Servers** sú samostatné servery, ktoré sa používajú na testovanie nových funkcií pred vydaním. Zvyčajne sa aktualizácie vydávajú na **Staging Servers** niekoľko dní pred verejným vydaním. Vývojári príležitostne pozývajú členov na otestovanie niektorých pripravovaných funkcií a žiadajú ich o spätnú väzbu na **Oficiálnom serveri Winterpixel Games Discord**.\n"
 
-#: all_pages/8 Useful Links.py:88 all_pages/0 Home.py:59
-#: all_pages/0 Home.py:164 common_config.py:1256
-msgid "Rocket Bot Royale"
-msgstr "Rocket Bot Royale"
-
-#: all_pages/8 Useful Links.py:92 all_pages/0 Home.py:69
-#: all_pages/0 Home.py:174 common_config.py:1258
-msgid "Goober Royale"
-msgstr "Goober Royale"
-
-#: all_pages/8 Useful Links.py:95 all_pages/0 Home.py:74
-#: all_pages/0 Home.py:179 common_config.py:1259
-msgid "Goober Shot"
-msgstr "Goober Shot"
-
-#: all_pages/8 Useful Links.py:96 all_pages/0 Home.py:79
-#: all_pages/0 Home.py:184
+#: all_pages/8 Useful Links.py:96 all_pages/0 Home.py:78
+#: all_pages/0 Home.py:183
 msgid "Moonrock Miners"
 msgstr "Mesační baníci"
 
-#: all_pages/8 Useful Links.py:97 all_pages/0 Home.py:84
-#: all_pages/0 Home.py:189
+#: all_pages/8 Useful Links.py:97 all_pages/0 Home.py:83
+#: all_pages/0 Home.py:188
 msgid "Broski"
 msgstr "Broski"
 
@@ -1698,440 +1997,163 @@ msgstr "[**Goober Dash Level Modding**](https://twhlynch.me/goober-dash-level-mo
 msgid "Goober Dash Level Modding"
 msgstr "Úprava úrovne Goober Dash"
 
-#: all_pages/3 Goober Royale.py:78
-msgid "**GOOBER ROYALE** is a multiplayer battle royale game in which each player controls a character (called a \"goober\") and must collect weapons, power-ups and other items to eliminate their opponents. The clashes bring together 16 players on a map and the objective will be to be the last survivor of the game. You can play alone or in a team of 4 players. Your Goober will have several weapons, a main missile that reloads at regular intervals and a secondary accessory such as mines, a tornado, a drill and many others. Also use your jetpack to move around the map more easily, reach high places and surprise your opponents. Completing games and missions will earn you gold coins that you can spend either to improve your Goober's skills or to buy cosmetics that will give your character a unique style. An online ranking will allow you to see the 100 best players in the world and in your region."
-msgstr "**GOOBER ROYALE** je bojová hra pre viacerých hráčov, v ktorej každý hráč ovláda svoju postavu (tzv. \"goober\") a musí zbierať zbrane, vylepšenia a ďalšie predmety, aby eliminoval svojich súperov. V stretoch sa na mape stretne 16 hráčov a cieľom bude byť posledným preživším v hre. Hrať môžete sami alebo v tíme 4 hráčov. Váš Goober bude mať niekoľko zbraní, hlavnú strelu, ktorá sa v pravidelných intervaloch dobíja, a sekundárne príslušenstvo, ako sú míny, tornádo, vrták a mnoho ďalších. Používajte aj jetpack, aby ste sa ľahšie pohybovali po mape, dosiahli na vyvýšené miesta a prekvapili svojich súperov. Za dokončenie hier a misií získate zlaté mince, ktoré môžete minúť buď na zlepšenie schopností vášho Goobera, alebo na nákup kozmetiky, ktorá dodá vašej postave jedinečný štýl. Online rebríček vám umožní vidieť 100 najlepších hráčov na svete a vo vašom regióne."
-
-#: all_pages/3 Goober Royale.py:83
-msgid "**Goober Royale** is in **beta** currently (Bugs are expected and Data may be reset in future)"
-msgstr "**Goober Royale** je momentálne v **beta** verzii (očakávajú sa chyby a údaje môžu byť v budúcnosti obnovené)"
-
-#: all_pages/7 About.py:55 all_pages/0 Home.py:194
-msgid "About"
-msgstr "O stránke"
-
-#: all_pages/7 About.py:57
-msgid "What is WinterPixelGames?"
-msgstr "Čo je WinterPixelGames?"
-
-#: all_pages/7 About.py:63
-msgid "**:blue-background[WinterPixelGames]** (WPG) is a community-driven site made by [**TANK8K**](https://tank8k.com/) which provides useful **Tools & Statistics** of games made by **[Winterpixel Games](https://www.winterpixel.com/)**, including **[Rocket Bot Royale](./Rocket_Bot_Royale)**, **[Goober Dash](./Goober_Dash)**, **[Goober Royale](./Goober_Royale)**, **[Goober Shot](./Goober_Shot)**, and **[Moonrock Miners](./Moonrock_Miners)**."
-msgstr "**:blue-background[WinterPixelGames]** (WPG) je komunitná stránka vytvorená [**TANK8K**](https://tank8k.com/), ktorá poskytuje užitočné **nástroje a štatistiky** hier od **[Winterpixel Games](https://www.winterpixel.com/)**, vrátane **[Rocket Bot Royale](./Rocket_Bot_Royale)**, **[Goober Dash](./Goober_Dash)**, **[Goober Royale](./Goober_Royale)**, **[Goober Shot](./Goober_Shot)** a **[Moonrock Miners](./Moonrock_Miners)**."
-
-#: all_pages/7 About.py:70
-msgid "Affiliation"
-msgstr "Príslušnosť"
-
-#: all_pages/7 About.py:74
-msgid "This website is **NOT** affiliated with or endorsed by **Winterpixel Games Inc.**"
-msgstr "Táto webová stránka nie je **spojená s **Winterpixel Games Inc.** ani ňou nie je podporovaná."
-
-#: all_pages/7 About.py:81
-msgid "Copyright Notice"
-msgstr "Oznámenie o autorských právach"
-
-#: all_pages/7 About.py:85
-msgid "Rocket Bot Royale, Goober Dash, Goober Royale, Goober Shot, Moonrock Miners, Websites and Media **@ Winterpixel Games Inc.**"
-msgstr "Rocket Bot Royale, Goober Dash, Goober Royale, Goober Shot, Moonrock Miners, webové stránky a médiá **@ Winterpixel Games Inc.**"
-
-#: all_pages/7 About.py:92
-msgid "License"
-msgstr "Licencia"
-
-#: all_pages/7 About.py:95
-msgid "The source code is licensed under **MIT license**."
-msgstr "Zdrojový kód je licencovaný pod **licenciou MIT**."
-
-#: all_pages/7 About.py:101
-msgid "Technology"
-msgstr "Technológia"
-
-#: all_pages/7 About.py:108
-msgid "Framework"
-msgstr "Rámec"
-
-#: all_pages/7 About.py:111 common_config.py:2226
+#: all_pages/E Language.py:19 all_pages/7 About.py:110 all_pages/0 Home.py:227
 msgid "Language"
 msgstr "Jazyk"
 
-#: all_pages/7 About.py:114
-msgid "Database"
-msgstr "Databáza"
-
-#: all_pages/7 About.py:117
-msgid "Cloud Vendor"
-msgstr "Predajca cloudu"
-
-#: all_pages/7 About.py:120
-msgid "Web Server"
-msgstr "Webový server"
-
-#: all_pages/7 About.py:123
-msgid "Source Code"
-msgstr "Zdrojový kód"
-
-#: all_pages/7 About.py:130
-msgid "Developer"
-msgstr "Vývojár"
-
-#: all_pages/7 About.py:141
-msgid "Personal Website"
-msgstr "Osobná webová stránka"
-
-#: all_pages/7 About.py:146
-msgid "Developed with 💖 by **[:blue[TANK8K]](https://tank8k.com/)**"
-msgstr "Vyvinuté s 💖 od **[:blue[TANK8K]](https://tank8k.com/)**"
-
-#: all_pages/1 Rocket Bot Royale.py:110
-msgid "**ROCKET BOT ROYALE** is a fun new take on the online battle royale formula. Powerful, wall-climbing, rocket-jumping, artillery-pumping Robo-Tanks are the vehicle of choice in this fast-paced shootout, where the goal is to survive longer than the competition. Collect the loot to upgrade your arsenal, tunnel into the terrain to take cover and collect buried treasure, and avoid the rising water levels to be the blast one standing!"
-msgstr "**ROCKET BOT ROYALE** je zábavná nová verzia online battle royale. V tejto rýchlej prestrelke, v ktorej je cieľom prežiť dlhšie ako súper, sa používajú výkonné, po stenách lezúce, rakety skákajúce a delostrelectvo pumpujúce robo-tanky. Zbierajte korisť na vylepšenie svojho arzenálu, tunelujte v teréne, aby ste sa kryli a zbierali zakopané poklady, a vyhýbajte sa stúpajúcej hladine vody, aby ste zostali nažive!"
-
-#: all_pages/1 Rocket Bot Royale.py:114 all_pages/2 Goober Dash.py:146
-msgid "Platforms"
-msgstr "Platformy"
-
-#: all_pages/1 Rocket Bot Royale.py:129 all_pages/2 Goober Dash.py:160
-msgid "Communities"
-msgstr "Komunity"
-
-#: all_pages/0 Home.py:12
-msgid "Welcome to"
-msgstr "Vitajte v"
-
-#: all_pages/0 Home.py:15
-msgid "A website which provides useful Tools & Statistics of games made by [Winterpixel Games](https://www.winterpixel.com/)"
-msgstr "Webová stránka, ktorá poskytuje užitočné nástroje a štatistiky hier od [Winterpixel Games](https://www.winterpixel.com/)"
-
-#: all_pages/0 Home.py:64 all_pages/0 Home.py:169 common_config.py:1257
-msgid "Goober Dash"
-msgstr "Goober Dash"
-
-#: all_pages/0 Home.py:161
-msgid "Home"
-msgstr "Domov"
-
-#: all_pages/2 Goober Dash.py:142
-msgid "**GOOBER DASH** is a multiplayer battle royale game that you can play online. Dash your opponents into deadly spikes, gather precious coins, and unlock a plethora of unique costumes as you strive to outlast the competition. Invite your friends to engage in epic battles in custom private lobbies. Unleash your creativity with the level editor, crafting and conquering your very own battlegrounds. Climb the global and country-based seasonal leaderboards to prove your dominance in this thrilling contest."
-msgstr "**GOOBER DASH** je multiplayerová battle royale hra, ktorú môžete hrať online. Narážajte so súpermi do smrtiacich hrotov, zbierajte cenné mince a odomykajte množstvo jedinečných kostýmov, kým sa snažíte prekonať konkurenciu. Pozvite svojich priateľov a zapojte sa do epických bitiek vo vlastných súkromných lobby. Uvoľnite svoju kreativitu pomocou editora úrovní, vytvárajte a dobývajte vlastné bojiská. Šplhajte sa v celosvetových sezónnych rebríčkoch a rebríčkoch jednotlivých krajín, aby ste dokázali svoju dominanciu v tejto napínavej súťaži."
-
-#: all_pages/2 Goober Dash.py:193
-msgid "Time Trials (Certified Levels)"
-msgstr "Skúšky na čas (certifikované úrovne)"
-
-#: common_config.py:47 common_config.py:206
-msgid "Verify Account"
-msgstr "Overenie účtu"
-
-#: common_config.py:235 common_config.py:595 common_config.py:962
-msgid "Hello"
-msgstr "Dobrý deň,"
-
-#: common_config.py:240
-msgid "Welcome to WinterPixelGames! We're excited to have you join our community. Before you creating your account, we need to verify your email address to ensure we have the correct information."
-msgstr "Vitajte na stránke WinterPixelGames! Tešíme sa, že ste sa pripojili k našej komunite. Pred vytvorením vášho účtu musíme overiť vašu e-mailovú adresu, aby sme sa uistili, že máme správne informácie."
-
-#: common_config.py:245
-msgid "Your verification code is "
-msgstr "Váš overovací kód je "
-
-#: common_config.py:251
-msgid "You can now register your account using this verification code and the corresponding email."
-msgstr "Teraz môžete zaregistrovať svoje konto pomocou tohto overovacieho kódu a príslušného e-mailu."
-
-#: common_config.py:256 common_config.py:618 common_config.py:985
-msgid "Happy Gaming!"
-msgstr "Šťastné hranie!"
-
-#: common_config.py:273
-msgid "Verify"
-msgstr "Overiť"
-
-#: common_config.py:288
-msgid "Please disregard this email if you did not submit a verify email request."
-msgstr "Ak ste nezaslali žiadosť o overenie e-mailu, neberte tento e-mail do úvahy."
-
-#: common_config.py:317 common_config.py:683 common_config.py:1050
-msgid "Problems or questions?"
-msgstr "Problémy alebo otázky?"
-
-#: common_config.py:407 common_config.py:566
-msgid "Forgot Username Request"
-msgstr "Žiadosť o zabudnuté používateľské meno"
-
-#: common_config.py:602
-msgid "We have sent you this email in response to your request about forgotting your username on WinterPixelGames."
-msgstr "Tento e-mail sme vám poslali v reakcii na vašu žiadosť o zabudnutí vášho používateľského mena na WinterPixelGames."
-
-#: common_config.py:607
-msgid "Your username of the associated email is "
-msgstr "Vaše používateľské meno súvisiaceho e-mailu je "
-
-#: common_config.py:613
-msgid "You can now login to your account using this username and the corresponding password."
-msgstr "Teraz sa môžete prihlásiť do svojho konta pomocou tohto používateľského mena a príslušného hesla."
-
-#: common_config.py:621 common_config.py:988
-msgid "WinterPixelGames"
-msgstr "WinterPixelGames"
-
-#: common_config.py:637 common_config.py:1332 common_config.py:1350
-#: common_config.py:1353
-msgid "Login"
-msgstr "Prihlásenie"
-
-#: common_config.py:653
-msgid "Please disregard this email if you did not submit a forgot username request."
-msgstr "Ak ste nezaslali žiadosť o zabudnuté používateľské meno, neberte tento e-mail do úvahy."
-
-#: common_config.py:773 common_config.py:932
-msgid "Forgot Password Request"
-msgstr "Žiadosť o zabudnuté heslo"
-
-#: common_config.py:969
-msgid "We have sent you this email in response to your request about forgotting your password on WinterPixelGames."
-msgstr "Tento e-mail sme vám poslali ako odpoveď na vašu žiadosť o zabudnutie hesla na WinterPixelGames."
-
-#: common_config.py:974
-msgid "Your new auto-generated password is "
-msgstr "Vaše nové automaticky vygenerované heslo je "
-
-#: common_config.py:980
-msgid "You can now login to your account using this password and change it to a custom password if necessary."
-msgstr "Teraz sa môžete prihlásiť do svojho konta pomocou tohto hesla a v prípade potreby ho zmeniť na vlastné heslo."
-
-#: common_config.py:1004 common_config.py:1401
-msgid "Reset Password"
-msgstr "Obnovenie hesla"
-
-#: common_config.py:1020
-msgid "Please disregard this email if you did not submit a forgot password request."
-msgstr "Ak ste nezaslali žiadosť o zabudnuté heslo, neberte tento e-mail do úvahy."
-
-#: common_config.py:1187 common_config.py:1194
-msgid "Linked Game Accounts"
-msgstr "Prepojené herné účty"
-
-#: common_config.py:1188
-msgid "Change Nickname/Email"
-msgstr "Zmena prezývky/e-mailu"
-
-#: common_config.py:1189 common_config.py:1307
-msgid "Change Password"
-msgstr "Zmena hesla"
-
-#: common_config.py:1197
-msgid "Statistics of Linked Accounts will be tracked daily and displayed in Player Info"
-msgstr "Štatistiky prepojených účtov sa budú denne sledovať a zobrazovať v časti Informácie o hráčovi."
-
-#: common_config.py:1261 common_config.py:1292
-msgid "Update"
-msgstr "Aktualizácia"
-
-#: common_config.py:1268
-msgid "Wrong User ID format of "
-msgstr "Nesprávny formát ID používateľa "
-
-#: common_config.py:1280
-msgid "User IDs are updated successfully"
-msgstr "ID používateľov sú úspešne aktualizované"
-
-#: common_config.py:1287
-msgid "Change Name/Email"
-msgstr "Zmena mena/e-mailu"
-
-#: common_config.py:1288
-msgid "Field"
-msgstr "Pole"
-
-#: common_config.py:1289 common_config.py:1552
-msgid "Nickname"
-msgstr "Prezývka"
-
-#: common_config.py:1290 common_config.py:1375 common_config.py:1440
-msgid "Email"
-msgstr "E-mail"
-
-#: common_config.py:1291
-msgid "New value"
-msgstr "Nová hodnota"
-
-#: common_config.py:1297
-msgid "Entries updated successfully"
-msgstr "Záznamy boli úspešne aktualizované"
-
-#: common_config.py:1308
-msgid "Current Password"
-msgstr "Aktuálne heslo"
-
-#: common_config.py:1309
-msgid "New Password"
-msgstr "Nové heslo"
-
-#: common_config.py:1310 common_config.py:1559
-msgid "Repeat Password"
-msgstr "Opakovanie hesla"
-
-#: common_config.py:1311
-msgid "Reset"
-msgstr "Obnovenie"
-
-#: common_config.py:1316
-msgid "Password modified successfully"
-msgstr "Heslo bolo úspešne zmenené"
-
-#: common_config.py:1333 common_config.py:1374
-msgid "Forgot Username"
-msgstr "Zabudnuté používateľské meno"
-
-#: common_config.py:1334 common_config.py:1399
-msgid "Forgot Password"
-msgstr "Zabudnuté heslo"
-
-#: common_config.py:1351 common_config.py:1400 common_config.py:1557
-msgid "Username"
-msgstr "Používateľské meno"
-
-#: common_config.py:1352 common_config.py:1558
-msgid "Password"
-msgstr "Heslo"
-
-#: common_config.py:1361
-msgid "Username or Password is incorrect"
-msgstr "Používateľské meno alebo heslo je nesprávne"
-
-#: common_config.py:1376
-msgid "Send Userename"
-msgstr "Odoslať meno používateľa"
-
-#: common_config.py:1385
-msgid "Username is sent to the associated email successfully"
-msgstr "Používateľské meno je úspešne odoslané na súvisiaci e-mail"
-
-#: common_config.py:1387 common_config.py:1510
-msgid "Email not found"
-msgstr "E-mail nebol nájdený"
-
-#: common_config.py:1416
-msgid "New password is sent to the associated email successfully"
-msgstr "Nové heslo sa úspešne odošle na priradený e-mail"
-
-#: common_config.py:1419
-msgid "Username not found"
-msgstr "Používateľské meno nebolo nájdené"
-
-#: common_config.py:1430 common_config.py:1439 common_config.py:1450
-msgid "Verify Email"
-msgstr "Overenie e-mailu"
-
-#: common_config.py:1431 common_config.py:1551 common_config.py:1560
-msgid "Register"
-msgstr "Registrácia"
-
-#: common_config.py:1444
-msgid "Send Verification Code"
-msgstr "Odoslať overovací kód"
-
-#: common_config.py:1448
-msgid "Verification Code"
-msgstr "Overovací kód"
-
-#: common_config.py:1494
-msgid "Verification code is sent to the email successfully"
-msgstr "Overovací kód je úspešne odoslaný na e-mail"
-
-#: common_config.py:1499
-msgid "Email is required"
-msgstr "Vyžaduje sa e-mail"
-
-#: common_config.py:1501
-msgid "Email is not valid"
-msgstr "E-mail nie je platný"
-
-#: common_config.py:1503
-msgid "Email is already in use"
-msgstr "E-mail sa už používa"
-
-#: common_config.py:1515
-msgid "Wrong verification code"
-msgstr "Nesprávny overovací kód"
-
-#: common_config.py:1526
-msgid "Verify success"
-msgstr "Overenie úspechu"
-
-#: common_config.py:1552
-msgid "alphabets only"
-msgstr "iba abecedy"
-
-#: common_config.py:1553
-msgid "Verified Email"
-msgstr "Overený e-mail"
-
-#: common_config.py:1555
-msgid "used for forgot username/password"
-msgstr "použité pre zabudnuté používateľské meno/heslo"
-
-#: common_config.py:1557 common_config.py:1558
-msgid "used for login"
-msgstr "používa sa na prihlásenie"
-
-#: common_config.py:1564
-msgid "User registered successfully"
-msgstr "Používateľ sa úspešne zaregistroval"
-
-#: common_config.py:1591
-msgid "Welcome back"
-msgstr "Vitajte späť"
-
-#: common_config.py:1692
+#: all_pages/E Language.py:148
 msgid "Apply"
 msgstr "Aplikovať"
 
-#: common_config.py:1695
+#: all_pages/E Language.py:154
 msgid "Contributors"
 msgstr "Prispievatelia"
 
-#: common_config.py:1695
+#: all_pages/E Language.py:154
 msgid "In no particular order"
 msgstr "Bez určenia poradia"
 
-#: common_config.py:1710
+#: all_pages/E Language.py:169
 msgid "Contribute"
 msgstr "Prispieť na"
 
-#: common_config.py:1760
-msgid "Back to Home"
-msgstr "Späť na Domov"
+#: all_pages/3 Goober Royale.py:76
+msgid "**GOOBER ROYALE** is a multiplayer battle royale game in which each player controls a character (called a \"goober\") and must collect weapons, power-ups and other items to eliminate their opponents. The clashes bring together 16 players on a map and the objective will be to be the last survivor of the game. You can play alone or in a team of 4 players. Your Goober will have several weapons, a main missile that reloads at regular intervals and a secondary accessory such as mines, a tornado, a drill and many others. Also use your jetpack to move around the map more easily, reach high places and surprise your opponents. Completing games and missions will earn you gold coins that you can spend either to improve your Goober's skills or to buy cosmetics that will give your character a unique style. An online ranking will allow you to see the 100 best players in the world and in your region."
+msgstr "**GOOBER ROYALE** je bojová hra pre viacerých hráčov, v ktorej každý hráč ovláda svoju postavu (tzv. \"goober\") a musí zbierať zbrane, vylepšenia a ďalšie predmety, aby eliminoval svojich súperov. V stretoch sa na mape stretne 16 hráčov a cieľom bude byť posledným preživším v hre. Hrať môžete sami alebo v tíme 4 hráčov. Váš Goober bude mať niekoľko zbraní, hlavnú strelu, ktorá sa v pravidelných intervaloch dobíja, a sekundárne príslušenstvo, ako sú míny, tornádo, vrták a mnoho ďalších. Používajte aj jetpack, aby ste sa ľahšie pohybovali po mape, dosiahli na vyvýšené miesta a prekvapili svojich súperov. Za dokončenie hier a misií získate zlaté mince, ktoré môžete minúť buď na zlepšenie schopností vášho Goobera, alebo na nákup kozmetiky, ktorá dodá vašej postave jedinečný štýl. Online rebríček vám umožní vidieť 100 najlepších hráčov na svete a vo vašom regióne."
 
-#: common_config.py:1802
-msgid "Back to Menu"
-msgstr "Späť na menu"
+#: all_pages/3 Goober Royale.py:81
+msgid "**Goober Royale** is in **beta** currently (Bugs are expected and Data may be reset in future)"
+msgstr "**Goober Royale** je momentálne v **beta** verzii (očakávajú sa chyby a údaje môžu byť v budúcnosti obnovené)"
 
-#: common_config.py:2160
-msgid "This website is NOT affiliated with or endorsed by Winterpixel Games Inc."
-msgstr "Táto webová stránka NIE JE spojená so spoločnosťou Winterpixel Games Inc. ani ňou nie je podporovaná."
+#: all_pages/7 About.py:54 all_pages/0 Home.py:193
+msgid "About"
+msgstr "O stránke"
 
-#: common_config.py:2163
-msgid "All relevant trademarks belong to their respective owners."
-msgstr "Všetky príslušné ochranné známky patria ich príslušným vlastníkom."
+#: all_pages/7 About.py:56
+msgid "What is WinterPixelGames?"
+msgstr "Čo je WinterPixelGames?"
 
-#: common_config.py:2166
-msgid "Developed with 💖 by <a style=\"text-decoration:none\" href=\"https://tank8k.com/\" target=\"_blank\">TANK8K</a>"
-msgstr "Vyvinuté pomocou 💖 by <a style=\"text-decoration:none\" href=\"https://tank8k.com/\" target=\"_blank\">TANK8K</a>"
+#: all_pages/7 About.py:62
+msgid "**:blue-background[WinterPixelGames]** (WPG) is a community-driven site made by [**TANK8K**](https://tank8k.com/) which provides useful **Tools & Statistics** of games made by **[Winterpixel Games](https://www.winterpixel.com/)**, including **[Rocket Bot Royale](./Rocket_Bot_Royale)**, **[Goober Dash](./Goober_Dash)**, **[Goober Royale](./Goober_Royale)**, **[Goober Shot](./Goober_Shot)**, and **[Moonrock Miners](./Moonrock_Miners)**."
+msgstr "**:blue-background[WinterPixelGames]** (WPG) je komunitná stránka vytvorená [**TANK8K**](https://tank8k.com/), ktorá poskytuje užitočné **nástroje a štatistiky** hier od **[Winterpixel Games](https://www.winterpixel.com/)**, vrátane **[Rocket Bot Royale](./Rocket_Bot_Royale)**, **[Goober Dash](./Goober_Dash)**, **[Goober Royale](./Goober_Royale)**, **[Goober Shot](./Goober_Shot)** a **[Moonrock Miners](./Moonrock_Miners)**."
 
-#: common_config.py:2194 common_config.py:2231
+#: all_pages/7 About.py:69
+msgid "Affiliation"
+msgstr "Príslušnosť"
+
+#: all_pages/7 About.py:73
+msgid "This website is **NOT** affiliated with or endorsed by **Winterpixel Games Inc.**"
+msgstr "Táto webová stránka nie je **spojená s **Winterpixel Games Inc.** ani ňou nie je podporovaná."
+
+#: all_pages/7 About.py:80
+msgid "Copyright Notice"
+msgstr "Oznámenie o autorských právach"
+
+#: all_pages/7 About.py:84
+msgid "Rocket Bot Royale, Goober Dash, Goober Royale, Goober Shot, Moonrock Miners, Websites and Media **@ Winterpixel Games Inc.**"
+msgstr "Rocket Bot Royale, Goober Dash, Goober Royale, Goober Shot, Moonrock Miners, webové stránky a médiá **@ Winterpixel Games Inc.**"
+
+#: all_pages/7 About.py:91
+msgid "License"
+msgstr "Licencia"
+
+#: all_pages/7 About.py:94
+msgid "The source code is licensed under **MIT license**."
+msgstr "Zdrojový kód je licencovaný pod **licenciou MIT**."
+
+#: all_pages/7 About.py:100
+msgid "Technology"
+msgstr "Technológia"
+
+#: all_pages/7 About.py:107
+msgid "Framework"
+msgstr "Rámec"
+
+#: all_pages/7 About.py:113
+msgid "Database"
+msgstr "Databáza"
+
+#: all_pages/7 About.py:116
+msgid "Cloud Vendor"
+msgstr "Predajca cloudu"
+
+#: all_pages/7 About.py:119
+msgid "Web Server"
+msgstr "Webový server"
+
+#: all_pages/7 About.py:122
+msgid "Source Code"
+msgstr "Zdrojový kód"
+
+#: all_pages/7 About.py:129
+msgid "Developer"
+msgstr "Vývojár"
+
+#: all_pages/7 About.py:140
+msgid "Personal Website"
+msgstr "Osobná webová stránka"
+
+#: all_pages/7 About.py:145
+msgid "Developed with 💖 by **[:blue[TANK8K]](https://tank8k.com/)**"
+msgstr "Vyvinuté s 💖 od **[:blue[TANK8K]](https://tank8k.com/)**"
+
+#: all_pages/1 Rocket Bot Royale.py:108
+msgid "**ROCKET BOT ROYALE** is a fun new take on the online battle royale formula. Powerful, wall-climbing, rocket-jumping, artillery-pumping Robo-Tanks are the vehicle of choice in this fast-paced shootout, where the goal is to survive longer than the competition. Collect the loot to upgrade your arsenal, tunnel into the terrain to take cover and collect buried treasure, and avoid the rising water levels to be the blast one standing!"
+msgstr "**ROCKET BOT ROYALE** je zábavná nová verzia online battle royale. V tejto rýchlej prestrelke, v ktorej je cieľom prežiť dlhšie ako súper, sa používajú výkonné, po stenách lezúce, rakety skákajúce a delostrelectvo pumpujúce robo-tanky. Zbierajte korisť na vylepšenie svojho arzenálu, tunelujte v teréne, aby ste sa kryli a zbierali zakopané poklady, a vyhýbajte sa stúpajúcej hladine vody, aby ste zostali nažive!"
+
+#: all_pages/1 Rocket Bot Royale.py:112 all_pages/2 Goober Dash.py:144
+msgid "Platforms"
+msgstr "Platformy"
+
+#: all_pages/1 Rocket Bot Royale.py:127 all_pages/2 Goober Dash.py:158
+msgid "Communities"
+msgstr "Komunity"
+
+#: all_pages/0 Home.py:11
+msgid "Welcome to"
+msgstr "Vitajte v"
+
+#: all_pages/0 Home.py:14
+msgid "A website which provides useful Tools & Statistics of games made by [Winterpixel Games](https://www.winterpixel.com/)"
+msgstr "Webová stránka, ktorá poskytuje užitočné nástroje a štatistiky hier od [Winterpixel Games](https://www.winterpixel.com/)"
+
+#: all_pages/0 Home.py:160
+msgid "Home"
+msgstr "Domov"
+
+#: all_pages/0 Home.py:215
 msgid "Log Out"
 msgstr "Odhlásenie"
 
-#: common_config.py:2202
-msgid "Account"
-msgstr "Účet"
+#: all_pages/2 Goober Dash.py:140
+msgid "**GOOBER DASH** is a multiplayer battle royale game that you can play online. Dash your opponents into deadly spikes, gather precious coins, and unlock a plethora of unique costumes as you strive to outlast the competition. Invite your friends to engage in epic battles in custom private lobbies. Unleash your creativity with the level editor, crafting and conquering your very own battlegrounds. Climb the global and country-based seasonal leaderboards to prove your dominance in this thrilling contest."
+msgstr "**GOOBER DASH** je multiplayerová battle royale hra, ktorú môžete hrať online. Narážajte so súpermi do smrtiacich hrotov, zbierajte cenné mince a odomykajte množstvo jedinečných kostýmov, kým sa snažíte prekonať konkurenciu. Pozvite svojich priateľov a zapojte sa do epických bitiek vo vlastných súkromných lobby. Uvoľnite svoju kreativitu pomocou editora úrovní, vytvárajte a dobývajte vlastné bojiská. Šplhajte sa v celosvetových sezónnych rebríčkoch a rebríčkoch jednotlivých krajín, aby ste dokázali svoju dominanciu v tejto napínavej súťaži."
 
-#: common_config.py:2210
-msgid "Log In"
-msgstr "Prihlásenie"
+#: all_pages/2 Goober Dash.py:191
+msgid "Time Trials (Certified Levels)"
+msgstr "Skúšky na čas (certifikované úrovne)"
 
-#: common_config.py:2218
-msgid "Sign Up"
-msgstr "Zaregistrujte sa"
+#: common_config.py:59
+msgid "Welcome back"
+msgstr "Vitajte späť"
+
+#: common_config.py:109
+msgid "Back to Home"
+msgstr "Späť na Domov"
+
+#: common_config.py:151
+msgid "Back to Menu"
+msgstr "Späť na menu"
+
+#: common_config.py:179
+msgid "This website is NOT affiliated with or endorsed by Winterpixel Games Inc."
+msgstr "Táto webová stránka NIE JE spojená so spoločnosťou Winterpixel Games Inc. ani ňou nie je podporovaná."
+
+#: common_config.py:181
+msgid "All relevant trademarks belong to their respective owners."
+msgstr "Všetky príslušné ochranné známky patria ich príslušným vlastníkom."
+
+#: common_config.py:184
+msgid "Developed with 💖 by <a style=\"text-decoration:none\" href=\"https://tank8k.com/\" target=\"_blank\">TANK8K</a>"
+msgstr "Vyvinuté pomocou 💖 by <a style=\"text-decoration:none\" href=\"https://tank8k.com/\" target=\"_blank\">TANK8K</a>"
 

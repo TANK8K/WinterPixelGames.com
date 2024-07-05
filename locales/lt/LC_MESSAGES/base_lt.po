@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: winterpixelgames\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-04 14:26+0800\n"
-"PO-Revision-Date: 2024-07-04 06:27\n"
+"POT-Creation-Date: 2024-07-05 16:37+0800\n"
+"PO-Revision-Date: 2024-07-05 08:41\n"
 "Last-Translator: \n"
 "Language-Team: Lithuanian\n"
 "Language: lt_LT\n"
@@ -17,90 +17,211 @@ msgstr ""
 "X-Crowdin-File: base.pot\n"
 "X-Crowdin-File-ID: 10\n"
 
-#: all_pages/6 Broski.py:62
+#: all_pages/A Log In.py:32 all_pages/0 Home.py:205
+msgid "Log In"
+msgstr "Prisijungti"
+
+#: all_pages/A Log In.py:56 all_pages/A Log In.py:215
+msgid "Forgot Username Request"
+msgstr "Užmiršto vartotojo vardo užklausa"
+
+#: all_pages/A Log In.py:244 all_pages/A Log In.py:611
+#: all_pages/B Sign Up.py:246
+msgid "Hello"
+msgstr "Sveiki"
+
+#: all_pages/A Log In.py:251
+msgid "We have sent you this email in response to your request about forgotting your username on WinterPixelGames."
+msgstr "Mes išsiuntėme jums šį el. laišką, atsakydami į jūsų užklausą dėl pamiršto vartotojo vardo \"WinterPixelGames\" svetainėje."
+
+#: all_pages/A Log In.py:256
+msgid "Your username of the associated email is "
+msgstr "Jūsų susieto el. pašto naudotojo vardas yra "
+
+#: all_pages/A Log In.py:262
+msgid "You can now login to your account using this username and the corresponding password."
+msgstr "Dabar galite prisijungti prie savo paskyros naudodami šį vartotojo vardą ir atitinkamą slaptažodį."
+
+#: all_pages/A Log In.py:267 all_pages/A Log In.py:634
+#: all_pages/B Sign Up.py:267
+msgid "Happy Gaming!"
+msgstr "Laimingo žaidimo!"
+
+#: all_pages/A Log In.py:270 all_pages/A Log In.py:637
+msgid "WinterPixelGames"
+msgstr "WinterPixelGames"
+
+#: all_pages/A Log In.py:286 all_pages/A Log In.py:787
+#: all_pages/A Log In.py:795 all_pages/A Log In.py:798
+msgid "Login"
+msgstr "Prisijungimas"
+
+#: all_pages/A Log In.py:302
+msgid "Please disregard this email if you did not submit a forgot username request."
+msgstr "Prašome nekreipti dėmesio į šį el. laišką, jei nepateikėte pamiršto vartotojo vardo užklausos."
+
+#: all_pages/A Log In.py:332 all_pages/A Log In.py:699
+#: all_pages/B Sign Up.py:328
+msgid "Problems or questions?"
+msgstr "Problemos ar klausimai?"
+
+#: all_pages/A Log In.py:422 all_pages/A Log In.py:581
+msgid "Forgot Password Request"
+msgstr "Prašymas pamiršti slaptažodį"
+
+#: all_pages/A Log In.py:618
+msgid "We have sent you this email in response to your request about forgotting your password on WinterPixelGames."
+msgstr "Mes išsiuntėme jums šį el. laišką, atsakydami į jūsų užklausą apie pamirštą slaptažodį \"WinterPixelGames\"."
+
+#: all_pages/A Log In.py:623
+msgid "Your new auto-generated password is "
+msgstr "Jūsų naujasis automatiškai sugeneruotas slaptažodis yra "
+
+#: all_pages/A Log In.py:629
+msgid "You can now login to your account using this password and change it to a custom password if necessary."
+msgstr "Dabar galite prisijungti prie savo paskyros naudodami šį slaptažodį ir, jei reikia, pakeisti jį į pasirinktinį slaptažodį."
+
+#: all_pages/A Log In.py:653 all_pages/A Log In.py:856
+msgid "Reset Password"
+msgstr "Iš naujo nustatyti slaptažodį"
+
+#: all_pages/A Log In.py:669
+msgid "Please disregard this email if you did not submit a forgot password request."
+msgstr "Prašome nekreipti dėmesio į šį el. laišką, jei nepateikėte prašymo pamiršti slaptažodį."
+
+#: all_pages/A Log In.py:788 all_pages/A Log In.py:829
+msgid "Forgot Username"
+msgstr "Pamiršote vartotojo vardą"
+
+#: all_pages/A Log In.py:789 all_pages/A Log In.py:854
+msgid "Forgot Password"
+msgstr "Pamiršote slaptažodį"
+
+#: all_pages/A Log In.py:796 all_pages/A Log In.py:855
+#: all_pages/B Sign Up.py:527
+msgid "Username"
+msgstr "Vartotojo vardas"
+
+#: all_pages/A Log In.py:797 all_pages/B Sign Up.py:528
+msgid "Password"
+msgstr "Slaptažodis"
+
+#: all_pages/A Log In.py:802
+msgid "Username or Password is incorrect"
+msgstr "Neteisingas vartotojo vardas arba slaptažodis"
+
+#: all_pages/A Log In.py:830 all_pages/B Sign Up.py:446
+#: all_pages/D Account.py:172
+msgid "Email"
+msgstr "El. paštas"
+
+#: all_pages/A Log In.py:831
+msgid "Send Userename"
+msgstr "Siųsti vartotojo vardą"
+
+#: all_pages/A Log In.py:840
+msgid "Username is sent to the associated email successfully"
+msgstr "Vartotojo vardas sėkmingai išsiųstas į susijusį el. paštą"
+
+#: all_pages/A Log In.py:842 all_pages/B Sign Up.py:460
+msgid "Email not found"
+msgstr "El. paštas nerastas"
+
+#: all_pages/A Log In.py:870
+msgid "New password is sent to the associated email successfully"
+msgstr "Naujas slaptažodis sėkmingai išsiųstas į susijusį el. pašto adresą"
+
+#: all_pages/A Log In.py:872
+msgid "Username not found"
+msgstr "Vartotojo vardas nerastas"
+
+#: all_pages/A Log In.py:876
+msgid "Click the button again if it doesn't work for the first time"
+msgstr "Spustelėkite mygtuką dar kartą, jei jis neveikia pirmą kartą"
+
+#: all_pages/6 Broski.py:60
 msgid "**BROSKI** is an arcade pixel style skiing game, it is a fun and has a unique visual style that allows you to enjoy skiing even in summer. In the game, you will play as a skier who races down a snowy mountain. Your goal is to ski the furthest distance possible. As you slide down the hill faster and faster, you have to avoid more and more obstacles on the way, which makes the game challenging. To test how far you can go, take the challenge!"
 msgstr "**BROSKI** - tai arkadinis pikselių stiliaus slidinėjimo žaidimas, kuris yra įdomus ir pasižymi unikaliu vizualiniu stiliumi, leidžiančiu mėgautis slidinėjimu net ir vasarą. Žaidime žaisite kaip slidininkas, kuris lenktyniauja nuo snieguoto kalno. Tavo tikslas - nučiuožti slidėmis kuo didesnį atstumą. Slidinėdami nuo kalno vis greičiau ir greičiau, pakeliui turėsite išvengti vis daugiau kliūčių, todėl žaidimas taps iššūkiu. Norėdami išbandyti, kaip toli galite nuvažiuoti, priimkite iššūkį!"
 
-#: all_pages/6 Broski.py:66
+#: all_pages/6 Broski.py:64
 msgid "**Broski** is a **prototype single-player game** currently"
 msgstr "**Broski** šiuo metu yra **prototipinis vieno žaidėjo žaidimas**."
 
-#: all_pages/6 Broski.py:69 all_pages/5 Moonrock Miners.py:77
-#: all_pages/4 Goober Shot.py:87 all_pages/3 Goober Royale.py:87
+#: all_pages/6 Broski.py:67 all_pages/5 Moonrock Miners.py:75
+#: all_pages/4 Goober Shot.py:85 all_pages/3 Goober Royale.py:85
 msgid "Platform"
 msgstr "Platforma"
 
-#: all_pages/6 Broski.py:71 all_pages/5 Moonrock Miners.py:79
-#: all_pages/4 Goober Shot.py:89 all_pages/3 Goober Royale.py:89
-#: all_pages/1 Rocket Bot Royale.py:116 all_pages/2 Goober Dash.py:148
+#: all_pages/6 Broski.py:69 all_pages/5 Moonrock Miners.py:77
+#: all_pages/4 Goober Shot.py:87 all_pages/3 Goober Royale.py:87
+#: all_pages/1 Rocket Bot Royale.py:114 all_pages/2 Goober Dash.py:146
 msgid "Browser"
 msgstr "Naršyklė"
 
-#: all_pages/6 Broski.py:72 all_pages/5 Moonrock Miners.py:80
-#: all_pages/4 Goober Shot.py:90 all_pages/3 Goober Royale.py:90
+#: all_pages/6 Broski.py:70 all_pages/5 Moonrock Miners.py:78
+#: all_pages/4 Goober Shot.py:88 all_pages/3 Goober Royale.py:88
 msgid "Community"
 msgstr "Bendruomenė"
 
-#: all_pages/6 Broski.py:78 all_pages/5 Moonrock Miners.py:86
-#: all_pages/4 Goober Shot.py:96 all_pages/3 Goober Royale.py:96
-#: all_pages/1 Rocket Bot Royale.py:141 all_pages/2 Goober Dash.py:171
+#: all_pages/6 Broski.py:76 all_pages/5 Moonrock Miners.py:84
+#: all_pages/4 Goober Shot.py:94 all_pages/3 Goober Royale.py:94
+#: all_pages/1 Rocket Bot Royale.py:139 all_pages/2 Goober Dash.py:169
 msgid "Tools"
 msgstr "Įrankiai"
 
-#: all_pages/6 Broski.py:83 all_pages/5 Moonrock Miners.py:91
+#: all_pages/6 Broski.py:81 all_pages/5 Moonrock Miners.py:89
 #: all_pages/RocketBotRoyale/Tools/image_assets.py:10
-#: all_pages/4 Goober Shot.py:101 all_pages/GooberDash/Tools/image_assets.py:37
+#: all_pages/4 Goober Shot.py:99 all_pages/GooberDash/Tools/image_assets.py:37
 #: all_pages/MoonrockMiners/Tools/image_assets.py:13
 #: all_pages/GooberRoyale/Tools/image_assets.py:13
 #: all_pages/GooberShot/Tools/image_assets.py:13
-#: all_pages/3 Goober Royale.py:100 all_pages/1 Rocket Bot Royale.py:151
-#: all_pages/Broski/Tools/image_assets.py:13 all_pages/2 Goober Dash.py:184
+#: all_pages/3 Goober Royale.py:98 all_pages/1 Rocket Bot Royale.py:149
+#: all_pages/Broski/Tools/image_assets.py:13 all_pages/2 Goober Dash.py:182
 msgid "Image Assets"
 msgstr "Vaizdų turtas"
 
-#: all_pages/6 Broski.py:83 all_pages/5 Moonrock Miners.py:91
-#: all_pages/5 Moonrock Miners.py:103 all_pages/4 Goober Shot.py:101
-#: all_pages/4 Goober Shot.py:113 all_pages/4 Goober Shot.py:118
+#: all_pages/6 Broski.py:81 all_pages/5 Moonrock Miners.py:89
+#: all_pages/5 Moonrock Miners.py:101 all_pages/4 Goober Shot.py:99
+#: all_pages/4 Goober Shot.py:111 all_pages/4 Goober Shot.py:116
 #: all_pages/GooberDash/Statistics/player_info.py:480
 #: all_pages/GooberDash/Statistics/player_info.py:494
 #: all_pages/GooberDash/Statistics/player_info.py:496
-#: all_pages/GooberDash/Statistics/player_info.py:498
-#: all_pages/3 Goober Royale.py:109 all_pages/3 Goober Royale.py:114
-#: all_pages/1 Rocket Bot Royale.py:146 all_pages/1 Rocket Bot Royale.py:151
-#: all_pages/1 Rocket Bot Royale.py:163 all_pages/1 Rocket Bot Royale.py:168
-#: all_pages/2 Goober Dash.py:177 all_pages/2 Goober Dash.py:198
-#: all_pages/2 Goober Dash.py:203 all_pages/2 Goober Dash.py:208
-#: common_config.py:1200
+#: all_pages/GooberDash/Statistics/player_info.py:498 all_pages/D Account.py:78
+#: all_pages/3 Goober Royale.py:107 all_pages/3 Goober Royale.py:112
+#: all_pages/1 Rocket Bot Royale.py:144 all_pages/1 Rocket Bot Royale.py:149
+#: all_pages/1 Rocket Bot Royale.py:161 all_pages/1 Rocket Bot Royale.py:166
+#: all_pages/2 Goober Dash.py:175 all_pages/2 Goober Dash.py:196
+#: all_pages/2 Goober Dash.py:201 all_pages/2 Goober Dash.py:206
 msgid "WIP"
 msgstr "WIP"
 
-#: all_pages/5 Moonrock Miners.py:70
+#: all_pages/5 Moonrock Miners.py:68
 msgid "**MOONROCK MINERS** is a gravity-defying multiplayer space battle game set in an asteroid field. Blast other players, collect powerups and crystals, and avoid the asteroids. Try to survive until the end to win the match. Compete against players around the world in real-time to rank in every season. You can also create your own custom lobbies to play private games online with your friends!"
 msgstr "**MOONROCK MINERS** - tai gravitacijos nepaisantis daugelio žaidėjų kosminis mūšis asteroidų lauke. Sprogdinkite kitus žaidėjus, rinkite patobulinimus ir kristalus ir venkite asteroidų. Stenkitės išgyventi iki pabaigos ir laimėti rungtynes. Varžykitės su viso pasaulio žaidėjais realiuoju laiku, kad kiekviename sezone užimtumėte aukštą vietą. Taip pat galite susikurti savo pasirinktinius lobius ir žaisti privačius žaidimus internete su draugais!"
 
-#: all_pages/5 Moonrock Miners.py:74
+#: all_pages/5 Moonrock Miners.py:72
 msgid "**Moonrock Miners** is **no longer in development**"
 msgstr "**Moonrock Miners** yra **nuo šiol nebekuriamas**"
 
-#: all_pages/5 Moonrock Miners.py:98 all_pages/4 Goober Shot.py:108
-#: all_pages/3 Goober Royale.py:104 all_pages/1 Rocket Bot Royale.py:158
-#: all_pages/2 Goober Dash.py:188
+#: all_pages/5 Moonrock Miners.py:96 all_pages/4 Goober Shot.py:106
+#: all_pages/3 Goober Royale.py:102 all_pages/1 Rocket Bot Royale.py:156
+#: all_pages/2 Goober Dash.py:186
 msgid "Statistics"
 msgstr "Statistika"
 
-#: all_pages/5 Moonrock Miners.py:103
+#: all_pages/5 Moonrock Miners.py:101
 #: all_pages/RocketBotRoyale/Statistics/season_leaderboard.py:10
-#: all_pages/4 Goober Shot.py:118
+#: all_pages/4 Goober Shot.py:116
 #: all_pages/GooberDash/Statistics/season_leaderboard.py:13
 #: all_pages/MoonrockMiners/Statistics/season_leaderboard.py:10
 #: all_pages/GooberRoyale/Statistics/season_leaderboard.py:10
 #: all_pages/GooberShot/Statistics/season_leaderboard.py:10
-#: all_pages/3 Goober Royale.py:114 all_pages/1 Rocket Bot Royale.py:168
-#: all_pages/2 Goober Dash.py:208
+#: all_pages/3 Goober Royale.py:112 all_pages/1 Rocket Bot Royale.py:166
+#: all_pages/2 Goober Dash.py:206
 msgid "Season Leaderboard"
 msgstr "Sezono lyderių lentelė"
 
-#: all_pages/5 Moonrock Miners.py:108
+#: all_pages/5 Moonrock Miners.py:106
 msgid "**Leaderboard** is **disabled** currently"
 msgstr "**Leaderboard** šiuo metu yra **išjungtas**"
 
@@ -128,30 +249,30 @@ msgid "Gallery"
 msgstr "Galerija"
 
 #: all_pages/RocketBotRoyale/Tools/optimize_crate.py:10
-#: all_pages/1 Rocket Bot Royale.py:146
+#: all_pages/1 Rocket Bot Royale.py:144
 msgid "Optimize Crate"
 msgstr "Optimizuoti dėžę"
 
 #: all_pages/RocketBotRoyale/Statistics/player_info.py:10
-#: all_pages/4 Goober Shot.py:113
+#: all_pages/4 Goober Shot.py:111
 #: all_pages/GooberDash/Statistics/player_info.py:80
 #: all_pages/GooberRoyale/Statistics/player_info.py:10
 #: all_pages/GooberShot/Statistics/player_info.py:10
-#: all_pages/3 Goober Royale.py:109 all_pages/1 Rocket Bot Royale.py:163
-#: all_pages/2 Goober Dash.py:198
+#: all_pages/3 Goober Royale.py:107 all_pages/1 Rocket Bot Royale.py:161
+#: all_pages/2 Goober Dash.py:196
 msgid "Player Info"
 msgstr "Žaidėjo informacija"
 
-#: all_pages/4 Goober Shot.py:78
+#: all_pages/4 Goober Shot.py:76
 msgid "**GOOBER SHOT** throws you into thrilling online archery battles against three other players! Prepare your bow, sharpen your arrows, enter the arena, and unleash your skills as a master archer. Remember, every arrow counts! Show off your precision and reflexes as you aim, shoot, and dodge with finesse. Rise through the ranks, climb the global leaderboards, and prove yourself as the ultimate archery champion. Will you emerge as the greatest archer in the realm?"
 msgstr "**GOOBER SHOT** įtraukia į jaudinančias šaudymo iš lanko internetines kovas su trimis kitais žaidėjais! Paruoškite lanką, pagaląskite strėles, išeikite į areną ir atskleiskite savo, kaip lanko meistro, įgūdžius. Atmink, kad kiekviena strėlė yra svarbi! Parodykite savo tikslumą ir refleksus, kai taikliai taikysitės, šaudysite ir vikriai išsisukinėsite. Kilkite aukštyn, kopkite į pasaulines reitingų lenteles ir įrodykite, kad esate geriausias šaudymo iš lanko čempionas. Ar tapsite geriausiu šaulys iš lanko karalystėje?"
 
-#: all_pages/4 Goober Shot.py:83
+#: all_pages/4 Goober Shot.py:81
 msgid "**Goober Shot** is in **beta** currently (Bugs are expected and Data may be reset in future)"
 msgstr "**Goober Shot** šiuo metu yra **beta versijoje** (tikimasi klaidų ir ateityje duomenys gali būti iš naujo nustatyti)"
 
 #: all_pages/GooberDash/Tools/goober_generator.py:65
-#: all_pages/2 Goober Dash.py:182
+#: all_pages/2 Goober Dash.py:180
 msgid "Goober Generator"
 msgstr "\"Goober\" generatorius"
 
@@ -204,7 +325,7 @@ msgstr "Ženkliukas"
 msgid "Other Stuff"
 msgstr "Kiti dalykai"
 
-#: all_pages/GooberDash/Tools/flip_level.py:130 all_pages/2 Goober Dash.py:175
+#: all_pages/GooberDash/Tools/flip_level.py:130 all_pages/2 Goober Dash.py:173
 msgid "Flip Level"
 msgstr "Apvertimo lygis"
 
@@ -252,7 +373,7 @@ msgid "flipped"
 msgstr "apversta"
 
 #: all_pages/GooberDash/Tools/maze_generator.py:13
-#: all_pages/2 Goober Dash.py:177
+#: all_pages/2 Goober Dash.py:175
 msgid "Maze Generator"
 msgstr "Labirintų generatorius"
 
@@ -1641,11 +1762,204 @@ msgid "Percentile"
 msgstr "Percentilis"
 
 #: all_pages/GooberDash/Statistics/level_info.py:13
-#: all_pages/2 Goober Dash.py:203
+#: all_pages/2 Goober Dash.py:201
 msgid "Level Info"
 msgstr "Lygio informacija"
 
-#: all_pages/8 Useful Links.py:73 all_pages/0 Home.py:199
+#: all_pages/B Sign Up.py:24 all_pages/0 Home.py:210
+msgid "Sign Up"
+msgstr "Užsiregistruoti"
+
+#: all_pages/B Sign Up.py:58 all_pages/B Sign Up.py:217
+msgid "Verify Account"
+msgstr "Patikrinti paskyrą"
+
+#: all_pages/B Sign Up.py:251
+msgid "Welcome to WinterPixelGames! We're excited to have you join our community. Before you creating your account, we need to verify your email address to ensure we have the correct information."
+msgstr "Sveiki atvykę į WinterPixelGames! Džiaugiamės, kad prisijungėte prie mūsų bendruomenės. Prieš kurdami paskyrą, turime patikrinti jūsų el. pašto adresą, kad įsitikintume, jog turime teisingą informaciją."
+
+#: all_pages/B Sign Up.py:256
+msgid "Your verification code is "
+msgstr "Jūsų patvirtinimo kodas yra "
+
+#: all_pages/B Sign Up.py:262
+msgid "You can now register your account using this verification code and the corresponding email."
+msgstr "Dabar galite užregistruoti savo paskyrą naudodami šį patvirtinimo kodą ir atitinkamą el. pašto adresą."
+
+#: all_pages/B Sign Up.py:284
+msgid "Verify"
+msgstr "Patikrinkite"
+
+#: all_pages/B Sign Up.py:299
+msgid "Please disregard this email if you did not submit a verify email request."
+msgstr "Prašome nekreipti dėmesio į šį el. laišką, jei nepateikėte patvirtinimo el. paštu prašymo."
+
+#: all_pages/B Sign Up.py:437 all_pages/B Sign Up.py:444
+msgid "Verify Email"
+msgstr "Patikrinti el. paštą"
+
+#: all_pages/B Sign Up.py:438 all_pages/B Sign Up.py:524
+#: all_pages/B Sign Up.py:530
+msgid "Register"
+msgstr "Registruotis"
+
+#: all_pages/B Sign Up.py:448
+msgid "Verification Code"
+msgstr "Patikrinimo kodas"
+
+#: all_pages/B Sign Up.py:450
+msgid "Leave it blank to send Verification Code"
+msgstr "Palikite jį tuščią, jei norite siųsti patvirtinimo kodą"
+
+#: all_pages/B Sign Up.py:452
+msgid "Send/Verify"
+msgstr "Siųsti / patvirtinti"
+
+#: all_pages/B Sign Up.py:464
+msgid "Wrong verification code"
+msgstr "Neteisingas patvirtinimo kodas"
+
+#: all_pages/B Sign Up.py:472
+msgid "Verify success"
+msgstr "Patikrinkite sėkmę"
+
+#: all_pages/B Sign Up.py:492
+msgid "Verification code is sent to the email successfully"
+msgstr "Patvirtinimo kodas sėkmingai išsiųstas į el. paštą"
+
+#: all_pages/B Sign Up.py:496
+msgid "Email is required"
+msgstr "Reikalingas el. paštas"
+
+#: all_pages/B Sign Up.py:498
+msgid "Email is not valid"
+msgstr "El. paštas negalioja"
+
+#: all_pages/B Sign Up.py:500
+msgid "Email is already in use"
+msgstr "El. paštas jau naudojamas"
+
+#: all_pages/B Sign Up.py:525 all_pages/D Account.py:171
+msgid "Nickname"
+msgstr "Slapyvardis"
+
+#: all_pages/B Sign Up.py:525
+msgid "alphabets only"
+msgstr "tik abėcėlės"
+
+#: all_pages/B Sign Up.py:526
+msgid "Verified Email"
+msgstr "Patvirtintas el. paštas"
+
+#: all_pages/B Sign Up.py:527 all_pages/B Sign Up.py:528
+msgid "for login"
+msgstr "prisijungimui"
+
+#: all_pages/B Sign Up.py:529 all_pages/D Account.py:192
+msgid "Repeat Password"
+msgstr "Pakartoti slaptažodį"
+
+#: all_pages/B Sign Up.py:534
+msgid "User registered successfully"
+msgstr "Vartotojas sėkmingai užsiregistravo"
+
+#: all_pages/C Log Out.py:13
+msgid "You are now logged out"
+msgstr "Dabar esate išregistruotas"
+
+#: all_pages/D Account.py:33 all_pages/0 Home.py:220
+msgid "Account"
+msgstr "Sąskaita"
+
+#: all_pages/D Account.py:64 all_pages/D Account.py:72
+msgid "Linked Game Accounts"
+msgstr "Susietos žaidimų paskyros"
+
+#: all_pages/D Account.py:65
+msgid "Change Nickname/Email"
+msgstr "Keisti slapyvardį / el. paštą"
+
+#: all_pages/D Account.py:66 all_pages/D Account.py:189
+msgid "Change Password"
+msgstr "Keisti slaptažodį"
+
+#: all_pages/D Account.py:75
+msgid "Statistics of Linked Accounts will be tracked daily and displayed in Player Info"
+msgstr "Susietų paskyrų statistika bus stebima kasdien ir rodoma žaidėjo informacijoje."
+
+#: all_pages/D Account.py:108 all_pages/D Account.py:138
+#: all_pages/8 Useful Links.py:88 all_pages/0 Home.py:58
+#: all_pages/0 Home.py:163
+msgid "Rocket Bot Royale"
+msgstr "Rocket Bot Royale"
+
+#: all_pages/D Account.py:110 all_pages/D Account.py:116
+#: all_pages/D Account.py:122 all_pages/D Account.py:128
+msgid "No User ID Found"
+msgstr "Nerastas joks naudotojo ID"
+
+#: all_pages/D Account.py:114 all_pages/D Account.py:139 all_pages/0 Home.py:63
+#: all_pages/0 Home.py:168
+msgid "Goober Dash"
+msgstr "Goober Dash"
+
+#: all_pages/D Account.py:120 all_pages/D Account.py:140
+#: all_pages/8 Useful Links.py:92 all_pages/0 Home.py:68
+#: all_pages/0 Home.py:173
+msgid "Goober Royale"
+msgstr "Goober Royale"
+
+#: all_pages/D Account.py:126 all_pages/D Account.py:141
+#: all_pages/8 Useful Links.py:95 all_pages/0 Home.py:73
+#: all_pages/0 Home.py:178
+msgid "Goober Shot"
+msgstr "\"Goober Shot"
+
+#: all_pages/D Account.py:143 all_pages/D Account.py:174
+msgid "Update"
+msgstr "Atnaujinti"
+
+#: all_pages/D Account.py:150
+msgid "Wrong User ID format of "
+msgstr "Neteisingas naudotojo ID formatas "
+
+#: all_pages/D Account.py:162
+msgid "User IDs are updated successfully"
+msgstr "Naudotojo ID sėkmingai atnaujinami"
+
+#: all_pages/D Account.py:169
+msgid "Change Name/Email"
+msgstr "Pakeisti vardą / el. paštą"
+
+#: all_pages/D Account.py:170
+msgid "Field"
+msgstr "Laukas"
+
+#: all_pages/D Account.py:173
+msgid "New value"
+msgstr "Nauja vertė"
+
+#: all_pages/D Account.py:179
+msgid "Entries updated successfully"
+msgstr "Įrašai sėkmingai atnaujinti"
+
+#: all_pages/D Account.py:190
+msgid "Current Password"
+msgstr "Dabartinis slaptažodis"
+
+#: all_pages/D Account.py:191
+msgid "New Password"
+msgstr "Naujas slaptažodis"
+
+#: all_pages/D Account.py:193
+msgid "Reset"
+msgstr "Iš naujo nustatyti"
+
+#: all_pages/D Account.py:198
+msgid "Password modified successfully"
+msgstr "Slaptažodis sėkmingai pakeistas"
+
+#: all_pages/8 Useful Links.py:73 all_pages/0 Home.py:198
 msgid "Useful Links"
 msgstr "Naudingos nuorodos"
 
@@ -1657,28 +1971,13 @@ msgstr "Inscenizavimo serveriai"
 msgid "**Staging Servers** are seperate servers which are used for testing new features before releasing. Usually updates are released on **Staging Servers** a few days before public release. Developers invite members to test out some upcoming features and ask for feedbacks in **Offcial Winterpixel Games Discord server** occasionally.\n"
 msgstr "**Staging Servers** - tai atskiri serveriai, naudojami naujoms funkcijoms išbandyti prieš išleidžiant. Paprastai atnaujinimai išleidžiami **Staging Servers** likus kelioms dienoms iki viešo išleidimo. Kūrėjai kviečia narius išbandyti kai kurias būsimas funkcijas ir retkarčiais prašo atsiliepimų **Offcial Winterpixel Games Discord serveryje**.\n"
 
-#: all_pages/8 Useful Links.py:88 all_pages/0 Home.py:59
-#: all_pages/0 Home.py:164 common_config.py:1256
-msgid "Rocket Bot Royale"
-msgstr "Rocket Bot Royale"
-
-#: all_pages/8 Useful Links.py:92 all_pages/0 Home.py:69
-#: all_pages/0 Home.py:174 common_config.py:1258
-msgid "Goober Royale"
-msgstr "Goober Royale"
-
-#: all_pages/8 Useful Links.py:95 all_pages/0 Home.py:74
-#: all_pages/0 Home.py:179 common_config.py:1259
-msgid "Goober Shot"
-msgstr "\"Goober Shot"
-
-#: all_pages/8 Useful Links.py:96 all_pages/0 Home.py:79
-#: all_pages/0 Home.py:184
+#: all_pages/8 Useful Links.py:96 all_pages/0 Home.py:78
+#: all_pages/0 Home.py:183
 msgid "Moonrock Miners"
 msgstr "Mėnulio uolų kalnakasiai"
 
-#: all_pages/8 Useful Links.py:97 all_pages/0 Home.py:84
-#: all_pages/0 Home.py:189
+#: all_pages/8 Useful Links.py:97 all_pages/0 Home.py:83
+#: all_pages/0 Home.py:188
 msgid "Broski"
 msgstr "Brošiūra"
 
@@ -1698,440 +1997,163 @@ msgstr "[**Goober Dash Level Modding**](https://twhlynch.me/goober-dash-level-mo
 msgid "Goober Dash Level Modding"
 msgstr "\"Goober Dash\" lygio modifikavimas"
 
-#: all_pages/3 Goober Royale.py:78
-msgid "**GOOBER ROYALE** is a multiplayer battle royale game in which each player controls a character (called a \"goober\") and must collect weapons, power-ups and other items to eliminate their opponents. The clashes bring together 16 players on a map and the objective will be to be the last survivor of the game. You can play alone or in a team of 4 players. Your Goober will have several weapons, a main missile that reloads at regular intervals and a secondary accessory such as mines, a tornado, a drill and many others. Also use your jetpack to move around the map more easily, reach high places and surprise your opponents. Completing games and missions will earn you gold coins that you can spend either to improve your Goober's skills or to buy cosmetics that will give your character a unique style. An online ranking will allow you to see the 100 best players in the world and in your region."
-msgstr "**GOOBER ROYALE** - tai daugelio žaidėjų \"Battle Royale\" žaidimas, kuriame kiekvienas žaidėjas valdo savo veikėją (vadinamą \"gooberiu\") ir turi rinkti ginklus, papildymus ir kitus daiktus, kad pašalintų priešininkus. Susidūrimuose viename žemėlapyje susirenka 16 žaidėjų, o tikslas bus tapti paskutiniuoju išgyvenusiu žaidėju. Žaisti galima vienam arba komandoje iš 4 žaidėjų. Jūsų Gooberis turės kelis ginklus, pagrindinę raketą, kuri reguliariai perkraunama, ir antrinius priedus, tokius kaip minos, tornadas, grąžtas ir daug kitų. Taip pat naudokis reaktyvine kuprine, kad lengviau judėtum žemėlapyje, pasiektum aukštas vietas ir nustebintum priešininkus. Įveikę žaidimus ir misijas uždirbsite aukso monetų, kurias galėsite išleisti Gooberio įgūdžiams tobulinti arba įsigyti kosmetikos, kuri suteiks jūsų veikėjui unikalų stilių. Internetinis reitingas leis jums pamatyti 100 geriausių pasaulio ir savo regiono žaidėjų."
-
-#: all_pages/3 Goober Royale.py:83
-msgid "**Goober Royale** is in **beta** currently (Bugs are expected and Data may be reset in future)"
-msgstr "**Goober Royale** šiuo metu yra **beta versijoje** (tikimasi klaidų ir ateityje duomenys gali būti iš naujo nustatyti)"
-
-#: all_pages/7 About.py:55 all_pages/0 Home.py:194
-msgid "About"
-msgstr "Apie"
-
-#: all_pages/7 About.py:57
-msgid "What is WinterPixelGames?"
-msgstr "Kas yra \"WinterPixelGames\"?"
-
-#: all_pages/7 About.py:63
-msgid "**:blue-background[WinterPixelGames]** (WPG) is a community-driven site made by [**TANK8K**](https://tank8k.com/) which provides useful **Tools & Statistics** of games made by **[Winterpixel Games](https://www.winterpixel.com/)**, including **[Rocket Bot Royale](./Rocket_Bot_Royale)**, **[Goober Dash](./Goober_Dash)**, **[Goober Royale](./Goober_Royale)**, **[Goober Shot](./Goober_Shot)**, and **[Moonrock Miners](./Moonrock_Miners)**."
-msgstr "**:blue-background[WinterPixelGames]** (WPG) - tai [**TANK8K**](https://tank8k.com/) bendruomenės sukurta svetainė, kurioje pateikiami naudingi **Įrankiai ir statistika** apie **[Winterpixel Games](https://www.winterpixel] sukurtus žaidimus.com/)**, įskaitant **[Rocket Bot Royale](./Rocket_Bot_Royale)**, **[Goober Dash](./Goober_Dash)**, **[Goober Royale](./Goober_Royale)**, **[Goober Shot](./Goober_Shot)** ir **[Moonrock Miners](./Moonrock_Miners)**."
-
-#: all_pages/7 About.py:70
-msgid "Affiliation"
-msgstr "Priklausomybė"
-
-#: all_pages/7 About.py:74
-msgid "This website is **NOT** affiliated with or endorsed by **Winterpixel Games Inc.**"
-msgstr "Ši svetainė **NĖRA susijusi su **Winterpixel Games Inc.** arba jos nepatvirtina **Winterpixel Games Inc.**."
-
-#: all_pages/7 About.py:81
-msgid "Copyright Notice"
-msgstr "Pranešimas apie autorių teises"
-
-#: all_pages/7 About.py:85
-msgid "Rocket Bot Royale, Goober Dash, Goober Royale, Goober Shot, Moonrock Miners, Websites and Media **@ Winterpixel Games Inc.**"
-msgstr "Rocket Bot Royale, Goober Dash, Goober Dash, Goober Royale, Goober Shot, Moonrock Miners, Svetainės ir žiniasklaida **@ Winterpixel Games Inc.**"
-
-#: all_pages/7 About.py:92
-msgid "License"
-msgstr "Licencija"
-
-#: all_pages/7 About.py:95
-msgid "The source code is licensed under **MIT license**."
-msgstr "Pirminis kodas licencijuojamas pagal **MIT licenciją**."
-
-#: all_pages/7 About.py:101
-msgid "Technology"
-msgstr "Technologijos"
-
-#: all_pages/7 About.py:108
-msgid "Framework"
-msgstr "Sistema"
-
-#: all_pages/7 About.py:111 common_config.py:2226
+#: all_pages/E Language.py:19 all_pages/7 About.py:110 all_pages/0 Home.py:227
 msgid "Language"
 msgstr "Kalba"
 
-#: all_pages/7 About.py:114
-msgid "Database"
-msgstr "Duomenų bazė"
-
-#: all_pages/7 About.py:117
-msgid "Cloud Vendor"
-msgstr "Debesijos pardavėjas"
-
-#: all_pages/7 About.py:120
-msgid "Web Server"
-msgstr "Žiniatinklio serveris"
-
-#: all_pages/7 About.py:123
-msgid "Source Code"
-msgstr "Šaltinio kodas"
-
-#: all_pages/7 About.py:130
-msgid "Developer"
-msgstr "Kūrėjas"
-
-#: all_pages/7 About.py:141
-msgid "Personal Website"
-msgstr "Asmeninė svetainė"
-
-#: all_pages/7 About.py:146
-msgid "Developed with 💖 by **[:blue[TANK8K]](https://tank8k.com/)**"
-msgstr "Sukurta kartu su **[:blue[TANK8K]](https://tank8k.com/)**"
-
-#: all_pages/1 Rocket Bot Royale.py:110
-msgid "**ROCKET BOT ROYALE** is a fun new take on the online battle royale formula. Powerful, wall-climbing, rocket-jumping, artillery-pumping Robo-Tanks are the vehicle of choice in this fast-paced shootout, where the goal is to survive longer than the competition. Collect the loot to upgrade your arsenal, tunnel into the terrain to take cover and collect buried treasure, and avoid the rising water levels to be the blast one standing!"
-msgstr "**ROCKET BOT ROYALE** - tai įdomus naujas internetinio mūšio rojaus formulės variantas. Galingi, sienomis laipiojantys, raketomis šokinėjantys ir artileriją pumpuojantys robotai-tankai yra šios greito tempo susišaudymo priemonės, kurių tikslas - išgyventi ilgiau nei varžovai. Rinkite grobį, kad patobulintumėte savo arsenalą, kaskite tunelius vietovėje, kad pasislėptumėte ir surinktumėte užkastus lobius, ir venkite kylančio vandens lygio, kad liktumėte vienas išlikęs!"
-
-#: all_pages/1 Rocket Bot Royale.py:114 all_pages/2 Goober Dash.py:146
-msgid "Platforms"
-msgstr "Platformos"
-
-#: all_pages/1 Rocket Bot Royale.py:129 all_pages/2 Goober Dash.py:160
-msgid "Communities"
-msgstr "Bendruomenės"
-
-#: all_pages/0 Home.py:12
-msgid "Welcome to"
-msgstr "Sveiki atvykę į"
-
-#: all_pages/0 Home.py:15
-msgid "A website which provides useful Tools & Statistics of games made by [Winterpixel Games](https://www.winterpixel.com/)"
-msgstr "Tinklalapis, kuriame pateikiami naudingi įrankiai ir žaidimų, kuriuos sukūrė [Winterpixel Games](https://www.winterpixel.com/), statistika."
-
-#: all_pages/0 Home.py:64 all_pages/0 Home.py:169 common_config.py:1257
-msgid "Goober Dash"
-msgstr "Goober Dash"
-
-#: all_pages/0 Home.py:161
-msgid "Home"
-msgstr "Pagrindinis"
-
-#: all_pages/2 Goober Dash.py:142
-msgid "**GOOBER DASH** is a multiplayer battle royale game that you can play online. Dash your opponents into deadly spikes, gather precious coins, and unlock a plethora of unique costumes as you strive to outlast the competition. Invite your friends to engage in epic battles in custom private lobbies. Unleash your creativity with the level editor, crafting and conquering your very own battlegrounds. Climb the global and country-based seasonal leaderboards to prove your dominance in this thrilling contest."
-msgstr "**GOOBER DASH** yra daugelio žaidėjų mūšio karaliaus žaidimas, kurį galite žaisti internete. Stumdykite priešininkus į mirtinus spyglius, rinkite brangias monetas ir atrakinkite daugybę unikalių kostiumų, kad įveiktumėte varžovus. Pakvieskite draugus dalyvauti epiniuose mūšiuose privačiuose lobiuose. Išlaisvinkite savo kūrybiškumą naudodamiesi lygių redaktoriumi, kurdami ir užkariaudami savo pačių mūšių laukus. Kopkite į pasaulines ir šalių sezonines lyderių lenteles, kad įrodytumėte savo pranašumą šiose jaudinančiose varžybose."
-
-#: all_pages/2 Goober Dash.py:193
-msgid "Time Trials (Certified Levels)"
-msgstr "Laiko bandymai (sertifikuoti lygiai)"
-
-#: common_config.py:47 common_config.py:206
-msgid "Verify Account"
-msgstr "Patikrinti paskyrą"
-
-#: common_config.py:235 common_config.py:595 common_config.py:962
-msgid "Hello"
-msgstr "Sveiki"
-
-#: common_config.py:240
-msgid "Welcome to WinterPixelGames! We're excited to have you join our community. Before you creating your account, we need to verify your email address to ensure we have the correct information."
-msgstr "Sveiki atvykę į WinterPixelGames! Džiaugiamės, kad prisijungėte prie mūsų bendruomenės. Prieš kurdami paskyrą, turime patikrinti jūsų el. pašto adresą, kad įsitikintume, jog turime teisingą informaciją."
-
-#: common_config.py:245
-msgid "Your verification code is "
-msgstr "Jūsų patvirtinimo kodas yra "
-
-#: common_config.py:251
-msgid "You can now register your account using this verification code and the corresponding email."
-msgstr "Dabar galite užregistruoti savo paskyrą naudodami šį patvirtinimo kodą ir atitinkamą el. pašto adresą."
-
-#: common_config.py:256 common_config.py:618 common_config.py:985
-msgid "Happy Gaming!"
-msgstr "Laimingo žaidimo!"
-
-#: common_config.py:273
-msgid "Verify"
-msgstr "Patikrinkite"
-
-#: common_config.py:288
-msgid "Please disregard this email if you did not submit a verify email request."
-msgstr "Prašome nekreipti dėmesio į šį el. laišką, jei nepateikėte patvirtinimo el. paštu prašymo."
-
-#: common_config.py:317 common_config.py:683 common_config.py:1050
-msgid "Problems or questions?"
-msgstr "Problemos ar klausimai?"
-
-#: common_config.py:407 common_config.py:566
-msgid "Forgot Username Request"
-msgstr "Užmiršto vartotojo vardo užklausa"
-
-#: common_config.py:602
-msgid "We have sent you this email in response to your request about forgotting your username on WinterPixelGames."
-msgstr "Mes išsiuntėme jums šį el. laišką, atsakydami į jūsų užklausą dėl pamiršto vartotojo vardo \"WinterPixelGames\" svetainėje."
-
-#: common_config.py:607
-msgid "Your username of the associated email is "
-msgstr "Jūsų susieto el. pašto naudotojo vardas yra "
-
-#: common_config.py:613
-msgid "You can now login to your account using this username and the corresponding password."
-msgstr "Dabar galite prisijungti prie savo paskyros naudodami šį vartotojo vardą ir atitinkamą slaptažodį."
-
-#: common_config.py:621 common_config.py:988
-msgid "WinterPixelGames"
-msgstr "WinterPixelGames"
-
-#: common_config.py:637 common_config.py:1332 common_config.py:1350
-#: common_config.py:1353
-msgid "Login"
-msgstr "Prisijungimas"
-
-#: common_config.py:653
-msgid "Please disregard this email if you did not submit a forgot username request."
-msgstr "Prašome nekreipti dėmesio į šį el. laišką, jei nepateikėte pamiršto vartotojo vardo užklausos."
-
-#: common_config.py:773 common_config.py:932
-msgid "Forgot Password Request"
-msgstr "Prašymas pamiršti slaptažodį"
-
-#: common_config.py:969
-msgid "We have sent you this email in response to your request about forgotting your password on WinterPixelGames."
-msgstr "Mes išsiuntėme jums šį el. laišką, atsakydami į jūsų užklausą apie pamirštą slaptažodį \"WinterPixelGames\"."
-
-#: common_config.py:974
-msgid "Your new auto-generated password is "
-msgstr "Jūsų naujasis automatiškai sugeneruotas slaptažodis yra "
-
-#: common_config.py:980
-msgid "You can now login to your account using this password and change it to a custom password if necessary."
-msgstr "Dabar galite prisijungti prie savo paskyros naudodami šį slaptažodį ir, jei reikia, pakeisti jį į pasirinktinį slaptažodį."
-
-#: common_config.py:1004 common_config.py:1401
-msgid "Reset Password"
-msgstr "Iš naujo nustatyti slaptažodį"
-
-#: common_config.py:1020
-msgid "Please disregard this email if you did not submit a forgot password request."
-msgstr "Prašome nekreipti dėmesio į šį el. laišką, jei nepateikėte prašymo pamiršti slaptažodį."
-
-#: common_config.py:1187 common_config.py:1194
-msgid "Linked Game Accounts"
-msgstr "Susietos žaidimų paskyros"
-
-#: common_config.py:1188
-msgid "Change Nickname/Email"
-msgstr "Keisti slapyvardį / el. paštą"
-
-#: common_config.py:1189 common_config.py:1307
-msgid "Change Password"
-msgstr "Keisti slaptažodį"
-
-#: common_config.py:1197
-msgid "Statistics of Linked Accounts will be tracked daily and displayed in Player Info"
-msgstr "Susietų paskyrų statistika bus stebima kasdien ir rodoma žaidėjo informacijoje."
-
-#: common_config.py:1261 common_config.py:1292
-msgid "Update"
-msgstr "Atnaujinti"
-
-#: common_config.py:1268
-msgid "Wrong User ID format of "
-msgstr "Neteisingas naudotojo ID formatas "
-
-#: common_config.py:1280
-msgid "User IDs are updated successfully"
-msgstr "Naudotojo ID sėkmingai atnaujinami"
-
-#: common_config.py:1287
-msgid "Change Name/Email"
-msgstr "Pakeisti vardą / el. paštą"
-
-#: common_config.py:1288
-msgid "Field"
-msgstr "Laukas"
-
-#: common_config.py:1289 common_config.py:1552
-msgid "Nickname"
-msgstr "Slapyvardis"
-
-#: common_config.py:1290 common_config.py:1375 common_config.py:1440
-msgid "Email"
-msgstr "El. paštas"
-
-#: common_config.py:1291
-msgid "New value"
-msgstr "Nauja vertė"
-
-#: common_config.py:1297
-msgid "Entries updated successfully"
-msgstr "Įrašai sėkmingai atnaujinti"
-
-#: common_config.py:1308
-msgid "Current Password"
-msgstr "Dabartinis slaptažodis"
-
-#: common_config.py:1309
-msgid "New Password"
-msgstr "Naujas slaptažodis"
-
-#: common_config.py:1310 common_config.py:1559
-msgid "Repeat Password"
-msgstr "Pakartoti slaptažodį"
-
-#: common_config.py:1311
-msgid "Reset"
-msgstr "Iš naujo nustatyti"
-
-#: common_config.py:1316
-msgid "Password modified successfully"
-msgstr "Slaptažodis sėkmingai pakeistas"
-
-#: common_config.py:1333 common_config.py:1374
-msgid "Forgot Username"
-msgstr "Pamiršote vartotojo vardą"
-
-#: common_config.py:1334 common_config.py:1399
-msgid "Forgot Password"
-msgstr "Pamiršote slaptažodį"
-
-#: common_config.py:1351 common_config.py:1400 common_config.py:1557
-msgid "Username"
-msgstr "Vartotojo vardas"
-
-#: common_config.py:1352 common_config.py:1558
-msgid "Password"
-msgstr "Slaptažodis"
-
-#: common_config.py:1361
-msgid "Username or Password is incorrect"
-msgstr "Neteisingas vartotojo vardas arba slaptažodis"
-
-#: common_config.py:1376
-msgid "Send Userename"
-msgstr "Siųsti vartotojo vardą"
-
-#: common_config.py:1385
-msgid "Username is sent to the associated email successfully"
-msgstr "Vartotojo vardas sėkmingai išsiųstas į susijusį el. paštą"
-
-#: common_config.py:1387 common_config.py:1510
-msgid "Email not found"
-msgstr "El. paštas nerastas"
-
-#: common_config.py:1416
-msgid "New password is sent to the associated email successfully"
-msgstr "Naujas slaptažodis sėkmingai išsiųstas į susijusį el. pašto adresą"
-
-#: common_config.py:1419
-msgid "Username not found"
-msgstr "Vartotojo vardas nerastas"
-
-#: common_config.py:1430 common_config.py:1439 common_config.py:1450
-msgid "Verify Email"
-msgstr "Patikrinti el. paštą"
-
-#: common_config.py:1431 common_config.py:1551 common_config.py:1560
-msgid "Register"
-msgstr "Registruotis"
-
-#: common_config.py:1444
-msgid "Send Verification Code"
-msgstr "Siųsti patvirtinimo kodą"
-
-#: common_config.py:1448
-msgid "Verification Code"
-msgstr "Patikrinimo kodas"
-
-#: common_config.py:1494
-msgid "Verification code is sent to the email successfully"
-msgstr "Patvirtinimo kodas sėkmingai išsiųstas į el. paštą"
-
-#: common_config.py:1499
-msgid "Email is required"
-msgstr "Reikalingas el. paštas"
-
-#: common_config.py:1501
-msgid "Email is not valid"
-msgstr "El. paštas negalioja"
-
-#: common_config.py:1503
-msgid "Email is already in use"
-msgstr "El. paštas jau naudojamas"
-
-#: common_config.py:1515
-msgid "Wrong verification code"
-msgstr "Neteisingas patvirtinimo kodas"
-
-#: common_config.py:1526
-msgid "Verify success"
-msgstr "Patikrinkite sėkmę"
-
-#: common_config.py:1552
-msgid "alphabets only"
-msgstr "tik abėcėlės"
-
-#: common_config.py:1553
-msgid "Verified Email"
-msgstr "Patvirtintas el. paštas"
-
-#: common_config.py:1555
-msgid "used for forgot username/password"
-msgstr "naudojamas pamiršus vartotojo vardą / slaptažodį"
-
-#: common_config.py:1557 common_config.py:1558
-msgid "used for login"
-msgstr "naudojamas prisijungimui"
-
-#: common_config.py:1564
-msgid "User registered successfully"
-msgstr "Vartotojas sėkmingai užsiregistravo"
-
-#: common_config.py:1591
-msgid "Welcome back"
-msgstr "Sveiki sugrįžę"
-
-#: common_config.py:1692
+#: all_pages/E Language.py:148
 msgid "Apply"
 msgstr "Taikyti"
 
-#: common_config.py:1695
+#: all_pages/E Language.py:154
 msgid "Contributors"
 msgstr "Prisidėjusieji"
 
-#: common_config.py:1695
+#: all_pages/E Language.py:154
 msgid "In no particular order"
 msgstr "Be ypatingos tvarkos"
 
-#: common_config.py:1710
+#: all_pages/E Language.py:169
 msgid "Contribute"
 msgstr "Prisidėti"
 
-#: common_config.py:1760
-msgid "Back to Home"
-msgstr "Grįžti į Pradžią"
+#: all_pages/3 Goober Royale.py:76
+msgid "**GOOBER ROYALE** is a multiplayer battle royale game in which each player controls a character (called a \"goober\") and must collect weapons, power-ups and other items to eliminate their opponents. The clashes bring together 16 players on a map and the objective will be to be the last survivor of the game. You can play alone or in a team of 4 players. Your Goober will have several weapons, a main missile that reloads at regular intervals and a secondary accessory such as mines, a tornado, a drill and many others. Also use your jetpack to move around the map more easily, reach high places and surprise your opponents. Completing games and missions will earn you gold coins that you can spend either to improve your Goober's skills or to buy cosmetics that will give your character a unique style. An online ranking will allow you to see the 100 best players in the world and in your region."
+msgstr "**GOOBER ROYALE** - tai daugelio žaidėjų \"Battle Royale\" žaidimas, kuriame kiekvienas žaidėjas valdo savo veikėją (vadinamą \"gooberiu\") ir turi rinkti ginklus, papildymus ir kitus daiktus, kad pašalintų priešininkus. Susidūrimuose viename žemėlapyje susirenka 16 žaidėjų, o tikslas bus tapti paskutiniuoju išgyvenusiu žaidėju. Žaisti galima vienam arba komandoje iš 4 žaidėjų. Jūsų Gooberis turės kelis ginklus, pagrindinę raketą, kuri reguliariai perkraunama, ir antrinius priedus, tokius kaip minos, tornadas, grąžtas ir daug kitų. Taip pat naudokis reaktyvine kuprine, kad lengviau judėtum žemėlapyje, pasiektum aukštas vietas ir nustebintum priešininkus. Įveikę žaidimus ir misijas uždirbsite aukso monetų, kurias galėsite išleisti Gooberio įgūdžiams tobulinti arba įsigyti kosmetikos, kuri suteiks jūsų veikėjui unikalų stilių. Internetinis reitingas leis jums pamatyti 100 geriausių pasaulio ir savo regiono žaidėjų."
 
-#: common_config.py:1802
-msgid "Back to Menu"
-msgstr "Grįžti į meniu"
+#: all_pages/3 Goober Royale.py:81
+msgid "**Goober Royale** is in **beta** currently (Bugs are expected and Data may be reset in future)"
+msgstr "**Goober Royale** šiuo metu yra **beta versijoje** (tikimasi klaidų ir ateityje duomenys gali būti iš naujo nustatyti)"
 
-#: common_config.py:2160
-msgid "This website is NOT affiliated with or endorsed by Winterpixel Games Inc."
-msgstr "Ši svetainė NĖRA susijusi su \"Winterpixel Games Inc.\" ar jos nepatvirtinta."
+#: all_pages/7 About.py:54 all_pages/0 Home.py:193
+msgid "About"
+msgstr "Apie"
 
-#: common_config.py:2163
-msgid "All relevant trademarks belong to their respective owners."
-msgstr "Visi atitinkami prekių ženklai priklauso atitinkamiems jų savininkams."
+#: all_pages/7 About.py:56
+msgid "What is WinterPixelGames?"
+msgstr "Kas yra \"WinterPixelGames\"?"
 
-#: common_config.py:2166
-msgid "Developed with 💖 by <a style=\"text-decoration:none\" href=\"https://tank8k.com/\" target=\"_blank\">TANK8K</a>"
-msgstr "Sukurta su 💖 by <a style=\"text-decoration:none\" href=\"https://tank8k.com/\" target=\"_blank\">TANK8K</a>"
+#: all_pages/7 About.py:62
+msgid "**:blue-background[WinterPixelGames]** (WPG) is a community-driven site made by [**TANK8K**](https://tank8k.com/) which provides useful **Tools & Statistics** of games made by **[Winterpixel Games](https://www.winterpixel.com/)**, including **[Rocket Bot Royale](./Rocket_Bot_Royale)**, **[Goober Dash](./Goober_Dash)**, **[Goober Royale](./Goober_Royale)**, **[Goober Shot](./Goober_Shot)**, and **[Moonrock Miners](./Moonrock_Miners)**."
+msgstr "**:blue-background[WinterPixelGames]** (WPG) - tai [**TANK8K**](https://tank8k.com/) bendruomenės sukurta svetainė, kurioje pateikiami naudingi **Įrankiai ir statistika** apie **[Winterpixel Games](https://www.winterpixel] sukurtus žaidimus.com/)**, įskaitant **[Rocket Bot Royale](./Rocket_Bot_Royale)**, **[Goober Dash](./Goober_Dash)**, **[Goober Royale](./Goober_Royale)**, **[Goober Shot](./Goober_Shot)** ir **[Moonrock Miners](./Moonrock_Miners)**."
 
-#: common_config.py:2194 common_config.py:2231
+#: all_pages/7 About.py:69
+msgid "Affiliation"
+msgstr "Priklausomybė"
+
+#: all_pages/7 About.py:73
+msgid "This website is **NOT** affiliated with or endorsed by **Winterpixel Games Inc.**"
+msgstr "Ši svetainė **NĖRA susijusi su **Winterpixel Games Inc.** arba jos nepatvirtina **Winterpixel Games Inc.**."
+
+#: all_pages/7 About.py:80
+msgid "Copyright Notice"
+msgstr "Pranešimas apie autorių teises"
+
+#: all_pages/7 About.py:84
+msgid "Rocket Bot Royale, Goober Dash, Goober Royale, Goober Shot, Moonrock Miners, Websites and Media **@ Winterpixel Games Inc.**"
+msgstr "Rocket Bot Royale, Goober Dash, Goober Dash, Goober Royale, Goober Shot, Moonrock Miners, Svetainės ir žiniasklaida **@ Winterpixel Games Inc.**"
+
+#: all_pages/7 About.py:91
+msgid "License"
+msgstr "Licencija"
+
+#: all_pages/7 About.py:94
+msgid "The source code is licensed under **MIT license**."
+msgstr "Pirminis kodas licencijuojamas pagal **MIT licenciją**."
+
+#: all_pages/7 About.py:100
+msgid "Technology"
+msgstr "Technologijos"
+
+#: all_pages/7 About.py:107
+msgid "Framework"
+msgstr "Sistema"
+
+#: all_pages/7 About.py:113
+msgid "Database"
+msgstr "Duomenų bazė"
+
+#: all_pages/7 About.py:116
+msgid "Cloud Vendor"
+msgstr "Debesijos pardavėjas"
+
+#: all_pages/7 About.py:119
+msgid "Web Server"
+msgstr "Žiniatinklio serveris"
+
+#: all_pages/7 About.py:122
+msgid "Source Code"
+msgstr "Šaltinio kodas"
+
+#: all_pages/7 About.py:129
+msgid "Developer"
+msgstr "Kūrėjas"
+
+#: all_pages/7 About.py:140
+msgid "Personal Website"
+msgstr "Asmeninė svetainė"
+
+#: all_pages/7 About.py:145
+msgid "Developed with 💖 by **[:blue[TANK8K]](https://tank8k.com/)**"
+msgstr "Sukurta kartu su **[:blue[TANK8K]](https://tank8k.com/)**"
+
+#: all_pages/1 Rocket Bot Royale.py:108
+msgid "**ROCKET BOT ROYALE** is a fun new take on the online battle royale formula. Powerful, wall-climbing, rocket-jumping, artillery-pumping Robo-Tanks are the vehicle of choice in this fast-paced shootout, where the goal is to survive longer than the competition. Collect the loot to upgrade your arsenal, tunnel into the terrain to take cover and collect buried treasure, and avoid the rising water levels to be the blast one standing!"
+msgstr "**ROCKET BOT ROYALE** - tai įdomus naujas internetinio mūšio rojaus formulės variantas. Galingi, sienomis laipiojantys, raketomis šokinėjantys ir artileriją pumpuojantys robotai-tankai yra šios greito tempo susišaudymo priemonės, kurių tikslas - išgyventi ilgiau nei varžovai. Rinkite grobį, kad patobulintumėte savo arsenalą, kaskite tunelius vietovėje, kad pasislėptumėte ir surinktumėte užkastus lobius, ir venkite kylančio vandens lygio, kad liktumėte vienas išlikęs!"
+
+#: all_pages/1 Rocket Bot Royale.py:112 all_pages/2 Goober Dash.py:144
+msgid "Platforms"
+msgstr "Platformos"
+
+#: all_pages/1 Rocket Bot Royale.py:127 all_pages/2 Goober Dash.py:158
+msgid "Communities"
+msgstr "Bendruomenės"
+
+#: all_pages/0 Home.py:11
+msgid "Welcome to"
+msgstr "Sveiki atvykę į"
+
+#: all_pages/0 Home.py:14
+msgid "A website which provides useful Tools & Statistics of games made by [Winterpixel Games](https://www.winterpixel.com/)"
+msgstr "Tinklalapis, kuriame pateikiami naudingi įrankiai ir žaidimų, kuriuos sukūrė [Winterpixel Games](https://www.winterpixel.com/), statistika."
+
+#: all_pages/0 Home.py:160
+msgid "Home"
+msgstr "Pagrindinis"
+
+#: all_pages/0 Home.py:215
 msgid "Log Out"
 msgstr "Atsijungti"
 
-#: common_config.py:2202
-msgid "Account"
-msgstr "Sąskaita"
+#: all_pages/2 Goober Dash.py:140
+msgid "**GOOBER DASH** is a multiplayer battle royale game that you can play online. Dash your opponents into deadly spikes, gather precious coins, and unlock a plethora of unique costumes as you strive to outlast the competition. Invite your friends to engage in epic battles in custom private lobbies. Unleash your creativity with the level editor, crafting and conquering your very own battlegrounds. Climb the global and country-based seasonal leaderboards to prove your dominance in this thrilling contest."
+msgstr "**GOOBER DASH** yra daugelio žaidėjų mūšio karaliaus žaidimas, kurį galite žaisti internete. Stumdykite priešininkus į mirtinus spyglius, rinkite brangias monetas ir atrakinkite daugybę unikalių kostiumų, kad įveiktumėte varžovus. Pakvieskite draugus dalyvauti epiniuose mūšiuose privačiuose lobiuose. Išlaisvinkite savo kūrybiškumą naudodamiesi lygių redaktoriumi, kurdami ir užkariaudami savo pačių mūšių laukus. Kopkite į pasaulines ir šalių sezonines lyderių lenteles, kad įrodytumėte savo pranašumą šiose jaudinančiose varžybose."
 
-#: common_config.py:2210
-msgid "Log In"
-msgstr "Prisijungti"
+#: all_pages/2 Goober Dash.py:191
+msgid "Time Trials (Certified Levels)"
+msgstr "Laiko bandymai (sertifikuoti lygiai)"
 
-#: common_config.py:2218
-msgid "Sign Up"
-msgstr "Užsiregistruoti"
+#: common_config.py:59
+msgid "Welcome back"
+msgstr "Sveiki sugrįžę"
+
+#: common_config.py:109
+msgid "Back to Home"
+msgstr "Grįžti į Pradžią"
+
+#: common_config.py:151
+msgid "Back to Menu"
+msgstr "Grįžti į meniu"
+
+#: common_config.py:179
+msgid "This website is NOT affiliated with or endorsed by Winterpixel Games Inc."
+msgstr "Ši svetainė NĖRA susijusi su \"Winterpixel Games Inc.\" ar jos nepatvirtinta."
+
+#: common_config.py:181
+msgid "All relevant trademarks belong to their respective owners."
+msgstr "Visi atitinkami prekių ženklai priklauso atitinkamiems jų savininkams."
+
+#: common_config.py:184
+msgid "Developed with 💖 by <a style=\"text-decoration:none\" href=\"https://tank8k.com/\" target=\"_blank\">TANK8K</a>"
+msgstr "Sukurta su 💖 by <a style=\"text-decoration:none\" href=\"https://tank8k.com/\" target=\"_blank\">TANK8K</a>"
 

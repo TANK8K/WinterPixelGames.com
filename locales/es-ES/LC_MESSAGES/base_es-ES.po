@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: winterpixelgames\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-04 14:26+0800\n"
-"PO-Revision-Date: 2024-07-04 06:28\n"
+"POT-Creation-Date: 2024-07-05 16:37+0800\n"
+"PO-Revision-Date: 2024-07-05 08:41\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
@@ -17,90 +17,211 @@ msgstr ""
 "X-Crowdin-File: base.pot\n"
 "X-Crowdin-File-ID: 10\n"
 
-#: all_pages/6 Broski.py:62
+#: all_pages/A Log In.py:32 all_pages/0 Home.py:205
+msgid "Log In"
+msgstr "Iniciar sesión"
+
+#: all_pages/A Log In.py:56 all_pages/A Log In.py:215
+msgid "Forgot Username Request"
+msgstr "Solicitud de nombre de usuario olvidado"
+
+#: all_pages/A Log In.py:244 all_pages/A Log In.py:611
+#: all_pages/B Sign Up.py:246
+msgid "Hello"
+msgstr "Hola"
+
+#: all_pages/A Log In.py:251
+msgid "We have sent you this email in response to your request about forgotting your username on WinterPixelGames."
+msgstr "Te hemos enviado este correo electrónico en respuesta a tu solicitud sobre cómo olvidar tu nombre de usuario en WinterPixelGames."
+
+#: all_pages/A Log In.py:256
+msgid "Your username of the associated email is "
+msgstr "Su nombre de usuario del correo electrónico asociado es "
+
+#: all_pages/A Log In.py:262
+msgid "You can now login to your account using this username and the corresponding password."
+msgstr "Ahora puede iniciar sesión en su cuenta usando este nombre de usuario y la contraseña correspondiente."
+
+#: all_pages/A Log In.py:267 all_pages/A Log In.py:634
+#: all_pages/B Sign Up.py:267
+msgid "Happy Gaming!"
+msgstr "¡Feliz Juego!"
+
+#: all_pages/A Log In.py:270 all_pages/A Log In.py:637
+msgid "WinterPixelGames"
+msgstr "WinterPixelGames"
+
+#: all_pages/A Log In.py:286 all_pages/A Log In.py:787
+#: all_pages/A Log In.py:795 all_pages/A Log In.py:798
+msgid "Login"
+msgstr "Ingresar"
+
+#: all_pages/A Log In.py:302
+msgid "Please disregard this email if you did not submit a forgot username request."
+msgstr "Por favor ignore este correo electrónico si no ha enviado una solicitud de nombre de usuario olvidado."
+
+#: all_pages/A Log In.py:332 all_pages/A Log In.py:699
+#: all_pages/B Sign Up.py:328
+msgid "Problems or questions?"
+msgstr "¿Problemas o preguntas?"
+
+#: all_pages/A Log In.py:422 all_pages/A Log In.py:581
+msgid "Forgot Password Request"
+msgstr "Solicitud de contraseña olvidada"
+
+#: all_pages/A Log In.py:618
+msgid "We have sent you this email in response to your request about forgotting your password on WinterPixelGames."
+msgstr "Te hemos enviado este correo electrónico en respuesta a tu solicitud sobre cómo olvidar tu contraseña en WinterPixelGames."
+
+#: all_pages/A Log In.py:623
+msgid "Your new auto-generated password is "
+msgstr "Su nueva contraseña autogenerada es "
+
+#: all_pages/A Log In.py:629
+msgid "You can now login to your account using this password and change it to a custom password if necessary."
+msgstr "Ahora puede iniciar sesión en su cuenta usando esta contraseña y cambiarla a una contraseña personalizada si es necesario."
+
+#: all_pages/A Log In.py:653 all_pages/A Log In.py:856
+msgid "Reset Password"
+msgstr "Restablecer contraseña"
+
+#: all_pages/A Log In.py:669
+msgid "Please disregard this email if you did not submit a forgot password request."
+msgstr "Por favor, ignora este correo electrónico si no has enviado una solicitud de contraseña olvidada."
+
+#: all_pages/A Log In.py:788 all_pages/A Log In.py:829
+msgid "Forgot Username"
+msgstr "Nombre de usuario olvidado"
+
+#: all_pages/A Log In.py:789 all_pages/A Log In.py:854
+msgid "Forgot Password"
+msgstr "Olvidó la contraseña"
+
+#: all_pages/A Log In.py:796 all_pages/A Log In.py:855
+#: all_pages/B Sign Up.py:527
+msgid "Username"
+msgstr "Usuario"
+
+#: all_pages/A Log In.py:797 all_pages/B Sign Up.py:528
+msgid "Password"
+msgstr "Contraseña"
+
+#: all_pages/A Log In.py:802
+msgid "Username or Password is incorrect"
+msgstr "Nombre de usuario o contraseña incorrectos"
+
+#: all_pages/A Log In.py:830 all_pages/B Sign Up.py:446
+#: all_pages/D Account.py:172
+msgid "Email"
+msgstr "E-mail"
+
+#: all_pages/A Log In.py:831
+msgid "Send Userename"
+msgstr "Enviar nombre de usuario"
+
+#: all_pages/A Log In.py:840
+msgid "Username is sent to the associated email successfully"
+msgstr "El nombre de usuario se ha enviado al correo electrónico asociado correctamente"
+
+#: all_pages/A Log In.py:842 all_pages/B Sign Up.py:460
+msgid "Email not found"
+msgstr "Email no encontrado"
+
+#: all_pages/A Log In.py:870
+msgid "New password is sent to the associated email successfully"
+msgstr "La nueva contraseña se ha enviado al correo electrónico asociado correctamente"
+
+#: all_pages/A Log In.py:872
+msgid "Username not found"
+msgstr "Usuario no encontrado"
+
+#: all_pages/A Log In.py:876
+msgid "Click the button again if it doesn't work for the first time"
+msgstr "Haz clic en el botón de nuevo si no funciona por primera vez"
+
+#: all_pages/6 Broski.py:60
 msgid "**BROSKI** is an arcade pixel style skiing game, it is a fun and has a unique visual style that allows you to enjoy skiing even in summer. In the game, you will play as a skier who races down a snowy mountain. Your goal is to ski the furthest distance possible. As you slide down the hill faster and faster, you have to avoid more and more obstacles on the way, which makes the game challenging. To test how far you can go, take the challenge!"
 msgstr "**BROSKI** es un juego de skiing estilo arcade de píxeles, es divertido y tiene un estilo visual único que te permite disfrutar del esquí incluso en verano. En el juego, usted jugará como esquiador que compite por una montaña nevada. Su objetivo es esquiar la distancia más lejana posible. A medida que te deslizas por la colina más rápido y rápido, tendrás que evitar más y más obstáculos en el camino, lo que hace que el juego sea un desafío. ¡Para probar hasta dónde puedes llegar, haz el desafío!"
 
-#: all_pages/6 Broski.py:66
+#: all_pages/6 Broski.py:64
 msgid "**Broski** is a **prototype single-player game** currently"
 msgstr "**Broski** es un **prototipo de juego de un solo jugador** actualmente"
 
-#: all_pages/6 Broski.py:69 all_pages/5 Moonrock Miners.py:77
-#: all_pages/4 Goober Shot.py:87 all_pages/3 Goober Royale.py:87
+#: all_pages/6 Broski.py:67 all_pages/5 Moonrock Miners.py:75
+#: all_pages/4 Goober Shot.py:85 all_pages/3 Goober Royale.py:85
 msgid "Platform"
 msgstr "Plataforma"
 
-#: all_pages/6 Broski.py:71 all_pages/5 Moonrock Miners.py:79
-#: all_pages/4 Goober Shot.py:89 all_pages/3 Goober Royale.py:89
-#: all_pages/1 Rocket Bot Royale.py:116 all_pages/2 Goober Dash.py:148
+#: all_pages/6 Broski.py:69 all_pages/5 Moonrock Miners.py:77
+#: all_pages/4 Goober Shot.py:87 all_pages/3 Goober Royale.py:87
+#: all_pages/1 Rocket Bot Royale.py:114 all_pages/2 Goober Dash.py:146
 msgid "Browser"
 msgstr "Navegador"
 
-#: all_pages/6 Broski.py:72 all_pages/5 Moonrock Miners.py:80
-#: all_pages/4 Goober Shot.py:90 all_pages/3 Goober Royale.py:90
+#: all_pages/6 Broski.py:70 all_pages/5 Moonrock Miners.py:78
+#: all_pages/4 Goober Shot.py:88 all_pages/3 Goober Royale.py:88
 msgid "Community"
 msgstr "Comunidad"
 
-#: all_pages/6 Broski.py:78 all_pages/5 Moonrock Miners.py:86
-#: all_pages/4 Goober Shot.py:96 all_pages/3 Goober Royale.py:96
-#: all_pages/1 Rocket Bot Royale.py:141 all_pages/2 Goober Dash.py:171
+#: all_pages/6 Broski.py:76 all_pages/5 Moonrock Miners.py:84
+#: all_pages/4 Goober Shot.py:94 all_pages/3 Goober Royale.py:94
+#: all_pages/1 Rocket Bot Royale.py:139 all_pages/2 Goober Dash.py:169
 msgid "Tools"
 msgstr "Herramientas"
 
-#: all_pages/6 Broski.py:83 all_pages/5 Moonrock Miners.py:91
+#: all_pages/6 Broski.py:81 all_pages/5 Moonrock Miners.py:89
 #: all_pages/RocketBotRoyale/Tools/image_assets.py:10
-#: all_pages/4 Goober Shot.py:101 all_pages/GooberDash/Tools/image_assets.py:37
+#: all_pages/4 Goober Shot.py:99 all_pages/GooberDash/Tools/image_assets.py:37
 #: all_pages/MoonrockMiners/Tools/image_assets.py:13
 #: all_pages/GooberRoyale/Tools/image_assets.py:13
 #: all_pages/GooberShot/Tools/image_assets.py:13
-#: all_pages/3 Goober Royale.py:100 all_pages/1 Rocket Bot Royale.py:151
-#: all_pages/Broski/Tools/image_assets.py:13 all_pages/2 Goober Dash.py:184
+#: all_pages/3 Goober Royale.py:98 all_pages/1 Rocket Bot Royale.py:149
+#: all_pages/Broski/Tools/image_assets.py:13 all_pages/2 Goober Dash.py:182
 msgid "Image Assets"
 msgstr "Activos de imagen"
 
-#: all_pages/6 Broski.py:83 all_pages/5 Moonrock Miners.py:91
-#: all_pages/5 Moonrock Miners.py:103 all_pages/4 Goober Shot.py:101
-#: all_pages/4 Goober Shot.py:113 all_pages/4 Goober Shot.py:118
+#: all_pages/6 Broski.py:81 all_pages/5 Moonrock Miners.py:89
+#: all_pages/5 Moonrock Miners.py:101 all_pages/4 Goober Shot.py:99
+#: all_pages/4 Goober Shot.py:111 all_pages/4 Goober Shot.py:116
 #: all_pages/GooberDash/Statistics/player_info.py:480
 #: all_pages/GooberDash/Statistics/player_info.py:494
 #: all_pages/GooberDash/Statistics/player_info.py:496
-#: all_pages/GooberDash/Statistics/player_info.py:498
-#: all_pages/3 Goober Royale.py:109 all_pages/3 Goober Royale.py:114
-#: all_pages/1 Rocket Bot Royale.py:146 all_pages/1 Rocket Bot Royale.py:151
-#: all_pages/1 Rocket Bot Royale.py:163 all_pages/1 Rocket Bot Royale.py:168
-#: all_pages/2 Goober Dash.py:177 all_pages/2 Goober Dash.py:198
-#: all_pages/2 Goober Dash.py:203 all_pages/2 Goober Dash.py:208
-#: common_config.py:1200
+#: all_pages/GooberDash/Statistics/player_info.py:498 all_pages/D Account.py:78
+#: all_pages/3 Goober Royale.py:107 all_pages/3 Goober Royale.py:112
+#: all_pages/1 Rocket Bot Royale.py:144 all_pages/1 Rocket Bot Royale.py:149
+#: all_pages/1 Rocket Bot Royale.py:161 all_pages/1 Rocket Bot Royale.py:166
+#: all_pages/2 Goober Dash.py:175 all_pages/2 Goober Dash.py:196
+#: all_pages/2 Goober Dash.py:201 all_pages/2 Goober Dash.py:206
 msgid "WIP"
 msgstr "WIP"
 
-#: all_pages/5 Moonrock Miners.py:70
+#: all_pages/5 Moonrock Miners.py:68
 msgid "**MOONROCK MINERS** is a gravity-defying multiplayer space battle game set in an asteroid field. Blast other players, collect powerups and crystals, and avoid the asteroids. Try to survive until the end to win the match. Compete against players around the world in real-time to rank in every season. You can also create your own custom lobbies to play private games online with your friends!"
 msgstr "**MOONROCK MINERS** es un juego de batallas espaciales multijugador que desafía a la gravedad y se desarrolla en un campo de asteroides. Explota a otros jugadores, recoge potenciadores y cristales y esquiva los asteroides. Intente sobrevivir hasta el final para ganar la partida. Compita contra jugadores de todo el mundo en tiempo real para clasificarse en cada estación. También puede crear sus propios vestíbulos personalizados para jugar partidas privadas en línea con sus amigos."
 
-#: all_pages/5 Moonrock Miners.py:74
+#: all_pages/5 Moonrock Miners.py:72
 msgid "**Moonrock Miners** is **no longer in development**"
 msgstr "**Moonrock Miners** ya **no está en desarrollo**"
 
-#: all_pages/5 Moonrock Miners.py:98 all_pages/4 Goober Shot.py:108
-#: all_pages/3 Goober Royale.py:104 all_pages/1 Rocket Bot Royale.py:158
-#: all_pages/2 Goober Dash.py:188
+#: all_pages/5 Moonrock Miners.py:96 all_pages/4 Goober Shot.py:106
+#: all_pages/3 Goober Royale.py:102 all_pages/1 Rocket Bot Royale.py:156
+#: all_pages/2 Goober Dash.py:186
 msgid "Statistics"
 msgstr "Estadísticas"
 
-#: all_pages/5 Moonrock Miners.py:103
+#: all_pages/5 Moonrock Miners.py:101
 #: all_pages/RocketBotRoyale/Statistics/season_leaderboard.py:10
-#: all_pages/4 Goober Shot.py:118
+#: all_pages/4 Goober Shot.py:116
 #: all_pages/GooberDash/Statistics/season_leaderboard.py:13
 #: all_pages/MoonrockMiners/Statistics/season_leaderboard.py:10
 #: all_pages/GooberRoyale/Statistics/season_leaderboard.py:10
 #: all_pages/GooberShot/Statistics/season_leaderboard.py:10
-#: all_pages/3 Goober Royale.py:114 all_pages/1 Rocket Bot Royale.py:168
-#: all_pages/2 Goober Dash.py:208
+#: all_pages/3 Goober Royale.py:112 all_pages/1 Rocket Bot Royale.py:166
+#: all_pages/2 Goober Dash.py:206
 msgid "Season Leaderboard"
 msgstr "Clasificación de la temporada"
 
-#: all_pages/5 Moonrock Miners.py:108
+#: all_pages/5 Moonrock Miners.py:106
 msgid "**Leaderboard** is **disabled** currently"
 msgstr "**Leaderboard** está **deshabilitado** actualmente"
 
@@ -128,30 +249,30 @@ msgid "Gallery"
 msgstr "Galería"
 
 #: all_pages/RocketBotRoyale/Tools/optimize_crate.py:10
-#: all_pages/1 Rocket Bot Royale.py:146
+#: all_pages/1 Rocket Bot Royale.py:144
 msgid "Optimize Crate"
 msgstr "Optimizar la caja"
 
 #: all_pages/RocketBotRoyale/Statistics/player_info.py:10
-#: all_pages/4 Goober Shot.py:113
+#: all_pages/4 Goober Shot.py:111
 #: all_pages/GooberDash/Statistics/player_info.py:80
 #: all_pages/GooberRoyale/Statistics/player_info.py:10
 #: all_pages/GooberShot/Statistics/player_info.py:10
-#: all_pages/3 Goober Royale.py:109 all_pages/1 Rocket Bot Royale.py:163
-#: all_pages/2 Goober Dash.py:198
+#: all_pages/3 Goober Royale.py:107 all_pages/1 Rocket Bot Royale.py:161
+#: all_pages/2 Goober Dash.py:196
 msgid "Player Info"
 msgstr "Información del jugador"
 
-#: all_pages/4 Goober Shot.py:78
+#: all_pages/4 Goober Shot.py:76
 msgid "**GOOBER SHOT** throws you into thrilling online archery battles against three other players! Prepare your bow, sharpen your arrows, enter the arena, and unleash your skills as a master archer. Remember, every arrow counts! Show off your precision and reflexes as you aim, shoot, and dodge with finesse. Rise through the ranks, climb the global leaderboards, and prove yourself as the ultimate archery champion. Will you emerge as the greatest archer in the realm?"
 msgstr "¡**GOOBER SHOT** le lanza a emocionantes batallas de tiro con arco en línea contra otros tres jugadores! Prepare su arco, afile sus flechas, entre en la arena y dé rienda suelta a sus habilidades como maestro arquero. Recuerde, ¡cada flecha cuenta! Demuestre su precisión y sus reflejos mientras apunta, dispara y esquiva con finura. Ascienda en la clasificación, escale posiciones en los marcadores mundiales y demuestre que es el campeón de tiro con arco definitivo. ¿Surgirá usted como el mejor arquero del reino?"
 
-#: all_pages/4 Goober Shot.py:83
+#: all_pages/4 Goober Shot.py:81
 msgid "**Goober Shot** is in **beta** currently (Bugs are expected and Data may be reset in future)"
 msgstr "**Goober Shot** está en **beta** actualmente (se esperan fallos y los datos pueden ser reseteados en el futuro)"
 
 #: all_pages/GooberDash/Tools/goober_generator.py:65
-#: all_pages/2 Goober Dash.py:182
+#: all_pages/2 Goober Dash.py:180
 msgid "Goober Generator"
 msgstr "Generador Goober"
 
@@ -204,7 +325,7 @@ msgstr "Insignia"
 msgid "Other Stuff"
 msgstr "Otras cosas"
 
-#: all_pages/GooberDash/Tools/flip_level.py:130 all_pages/2 Goober Dash.py:175
+#: all_pages/GooberDash/Tools/flip_level.py:130 all_pages/2 Goober Dash.py:173
 msgid "Flip Level"
 msgstr "Nivel de volteo"
 
@@ -252,7 +373,7 @@ msgid "flipped"
 msgstr "volteado"
 
 #: all_pages/GooberDash/Tools/maze_generator.py:13
-#: all_pages/2 Goober Dash.py:177
+#: all_pages/2 Goober Dash.py:175
 msgid "Maze Generator"
 msgstr "Generador de laberintos"
 
@@ -1641,11 +1762,204 @@ msgid "Percentile"
 msgstr "Percentil"
 
 #: all_pages/GooberDash/Statistics/level_info.py:13
-#: all_pages/2 Goober Dash.py:203
+#: all_pages/2 Goober Dash.py:201
 msgid "Level Info"
 msgstr "Información de nivel"
 
-#: all_pages/8 Useful Links.py:73 all_pages/0 Home.py:199
+#: all_pages/B Sign Up.py:24 all_pages/0 Home.py:210
+msgid "Sign Up"
+msgstr "Regístrate"
+
+#: all_pages/B Sign Up.py:58 all_pages/B Sign Up.py:217
+msgid "Verify Account"
+msgstr "Verificar cuenta"
+
+#: all_pages/B Sign Up.py:251
+msgid "Welcome to WinterPixelGames! We're excited to have you join our community. Before you creating your account, we need to verify your email address to ensure we have the correct information."
+msgstr "¡Bienvenido a WinterPixelGames! Estamos encantados de que te unas a nuestra comunidad. Antes de crear tu cuenta, necesitamos verificar tu dirección de correo electrónico para asegurarnos de que tenemos la información correcta."
+
+#: all_pages/B Sign Up.py:256
+msgid "Your verification code is "
+msgstr "Tu código de verificación es "
+
+#: all_pages/B Sign Up.py:262
+msgid "You can now register your account using this verification code and the corresponding email."
+msgstr "Ahora puedes registrar tu cuenta usando este código de verificación y el correo electrónico correspondiente."
+
+#: all_pages/B Sign Up.py:284
+msgid "Verify"
+msgstr "Verificar"
+
+#: all_pages/B Sign Up.py:299
+msgid "Please disregard this email if you did not submit a verify email request."
+msgstr "Por favor, ignora este correo electrónico si no has enviado una solicitud de verificación de correo electrónico."
+
+#: all_pages/B Sign Up.py:437 all_pages/B Sign Up.py:444
+msgid "Verify Email"
+msgstr "Verificar Email"
+
+#: all_pages/B Sign Up.py:438 all_pages/B Sign Up.py:524
+#: all_pages/B Sign Up.py:530
+msgid "Register"
+msgstr "Registrarse"
+
+#: all_pages/B Sign Up.py:448
+msgid "Verification Code"
+msgstr "Código de verificación"
+
+#: all_pages/B Sign Up.py:450
+msgid "Leave it blank to send Verification Code"
+msgstr "Deje en blanco para enviar código de verificación"
+
+#: all_pages/B Sign Up.py:452
+msgid "Send/Verify"
+msgstr "Enviar/Verificar"
+
+#: all_pages/B Sign Up.py:464
+msgid "Wrong verification code"
+msgstr "Código de verificación incorrecto"
+
+#: all_pages/B Sign Up.py:472
+msgid "Verify success"
+msgstr "Verificar con éxito"
+
+#: all_pages/B Sign Up.py:492
+msgid "Verification code is sent to the email successfully"
+msgstr "El código de verificación se ha enviado al correo electrónico correctamente"
+
+#: all_pages/B Sign Up.py:496
+msgid "Email is required"
+msgstr "Se requiere correo electrónico"
+
+#: all_pages/B Sign Up.py:498
+msgid "Email is not valid"
+msgstr "El email no es válido"
+
+#: all_pages/B Sign Up.py:500
+msgid "Email is already in use"
+msgstr "El correo electrónico ya está en uso"
+
+#: all_pages/B Sign Up.py:525 all_pages/D Account.py:171
+msgid "Nickname"
+msgstr "Apodo"
+
+#: all_pages/B Sign Up.py:525
+msgid "alphabets only"
+msgstr "sólo alfabetos"
+
+#: all_pages/B Sign Up.py:526
+msgid "Verified Email"
+msgstr "Email verificado"
+
+#: all_pages/B Sign Up.py:527 all_pages/B Sign Up.py:528
+msgid "for login"
+msgstr "para iniciar sesión"
+
+#: all_pages/B Sign Up.py:529 all_pages/D Account.py:192
+msgid "Repeat Password"
+msgstr "Repetir contraseña"
+
+#: all_pages/B Sign Up.py:534
+msgid "User registered successfully"
+msgstr "Usuario registrado correctamente"
+
+#: all_pages/C Log Out.py:13
+msgid "You are now logged out"
+msgstr "Has cerrado la sesión"
+
+#: all_pages/D Account.py:33 all_pages/0 Home.py:220
+msgid "Account"
+msgstr "Cuenta"
+
+#: all_pages/D Account.py:64 all_pages/D Account.py:72
+msgid "Linked Game Accounts"
+msgstr "Cuentas de juego vinculadas"
+
+#: all_pages/D Account.py:65
+msgid "Change Nickname/Email"
+msgstr "Cambiar Apodo/Email"
+
+#: all_pages/D Account.py:66 all_pages/D Account.py:189
+msgid "Change Password"
+msgstr "Cambiar contraseña"
+
+#: all_pages/D Account.py:75
+msgid "Statistics of Linked Accounts will be tracked daily and displayed in Player Info"
+msgstr "Las estadísticas de las cuentas vinculadas se registrarán diariamente y se mostrarán en la información del jugador"
+
+#: all_pages/D Account.py:108 all_pages/D Account.py:138
+#: all_pages/8 Useful Links.py:88 all_pages/0 Home.py:58
+#: all_pages/0 Home.py:163
+msgid "Rocket Bot Royale"
+msgstr "Rocket Bot Royale"
+
+#: all_pages/D Account.py:110 all_pages/D Account.py:116
+#: all_pages/D Account.py:122 all_pages/D Account.py:128
+msgid "No User ID Found"
+msgstr "No se encontró ID de usuario"
+
+#: all_pages/D Account.py:114 all_pages/D Account.py:139 all_pages/0 Home.py:63
+#: all_pages/0 Home.py:168
+msgid "Goober Dash"
+msgstr "Goober Dash"
+
+#: all_pages/D Account.py:120 all_pages/D Account.py:140
+#: all_pages/8 Useful Links.py:92 all_pages/0 Home.py:68
+#: all_pages/0 Home.py:173
+msgid "Goober Royale"
+msgstr "Goober Royale"
+
+#: all_pages/D Account.py:126 all_pages/D Account.py:141
+#: all_pages/8 Useful Links.py:95 all_pages/0 Home.py:73
+#: all_pages/0 Home.py:178
+msgid "Goober Shot"
+msgstr "Tiro Goober"
+
+#: all_pages/D Account.py:143 all_pages/D Account.py:174
+msgid "Update"
+msgstr "Actualizar"
+
+#: all_pages/D Account.py:150
+msgid "Wrong User ID format of "
+msgstr "Formato de ID de usuario incorrecto de "
+
+#: all_pages/D Account.py:162
+msgid "User IDs are updated successfully"
+msgstr "IDs de usuario se actualizan correctamente"
+
+#: all_pages/D Account.py:169
+msgid "Change Name/Email"
+msgstr "Cambiar nombre/email"
+
+#: all_pages/D Account.py:170
+msgid "Field"
+msgstr "Campo"
+
+#: all_pages/D Account.py:173
+msgid "New value"
+msgstr "Nuevo valor"
+
+#: all_pages/D Account.py:179
+msgid "Entries updated successfully"
+msgstr "Entradas actualizadas correctamente"
+
+#: all_pages/D Account.py:190
+msgid "Current Password"
+msgstr "Contraseña actual"
+
+#: all_pages/D Account.py:191
+msgid "New Password"
+msgstr "Nueva contraseña"
+
+#: all_pages/D Account.py:193
+msgid "Reset"
+msgstr "Reset"
+
+#: all_pages/D Account.py:198
+msgid "Password modified successfully"
+msgstr "Contraseña modificada correctamente"
+
+#: all_pages/8 Useful Links.py:73 all_pages/0 Home.py:198
 msgid "Useful Links"
 msgstr "Enlaces útiles"
 
@@ -1657,28 +1971,13 @@ msgstr "Servidores de montaje"
 msgid "**Staging Servers** are seperate servers which are used for testing new features before releasing. Usually updates are released on **Staging Servers** a few days before public release. Developers invite members to test out some upcoming features and ask for feedbacks in **Offcial Winterpixel Games Discord server** occasionally.\n"
 msgstr "Los **Staging Servers** son servidores independientes que se utilizan para probar nuevas funciones antes de su lanzamiento. Normalmente las actualizaciones se lanzan en **Staging Servers** unos días antes del lanzamiento público. Los desarrolladores invitan a los miembros a probar algunas de las próximas características y a pedir opiniones en el **servidor de Discord oficial de Winterpixel Games** de vez en cuando.\n"
 
-#: all_pages/8 Useful Links.py:88 all_pages/0 Home.py:59
-#: all_pages/0 Home.py:164 common_config.py:1256
-msgid "Rocket Bot Royale"
-msgstr "Rocket Bot Royale"
-
-#: all_pages/8 Useful Links.py:92 all_pages/0 Home.py:69
-#: all_pages/0 Home.py:174 common_config.py:1258
-msgid "Goober Royale"
-msgstr "Goober Royale"
-
-#: all_pages/8 Useful Links.py:95 all_pages/0 Home.py:74
-#: all_pages/0 Home.py:179 common_config.py:1259
-msgid "Goober Shot"
-msgstr "Tiro Goober"
-
-#: all_pages/8 Useful Links.py:96 all_pages/0 Home.py:79
-#: all_pages/0 Home.py:184
+#: all_pages/8 Useful Links.py:96 all_pages/0 Home.py:78
+#: all_pages/0 Home.py:183
 msgid "Moonrock Miners"
 msgstr "Mineros de roca lunar"
 
-#: all_pages/8 Useful Links.py:97 all_pages/0 Home.py:84
-#: all_pages/0 Home.py:189
+#: all_pages/8 Useful Links.py:97 all_pages/0 Home.py:83
+#: all_pages/0 Home.py:188
 msgid "Broski"
 msgstr "Broski"
 
@@ -1698,440 +1997,163 @@ msgstr "[**Modificación de nivel Goober Dash**](https://twhlynch.me/goober-dash
 msgid "Goober Dash Level Modding"
 msgstr "Modificación de nivel Goober Dash"
 
-#: all_pages/3 Goober Royale.py:78
-msgid "**GOOBER ROYALE** is a multiplayer battle royale game in which each player controls a character (called a \"goober\") and must collect weapons, power-ups and other items to eliminate their opponents. The clashes bring together 16 players on a map and the objective will be to be the last survivor of the game. You can play alone or in a team of 4 players. Your Goober will have several weapons, a main missile that reloads at regular intervals and a secondary accessory such as mines, a tornado, a drill and many others. Also use your jetpack to move around the map more easily, reach high places and surprise your opponents. Completing games and missions will earn you gold coins that you can spend either to improve your Goober's skills or to buy cosmetics that will give your character a unique style. An online ranking will allow you to see the 100 best players in the world and in your region."
-msgstr "**GOOBER ROYALE** es un juego battle royale multijugador en el que cada jugador controla a un personaje (llamado \"goober\") y debe recoger armas, potenciadores y otros objetos para eliminar a sus oponentes. Los enfrentamientos reúnen a 16 jugadores en un mapa y el objetivo será ser el último superviviente de la partida. Puede jugar solo o en un equipo de 4 jugadores. Su Goober dispondrá de varias armas, un misil principal que se recarga a intervalos regulares y un accesorio secundario como minas, un tornado, un taladro y muchos otros. Utilice también su jetpack para desplazarse más fácilmente por el mapa, alcanzar lugares elevados y sorprender a sus adversarios. Completando partidas y misiones ganará monedas de oro que podrá gastar para mejorar las habilidades de su Goober o para comprar cosméticos que darán a su personaje un estilo único. Una clasificación en línea le permitirá ver a los 100 mejores jugadores del mundo y de su región."
-
-#: all_pages/3 Goober Royale.py:83
-msgid "**Goober Royale** is in **beta** currently (Bugs are expected and Data may be reset in future)"
-msgstr "**Goober Royale** está en **beta** actualmente (Se esperan errores y los datos pueden ser restablecidos en el futuro)"
-
-#: all_pages/7 About.py:55 all_pages/0 Home.py:194
-msgid "About"
-msgstr "Acerca de"
-
-#: all_pages/7 About.py:57
-msgid "What is WinterPixelGames?"
-msgstr "¿Qué es WinterPixelGames?"
-
-#: all_pages/7 About.py:63
-msgid "**:blue-background[WinterPixelGames]** (WPG) is a community-driven site made by [**TANK8K**](https://tank8k.com/) which provides useful **Tools & Statistics** of games made by **[Winterpixel Games](https://www.winterpixel.com/)**, including **[Rocket Bot Royale](./Rocket_Bot_Royale)**, **[Goober Dash](./Goober_Dash)**, **[Goober Royale](./Goober_Royale)**, **[Goober Shot](./Goober_Shot)**, and **[Moonrock Miners](./Moonrock_Miners)**."
-msgstr "**:blue-background[WinterPixelGames]** (WPG) es un sitio impulsado por la comunidad hecho por [**TANK8K**](https://tank8k.com/) que proporciona **herramientas y estadísticas** útiles de los juegos hechos por **[Winterpixel Games](https://www.winterpixel.com/)**, incluyendo **[Rocket Bot Royale](./Rocket_Bot_Royale)**, **[Goober Dash](./Goober_Dash)**, **[Goober Royale](./Goober_Royale)**, **[Goober Shot](./Goober_Shot)**, y **[Moonrock Miners](./Moonrock_Miners)**."
-
-#: all_pages/7 About.py:70
-msgid "Affiliation"
-msgstr "Afiliación"
-
-#: all_pages/7 About.py:74
-msgid "This website is **NOT** affiliated with or endorsed by **Winterpixel Games Inc.**"
-msgstr "Este sitio web **NO** está afiliado ni respaldado por **Winterpixel Games Inc.**."
-
-#: all_pages/7 About.py:81
-msgid "Copyright Notice"
-msgstr "Aviso sobre los derechos de autor"
-
-#: all_pages/7 About.py:85
-msgid "Rocket Bot Royale, Goober Dash, Goober Royale, Goober Shot, Moonrock Miners, Websites and Media **@ Winterpixel Games Inc.**"
-msgstr "Rocket Bot Royale, Goober Dash, Goober Royale, Goober Shot, Moonrock Miners, Sitios Web y Medios **@ Winterpixel Games Inc.**"
-
-#: all_pages/7 About.py:92
-msgid "License"
-msgstr "Licencia"
-
-#: all_pages/7 About.py:95
-msgid "The source code is licensed under **MIT license**."
-msgstr "El código fuente está licenciado bajo la **licencia MIT**."
-
-#: all_pages/7 About.py:101
-msgid "Technology"
-msgstr "Tecnología"
-
-#: all_pages/7 About.py:108
-msgid "Framework"
-msgstr "Marco"
-
-#: all_pages/7 About.py:111 common_config.py:2226
+#: all_pages/E Language.py:19 all_pages/7 About.py:110 all_pages/0 Home.py:227
 msgid "Language"
 msgstr "Idioma"
 
-#: all_pages/7 About.py:114
-msgid "Database"
-msgstr "Base de datos"
-
-#: all_pages/7 About.py:117
-msgid "Cloud Vendor"
-msgstr "Vendedor en la nube"
-
-#: all_pages/7 About.py:120
-msgid "Web Server"
-msgstr "Servidor web"
-
-#: all_pages/7 About.py:123
-msgid "Source Code"
-msgstr "Código fuente"
-
-#: all_pages/7 About.py:130
-msgid "Developer"
-msgstr "Desarrollador"
-
-#: all_pages/7 About.py:141
-msgid "Personal Website"
-msgstr "Página web personal"
-
-#: all_pages/7 About.py:146
-msgid "Developed with 💖 by **[:blue[TANK8K]](https://tank8k.com/)**"
-msgstr "Desarrollado con 💖 por **[:blue[TANK8K]](https://tank8k.com/)**"
-
-#: all_pages/1 Rocket Bot Royale.py:110
-msgid "**ROCKET BOT ROYALE** is a fun new take on the online battle royale formula. Powerful, wall-climbing, rocket-jumping, artillery-pumping Robo-Tanks are the vehicle of choice in this fast-paced shootout, where the goal is to survive longer than the competition. Collect the loot to upgrade your arsenal, tunnel into the terrain to take cover and collect buried treasure, and avoid the rising water levels to be the blast one standing!"
-msgstr "**ROCKET BOT ROYALE** es una nueva y divertida versión de la fórmula del battle royale en línea. Poderosos Robot-Tanques que trepan por las paredes, saltan cohetes y bombean artillería son el vehículo elegido en este trepidante tiroteo, en el que el objetivo es sobrevivir más tiempo que la competencia. Recoge el botín para mejorar tu arsenal, haz túneles en el terreno para ponerte a cubierto y recoger tesoros enterrados, ¡y evita los crecientes niveles de agua para ser el último en pie!"
-
-#: all_pages/1 Rocket Bot Royale.py:114 all_pages/2 Goober Dash.py:146
-msgid "Platforms"
-msgstr "Plataformas"
-
-#: all_pages/1 Rocket Bot Royale.py:129 all_pages/2 Goober Dash.py:160
-msgid "Communities"
-msgstr "Comunidades"
-
-#: all_pages/0 Home.py:12
-msgid "Welcome to"
-msgstr "Bienvenido a"
-
-#: all_pages/0 Home.py:15
-msgid "A website which provides useful Tools & Statistics of games made by [Winterpixel Games](https://www.winterpixel.com/)"
-msgstr "Un sitio web que proporciona herramientas útiles y estadísticas de los juegos realizados por [Winterpixel Games](https://www.winterpixel.com/)"
-
-#: all_pages/0 Home.py:64 all_pages/0 Home.py:169 common_config.py:1257
-msgid "Goober Dash"
-msgstr "Goober Dash"
-
-#: all_pages/0 Home.py:161
-msgid "Home"
-msgstr "Inicio"
-
-#: all_pages/2 Goober Dash.py:142
-msgid "**GOOBER DASH** is a multiplayer battle royale game that you can play online. Dash your opponents into deadly spikes, gather precious coins, and unlock a plethora of unique costumes as you strive to outlast the competition. Invite your friends to engage in epic battles in custom private lobbies. Unleash your creativity with the level editor, crafting and conquering your very own battlegrounds. Climb the global and country-based seasonal leaderboards to prove your dominance in this thrilling contest."
-msgstr "**GOOBER DASH** es un juego battle royale multijugador al que puede jugar en línea. Lance a sus oponentes contra pinchos mortales, recoja preciadas monedas y desbloquee una plétora de trajes únicos mientras se esfuerza por superar a la competencia. Invite a sus amigos a participar en batallas épicas en vestíbulos privados personalizados. Dé rienda suelta a su creatividad con el editor de niveles, creando y conquistando sus propios campos de batalla. Ascienda en las tablas de clasificación estacionales mundiales y por países para demostrar su dominio en esta emocionante competición."
-
-#: all_pages/2 Goober Dash.py:193
-msgid "Time Trials (Certified Levels)"
-msgstr "Contrarreloj (Niveles certificados)"
-
-#: common_config.py:47 common_config.py:206
-msgid "Verify Account"
-msgstr "Verificar cuenta"
-
-#: common_config.py:235 common_config.py:595 common_config.py:962
-msgid "Hello"
-msgstr "Hola"
-
-#: common_config.py:240
-msgid "Welcome to WinterPixelGames! We're excited to have you join our community. Before you creating your account, we need to verify your email address to ensure we have the correct information."
-msgstr "¡Bienvenido a WinterPixelGames! Estamos encantados de que te unas a nuestra comunidad. Antes de crear tu cuenta, necesitamos verificar tu dirección de correo electrónico para asegurarnos de que tenemos la información correcta."
-
-#: common_config.py:245
-msgid "Your verification code is "
-msgstr "Tu código de verificación es "
-
-#: common_config.py:251
-msgid "You can now register your account using this verification code and the corresponding email."
-msgstr "Ahora puedes registrar tu cuenta usando este código de verificación y el correo electrónico correspondiente."
-
-#: common_config.py:256 common_config.py:618 common_config.py:985
-msgid "Happy Gaming!"
-msgstr "¡Feliz Juego!"
-
-#: common_config.py:273
-msgid "Verify"
-msgstr "Verificar"
-
-#: common_config.py:288
-msgid "Please disregard this email if you did not submit a verify email request."
-msgstr "Por favor, ignora este correo electrónico si no has enviado una solicitud de verificación de correo electrónico."
-
-#: common_config.py:317 common_config.py:683 common_config.py:1050
-msgid "Problems or questions?"
-msgstr "¿Problemas o preguntas?"
-
-#: common_config.py:407 common_config.py:566
-msgid "Forgot Username Request"
-msgstr "Solicitud de nombre de usuario olvidado"
-
-#: common_config.py:602
-msgid "We have sent you this email in response to your request about forgotting your username on WinterPixelGames."
-msgstr "Te hemos enviado este correo electrónico en respuesta a tu solicitud sobre cómo olvidar tu nombre de usuario en WinterPixelGames."
-
-#: common_config.py:607
-msgid "Your username of the associated email is "
-msgstr "Su nombre de usuario del correo electrónico asociado es "
-
-#: common_config.py:613
-msgid "You can now login to your account using this username and the corresponding password."
-msgstr "Ahora puede iniciar sesión en su cuenta usando este nombre de usuario y la contraseña correspondiente."
-
-#: common_config.py:621 common_config.py:988
-msgid "WinterPixelGames"
-msgstr "WinterPixelGames"
-
-#: common_config.py:637 common_config.py:1332 common_config.py:1350
-#: common_config.py:1353
-msgid "Login"
-msgstr "Ingresar"
-
-#: common_config.py:653
-msgid "Please disregard this email if you did not submit a forgot username request."
-msgstr "Por favor ignore este correo electrónico si no ha enviado una solicitud de nombre de usuario olvidado."
-
-#: common_config.py:773 common_config.py:932
-msgid "Forgot Password Request"
-msgstr "Solicitud de contraseña olvidada"
-
-#: common_config.py:969
-msgid "We have sent you this email in response to your request about forgotting your password on WinterPixelGames."
-msgstr "Te hemos enviado este correo electrónico en respuesta a tu solicitud sobre cómo olvidar tu contraseña en WinterPixelGames."
-
-#: common_config.py:974
-msgid "Your new auto-generated password is "
-msgstr "Su nueva contraseña autogenerada es "
-
-#: common_config.py:980
-msgid "You can now login to your account using this password and change it to a custom password if necessary."
-msgstr "Ahora puede iniciar sesión en su cuenta usando esta contraseña y cambiarla a una contraseña personalizada si es necesario."
-
-#: common_config.py:1004 common_config.py:1401
-msgid "Reset Password"
-msgstr "Restablecer contraseña"
-
-#: common_config.py:1020
-msgid "Please disregard this email if you did not submit a forgot password request."
-msgstr "Por favor, ignora este correo electrónico si no has enviado una solicitud de contraseña olvidada."
-
-#: common_config.py:1187 common_config.py:1194
-msgid "Linked Game Accounts"
-msgstr "Cuentas de juego vinculadas"
-
-#: common_config.py:1188
-msgid "Change Nickname/Email"
-msgstr "Cambiar Apodo/Email"
-
-#: common_config.py:1189 common_config.py:1307
-msgid "Change Password"
-msgstr "Cambiar contraseña"
-
-#: common_config.py:1197
-msgid "Statistics of Linked Accounts will be tracked daily and displayed in Player Info"
-msgstr "Las estadísticas de las cuentas vinculadas se registrarán diariamente y se mostrarán en la información del jugador"
-
-#: common_config.py:1261 common_config.py:1292
-msgid "Update"
-msgstr "Actualizar"
-
-#: common_config.py:1268
-msgid "Wrong User ID format of "
-msgstr "Formato de ID de usuario incorrecto de "
-
-#: common_config.py:1280
-msgid "User IDs are updated successfully"
-msgstr "IDs de usuario se actualizan correctamente"
-
-#: common_config.py:1287
-msgid "Change Name/Email"
-msgstr "Cambiar nombre/email"
-
-#: common_config.py:1288
-msgid "Field"
-msgstr "Campo"
-
-#: common_config.py:1289 common_config.py:1552
-msgid "Nickname"
-msgstr "Apodo"
-
-#: common_config.py:1290 common_config.py:1375 common_config.py:1440
-msgid "Email"
-msgstr "E-mail"
-
-#: common_config.py:1291
-msgid "New value"
-msgstr "Nuevo valor"
-
-#: common_config.py:1297
-msgid "Entries updated successfully"
-msgstr "Entradas actualizadas correctamente"
-
-#: common_config.py:1308
-msgid "Current Password"
-msgstr "Contraseña actual"
-
-#: common_config.py:1309
-msgid "New Password"
-msgstr "Nueva contraseña"
-
-#: common_config.py:1310 common_config.py:1559
-msgid "Repeat Password"
-msgstr "Repetir contraseña"
-
-#: common_config.py:1311
-msgid "Reset"
-msgstr "Reset"
-
-#: common_config.py:1316
-msgid "Password modified successfully"
-msgstr "Contraseña modificada correctamente"
-
-#: common_config.py:1333 common_config.py:1374
-msgid "Forgot Username"
-msgstr "Nombre de usuario olvidado"
-
-#: common_config.py:1334 common_config.py:1399
-msgid "Forgot Password"
-msgstr "Olvidó la contraseña"
-
-#: common_config.py:1351 common_config.py:1400 common_config.py:1557
-msgid "Username"
-msgstr "Usuario"
-
-#: common_config.py:1352 common_config.py:1558
-msgid "Password"
-msgstr "Contraseña"
-
-#: common_config.py:1361
-msgid "Username or Password is incorrect"
-msgstr "Nombre de usuario o contraseña incorrectos"
-
-#: common_config.py:1376
-msgid "Send Userename"
-msgstr "Enviar nombre de usuario"
-
-#: common_config.py:1385
-msgid "Username is sent to the associated email successfully"
-msgstr "El nombre de usuario se ha enviado al correo electrónico asociado correctamente"
-
-#: common_config.py:1387 common_config.py:1510
-msgid "Email not found"
-msgstr "Email no encontrado"
-
-#: common_config.py:1416
-msgid "New password is sent to the associated email successfully"
-msgstr "La nueva contraseña se ha enviado al correo electrónico asociado correctamente"
-
-#: common_config.py:1419
-msgid "Username not found"
-msgstr "Usuario no encontrado"
-
-#: common_config.py:1430 common_config.py:1439 common_config.py:1450
-msgid "Verify Email"
-msgstr "Verificar Email"
-
-#: common_config.py:1431 common_config.py:1551 common_config.py:1560
-msgid "Register"
-msgstr "Registrarse"
-
-#: common_config.py:1444
-msgid "Send Verification Code"
-msgstr "Enviar código de verificación"
-
-#: common_config.py:1448
-msgid "Verification Code"
-msgstr "Código de verificación"
-
-#: common_config.py:1494
-msgid "Verification code is sent to the email successfully"
-msgstr "El código de verificación se ha enviado al correo electrónico correctamente"
-
-#: common_config.py:1499
-msgid "Email is required"
-msgstr "Se requiere correo electrónico"
-
-#: common_config.py:1501
-msgid "Email is not valid"
-msgstr "El email no es válido"
-
-#: common_config.py:1503
-msgid "Email is already in use"
-msgstr "El correo electrónico ya está en uso"
-
-#: common_config.py:1515
-msgid "Wrong verification code"
-msgstr "Código de verificación incorrecto"
-
-#: common_config.py:1526
-msgid "Verify success"
-msgstr "Verificar con éxito"
-
-#: common_config.py:1552
-msgid "alphabets only"
-msgstr "sólo alfabetos"
-
-#: common_config.py:1553
-msgid "Verified Email"
-msgstr "Email verificado"
-
-#: common_config.py:1555
-msgid "used for forgot username/password"
-msgstr "usado para olvidar/nombre de usuario/contraseña"
-
-#: common_config.py:1557 common_config.py:1558
-msgid "used for login"
-msgstr "usado para iniciar sesión"
-
-#: common_config.py:1564
-msgid "User registered successfully"
-msgstr "Usuario registrado correctamente"
-
-#: common_config.py:1591
-msgid "Welcome back"
-msgstr "Bienvenida de nuevo"
-
-#: common_config.py:1692
+#: all_pages/E Language.py:148
 msgid "Apply"
 msgstr "Aplicar"
 
-#: common_config.py:1695
+#: all_pages/E Language.py:154
 msgid "Contributors"
 msgstr "Colaboradores"
 
-#: common_config.py:1695
+#: all_pages/E Language.py:154
 msgid "In no particular order"
 msgstr "En ningún orden particular"
 
-#: common_config.py:1710
+#: all_pages/E Language.py:169
 msgid "Contribute"
 msgstr "Contribuir"
 
-#: common_config.py:1760
-msgid "Back to Home"
-msgstr "Volver al inicio"
+#: all_pages/3 Goober Royale.py:76
+msgid "**GOOBER ROYALE** is a multiplayer battle royale game in which each player controls a character (called a \"goober\") and must collect weapons, power-ups and other items to eliminate their opponents. The clashes bring together 16 players on a map and the objective will be to be the last survivor of the game. You can play alone or in a team of 4 players. Your Goober will have several weapons, a main missile that reloads at regular intervals and a secondary accessory such as mines, a tornado, a drill and many others. Also use your jetpack to move around the map more easily, reach high places and surprise your opponents. Completing games and missions will earn you gold coins that you can spend either to improve your Goober's skills or to buy cosmetics that will give your character a unique style. An online ranking will allow you to see the 100 best players in the world and in your region."
+msgstr "**GOOBER ROYALE** es un juego battle royale multijugador en el que cada jugador controla a un personaje (llamado \"goober\") y debe recoger armas, potenciadores y otros objetos para eliminar a sus oponentes. Los enfrentamientos reúnen a 16 jugadores en un mapa y el objetivo será ser el último superviviente de la partida. Puede jugar solo o en un equipo de 4 jugadores. Su Goober dispondrá de varias armas, un misil principal que se recarga a intervalos regulares y un accesorio secundario como minas, un tornado, un taladro y muchos otros. Utilice también su jetpack para desplazarse más fácilmente por el mapa, alcanzar lugares elevados y sorprender a sus adversarios. Completando partidas y misiones ganará monedas de oro que podrá gastar para mejorar las habilidades de su Goober o para comprar cosméticos que darán a su personaje un estilo único. Una clasificación en línea le permitirá ver a los 100 mejores jugadores del mundo y de su región."
 
-#: common_config.py:1802
-msgid "Back to Menu"
-msgstr "Volver al menú"
+#: all_pages/3 Goober Royale.py:81
+msgid "**Goober Royale** is in **beta** currently (Bugs are expected and Data may be reset in future)"
+msgstr "**Goober Royale** está en **beta** actualmente (Se esperan errores y los datos pueden ser restablecidos en el futuro)"
 
-#: common_config.py:2160
-msgid "This website is NOT affiliated with or endorsed by Winterpixel Games Inc."
-msgstr "Este sitio web NO está afiliado ni respaldado por Winterpixel Games Inc."
+#: all_pages/7 About.py:54 all_pages/0 Home.py:193
+msgid "About"
+msgstr "Acerca de"
 
-#: common_config.py:2163
-msgid "All relevant trademarks belong to their respective owners."
-msgstr "Todas las marcas comerciales relevantes pertenecen a sus respectivos propietarios."
+#: all_pages/7 About.py:56
+msgid "What is WinterPixelGames?"
+msgstr "¿Qué es WinterPixelGames?"
 
-#: common_config.py:2166
-msgid "Developed with 💖 by <a style=\"text-decoration:none\" href=\"https://tank8k.com/\" target=\"_blank\">TANK8K</a>"
-msgstr "Desarrollado con 💖 por <a style=\"text-decoration:none\" href=\"https://tank8k.com/\" target=\"_blank\">TANK8K</a>"
+#: all_pages/7 About.py:62
+msgid "**:blue-background[WinterPixelGames]** (WPG) is a community-driven site made by [**TANK8K**](https://tank8k.com/) which provides useful **Tools & Statistics** of games made by **[Winterpixel Games](https://www.winterpixel.com/)**, including **[Rocket Bot Royale](./Rocket_Bot_Royale)**, **[Goober Dash](./Goober_Dash)**, **[Goober Royale](./Goober_Royale)**, **[Goober Shot](./Goober_Shot)**, and **[Moonrock Miners](./Moonrock_Miners)**."
+msgstr "**:blue-background[WinterPixelGames]** (WPG) es un sitio impulsado por la comunidad hecho por [**TANK8K**](https://tank8k.com/) que proporciona **herramientas y estadísticas** útiles de los juegos hechos por **[Winterpixel Games](https://www.winterpixel.com/)**, incluyendo **[Rocket Bot Royale](./Rocket_Bot_Royale)**, **[Goober Dash](./Goober_Dash)**, **[Goober Royale](./Goober_Royale)**, **[Goober Shot](./Goober_Shot)**, y **[Moonrock Miners](./Moonrock_Miners)**."
 
-#: common_config.py:2194 common_config.py:2231
+#: all_pages/7 About.py:69
+msgid "Affiliation"
+msgstr "Afiliación"
+
+#: all_pages/7 About.py:73
+msgid "This website is **NOT** affiliated with or endorsed by **Winterpixel Games Inc.**"
+msgstr "Este sitio web **NO** está afiliado ni respaldado por **Winterpixel Games Inc.**."
+
+#: all_pages/7 About.py:80
+msgid "Copyright Notice"
+msgstr "Aviso sobre los derechos de autor"
+
+#: all_pages/7 About.py:84
+msgid "Rocket Bot Royale, Goober Dash, Goober Royale, Goober Shot, Moonrock Miners, Websites and Media **@ Winterpixel Games Inc.**"
+msgstr "Rocket Bot Royale, Goober Dash, Goober Royale, Goober Shot, Moonrock Miners, Sitios Web y Medios **@ Winterpixel Games Inc.**"
+
+#: all_pages/7 About.py:91
+msgid "License"
+msgstr "Licencia"
+
+#: all_pages/7 About.py:94
+msgid "The source code is licensed under **MIT license**."
+msgstr "El código fuente está licenciado bajo la **licencia MIT**."
+
+#: all_pages/7 About.py:100
+msgid "Technology"
+msgstr "Tecnología"
+
+#: all_pages/7 About.py:107
+msgid "Framework"
+msgstr "Marco"
+
+#: all_pages/7 About.py:113
+msgid "Database"
+msgstr "Base de datos"
+
+#: all_pages/7 About.py:116
+msgid "Cloud Vendor"
+msgstr "Vendedor en la nube"
+
+#: all_pages/7 About.py:119
+msgid "Web Server"
+msgstr "Servidor web"
+
+#: all_pages/7 About.py:122
+msgid "Source Code"
+msgstr "Código fuente"
+
+#: all_pages/7 About.py:129
+msgid "Developer"
+msgstr "Desarrollador"
+
+#: all_pages/7 About.py:140
+msgid "Personal Website"
+msgstr "Página web personal"
+
+#: all_pages/7 About.py:145
+msgid "Developed with 💖 by **[:blue[TANK8K]](https://tank8k.com/)**"
+msgstr "Desarrollado con 💖 por **[:blue[TANK8K]](https://tank8k.com/)**"
+
+#: all_pages/1 Rocket Bot Royale.py:108
+msgid "**ROCKET BOT ROYALE** is a fun new take on the online battle royale formula. Powerful, wall-climbing, rocket-jumping, artillery-pumping Robo-Tanks are the vehicle of choice in this fast-paced shootout, where the goal is to survive longer than the competition. Collect the loot to upgrade your arsenal, tunnel into the terrain to take cover and collect buried treasure, and avoid the rising water levels to be the blast one standing!"
+msgstr "**ROCKET BOT ROYALE** es una nueva y divertida versión de la fórmula del battle royale en línea. Poderosos Robot-Tanques que trepan por las paredes, saltan cohetes y bombean artillería son el vehículo elegido en este trepidante tiroteo, en el que el objetivo es sobrevivir más tiempo que la competencia. Recoge el botín para mejorar tu arsenal, haz túneles en el terreno para ponerte a cubierto y recoger tesoros enterrados, ¡y evita los crecientes niveles de agua para ser el último en pie!"
+
+#: all_pages/1 Rocket Bot Royale.py:112 all_pages/2 Goober Dash.py:144
+msgid "Platforms"
+msgstr "Plataformas"
+
+#: all_pages/1 Rocket Bot Royale.py:127 all_pages/2 Goober Dash.py:158
+msgid "Communities"
+msgstr "Comunidades"
+
+#: all_pages/0 Home.py:11
+msgid "Welcome to"
+msgstr "Bienvenido a"
+
+#: all_pages/0 Home.py:14
+msgid "A website which provides useful Tools & Statistics of games made by [Winterpixel Games](https://www.winterpixel.com/)"
+msgstr "Un sitio web que proporciona herramientas útiles y estadísticas de los juegos realizados por [Winterpixel Games](https://www.winterpixel.com/)"
+
+#: all_pages/0 Home.py:160
+msgid "Home"
+msgstr "Inicio"
+
+#: all_pages/0 Home.py:215
 msgid "Log Out"
 msgstr "Cerrar sesión"
 
-#: common_config.py:2202
-msgid "Account"
-msgstr "Cuenta"
+#: all_pages/2 Goober Dash.py:140
+msgid "**GOOBER DASH** is a multiplayer battle royale game that you can play online. Dash your opponents into deadly spikes, gather precious coins, and unlock a plethora of unique costumes as you strive to outlast the competition. Invite your friends to engage in epic battles in custom private lobbies. Unleash your creativity with the level editor, crafting and conquering your very own battlegrounds. Climb the global and country-based seasonal leaderboards to prove your dominance in this thrilling contest."
+msgstr "**GOOBER DASH** es un juego battle royale multijugador al que puede jugar en línea. Lance a sus oponentes contra pinchos mortales, recoja preciadas monedas y desbloquee una plétora de trajes únicos mientras se esfuerza por superar a la competencia. Invite a sus amigos a participar en batallas épicas en vestíbulos privados personalizados. Dé rienda suelta a su creatividad con el editor de niveles, creando y conquistando sus propios campos de batalla. Ascienda en las tablas de clasificación estacionales mundiales y por países para demostrar su dominio en esta emocionante competición."
 
-#: common_config.py:2210
-msgid "Log In"
-msgstr "Iniciar sesión"
+#: all_pages/2 Goober Dash.py:191
+msgid "Time Trials (Certified Levels)"
+msgstr "Contrarreloj (Niveles certificados)"
 
-#: common_config.py:2218
-msgid "Sign Up"
-msgstr "Regístrate"
+#: common_config.py:59
+msgid "Welcome back"
+msgstr "Bienvenida de nuevo"
+
+#: common_config.py:109
+msgid "Back to Home"
+msgstr "Volver al inicio"
+
+#: common_config.py:151
+msgid "Back to Menu"
+msgstr "Volver al menú"
+
+#: common_config.py:179
+msgid "This website is NOT affiliated with or endorsed by Winterpixel Games Inc."
+msgstr "Este sitio web NO está afiliado ni respaldado por Winterpixel Games Inc."
+
+#: common_config.py:181
+msgid "All relevant trademarks belong to their respective owners."
+msgstr "Todas las marcas comerciales relevantes pertenecen a sus respectivos propietarios."
+
+#: common_config.py:184
+msgid "Developed with 💖 by <a style=\"text-decoration:none\" href=\"https://tank8k.com/\" target=\"_blank\">TANK8K</a>"
+msgstr "Desarrollado con 💖 por <a style=\"text-decoration:none\" href=\"https://tank8k.com/\" target=\"_blank\">TANK8K</a>"
 

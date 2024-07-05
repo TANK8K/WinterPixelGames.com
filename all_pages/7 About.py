@@ -1,8 +1,7 @@
 import streamlit as st
-from common_config import back_to_home, set_localization, footer_account_language
+from common_config import back_to_home, set_localization
 
 _ = set_localization(st.session_state.language)
-footer_account_language(st.session_state.language)
 
 st.html(
     """
@@ -51,7 +50,7 @@ st.html(
 )
 
 st.html(
-    '<h4><i class="fa-solid fa-circle-info" style="display: inline; margin: 0 5px 8px 0; width: 25px"></i>'
+    '<h4><i class="fa-solid fa-circle-info" style="display: inline; margin: 0 10px 8px 0; width: 25px"></i>'
     + _("About")
     + '</h4><h3><span style="font-size: 25px;">'
     + _("What is WinterPixelGames?")

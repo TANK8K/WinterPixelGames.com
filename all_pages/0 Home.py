@@ -1,8 +1,7 @@
 import streamlit as st
-from common_config import set_localization, footer_account_language
+from common_config import set_localization
 
 _ = set_localization(st.session_state.language)
-footer_account_language(st.session_state.language)
 
 
 def home_page():
@@ -198,6 +197,35 @@ pg = st.navigation(
                 "all_pages/8 Useful Links.py",
                 title=_("Useful Links"),
                 url_path="Userful_Links",
+            ),
+        ],
+        " ": [
+            st.Page(
+                "all_pages/A Log In.py",
+                title=_("Log In"),
+                url_path="Log_In",
+            ),
+            st.Page(
+                "all_pages/B Sign Up.py",
+                title=_("Sign Up"),
+                url_path="Sign_Up",
+            ),
+            st.Page(
+                "all_pages/C Log Out.py",
+                title=_("Log Out"),
+                url_path="Log_Out",
+            ),
+            st.Page(
+                "all_pages/D Account.py",
+                title=_("Account"),
+                url_path="Account",
+            ),
+        ],
+        "  ": [
+            st.Page(
+                "all_pages/E Language.py",
+                title=_("Language"),
+                url_path="Language",
             ),
         ],
     }

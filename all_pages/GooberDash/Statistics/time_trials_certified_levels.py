@@ -10,13 +10,13 @@ from common_config import set_localization
 conn = st.connection("postgresql", type="sql")
 
 
-@st.cache_data(show_spinner=True, ttl=21600)
+# @st.cache_data(show_spinner=True, ttl=21600)
 def split_frame(input_df, rows):
     df = [input_df.loc[i : i + rows - 1, :] for i in range(0, len(input_df), rows)]
     return df
 
 
-@st.cache_data(show_spinner=True, ttl=21600)
+# @st.cache_data(show_spinner=True, ttl=21600)
 def query_df_first_records():
     df_first_records = conn.query(
         """

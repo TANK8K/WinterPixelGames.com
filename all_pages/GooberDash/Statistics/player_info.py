@@ -14,7 +14,7 @@ from common_config import set_localization
 conn = st.connection("postgresql", type="sql")
 
 
-@st.cache_data(show_spinner=True, ttl=21600)
+# @st.cache_data(show_spinner=True, ttl=21600)
 def query_df_user(user):
     df_user_records = conn.query(
         f"""
@@ -26,7 +26,7 @@ def query_df_user(user):
     return df_user_records
 
 
-@st.cache_data(show_spinner=True, ttl=21600)
+# @st.cache_data(show_spinner=True, ttl=21600)
 def query_df_user_records(user_id):
     df_user_records = conn.query(
         f"""
@@ -39,7 +39,7 @@ def query_df_user_records(user_id):
     return df_user_records
 
 
-@st.cache_data(show_spinner=True, ttl=21600)
+# @st.cache_data(show_spinner=True, ttl=21600)
 def query_df_user_leaderboard(user_id):
     df_user_leaderboard = conn.query(
         f"""
@@ -51,7 +51,7 @@ def query_df_user_leaderboard(user_id):
     return df_user_leaderboard
 
 
-@st.cache_data(show_spinner=True, ttl=21600)
+# @st.cache_data(show_spinner=True, ttl=21600)
 def query_df_level_ids():
     df_level_ids = conn.query(
         """

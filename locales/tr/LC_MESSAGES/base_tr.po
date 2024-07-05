@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: winterpixelgames\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-04 14:26+0800\n"
-"PO-Revision-Date: 2024-07-04 06:28\n"
+"POT-Creation-Date: 2024-07-05 16:37+0800\n"
+"PO-Revision-Date: 2024-07-05 08:41\n"
 "Last-Translator: \n"
 "Language-Team: Turkish\n"
 "Language: tr_TR\n"
@@ -17,90 +17,211 @@ msgstr ""
 "X-Crowdin-File: base.pot\n"
 "X-Crowdin-File-ID: 10\n"
 
-#: all_pages/6 Broski.py:62
+#: all_pages/A Log In.py:32 all_pages/0 Home.py:205
+msgid "Log In"
+msgstr "Giriş Yap"
+
+#: all_pages/A Log In.py:56 all_pages/A Log In.py:215
+msgid "Forgot Username Request"
+msgstr "Kullanıcı Adımı Unuttum Talebi"
+
+#: all_pages/A Log In.py:244 all_pages/A Log In.py:611
+#: all_pages/B Sign Up.py:246
+msgid "Hello"
+msgstr "Merhaba"
+
+#: all_pages/A Log In.py:251
+msgid "We have sent you this email in response to your request about forgotting your username on WinterPixelGames."
+msgstr "WinterPixelGames'te kullanıcı adınızı unutmanızla ilgili talebinize yanıt olarak size bu e-postayı gönderdik."
+
+#: all_pages/A Log In.py:256
+msgid "Your username of the associated email is "
+msgstr "İlişkili e-postanın kullanıcı adınız "
+
+#: all_pages/A Log In.py:262
+msgid "You can now login to your account using this username and the corresponding password."
+msgstr "Artık bu kullanıcı adını ve ilgili şifreyi kullanarak hesabınıza giriş yapabilirsiniz."
+
+#: all_pages/A Log In.py:267 all_pages/A Log In.py:634
+#: all_pages/B Sign Up.py:267
+msgid "Happy Gaming!"
+msgstr "Mutlu oyunlar!"
+
+#: all_pages/A Log In.py:270 all_pages/A Log In.py:637
+msgid "WinterPixelGames"
+msgstr "WinterPixelGames"
+
+#: all_pages/A Log In.py:286 all_pages/A Log In.py:787
+#: all_pages/A Log In.py:795 all_pages/A Log In.py:798
+msgid "Login"
+msgstr "Giriş"
+
+#: all_pages/A Log In.py:302
+msgid "Please disregard this email if you did not submit a forgot username request."
+msgstr "Kullanıcı adını unuttum talebi göndermediyseniz lütfen bu e-postayı dikkate almayın."
+
+#: all_pages/A Log In.py:332 all_pages/A Log In.py:699
+#: all_pages/B Sign Up.py:328
+msgid "Problems or questions?"
+msgstr "Sorun veya sorularınız mı var?"
+
+#: all_pages/A Log In.py:422 all_pages/A Log In.py:581
+msgid "Forgot Password Request"
+msgstr "Şifremi Unuttum Talebi"
+
+#: all_pages/A Log In.py:618
+msgid "We have sent you this email in response to your request about forgotting your password on WinterPixelGames."
+msgstr "WinterPixelGames'te şifrenizi unutmanızla ilgili talebinize yanıt olarak size bu e-postayı gönderdik."
+
+#: all_pages/A Log In.py:623
+msgid "Your new auto-generated password is "
+msgstr "Otomatik olarak oluşturulan yeni şifreniz "
+
+#: all_pages/A Log In.py:629
+msgid "You can now login to your account using this password and change it to a custom password if necessary."
+msgstr "Artık bu parolayı kullanarak hesabınıza giriş yapabilir ve gerekirse özel bir parola ile değiştirebilirsiniz."
+
+#: all_pages/A Log In.py:653 all_pages/A Log In.py:856
+msgid "Reset Password"
+msgstr "Şifre Sıfırlama"
+
+#: all_pages/A Log In.py:669
+msgid "Please disregard this email if you did not submit a forgot password request."
+msgstr "Şifremi unuttum talebinde bulunmadıysanız lütfen bu e-postayı dikkate almayın."
+
+#: all_pages/A Log In.py:788 all_pages/A Log In.py:829
+msgid "Forgot Username"
+msgstr "Kullanıcı Adımı Unuttum"
+
+#: all_pages/A Log In.py:789 all_pages/A Log In.py:854
+msgid "Forgot Password"
+msgstr "Şifremi Unuttum"
+
+#: all_pages/A Log In.py:796 all_pages/A Log In.py:855
+#: all_pages/B Sign Up.py:527
+msgid "Username"
+msgstr "Kullanıcı Adı"
+
+#: all_pages/A Log In.py:797 all_pages/B Sign Up.py:528
+msgid "Password"
+msgstr "Şifre"
+
+#: all_pages/A Log In.py:802
+msgid "Username or Password is incorrect"
+msgstr "Kullanıcı Adı veya Şifre yanlış"
+
+#: all_pages/A Log In.py:830 all_pages/B Sign Up.py:446
+#: all_pages/D Account.py:172
+msgid "Email"
+msgstr "E-posta"
+
+#: all_pages/A Log In.py:831
+msgid "Send Userename"
+msgstr "Kullanıcı adı gönder"
+
+#: all_pages/A Log In.py:840
+msgid "Username is sent to the associated email successfully"
+msgstr "Kullanıcı adı ilgili e-postaya başarıyla gönderildi"
+
+#: all_pages/A Log In.py:842 all_pages/B Sign Up.py:460
+msgid "Email not found"
+msgstr "E-posta bulunamadı"
+
+#: all_pages/A Log In.py:870
+msgid "New password is sent to the associated email successfully"
+msgstr "Yeni şifre ilgili e-postaya başarıyla gönderildi"
+
+#: all_pages/A Log In.py:872
+msgid "Username not found"
+msgstr "Kullanıcı adı bulunamadı"
+
+#: all_pages/A Log In.py:876
+msgid "Click the button again if it doesn't work for the first time"
+msgstr "İlk seferde çalışmazsa düğmeye tekrar tıklayın"
+
+#: all_pages/6 Broski.py:60
 msgid "**BROSKI** is an arcade pixel style skiing game, it is a fun and has a unique visual style that allows you to enjoy skiing even in summer. In the game, you will play as a skier who races down a snowy mountain. Your goal is to ski the furthest distance possible. As you slide down the hill faster and faster, you have to avoid more and more obstacles on the way, which makes the game challenging. To test how far you can go, take the challenge!"
 msgstr "**BROSKI** bir arcade piksel tarzı kayak oyunudur, eğlencelidir ve yazın bile kayak yapmanın keyfini çıkarmanızı sağlayan benzersiz bir görsel stile sahiptir. Oyunda, karlı bir dağdan aşağıya doğru yarışan bir kayakçı olarak oynayacaksınız. Amacınız mümkün olan en uzak mesafeye kaymaktır. Tepeden aşağı daha hızlı ve daha hızlı kayarken, yolda giderek daha fazla engelden kaçınmanız gerekir, bu da oyunu zorlu hale getirir. Ne kadar uzağa gidebileceğinizi test etmek için meydan okumaya katılın!"
 
-#: all_pages/6 Broski.py:66
+#: all_pages/6 Broski.py:64
 msgid "**Broski** is a **prototype single-player game** currently"
 msgstr "**Broski** şu anda bir **tek oyunculu oyun** prototipidir"
 
-#: all_pages/6 Broski.py:69 all_pages/5 Moonrock Miners.py:77
-#: all_pages/4 Goober Shot.py:87 all_pages/3 Goober Royale.py:87
+#: all_pages/6 Broski.py:67 all_pages/5 Moonrock Miners.py:75
+#: all_pages/4 Goober Shot.py:85 all_pages/3 Goober Royale.py:85
 msgid "Platform"
 msgstr "Platform"
 
-#: all_pages/6 Broski.py:71 all_pages/5 Moonrock Miners.py:79
-#: all_pages/4 Goober Shot.py:89 all_pages/3 Goober Royale.py:89
-#: all_pages/1 Rocket Bot Royale.py:116 all_pages/2 Goober Dash.py:148
+#: all_pages/6 Broski.py:69 all_pages/5 Moonrock Miners.py:77
+#: all_pages/4 Goober Shot.py:87 all_pages/3 Goober Royale.py:87
+#: all_pages/1 Rocket Bot Royale.py:114 all_pages/2 Goober Dash.py:146
 msgid "Browser"
 msgstr "Tarayıcı"
 
-#: all_pages/6 Broski.py:72 all_pages/5 Moonrock Miners.py:80
-#: all_pages/4 Goober Shot.py:90 all_pages/3 Goober Royale.py:90
+#: all_pages/6 Broski.py:70 all_pages/5 Moonrock Miners.py:78
+#: all_pages/4 Goober Shot.py:88 all_pages/3 Goober Royale.py:88
 msgid "Community"
 msgstr "Topluluk"
 
-#: all_pages/6 Broski.py:78 all_pages/5 Moonrock Miners.py:86
-#: all_pages/4 Goober Shot.py:96 all_pages/3 Goober Royale.py:96
-#: all_pages/1 Rocket Bot Royale.py:141 all_pages/2 Goober Dash.py:171
+#: all_pages/6 Broski.py:76 all_pages/5 Moonrock Miners.py:84
+#: all_pages/4 Goober Shot.py:94 all_pages/3 Goober Royale.py:94
+#: all_pages/1 Rocket Bot Royale.py:139 all_pages/2 Goober Dash.py:169
 msgid "Tools"
 msgstr "Araçlar"
 
-#: all_pages/6 Broski.py:83 all_pages/5 Moonrock Miners.py:91
+#: all_pages/6 Broski.py:81 all_pages/5 Moonrock Miners.py:89
 #: all_pages/RocketBotRoyale/Tools/image_assets.py:10
-#: all_pages/4 Goober Shot.py:101 all_pages/GooberDash/Tools/image_assets.py:37
+#: all_pages/4 Goober Shot.py:99 all_pages/GooberDash/Tools/image_assets.py:37
 #: all_pages/MoonrockMiners/Tools/image_assets.py:13
 #: all_pages/GooberRoyale/Tools/image_assets.py:13
 #: all_pages/GooberShot/Tools/image_assets.py:13
-#: all_pages/3 Goober Royale.py:100 all_pages/1 Rocket Bot Royale.py:151
-#: all_pages/Broski/Tools/image_assets.py:13 all_pages/2 Goober Dash.py:184
+#: all_pages/3 Goober Royale.py:98 all_pages/1 Rocket Bot Royale.py:149
+#: all_pages/Broski/Tools/image_assets.py:13 all_pages/2 Goober Dash.py:182
 msgid "Image Assets"
 msgstr "Görüntü Varlıkları"
 
-#: all_pages/6 Broski.py:83 all_pages/5 Moonrock Miners.py:91
-#: all_pages/5 Moonrock Miners.py:103 all_pages/4 Goober Shot.py:101
-#: all_pages/4 Goober Shot.py:113 all_pages/4 Goober Shot.py:118
+#: all_pages/6 Broski.py:81 all_pages/5 Moonrock Miners.py:89
+#: all_pages/5 Moonrock Miners.py:101 all_pages/4 Goober Shot.py:99
+#: all_pages/4 Goober Shot.py:111 all_pages/4 Goober Shot.py:116
 #: all_pages/GooberDash/Statistics/player_info.py:480
 #: all_pages/GooberDash/Statistics/player_info.py:494
 #: all_pages/GooberDash/Statistics/player_info.py:496
-#: all_pages/GooberDash/Statistics/player_info.py:498
-#: all_pages/3 Goober Royale.py:109 all_pages/3 Goober Royale.py:114
-#: all_pages/1 Rocket Bot Royale.py:146 all_pages/1 Rocket Bot Royale.py:151
-#: all_pages/1 Rocket Bot Royale.py:163 all_pages/1 Rocket Bot Royale.py:168
-#: all_pages/2 Goober Dash.py:177 all_pages/2 Goober Dash.py:198
-#: all_pages/2 Goober Dash.py:203 all_pages/2 Goober Dash.py:208
-#: common_config.py:1200
+#: all_pages/GooberDash/Statistics/player_info.py:498 all_pages/D Account.py:78
+#: all_pages/3 Goober Royale.py:107 all_pages/3 Goober Royale.py:112
+#: all_pages/1 Rocket Bot Royale.py:144 all_pages/1 Rocket Bot Royale.py:149
+#: all_pages/1 Rocket Bot Royale.py:161 all_pages/1 Rocket Bot Royale.py:166
+#: all_pages/2 Goober Dash.py:175 all_pages/2 Goober Dash.py:196
+#: all_pages/2 Goober Dash.py:201 all_pages/2 Goober Dash.py:206
 msgid "WIP"
 msgstr "WIP"
 
-#: all_pages/5 Moonrock Miners.py:70
+#: all_pages/5 Moonrock Miners.py:68
 msgid "**MOONROCK MINERS** is a gravity-defying multiplayer space battle game set in an asteroid field. Blast other players, collect powerups and crystals, and avoid the asteroids. Try to survive until the end to win the match. Compete against players around the world in real-time to rank in every season. You can also create your own custom lobbies to play private games online with your friends!"
 msgstr "**MOONROCK MINERS** bir asteroit alanında geçen, yerçekimine meydan okuyan çok oyunculu bir uzay savaşı oyunudur. Diğer oyuncuları patlatın, güçlendiricileri ve kristalleri toplayın ve asteroitlerden kaçının. Maçı kazanmak için sonuna kadar hayatta kalmaya çalışın. Her sezonda sıralamaya girmek için dünyanın dört bir yanındaki oyunculara karşı gerçek zamanlı olarak yarışın. Ayrıca arkadaşlarınızla çevrimiçi özel oyunlar oynamak için kendi özel lobilerinizi oluşturabilirsiniz!"
 
-#: all_pages/5 Moonrock Miners.py:74
+#: all_pages/5 Moonrock Miners.py:72
 msgid "**Moonrock Miners** is **no longer in development**"
 msgstr "**Moonrock Miners** artık **geliştirme aşamasında değil**"
 
-#: all_pages/5 Moonrock Miners.py:98 all_pages/4 Goober Shot.py:108
-#: all_pages/3 Goober Royale.py:104 all_pages/1 Rocket Bot Royale.py:158
-#: all_pages/2 Goober Dash.py:188
+#: all_pages/5 Moonrock Miners.py:96 all_pages/4 Goober Shot.py:106
+#: all_pages/3 Goober Royale.py:102 all_pages/1 Rocket Bot Royale.py:156
+#: all_pages/2 Goober Dash.py:186
 msgid "Statistics"
 msgstr "İstatistikler"
 
-#: all_pages/5 Moonrock Miners.py:103
+#: all_pages/5 Moonrock Miners.py:101
 #: all_pages/RocketBotRoyale/Statistics/season_leaderboard.py:10
-#: all_pages/4 Goober Shot.py:118
+#: all_pages/4 Goober Shot.py:116
 #: all_pages/GooberDash/Statistics/season_leaderboard.py:13
 #: all_pages/MoonrockMiners/Statistics/season_leaderboard.py:10
 #: all_pages/GooberRoyale/Statistics/season_leaderboard.py:10
 #: all_pages/GooberShot/Statistics/season_leaderboard.py:10
-#: all_pages/3 Goober Royale.py:114 all_pages/1 Rocket Bot Royale.py:168
-#: all_pages/2 Goober Dash.py:208
+#: all_pages/3 Goober Royale.py:112 all_pages/1 Rocket Bot Royale.py:166
+#: all_pages/2 Goober Dash.py:206
 msgid "Season Leaderboard"
 msgstr "Sezon Liderlik Tablosu"
 
-#: all_pages/5 Moonrock Miners.py:108
+#: all_pages/5 Moonrock Miners.py:106
 msgid "**Leaderboard** is **disabled** currently"
 msgstr "**Leaderboard** şu anda **devre dışıdır**"
 
@@ -128,30 +249,30 @@ msgid "Gallery"
 msgstr "Galeri"
 
 #: all_pages/RocketBotRoyale/Tools/optimize_crate.py:10
-#: all_pages/1 Rocket Bot Royale.py:146
+#: all_pages/1 Rocket Bot Royale.py:144
 msgid "Optimize Crate"
 msgstr "Sandığı Optimize Et"
 
 #: all_pages/RocketBotRoyale/Statistics/player_info.py:10
-#: all_pages/4 Goober Shot.py:113
+#: all_pages/4 Goober Shot.py:111
 #: all_pages/GooberDash/Statistics/player_info.py:80
 #: all_pages/GooberRoyale/Statistics/player_info.py:10
 #: all_pages/GooberShot/Statistics/player_info.py:10
-#: all_pages/3 Goober Royale.py:109 all_pages/1 Rocket Bot Royale.py:163
-#: all_pages/2 Goober Dash.py:198
+#: all_pages/3 Goober Royale.py:107 all_pages/1 Rocket Bot Royale.py:161
+#: all_pages/2 Goober Dash.py:196
 msgid "Player Info"
 msgstr "Oyuncu Bilgileri"
 
-#: all_pages/4 Goober Shot.py:78
+#: all_pages/4 Goober Shot.py:76
 msgid "**GOOBER SHOT** throws you into thrilling online archery battles against three other players! Prepare your bow, sharpen your arrows, enter the arena, and unleash your skills as a master archer. Remember, every arrow counts! Show off your precision and reflexes as you aim, shoot, and dodge with finesse. Rise through the ranks, climb the global leaderboards, and prove yourself as the ultimate archery champion. Will you emerge as the greatest archer in the realm?"
 msgstr "**GOOBER SHOT** sizi diğer üç oyuncuya karşı heyecan verici çevrimiçi okçuluk savaşlarına atıyor! Yayınızı hazırlayın, oklarınızı bileyin, arenaya girin ve usta bir okçu olarak yeteneklerinizi ortaya çıkarın. Unutmayın, her ok önemlidir! Nişan alırken, ateş ederken ve ustalıkla kaçarken hassasiyetinizi ve reflekslerinizi gösterin. Sıralamalarda yükselin, küresel liderlik tablolarına tırmanın ve kendinizi nihai okçuluk şampiyonu olarak kanıtlayın. Alemdeki en iyi okçu olarak ortaya çıkacak mısın?"
 
-#: all_pages/4 Goober Shot.py:83
+#: all_pages/4 Goober Shot.py:81
 msgid "**Goober Shot** is in **beta** currently (Bugs are expected and Data may be reset in future)"
 msgstr "**Goober Shot** şu anda **beta** aşamasındadır (Hatalar beklenmektedir ve Veriler gelecekte sıfırlanabilir)"
 
 #: all_pages/GooberDash/Tools/goober_generator.py:65
-#: all_pages/2 Goober Dash.py:182
+#: all_pages/2 Goober Dash.py:180
 msgid "Goober Generator"
 msgstr "Goober Jeneratör"
 
@@ -204,7 +325,7 @@ msgstr "Rozet"
 msgid "Other Stuff"
 msgstr "Diğer Şeyler"
 
-#: all_pages/GooberDash/Tools/flip_level.py:130 all_pages/2 Goober Dash.py:175
+#: all_pages/GooberDash/Tools/flip_level.py:130 all_pages/2 Goober Dash.py:173
 msgid "Flip Level"
 msgstr "Çevirme Seviyesi"
 
@@ -252,7 +373,7 @@ msgid "flipped"
 msgstr "çevrilmiş"
 
 #: all_pages/GooberDash/Tools/maze_generator.py:13
-#: all_pages/2 Goober Dash.py:177
+#: all_pages/2 Goober Dash.py:175
 msgid "Maze Generator"
 msgstr "Labirent Oluşturucu"
 
@@ -1641,11 +1762,204 @@ msgid "Percentile"
 msgstr "Yüzdelik Dilim"
 
 #: all_pages/GooberDash/Statistics/level_info.py:13
-#: all_pages/2 Goober Dash.py:203
+#: all_pages/2 Goober Dash.py:201
 msgid "Level Info"
 msgstr "Seviye Bilgisi"
 
-#: all_pages/8 Useful Links.py:73 all_pages/0 Home.py:199
+#: all_pages/B Sign Up.py:24 all_pages/0 Home.py:210
+msgid "Sign Up"
+msgstr "Kaydolun"
+
+#: all_pages/B Sign Up.py:58 all_pages/B Sign Up.py:217
+msgid "Verify Account"
+msgstr "Hesabı Doğrula"
+
+#: all_pages/B Sign Up.py:251
+msgid "Welcome to WinterPixelGames! We're excited to have you join our community. Before you creating your account, we need to verify your email address to ensure we have the correct information."
+msgstr "WinterPixelGames'e hoş geldiniz! Topluluğumuza katıldığınız için heyecanlıyız. Hesabınızı oluşturmadan önce, doğru bilgilere sahip olduğumuzdan emin olmak için e-posta adresinizi doğrulamamız gerekiyor."
+
+#: all_pages/B Sign Up.py:256
+msgid "Your verification code is "
+msgstr "Doğrulama kodunuz "
+
+#: all_pages/B Sign Up.py:262
+msgid "You can now register your account using this verification code and the corresponding email."
+msgstr "Artık bu doğrulama kodunu ve ilgili e-postayı kullanarak hesabınızı kaydedebilirsiniz."
+
+#: all_pages/B Sign Up.py:284
+msgid "Verify"
+msgstr "Doğrulama"
+
+#: all_pages/B Sign Up.py:299
+msgid "Please disregard this email if you did not submit a verify email request."
+msgstr "Doğrulama e-posta talebi göndermediyseniz lütfen bu e-postayı dikkate almayın."
+
+#: all_pages/B Sign Up.py:437 all_pages/B Sign Up.py:444
+msgid "Verify Email"
+msgstr "E-posta Doğrulama"
+
+#: all_pages/B Sign Up.py:438 all_pages/B Sign Up.py:524
+#: all_pages/B Sign Up.py:530
+msgid "Register"
+msgstr "Kayıt Olun"
+
+#: all_pages/B Sign Up.py:448
+msgid "Verification Code"
+msgstr "Doğrulama Kodu"
+
+#: all_pages/B Sign Up.py:450
+msgid "Leave it blank to send Verification Code"
+msgstr "Doğrulama Kodunu göndermek için boş bırakın"
+
+#: all_pages/B Sign Up.py:452
+msgid "Send/Verify"
+msgstr "Gönder/Doğrula"
+
+#: all_pages/B Sign Up.py:464
+msgid "Wrong verification code"
+msgstr "Yanlış doğrulama kodu"
+
+#: all_pages/B Sign Up.py:472
+msgid "Verify success"
+msgstr "Başarıyı doğrulayın"
+
+#: all_pages/B Sign Up.py:492
+msgid "Verification code is sent to the email successfully"
+msgstr "Doğrulama kodu e-postaya başarıyla gönderildi"
+
+#: all_pages/B Sign Up.py:496
+msgid "Email is required"
+msgstr "E-posta gereklidir"
+
+#: all_pages/B Sign Up.py:498
+msgid "Email is not valid"
+msgstr "E-posta geçerli değil"
+
+#: all_pages/B Sign Up.py:500
+msgid "Email is already in use"
+msgstr "E-posta zaten kullanımda"
+
+#: all_pages/B Sign Up.py:525 all_pages/D Account.py:171
+msgid "Nickname"
+msgstr "Takma ad"
+
+#: all_pages/B Sign Up.py:525
+msgid "alphabets only"
+msgstr "sadece alfabeler"
+
+#: all_pages/B Sign Up.py:526
+msgid "Verified Email"
+msgstr "Doğrulanmış E-posta"
+
+#: all_pages/B Sign Up.py:527 all_pages/B Sign Up.py:528
+msgid "for login"
+msgstr "giriş için"
+
+#: all_pages/B Sign Up.py:529 all_pages/D Account.py:192
+msgid "Repeat Password"
+msgstr "Şifreyi Tekrarla"
+
+#: all_pages/B Sign Up.py:534
+msgid "User registered successfully"
+msgstr "Kullanıcı başarıyla kaydoldu"
+
+#: all_pages/C Log Out.py:13
+msgid "You are now logged out"
+msgstr "Şimdi çıkış yaptınız"
+
+#: all_pages/D Account.py:33 all_pages/0 Home.py:220
+msgid "Account"
+msgstr "Hesap"
+
+#: all_pages/D Account.py:64 all_pages/D Account.py:72
+msgid "Linked Game Accounts"
+msgstr "Bağlantılı Oyun Hesapları"
+
+#: all_pages/D Account.py:65
+msgid "Change Nickname/Email"
+msgstr "Takma Ad/E-posta Değiştir"
+
+#: all_pages/D Account.py:66 all_pages/D Account.py:189
+msgid "Change Password"
+msgstr "Şifre Değiştir"
+
+#: all_pages/D Account.py:75
+msgid "Statistics of Linked Accounts will be tracked daily and displayed in Player Info"
+msgstr "Bağlantılı Hesapların istatistikleri günlük olarak izlenecek ve Oyuncu Bilgisinde görüntülenecektir"
+
+#: all_pages/D Account.py:108 all_pages/D Account.py:138
+#: all_pages/8 Useful Links.py:88 all_pages/0 Home.py:58
+#: all_pages/0 Home.py:163
+msgid "Rocket Bot Royale"
+msgstr "Roket Bot Royale"
+
+#: all_pages/D Account.py:110 all_pages/D Account.py:116
+#: all_pages/D Account.py:122 all_pages/D Account.py:128
+msgid "No User ID Found"
+msgstr "Kullanıcı Kimliği Bulunamadı"
+
+#: all_pages/D Account.py:114 all_pages/D Account.py:139 all_pages/0 Home.py:63
+#: all_pages/0 Home.py:168
+msgid "Goober Dash"
+msgstr "Goober Dash"
+
+#: all_pages/D Account.py:120 all_pages/D Account.py:140
+#: all_pages/8 Useful Links.py:92 all_pages/0 Home.py:68
+#: all_pages/0 Home.py:173
+msgid "Goober Royale"
+msgstr "Goober Royale"
+
+#: all_pages/D Account.py:126 all_pages/D Account.py:141
+#: all_pages/8 Useful Links.py:95 all_pages/0 Home.py:73
+#: all_pages/0 Home.py:178
+msgid "Goober Shot"
+msgstr "Goober Shot"
+
+#: all_pages/D Account.py:143 all_pages/D Account.py:174
+msgid "Update"
+msgstr "Güncelleme"
+
+#: all_pages/D Account.py:150
+msgid "Wrong User ID format of "
+msgstr "Yanlış Kullanıcı Kimliği biçimi "
+
+#: all_pages/D Account.py:162
+msgid "User IDs are updated successfully"
+msgstr "Kullanıcı kimlikleri başarıyla güncellendi"
+
+#: all_pages/D Account.py:169
+msgid "Change Name/Email"
+msgstr "İsim/E-posta Değiştir"
+
+#: all_pages/D Account.py:170
+msgid "Field"
+msgstr "Saha"
+
+#: all_pages/D Account.py:173
+msgid "New value"
+msgstr "Yeni değer"
+
+#: all_pages/D Account.py:179
+msgid "Entries updated successfully"
+msgstr "Girişler başarıyla güncellendi"
+
+#: all_pages/D Account.py:190
+msgid "Current Password"
+msgstr "Geçerli Şifre"
+
+#: all_pages/D Account.py:191
+msgid "New Password"
+msgstr "Yeni Şifre"
+
+#: all_pages/D Account.py:193
+msgid "Reset"
+msgstr "Sıfırla"
+
+#: all_pages/D Account.py:198
+msgid "Password modified successfully"
+msgstr "Parola başarıyla değiştirildi"
+
+#: all_pages/8 Useful Links.py:73 all_pages/0 Home.py:198
 msgid "Useful Links"
 msgstr "Faydalı Bağlantılar"
 
@@ -1657,28 +1971,13 @@ msgstr "Hazırlama Sunucuları"
 msgid "**Staging Servers** are seperate servers which are used for testing new features before releasing. Usually updates are released on **Staging Servers** a few days before public release. Developers invite members to test out some upcoming features and ask for feedbacks in **Offcial Winterpixel Games Discord server** occasionally.\n"
 msgstr "**Aşama Sunucuları** yeni özellikleri yayınlamadan önce test etmek için kullanılan ayrı sunuculardır. Genellikle güncellemeler genel sürümden birkaç gün önce **Staging Sunucularında** yayınlanır. Geliştiriciler, üyeleri gelecek bazı özellikleri test etmeye davet eder ve zaman zaman **Official Winterpixel Games Discord sunucusunda** geri bildirim ister.\n"
 
-#: all_pages/8 Useful Links.py:88 all_pages/0 Home.py:59
-#: all_pages/0 Home.py:164 common_config.py:1256
-msgid "Rocket Bot Royale"
-msgstr "Roket Bot Royale"
-
-#: all_pages/8 Useful Links.py:92 all_pages/0 Home.py:69
-#: all_pages/0 Home.py:174 common_config.py:1258
-msgid "Goober Royale"
-msgstr "Goober Royale"
-
-#: all_pages/8 Useful Links.py:95 all_pages/0 Home.py:74
-#: all_pages/0 Home.py:179 common_config.py:1259
-msgid "Goober Shot"
-msgstr "Goober Shot"
-
-#: all_pages/8 Useful Links.py:96 all_pages/0 Home.py:79
-#: all_pages/0 Home.py:184
+#: all_pages/8 Useful Links.py:96 all_pages/0 Home.py:78
+#: all_pages/0 Home.py:183
 msgid "Moonrock Miners"
 msgstr "Moonrock Madencileri"
 
-#: all_pages/8 Useful Links.py:97 all_pages/0 Home.py:84
-#: all_pages/0 Home.py:189
+#: all_pages/8 Useful Links.py:97 all_pages/0 Home.py:83
+#: all_pages/0 Home.py:188
 msgid "Broski"
 msgstr "Broski"
 
@@ -1698,440 +1997,163 @@ msgstr "[**Goober Dash Level Modding**](https://twhlynch.me/goober-dash-level-mo
 msgid "Goober Dash Level Modding"
 msgstr "Goober Dash Seviye Modifikasyonu"
 
-#: all_pages/3 Goober Royale.py:78
-msgid "**GOOBER ROYALE** is a multiplayer battle royale game in which each player controls a character (called a \"goober\") and must collect weapons, power-ups and other items to eliminate their opponents. The clashes bring together 16 players on a map and the objective will be to be the last survivor of the game. You can play alone or in a team of 4 players. Your Goober will have several weapons, a main missile that reloads at regular intervals and a secondary accessory such as mines, a tornado, a drill and many others. Also use your jetpack to move around the map more easily, reach high places and surprise your opponents. Completing games and missions will earn you gold coins that you can spend either to improve your Goober's skills or to buy cosmetics that will give your character a unique style. An online ranking will allow you to see the 100 best players in the world and in your region."
-msgstr "**GOOBER ROYALE**, her oyuncunun bir karakteri (\"goober\" olarak adlandırılır) kontrol ettiği ve rakiplerini ortadan kaldırmak için silahlar, güçlendiriciler ve diğer öğeleri toplaması gereken çok oyunculu bir battle royale oyunudur. Çatışmalar 16 oyuncuyu bir haritada bir araya getirir ve amaç oyunun hayatta kalan son oyuncusu olmaktır. Tek başınıza veya 4 kişilik bir takım halinde oynayabilirsiniz. Goober'ınızın çeşitli silahları, düzenli aralıklarla yeniden yüklenen bir ana füzesi ve mayınlar, bir kasırga, bir matkap ve diğerleri gibi ikincil bir aksesuarı olacaktır. Ayrıca haritada daha kolay hareket etmek, yüksek yerlere ulaşmak ve rakiplerinizi şaşırtmak için jetpack'inizi kullanın. Oyunları ve görevleri tamamlamak size Goober'ınızın becerilerini geliştirmek ya da karakterinize benzersiz bir tarz kazandıracak kozmetik ürünleri satın almak için harcayabileceğiniz altın paralar kazandıracak. Çevrimiçi bir sıralama, dünyadaki ve bölgenizdeki en iyi 100 oyuncuyu görmenizi sağlayacaktır."
-
-#: all_pages/3 Goober Royale.py:83
-msgid "**Goober Royale** is in **beta** currently (Bugs are expected and Data may be reset in future)"
-msgstr "**Goober Royale** şu anda **beta** aşamasındadır (Hatalar beklenmektedir ve Veriler gelecekte sıfırlanabilir)"
-
-#: all_pages/7 About.py:55 all_pages/0 Home.py:194
-msgid "About"
-msgstr "Hakkında"
-
-#: all_pages/7 About.py:57
-msgid "What is WinterPixelGames?"
-msgstr "WinterPixelGames nedir?"
-
-#: all_pages/7 About.py:63
-msgid "**:blue-background[WinterPixelGames]** (WPG) is a community-driven site made by [**TANK8K**](https://tank8k.com/) which provides useful **Tools & Statistics** of games made by **[Winterpixel Games](https://www.winterpixel.com/)**, including **[Rocket Bot Royale](./Rocket_Bot_Royale)**, **[Goober Dash](./Goober_Dash)**, **[Goober Royale](./Goober_Royale)**, **[Goober Shot](./Goober_Shot)**, and **[Moonrock Miners](./Moonrock_Miners)**."
-msgstr "**:blue-background[WinterPixelGames]** (WPG), [**TANK8K**](https://tank8k.com/) tarafından yapılan ve **[Winterpixel Games](https://www.winterpixel.com/)**, **[Rocket Bot Royale](./Rocket_Bot_Royale)**, **[Goober Dash](./Goober_Dash)**, **[Goober Royale](./Goober_Royale)**, **[Goober Shot](./Goober_Shot)** ve **[Moonrock Miners](./Moonrock_Miners)** dahil olmak üzere."
-
-#: all_pages/7 About.py:70
-msgid "Affiliation"
-msgstr "Üyelik"
-
-#: all_pages/7 About.py:74
-msgid "This website is **NOT** affiliated with or endorsed by **Winterpixel Games Inc.**"
-msgstr "Bu web sitesi **Winterpixel Games Inc.** ile bağlantılı değildir veya **Winterpixel Games Inc.** tarafından onaylanmamıştır."
-
-#: all_pages/7 About.py:81
-msgid "Copyright Notice"
-msgstr "Telif Hakkı Bildirimi"
-
-#: all_pages/7 About.py:85
-msgid "Rocket Bot Royale, Goober Dash, Goober Royale, Goober Shot, Moonrock Miners, Websites and Media **@ Winterpixel Games Inc.**"
-msgstr "Rocket Bot Royale, Goober Dash, Goober Royale, Goober Shot, Moonrock Miners, Web Siteleri ve Medya **@ Winterpixel Games Inc.**"
-
-#: all_pages/7 About.py:92
-msgid "License"
-msgstr "Lisans"
-
-#: all_pages/7 About.py:95
-msgid "The source code is licensed under **MIT license**."
-msgstr "Kaynak kodu **MIT lisansı** altında lisanslanmıştır."
-
-#: all_pages/7 About.py:101
-msgid "Technology"
-msgstr "Teknoloji"
-
-#: all_pages/7 About.py:108
-msgid "Framework"
-msgstr "Çerçeve"
-
-#: all_pages/7 About.py:111 common_config.py:2226
+#: all_pages/E Language.py:19 all_pages/7 About.py:110 all_pages/0 Home.py:227
 msgid "Language"
 msgstr "Dil"
 
-#: all_pages/7 About.py:114
-msgid "Database"
-msgstr "Veritabanı"
-
-#: all_pages/7 About.py:117
-msgid "Cloud Vendor"
-msgstr "Bulut Satıcısı"
-
-#: all_pages/7 About.py:120
-msgid "Web Server"
-msgstr "Web Sunucusu"
-
-#: all_pages/7 About.py:123
-msgid "Source Code"
-msgstr "Kaynak Kodu"
-
-#: all_pages/7 About.py:130
-msgid "Developer"
-msgstr "Geliştirici"
-
-#: all_pages/7 About.py:141
-msgid "Personal Website"
-msgstr "Kişisel Web Sitesi"
-
-#: all_pages/7 About.py:146
-msgid "Developed with 💖 by **[:blue[TANK8K]](https://tank8k.com/)**"
-msgstr "💖 ile **[:blue[TANK8K]](https://tank8k.com/)** tarafından geliştirilmiştir."
-
-#: all_pages/1 Rocket Bot Royale.py:110
-msgid "**ROCKET BOT ROYALE** is a fun new take on the online battle royale formula. Powerful, wall-climbing, rocket-jumping, artillery-pumping Robo-Tanks are the vehicle of choice in this fast-paced shootout, where the goal is to survive longer than the competition. Collect the loot to upgrade your arsenal, tunnel into the terrain to take cover and collect buried treasure, and avoid the rising water levels to be the blast one standing!"
-msgstr "**ROCKET BOT ROYALE** çevrimiçi battle royale formülüne yeni ve eğlenceli bir yaklaşım. Güçlü, duvara tırmanan, roket zıplatan, topçu pompalayan Robo-Tanklar, amacın rakipten daha uzun süre hayatta kalmak olduğu bu hızlı tempolu çatışmada tercih edilen araçlardır. Cephaneliğinizi geliştirmek için ganimet toplayın, siper almak ve gömülü hazineyi toplamak için araziye tünel kazın ve ayakta kalan tek kişi olmak için yükselen su seviyelerinden kaçının!"
-
-#: all_pages/1 Rocket Bot Royale.py:114 all_pages/2 Goober Dash.py:146
-msgid "Platforms"
-msgstr "Platformlar"
-
-#: all_pages/1 Rocket Bot Royale.py:129 all_pages/2 Goober Dash.py:160
-msgid "Communities"
-msgstr "Topluluklar"
-
-#: all_pages/0 Home.py:12
-msgid "Welcome to"
-msgstr "Hoş geldiniz"
-
-#: all_pages/0 Home.py:15
-msgid "A website which provides useful Tools & Statistics of games made by [Winterpixel Games](https://www.winterpixel.com/)"
-msgstr "Winterpixel Games] (https://www.winterpixel.com/) tarafından yapılan oyunların yararlı Araçlarını ve İstatistiklerini sağlayan bir web sitesi"
-
-#: all_pages/0 Home.py:64 all_pages/0 Home.py:169 common_config.py:1257
-msgid "Goober Dash"
-msgstr "Goober Dash"
-
-#: all_pages/0 Home.py:161
-msgid "Home"
-msgstr "Ev"
-
-#: all_pages/2 Goober Dash.py:142
-msgid "**GOOBER DASH** is a multiplayer battle royale game that you can play online. Dash your opponents into deadly spikes, gather precious coins, and unlock a plethora of unique costumes as you strive to outlast the competition. Invite your friends to engage in epic battles in custom private lobbies. Unleash your creativity with the level editor, crafting and conquering your very own battlegrounds. Climb the global and country-based seasonal leaderboards to prove your dominance in this thrilling contest."
-msgstr "**GOOBER DASH** çevrimiçi oynayabileceğiniz çok oyunculu bir battle royale oyunudur. Rakiplerinizi ölümcül sivri uçlara fırlatın, değerli paralar toplayın ve rekabette üstün gelmek için çabalarken çok sayıda benzersiz kostümün kilidini açın. Özel özel lobilerde destansı savaşlara katılmak için arkadaşlarınızı davet edin. Seviye editörü ile yaratıcılığınızı ortaya çıkarın, kendi savaş alanlarınızı oluşturun ve fethedin. Bu heyecan verici yarışmada üstünlüğünüzü kanıtlamak için küresel ve ülke tabanlı sezonluk liderlik tablolarında tırmanın."
-
-#: all_pages/2 Goober Dash.py:193
-msgid "Time Trials (Certified Levels)"
-msgstr "Zamana Karşı Yarışlar (Sertifikalı Seviyeler)"
-
-#: common_config.py:47 common_config.py:206
-msgid "Verify Account"
-msgstr "Hesabı Doğrula"
-
-#: common_config.py:235 common_config.py:595 common_config.py:962
-msgid "Hello"
-msgstr "Merhaba"
-
-#: common_config.py:240
-msgid "Welcome to WinterPixelGames! We're excited to have you join our community. Before you creating your account, we need to verify your email address to ensure we have the correct information."
-msgstr "WinterPixelGames'e hoş geldiniz! Topluluğumuza katıldığınız için heyecanlıyız. Hesabınızı oluşturmadan önce, doğru bilgilere sahip olduğumuzdan emin olmak için e-posta adresinizi doğrulamamız gerekiyor."
-
-#: common_config.py:245
-msgid "Your verification code is "
-msgstr "Doğrulama kodunuz "
-
-#: common_config.py:251
-msgid "You can now register your account using this verification code and the corresponding email."
-msgstr "Artık bu doğrulama kodunu ve ilgili e-postayı kullanarak hesabınızı kaydedebilirsiniz."
-
-#: common_config.py:256 common_config.py:618 common_config.py:985
-msgid "Happy Gaming!"
-msgstr "Mutlu oyunlar!"
-
-#: common_config.py:273
-msgid "Verify"
-msgstr "Doğrulama"
-
-#: common_config.py:288
-msgid "Please disregard this email if you did not submit a verify email request."
-msgstr "Doğrulama e-posta talebi göndermediyseniz lütfen bu e-postayı dikkate almayın."
-
-#: common_config.py:317 common_config.py:683 common_config.py:1050
-msgid "Problems or questions?"
-msgstr "Sorun veya sorularınız mı var?"
-
-#: common_config.py:407 common_config.py:566
-msgid "Forgot Username Request"
-msgstr "Kullanıcı Adımı Unuttum Talebi"
-
-#: common_config.py:602
-msgid "We have sent you this email in response to your request about forgotting your username on WinterPixelGames."
-msgstr "WinterPixelGames'te kullanıcı adınızı unutmanızla ilgili talebinize yanıt olarak size bu e-postayı gönderdik."
-
-#: common_config.py:607
-msgid "Your username of the associated email is "
-msgstr "İlişkili e-postanın kullanıcı adınız "
-
-#: common_config.py:613
-msgid "You can now login to your account using this username and the corresponding password."
-msgstr "Artık bu kullanıcı adını ve ilgili şifreyi kullanarak hesabınıza giriş yapabilirsiniz."
-
-#: common_config.py:621 common_config.py:988
-msgid "WinterPixelGames"
-msgstr "WinterPixelGames"
-
-#: common_config.py:637 common_config.py:1332 common_config.py:1350
-#: common_config.py:1353
-msgid "Login"
-msgstr "Giriş"
-
-#: common_config.py:653
-msgid "Please disregard this email if you did not submit a forgot username request."
-msgstr "Kullanıcı adını unuttum talebi göndermediyseniz lütfen bu e-postayı dikkate almayın."
-
-#: common_config.py:773 common_config.py:932
-msgid "Forgot Password Request"
-msgstr "Şifremi Unuttum Talebi"
-
-#: common_config.py:969
-msgid "We have sent you this email in response to your request about forgotting your password on WinterPixelGames."
-msgstr "WinterPixelGames'te şifrenizi unutmanızla ilgili talebinize yanıt olarak size bu e-postayı gönderdik."
-
-#: common_config.py:974
-msgid "Your new auto-generated password is "
-msgstr "Otomatik olarak oluşturulan yeni şifreniz "
-
-#: common_config.py:980
-msgid "You can now login to your account using this password and change it to a custom password if necessary."
-msgstr "Artık bu parolayı kullanarak hesabınıza giriş yapabilir ve gerekirse özel bir parola ile değiştirebilirsiniz."
-
-#: common_config.py:1004 common_config.py:1401
-msgid "Reset Password"
-msgstr "Şifre Sıfırlama"
-
-#: common_config.py:1020
-msgid "Please disregard this email if you did not submit a forgot password request."
-msgstr "Şifremi unuttum talebinde bulunmadıysanız lütfen bu e-postayı dikkate almayın."
-
-#: common_config.py:1187 common_config.py:1194
-msgid "Linked Game Accounts"
-msgstr "Bağlantılı Oyun Hesapları"
-
-#: common_config.py:1188
-msgid "Change Nickname/Email"
-msgstr "Takma Ad/E-posta Değiştir"
-
-#: common_config.py:1189 common_config.py:1307
-msgid "Change Password"
-msgstr "Şifre Değiştir"
-
-#: common_config.py:1197
-msgid "Statistics of Linked Accounts will be tracked daily and displayed in Player Info"
-msgstr "Bağlantılı Hesapların istatistikleri günlük olarak izlenecek ve Oyuncu Bilgisinde görüntülenecektir"
-
-#: common_config.py:1261 common_config.py:1292
-msgid "Update"
-msgstr "Güncelleme"
-
-#: common_config.py:1268
-msgid "Wrong User ID format of "
-msgstr "Yanlış Kullanıcı Kimliği biçimi "
-
-#: common_config.py:1280
-msgid "User IDs are updated successfully"
-msgstr "Kullanıcı kimlikleri başarıyla güncellendi"
-
-#: common_config.py:1287
-msgid "Change Name/Email"
-msgstr "İsim/E-posta Değiştir"
-
-#: common_config.py:1288
-msgid "Field"
-msgstr "Saha"
-
-#: common_config.py:1289 common_config.py:1552
-msgid "Nickname"
-msgstr "Takma ad"
-
-#: common_config.py:1290 common_config.py:1375 common_config.py:1440
-msgid "Email"
-msgstr "E-posta"
-
-#: common_config.py:1291
-msgid "New value"
-msgstr "Yeni değer"
-
-#: common_config.py:1297
-msgid "Entries updated successfully"
-msgstr "Girişler başarıyla güncellendi"
-
-#: common_config.py:1308
-msgid "Current Password"
-msgstr "Geçerli Şifre"
-
-#: common_config.py:1309
-msgid "New Password"
-msgstr "Yeni Şifre"
-
-#: common_config.py:1310 common_config.py:1559
-msgid "Repeat Password"
-msgstr "Şifreyi Tekrarla"
-
-#: common_config.py:1311
-msgid "Reset"
-msgstr "Sıfırla"
-
-#: common_config.py:1316
-msgid "Password modified successfully"
-msgstr "Parola başarıyla değiştirildi"
-
-#: common_config.py:1333 common_config.py:1374
-msgid "Forgot Username"
-msgstr "Kullanıcı Adımı Unuttum"
-
-#: common_config.py:1334 common_config.py:1399
-msgid "Forgot Password"
-msgstr "Şifremi Unuttum"
-
-#: common_config.py:1351 common_config.py:1400 common_config.py:1557
-msgid "Username"
-msgstr "Kullanıcı Adı"
-
-#: common_config.py:1352 common_config.py:1558
-msgid "Password"
-msgstr "Şifre"
-
-#: common_config.py:1361
-msgid "Username or Password is incorrect"
-msgstr "Kullanıcı Adı veya Şifre yanlış"
-
-#: common_config.py:1376
-msgid "Send Userename"
-msgstr "Kullanıcı adı gönder"
-
-#: common_config.py:1385
-msgid "Username is sent to the associated email successfully"
-msgstr "Kullanıcı adı ilgili e-postaya başarıyla gönderildi"
-
-#: common_config.py:1387 common_config.py:1510
-msgid "Email not found"
-msgstr "E-posta bulunamadı"
-
-#: common_config.py:1416
-msgid "New password is sent to the associated email successfully"
-msgstr "Yeni şifre ilgili e-postaya başarıyla gönderildi"
-
-#: common_config.py:1419
-msgid "Username not found"
-msgstr "Kullanıcı adı bulunamadı"
-
-#: common_config.py:1430 common_config.py:1439 common_config.py:1450
-msgid "Verify Email"
-msgstr "E-posta Doğrulama"
-
-#: common_config.py:1431 common_config.py:1551 common_config.py:1560
-msgid "Register"
-msgstr "Kayıt Olun"
-
-#: common_config.py:1444
-msgid "Send Verification Code"
-msgstr "Doğrulama Kodu Gönder"
-
-#: common_config.py:1448
-msgid "Verification Code"
-msgstr "Doğrulama Kodu"
-
-#: common_config.py:1494
-msgid "Verification code is sent to the email successfully"
-msgstr "Doğrulama kodu e-postaya başarıyla gönderildi"
-
-#: common_config.py:1499
-msgid "Email is required"
-msgstr "E-posta gereklidir"
-
-#: common_config.py:1501
-msgid "Email is not valid"
-msgstr "E-posta geçerli değil"
-
-#: common_config.py:1503
-msgid "Email is already in use"
-msgstr "E-posta zaten kullanımda"
-
-#: common_config.py:1515
-msgid "Wrong verification code"
-msgstr "Yanlış doğrulama kodu"
-
-#: common_config.py:1526
-msgid "Verify success"
-msgstr "Başarıyı doğrulayın"
-
-#: common_config.py:1552
-msgid "alphabets only"
-msgstr "sadece alfabeler"
-
-#: common_config.py:1553
-msgid "Verified Email"
-msgstr "Doğrulanmış E-posta"
-
-#: common_config.py:1555
-msgid "used for forgot username/password"
-msgstr "kullanıcı adı/şifre unuttum için kullanılır"
-
-#: common_config.py:1557 common_config.py:1558
-msgid "used for login"
-msgstr "giriş için kullanılır"
-
-#: common_config.py:1564
-msgid "User registered successfully"
-msgstr "Kullanıcı başarıyla kaydoldu"
-
-#: common_config.py:1591
-msgid "Welcome back"
-msgstr "Tekrar hoş geldiniz"
-
-#: common_config.py:1692
+#: all_pages/E Language.py:148
 msgid "Apply"
 msgstr "Başvurmak"
 
-#: common_config.py:1695
+#: all_pages/E Language.py:154
 msgid "Contributors"
 msgstr "Katkıda Bulunanlar"
 
-#: common_config.py:1695
+#: all_pages/E Language.py:154
 msgid "In no particular order"
 msgstr "Belirli bir sıralama olmaksızın"
 
-#: common_config.py:1710
+#: all_pages/E Language.py:169
 msgid "Contribute"
 msgstr "Katkıda bulunun"
 
-#: common_config.py:1760
-msgid "Back to Home"
-msgstr "Ana Sayfaya Geri Dön"
+#: all_pages/3 Goober Royale.py:76
+msgid "**GOOBER ROYALE** is a multiplayer battle royale game in which each player controls a character (called a \"goober\") and must collect weapons, power-ups and other items to eliminate their opponents. The clashes bring together 16 players on a map and the objective will be to be the last survivor of the game. You can play alone or in a team of 4 players. Your Goober will have several weapons, a main missile that reloads at regular intervals and a secondary accessory such as mines, a tornado, a drill and many others. Also use your jetpack to move around the map more easily, reach high places and surprise your opponents. Completing games and missions will earn you gold coins that you can spend either to improve your Goober's skills or to buy cosmetics that will give your character a unique style. An online ranking will allow you to see the 100 best players in the world and in your region."
+msgstr "**GOOBER ROYALE**, her oyuncunun bir karakteri (\"goober\" olarak adlandırılır) kontrol ettiği ve rakiplerini ortadan kaldırmak için silahlar, güçlendiriciler ve diğer öğeleri toplaması gereken çok oyunculu bir battle royale oyunudur. Çatışmalar 16 oyuncuyu bir haritada bir araya getirir ve amaç oyunun hayatta kalan son oyuncusu olmaktır. Tek başınıza veya 4 kişilik bir takım halinde oynayabilirsiniz. Goober'ınızın çeşitli silahları, düzenli aralıklarla yeniden yüklenen bir ana füzesi ve mayınlar, bir kasırga, bir matkap ve diğerleri gibi ikincil bir aksesuarı olacaktır. Ayrıca haritada daha kolay hareket etmek, yüksek yerlere ulaşmak ve rakiplerinizi şaşırtmak için jetpack'inizi kullanın. Oyunları ve görevleri tamamlamak size Goober'ınızın becerilerini geliştirmek ya da karakterinize benzersiz bir tarz kazandıracak kozmetik ürünleri satın almak için harcayabileceğiniz altın paralar kazandıracak. Çevrimiçi bir sıralama, dünyadaki ve bölgenizdeki en iyi 100 oyuncuyu görmenizi sağlayacaktır."
 
-#: common_config.py:1802
-msgid "Back to Menu"
-msgstr "Menüye Geri Dön"
+#: all_pages/3 Goober Royale.py:81
+msgid "**Goober Royale** is in **beta** currently (Bugs are expected and Data may be reset in future)"
+msgstr "**Goober Royale** şu anda **beta** aşamasındadır (Hatalar beklenmektedir ve Veriler gelecekte sıfırlanabilir)"
 
-#: common_config.py:2160
-msgid "This website is NOT affiliated with or endorsed by Winterpixel Games Inc."
-msgstr "Bu web sitesi Winterpixel Games Inc. ile bağlantılı değildir veya tarafından onaylanmamıştır."
+#: all_pages/7 About.py:54 all_pages/0 Home.py:193
+msgid "About"
+msgstr "Hakkında"
 
-#: common_config.py:2163
-msgid "All relevant trademarks belong to their respective owners."
-msgstr "İlgili tüm ticari markalar ilgili sahiplerine aittir."
+#: all_pages/7 About.py:56
+msgid "What is WinterPixelGames?"
+msgstr "WinterPixelGames nedir?"
 
-#: common_config.py:2166
-msgid "Developed with 💖 by <a style=\"text-decoration:none\" href=\"https://tank8k.com/\" target=\"_blank\">TANK8K</a>"
-msgstr "<a style=\"text-decoration:none\" href=\"https://tank8k.com/\" target=\"_blank\">TANK8K</a> tarafından 💖 ile geliştirildi"
+#: all_pages/7 About.py:62
+msgid "**:blue-background[WinterPixelGames]** (WPG) is a community-driven site made by [**TANK8K**](https://tank8k.com/) which provides useful **Tools & Statistics** of games made by **[Winterpixel Games](https://www.winterpixel.com/)**, including **[Rocket Bot Royale](./Rocket_Bot_Royale)**, **[Goober Dash](./Goober_Dash)**, **[Goober Royale](./Goober_Royale)**, **[Goober Shot](./Goober_Shot)**, and **[Moonrock Miners](./Moonrock_Miners)**."
+msgstr "**:blue-background[WinterPixelGames]** (WPG), [**TANK8K**](https://tank8k.com/) tarafından yapılan ve **[Winterpixel Games](https://www.winterpixel.com/)**, **[Rocket Bot Royale](./Rocket_Bot_Royale)**, **[Goober Dash](./Goober_Dash)**, **[Goober Royale](./Goober_Royale)**, **[Goober Shot](./Goober_Shot)** ve **[Moonrock Miners](./Moonrock_Miners)** dahil olmak üzere."
 
-#: common_config.py:2194 common_config.py:2231
+#: all_pages/7 About.py:69
+msgid "Affiliation"
+msgstr "Üyelik"
+
+#: all_pages/7 About.py:73
+msgid "This website is **NOT** affiliated with or endorsed by **Winterpixel Games Inc.**"
+msgstr "Bu web sitesi **Winterpixel Games Inc.** ile bağlantılı değildir veya **Winterpixel Games Inc.** tarafından onaylanmamıştır."
+
+#: all_pages/7 About.py:80
+msgid "Copyright Notice"
+msgstr "Telif Hakkı Bildirimi"
+
+#: all_pages/7 About.py:84
+msgid "Rocket Bot Royale, Goober Dash, Goober Royale, Goober Shot, Moonrock Miners, Websites and Media **@ Winterpixel Games Inc.**"
+msgstr "Rocket Bot Royale, Goober Dash, Goober Royale, Goober Shot, Moonrock Miners, Web Siteleri ve Medya **@ Winterpixel Games Inc.**"
+
+#: all_pages/7 About.py:91
+msgid "License"
+msgstr "Lisans"
+
+#: all_pages/7 About.py:94
+msgid "The source code is licensed under **MIT license**."
+msgstr "Kaynak kodu **MIT lisansı** altında lisanslanmıştır."
+
+#: all_pages/7 About.py:100
+msgid "Technology"
+msgstr "Teknoloji"
+
+#: all_pages/7 About.py:107
+msgid "Framework"
+msgstr "Çerçeve"
+
+#: all_pages/7 About.py:113
+msgid "Database"
+msgstr "Veritabanı"
+
+#: all_pages/7 About.py:116
+msgid "Cloud Vendor"
+msgstr "Bulut Satıcısı"
+
+#: all_pages/7 About.py:119
+msgid "Web Server"
+msgstr "Web Sunucusu"
+
+#: all_pages/7 About.py:122
+msgid "Source Code"
+msgstr "Kaynak Kodu"
+
+#: all_pages/7 About.py:129
+msgid "Developer"
+msgstr "Geliştirici"
+
+#: all_pages/7 About.py:140
+msgid "Personal Website"
+msgstr "Kişisel Web Sitesi"
+
+#: all_pages/7 About.py:145
+msgid "Developed with 💖 by **[:blue[TANK8K]](https://tank8k.com/)**"
+msgstr "💖 ile **[:blue[TANK8K]](https://tank8k.com/)** tarafından geliştirilmiştir."
+
+#: all_pages/1 Rocket Bot Royale.py:108
+msgid "**ROCKET BOT ROYALE** is a fun new take on the online battle royale formula. Powerful, wall-climbing, rocket-jumping, artillery-pumping Robo-Tanks are the vehicle of choice in this fast-paced shootout, where the goal is to survive longer than the competition. Collect the loot to upgrade your arsenal, tunnel into the terrain to take cover and collect buried treasure, and avoid the rising water levels to be the blast one standing!"
+msgstr "**ROCKET BOT ROYALE** çevrimiçi battle royale formülüne yeni ve eğlenceli bir yaklaşım. Güçlü, duvara tırmanan, roket zıplatan, topçu pompalayan Robo-Tanklar, amacın rakipten daha uzun süre hayatta kalmak olduğu bu hızlı tempolu çatışmada tercih edilen araçlardır. Cephaneliğinizi geliştirmek için ganimet toplayın, siper almak ve gömülü hazineyi toplamak için araziye tünel kazın ve ayakta kalan tek kişi olmak için yükselen su seviyelerinden kaçının!"
+
+#: all_pages/1 Rocket Bot Royale.py:112 all_pages/2 Goober Dash.py:144
+msgid "Platforms"
+msgstr "Platformlar"
+
+#: all_pages/1 Rocket Bot Royale.py:127 all_pages/2 Goober Dash.py:158
+msgid "Communities"
+msgstr "Topluluklar"
+
+#: all_pages/0 Home.py:11
+msgid "Welcome to"
+msgstr "Hoş geldiniz"
+
+#: all_pages/0 Home.py:14
+msgid "A website which provides useful Tools & Statistics of games made by [Winterpixel Games](https://www.winterpixel.com/)"
+msgstr "Winterpixel Games] (https://www.winterpixel.com/) tarafından yapılan oyunların yararlı Araçlarını ve İstatistiklerini sağlayan bir web sitesi"
+
+#: all_pages/0 Home.py:160
+msgid "Home"
+msgstr "Ev"
+
+#: all_pages/0 Home.py:215
 msgid "Log Out"
 msgstr "Çıkış Yap"
 
-#: common_config.py:2202
-msgid "Account"
-msgstr "Hesap"
+#: all_pages/2 Goober Dash.py:140
+msgid "**GOOBER DASH** is a multiplayer battle royale game that you can play online. Dash your opponents into deadly spikes, gather precious coins, and unlock a plethora of unique costumes as you strive to outlast the competition. Invite your friends to engage in epic battles in custom private lobbies. Unleash your creativity with the level editor, crafting and conquering your very own battlegrounds. Climb the global and country-based seasonal leaderboards to prove your dominance in this thrilling contest."
+msgstr "**GOOBER DASH** çevrimiçi oynayabileceğiniz çok oyunculu bir battle royale oyunudur. Rakiplerinizi ölümcül sivri uçlara fırlatın, değerli paralar toplayın ve rekabette üstün gelmek için çabalarken çok sayıda benzersiz kostümün kilidini açın. Özel özel lobilerde destansı savaşlara katılmak için arkadaşlarınızı davet edin. Seviye editörü ile yaratıcılığınızı ortaya çıkarın, kendi savaş alanlarınızı oluşturun ve fethedin. Bu heyecan verici yarışmada üstünlüğünüzü kanıtlamak için küresel ve ülke tabanlı sezonluk liderlik tablolarında tırmanın."
 
-#: common_config.py:2210
-msgid "Log In"
-msgstr "Giriş Yap"
+#: all_pages/2 Goober Dash.py:191
+msgid "Time Trials (Certified Levels)"
+msgstr "Zamana Karşı Yarışlar (Sertifikalı Seviyeler)"
 
-#: common_config.py:2218
-msgid "Sign Up"
-msgstr "Kaydolun"
+#: common_config.py:59
+msgid "Welcome back"
+msgstr "Tekrar hoş geldiniz"
+
+#: common_config.py:109
+msgid "Back to Home"
+msgstr "Ana Sayfaya Geri Dön"
+
+#: common_config.py:151
+msgid "Back to Menu"
+msgstr "Menüye Geri Dön"
+
+#: common_config.py:179
+msgid "This website is NOT affiliated with or endorsed by Winterpixel Games Inc."
+msgstr "Bu web sitesi Winterpixel Games Inc. ile bağlantılı değildir veya tarafından onaylanmamıştır."
+
+#: common_config.py:181
+msgid "All relevant trademarks belong to their respective owners."
+msgstr "İlgili tüm ticari markalar ilgili sahiplerine aittir."
+
+#: common_config.py:184
+msgid "Developed with 💖 by <a style=\"text-decoration:none\" href=\"https://tank8k.com/\" target=\"_blank\">TANK8K</a>"
+msgstr "<a style=\"text-decoration:none\" href=\"https://tank8k.com/\" target=\"_blank\">TANK8K</a> tarafından 💖 ile geliştirildi"
 

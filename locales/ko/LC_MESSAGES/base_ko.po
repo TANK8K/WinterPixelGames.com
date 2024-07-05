@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: winterpixelgames\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-04 14:26+0800\n"
-"PO-Revision-Date: 2024-07-04 06:27\n"
+"POT-Creation-Date: 2024-07-05 16:37+0800\n"
+"PO-Revision-Date: 2024-07-05 08:41\n"
 "Last-Translator: \n"
 "Language-Team: Korean\n"
 "Language: ko_KR\n"
@@ -17,90 +17,211 @@ msgstr ""
 "X-Crowdin-File: base.pot\n"
 "X-Crowdin-File-ID: 10\n"
 
-#: all_pages/6 Broski.py:62
+#: all_pages/A Log In.py:32 all_pages/0 Home.py:205
+msgid "Log In"
+msgstr "로그인"
+
+#: all_pages/A Log In.py:56 all_pages/A Log In.py:215
+msgid "Forgot Username Request"
+msgstr "사용자 이름 찾기 요청"
+
+#: all_pages/A Log In.py:244 all_pages/A Log In.py:611
+#: all_pages/B Sign Up.py:246
+msgid "Hello"
+msgstr "안녕하세요"
+
+#: all_pages/A Log In.py:251
+msgid "We have sent you this email in response to your request about forgotting your username on WinterPixelGames."
+msgstr "겨울 픽셀 게임에서 사용자 아이디 분실에 대한 요청에 대한 답변으로 이 이메일을 보냈습니다."
+
+#: all_pages/A Log In.py:256
+msgid "Your username of the associated email is "
+msgstr "연결된 이메일의 사용자 아이디는 "
+
+#: all_pages/A Log In.py:262
+msgid "You can now login to your account using this username and the corresponding password."
+msgstr "이제 이 사용자 아이디와 해당 비밀번호를 사용하여 계정에 로그인할 수 있습니다."
+
+#: all_pages/A Log In.py:267 all_pages/A Log In.py:634
+#: all_pages/B Sign Up.py:267
+msgid "Happy Gaming!"
+msgstr "행복한 게임!"
+
+#: all_pages/A Log In.py:270 all_pages/A Log In.py:637
+msgid "WinterPixelGames"
+msgstr "겨울 픽셀 게임"
+
+#: all_pages/A Log In.py:286 all_pages/A Log In.py:787
+#: all_pages/A Log In.py:795 all_pages/A Log In.py:798
+msgid "Login"
+msgstr "로그인"
+
+#: all_pages/A Log In.py:302
+msgid "Please disregard this email if you did not submit a forgot username request."
+msgstr "사용자 아이디 찾기 요청을 제출하지 않은 경우 이 이메일을 무시해 주세요."
+
+#: all_pages/A Log In.py:332 all_pages/A Log In.py:699
+#: all_pages/B Sign Up.py:328
+msgid "Problems or questions?"
+msgstr "문제나 질문이 있으신가요?"
+
+#: all_pages/A Log In.py:422 all_pages/A Log In.py:581
+msgid "Forgot Password Request"
+msgstr "비밀번호 찾기 요청"
+
+#: all_pages/A Log In.py:618
+msgid "We have sent you this email in response to your request about forgotting your password on WinterPixelGames."
+msgstr "겨울 픽셀 게임에서 비밀번호 분실에 대한 요청에 대한 답변으로 이 이메일을 보냈습니다."
+
+#: all_pages/A Log In.py:623
+msgid "Your new auto-generated password is "
+msgstr "새 자동 생성 비밀번호는 다음과 같습니다. "
+
+#: all_pages/A Log In.py:629
+msgid "You can now login to your account using this password and change it to a custom password if necessary."
+msgstr "이제 이 비밀번호를 사용하여 계정에 로그인하고 필요한 경우 사용자 지정 비밀번호로 변경할 수 있습니다."
+
+#: all_pages/A Log In.py:653 all_pages/A Log In.py:856
+msgid "Reset Password"
+msgstr "비밀번호 재설정"
+
+#: all_pages/A Log In.py:669
+msgid "Please disregard this email if you did not submit a forgot password request."
+msgstr "비밀번호 분실 요청을 제출하지 않은 경우 이 이메일은 무시해 주세요."
+
+#: all_pages/A Log In.py:788 all_pages/A Log In.py:829
+msgid "Forgot Username"
+msgstr "사용자 이름 찾기"
+
+#: all_pages/A Log In.py:789 all_pages/A Log In.py:854
+msgid "Forgot Password"
+msgstr "비밀번호 찾기"
+
+#: all_pages/A Log In.py:796 all_pages/A Log In.py:855
+#: all_pages/B Sign Up.py:527
+msgid "Username"
+msgstr "사용자 이름"
+
+#: all_pages/A Log In.py:797 all_pages/B Sign Up.py:528
+msgid "Password"
+msgstr "비밀번호"
+
+#: all_pages/A Log In.py:802
+msgid "Username or Password is incorrect"
+msgstr "사용자 이름 또는 비밀번호가 올바르지 않습니다."
+
+#: all_pages/A Log In.py:830 all_pages/B Sign Up.py:446
+#: all_pages/D Account.py:172
+msgid "Email"
+msgstr "이메일"
+
+#: all_pages/A Log In.py:831
+msgid "Send Userename"
+msgstr "사용자 이름 보내기"
+
+#: all_pages/A Log In.py:840
+msgid "Username is sent to the associated email successfully"
+msgstr "사용자 아이디가 연결된 이메일로 성공적으로 전송되었습니다."
+
+#: all_pages/A Log In.py:842 all_pages/B Sign Up.py:460
+msgid "Email not found"
+msgstr "이메일을 찾을 수 없습니다."
+
+#: all_pages/A Log In.py:870
+msgid "New password is sent to the associated email successfully"
+msgstr "새 비밀번호가 연결된 이메일로 성공적으로 전송되었습니다."
+
+#: all_pages/A Log In.py:872
+msgid "Username not found"
+msgstr "사용자 이름을 찾을 수 없습니다."
+
+#: all_pages/A Log In.py:876
+msgid "Click the button again if it doesn't work for the first time"
+msgstr "처음으로 작동하지 않는 경우 버튼을 다시 클릭합니다."
+
+#: all_pages/6 Broski.py:60
 msgid "**BROSKI** is an arcade pixel style skiing game, it is a fun and has a unique visual style that allows you to enjoy skiing even in summer. In the game, you will play as a skier who races down a snowy mountain. Your goal is to ski the furthest distance possible. As you slide down the hill faster and faster, you have to avoid more and more obstacles on the way, which makes the game challenging. To test how far you can go, take the challenge!"
 msgstr "**브로스키**는 아케이드 픽셀 스타일의 스키 게임으로, 여름에도 스키를 즐길 수 있는 재미있고 독특한 비주얼 스타일이 특징입니다. 게임에서 여러분은 눈 덮인 산을 내려가는 스키어가 되어 플레이하게 됩니다. 목표는 가능한 한 가장 먼 거리를 스키를 타는 것입니다. 언덕을 점점 더 빠르게 내려가면서 도중에 점점 더 많은 장애물을 피해야 하므로 게임이 어려워집니다. 얼마나 멀리 갈 수 있는지 테스트하려면 도전해 보세요!"
 
-#: all_pages/6 Broski.py:66
+#: all_pages/6 Broski.py:64
 msgid "**Broski** is a **prototype single-player game** currently"
 msgstr "**브로스키**는 현재 **프로토타입 싱글플레이어 게임**입니다."
 
-#: all_pages/6 Broski.py:69 all_pages/5 Moonrock Miners.py:77
-#: all_pages/4 Goober Shot.py:87 all_pages/3 Goober Royale.py:87
+#: all_pages/6 Broski.py:67 all_pages/5 Moonrock Miners.py:75
+#: all_pages/4 Goober Shot.py:85 all_pages/3 Goober Royale.py:85
 msgid "Platform"
 msgstr "플랫폼"
 
-#: all_pages/6 Broski.py:71 all_pages/5 Moonrock Miners.py:79
-#: all_pages/4 Goober Shot.py:89 all_pages/3 Goober Royale.py:89
-#: all_pages/1 Rocket Bot Royale.py:116 all_pages/2 Goober Dash.py:148
+#: all_pages/6 Broski.py:69 all_pages/5 Moonrock Miners.py:77
+#: all_pages/4 Goober Shot.py:87 all_pages/3 Goober Royale.py:87
+#: all_pages/1 Rocket Bot Royale.py:114 all_pages/2 Goober Dash.py:146
 msgid "Browser"
 msgstr "브라우저"
 
-#: all_pages/6 Broski.py:72 all_pages/5 Moonrock Miners.py:80
-#: all_pages/4 Goober Shot.py:90 all_pages/3 Goober Royale.py:90
+#: all_pages/6 Broski.py:70 all_pages/5 Moonrock Miners.py:78
+#: all_pages/4 Goober Shot.py:88 all_pages/3 Goober Royale.py:88
 msgid "Community"
 msgstr "커뮤니티"
 
-#: all_pages/6 Broski.py:78 all_pages/5 Moonrock Miners.py:86
-#: all_pages/4 Goober Shot.py:96 all_pages/3 Goober Royale.py:96
-#: all_pages/1 Rocket Bot Royale.py:141 all_pages/2 Goober Dash.py:171
+#: all_pages/6 Broski.py:76 all_pages/5 Moonrock Miners.py:84
+#: all_pages/4 Goober Shot.py:94 all_pages/3 Goober Royale.py:94
+#: all_pages/1 Rocket Bot Royale.py:139 all_pages/2 Goober Dash.py:169
 msgid "Tools"
 msgstr "도구"
 
-#: all_pages/6 Broski.py:83 all_pages/5 Moonrock Miners.py:91
+#: all_pages/6 Broski.py:81 all_pages/5 Moonrock Miners.py:89
 #: all_pages/RocketBotRoyale/Tools/image_assets.py:10
-#: all_pages/4 Goober Shot.py:101 all_pages/GooberDash/Tools/image_assets.py:37
+#: all_pages/4 Goober Shot.py:99 all_pages/GooberDash/Tools/image_assets.py:37
 #: all_pages/MoonrockMiners/Tools/image_assets.py:13
 #: all_pages/GooberRoyale/Tools/image_assets.py:13
 #: all_pages/GooberShot/Tools/image_assets.py:13
-#: all_pages/3 Goober Royale.py:100 all_pages/1 Rocket Bot Royale.py:151
-#: all_pages/Broski/Tools/image_assets.py:13 all_pages/2 Goober Dash.py:184
+#: all_pages/3 Goober Royale.py:98 all_pages/1 Rocket Bot Royale.py:149
+#: all_pages/Broski/Tools/image_assets.py:13 all_pages/2 Goober Dash.py:182
 msgid "Image Assets"
 msgstr "이미지 자산"
 
-#: all_pages/6 Broski.py:83 all_pages/5 Moonrock Miners.py:91
-#: all_pages/5 Moonrock Miners.py:103 all_pages/4 Goober Shot.py:101
-#: all_pages/4 Goober Shot.py:113 all_pages/4 Goober Shot.py:118
+#: all_pages/6 Broski.py:81 all_pages/5 Moonrock Miners.py:89
+#: all_pages/5 Moonrock Miners.py:101 all_pages/4 Goober Shot.py:99
+#: all_pages/4 Goober Shot.py:111 all_pages/4 Goober Shot.py:116
 #: all_pages/GooberDash/Statistics/player_info.py:480
 #: all_pages/GooberDash/Statistics/player_info.py:494
 #: all_pages/GooberDash/Statistics/player_info.py:496
-#: all_pages/GooberDash/Statistics/player_info.py:498
-#: all_pages/3 Goober Royale.py:109 all_pages/3 Goober Royale.py:114
-#: all_pages/1 Rocket Bot Royale.py:146 all_pages/1 Rocket Bot Royale.py:151
-#: all_pages/1 Rocket Bot Royale.py:163 all_pages/1 Rocket Bot Royale.py:168
-#: all_pages/2 Goober Dash.py:177 all_pages/2 Goober Dash.py:198
-#: all_pages/2 Goober Dash.py:203 all_pages/2 Goober Dash.py:208
-#: common_config.py:1200
+#: all_pages/GooberDash/Statistics/player_info.py:498 all_pages/D Account.py:78
+#: all_pages/3 Goober Royale.py:107 all_pages/3 Goober Royale.py:112
+#: all_pages/1 Rocket Bot Royale.py:144 all_pages/1 Rocket Bot Royale.py:149
+#: all_pages/1 Rocket Bot Royale.py:161 all_pages/1 Rocket Bot Royale.py:166
+#: all_pages/2 Goober Dash.py:175 all_pages/2 Goober Dash.py:196
+#: all_pages/2 Goober Dash.py:201 all_pages/2 Goober Dash.py:206
 msgid "WIP"
 msgstr "WIP"
 
-#: all_pages/5 Moonrock Miners.py:70
+#: all_pages/5 Moonrock Miners.py:68
 msgid "**MOONROCK MINERS** is a gravity-defying multiplayer space battle game set in an asteroid field. Blast other players, collect powerups and crystals, and avoid the asteroids. Try to survive until the end to win the match. Compete against players around the world in real-time to rank in every season. You can also create your own custom lobbies to play private games online with your friends!"
 msgstr "**문락 마이너스(MOONROCK MINERS)는 소행성 지대를 배경으로 중력을 거스르는 멀티플레이어 우주 전투 게임입니다. 다른 플레이어를 폭파하고 파워업과 크리스탈을 수집하고 소행성을 피하세요. 끝까지 살아남아 경기에서 승리하세요. 전 세계의 플레이어와 실시간으로 경쟁하여 매 시즌 순위를 매겨보세요. 나만의 로비를 만들어 친구들과 온라인으로 비공개 게임을 플레이할 수도 있습니다!"
 
-#: all_pages/5 Moonrock Miners.py:74
+#: all_pages/5 Moonrock Miners.py:72
 msgid "**Moonrock Miners** is **no longer in development**"
 msgstr "**문록 광부**는 **더 이상 개발 중이 아닙니다**."
 
-#: all_pages/5 Moonrock Miners.py:98 all_pages/4 Goober Shot.py:108
-#: all_pages/3 Goober Royale.py:104 all_pages/1 Rocket Bot Royale.py:158
-#: all_pages/2 Goober Dash.py:188
+#: all_pages/5 Moonrock Miners.py:96 all_pages/4 Goober Shot.py:106
+#: all_pages/3 Goober Royale.py:102 all_pages/1 Rocket Bot Royale.py:156
+#: all_pages/2 Goober Dash.py:186
 msgid "Statistics"
 msgstr "통계"
 
-#: all_pages/5 Moonrock Miners.py:103
+#: all_pages/5 Moonrock Miners.py:101
 #: all_pages/RocketBotRoyale/Statistics/season_leaderboard.py:10
-#: all_pages/4 Goober Shot.py:118
+#: all_pages/4 Goober Shot.py:116
 #: all_pages/GooberDash/Statistics/season_leaderboard.py:13
 #: all_pages/MoonrockMiners/Statistics/season_leaderboard.py:10
 #: all_pages/GooberRoyale/Statistics/season_leaderboard.py:10
 #: all_pages/GooberShot/Statistics/season_leaderboard.py:10
-#: all_pages/3 Goober Royale.py:114 all_pages/1 Rocket Bot Royale.py:168
-#: all_pages/2 Goober Dash.py:208
+#: all_pages/3 Goober Royale.py:112 all_pages/1 Rocket Bot Royale.py:166
+#: all_pages/2 Goober Dash.py:206
 msgid "Season Leaderboard"
 msgstr "시즌 순위표"
 
-#: all_pages/5 Moonrock Miners.py:108
+#: all_pages/5 Moonrock Miners.py:106
 msgid "**Leaderboard** is **disabled** currently"
 msgstr "**리더보드**는 현재 **비활성화**되어 있습니다."
 
@@ -128,30 +249,30 @@ msgid "Gallery"
 msgstr "갤러리"
 
 #: all_pages/RocketBotRoyale/Tools/optimize_crate.py:10
-#: all_pages/1 Rocket Bot Royale.py:146
+#: all_pages/1 Rocket Bot Royale.py:144
 msgid "Optimize Crate"
 msgstr "상자 최적화"
 
 #: all_pages/RocketBotRoyale/Statistics/player_info.py:10
-#: all_pages/4 Goober Shot.py:113
+#: all_pages/4 Goober Shot.py:111
 #: all_pages/GooberDash/Statistics/player_info.py:80
 #: all_pages/GooberRoyale/Statistics/player_info.py:10
 #: all_pages/GooberShot/Statistics/player_info.py:10
-#: all_pages/3 Goober Royale.py:109 all_pages/1 Rocket Bot Royale.py:163
-#: all_pages/2 Goober Dash.py:198
+#: all_pages/3 Goober Royale.py:107 all_pages/1 Rocket Bot Royale.py:161
+#: all_pages/2 Goober Dash.py:196
 msgid "Player Info"
 msgstr "플레이어 정보"
 
-#: all_pages/4 Goober Shot.py:78
+#: all_pages/4 Goober Shot.py:76
 msgid "**GOOBER SHOT** throws you into thrilling online archery battles against three other players! Prepare your bow, sharpen your arrows, enter the arena, and unleash your skills as a master archer. Remember, every arrow counts! Show off your precision and reflexes as you aim, shoot, and dodge with finesse. Rise through the ranks, climb the global leaderboards, and prove yourself as the ultimate archery champion. Will you emerge as the greatest archer in the realm?"
 msgstr "**구버샷**에서 다른 세 명의 플레이어와 스릴 넘치는 온라인 양궁 대결을 펼치세요! 활을 준비하고, 화살을 갈고, 경기장에 입장하여 마스터 궁수로서의 기술을 발휘하세요. 모든 화살이 중요하다는 것을 기억하세요! 정교하게 조준하고, 쏘고, 피하면서 정확성과 반사 신경을 뽐내 보세요. 순위를 올리고 전 세계 순위표에 올라 최고의 양궁 챔피언임을 증명하세요. 최고의 궁수로 등극할 수 있을까요?"
 
-#: all_pages/4 Goober Shot.py:83
+#: all_pages/4 Goober Shot.py:81
 msgid "**Goober Shot** is in **beta** currently (Bugs are expected and Data may be reset in future)"
 msgstr "**구버샷**은 현재 **베타** 버전입니다(버그가 예상되며 향후 데이터가 초기화될 수 있습니다)."
 
 #: all_pages/GooberDash/Tools/goober_generator.py:65
-#: all_pages/2 Goober Dash.py:182
+#: all_pages/2 Goober Dash.py:180
 msgid "Goober Generator"
 msgstr "구버 생성기"
 
@@ -204,7 +325,7 @@ msgstr "배지"
 msgid "Other Stuff"
 msgstr "기타 항목"
 
-#: all_pages/GooberDash/Tools/flip_level.py:130 all_pages/2 Goober Dash.py:175
+#: all_pages/GooberDash/Tools/flip_level.py:130 all_pages/2 Goober Dash.py:173
 msgid "Flip Level"
 msgstr "플립 레벨"
 
@@ -252,7 +373,7 @@ msgid "flipped"
 msgstr "플립"
 
 #: all_pages/GooberDash/Tools/maze_generator.py:13
-#: all_pages/2 Goober Dash.py:177
+#: all_pages/2 Goober Dash.py:175
 msgid "Maze Generator"
 msgstr "미로 생성기"
 
@@ -1641,11 +1762,204 @@ msgid "Percentile"
 msgstr "백분위수"
 
 #: all_pages/GooberDash/Statistics/level_info.py:13
-#: all_pages/2 Goober Dash.py:203
+#: all_pages/2 Goober Dash.py:201
 msgid "Level Info"
 msgstr "레벨 정보"
 
-#: all_pages/8 Useful Links.py:73 all_pages/0 Home.py:199
+#: all_pages/B Sign Up.py:24 all_pages/0 Home.py:210
+msgid "Sign Up"
+msgstr "가입하기"
+
+#: all_pages/B Sign Up.py:58 all_pages/B Sign Up.py:217
+msgid "Verify Account"
+msgstr "계정 확인"
+
+#: all_pages/B Sign Up.py:251
+msgid "Welcome to WinterPixelGames! We're excited to have you join our community. Before you creating your account, we need to verify your email address to ensure we have the correct information."
+msgstr "윈터픽셀게임즈에 오신 것을 환영합니다! 저희 커뮤니티에 가입하게 되어 기쁩니다. 계정을 만들기 전에 정확한 정보를 확인하기 위해 이메일 주소를 확인해야 합니다."
+
+#: all_pages/B Sign Up.py:256
+msgid "Your verification code is "
+msgstr "인증 코드는 다음과 같습니다. "
+
+#: all_pages/B Sign Up.py:262
+msgid "You can now register your account using this verification code and the corresponding email."
+msgstr "이제 이 인증 코드와 해당 이메일을 사용하여 계정을 등록할 수 있습니다."
+
+#: all_pages/B Sign Up.py:284
+msgid "Verify"
+msgstr "확인"
+
+#: all_pages/B Sign Up.py:299
+msgid "Please disregard this email if you did not submit a verify email request."
+msgstr "이메일 확인 요청을 제출하지 않은 경우 이 이메일은 무시하세요."
+
+#: all_pages/B Sign Up.py:437 all_pages/B Sign Up.py:444
+msgid "Verify Email"
+msgstr "이메일 확인"
+
+#: all_pages/B Sign Up.py:438 all_pages/B Sign Up.py:524
+#: all_pages/B Sign Up.py:530
+msgid "Register"
+msgstr "등록하기"
+
+#: all_pages/B Sign Up.py:448
+msgid "Verification Code"
+msgstr "인증 코드"
+
+#: all_pages/B Sign Up.py:450
+msgid "Leave it blank to send Verification Code"
+msgstr "인증 코드를 보내려면 비워 두세요."
+
+#: all_pages/B Sign Up.py:452
+msgid "Send/Verify"
+msgstr "전송/확인"
+
+#: all_pages/B Sign Up.py:464
+msgid "Wrong verification code"
+msgstr "잘못된 인증 코드"
+
+#: all_pages/B Sign Up.py:472
+msgid "Verify success"
+msgstr "성공 확인"
+
+#: all_pages/B Sign Up.py:492
+msgid "Verification code is sent to the email successfully"
+msgstr "인증 코드가 성공적으로 이메일로 전송되었습니다."
+
+#: all_pages/B Sign Up.py:496
+msgid "Email is required"
+msgstr "이메일 필수 입력"
+
+#: all_pages/B Sign Up.py:498
+msgid "Email is not valid"
+msgstr "이메일이 유효하지 않습니다."
+
+#: all_pages/B Sign Up.py:500
+msgid "Email is already in use"
+msgstr "이메일이 이미 사용 중입니다."
+
+#: all_pages/B Sign Up.py:525 all_pages/D Account.py:171
+msgid "Nickname"
+msgstr "닉네임"
+
+#: all_pages/B Sign Up.py:525
+msgid "alphabets only"
+msgstr "알파벳만"
+
+#: all_pages/B Sign Up.py:526
+msgid "Verified Email"
+msgstr "인증된 이메일"
+
+#: all_pages/B Sign Up.py:527 all_pages/B Sign Up.py:528
+msgid "for login"
+msgstr "로그인"
+
+#: all_pages/B Sign Up.py:529 all_pages/D Account.py:192
+msgid "Repeat Password"
+msgstr "비밀번호 반복"
+
+#: all_pages/B Sign Up.py:534
+msgid "User registered successfully"
+msgstr "사용자 등록 성공"
+
+#: all_pages/C Log Out.py:13
+msgid "You are now logged out"
+msgstr "로그아웃되었습니다."
+
+#: all_pages/D Account.py:33 all_pages/0 Home.py:220
+msgid "Account"
+msgstr "계정"
+
+#: all_pages/D Account.py:64 all_pages/D Account.py:72
+msgid "Linked Game Accounts"
+msgstr "연결된 게임 계정"
+
+#: all_pages/D Account.py:65
+msgid "Change Nickname/Email"
+msgstr "닉네임/이메일 변경"
+
+#: all_pages/D Account.py:66 all_pages/D Account.py:189
+msgid "Change Password"
+msgstr "비밀번호 변경"
+
+#: all_pages/D Account.py:75
+msgid "Statistics of Linked Accounts will be tracked daily and displayed in Player Info"
+msgstr "연결된 계정의 통계는 매일 추적되어 플레이어 정보에 표시됩니다."
+
+#: all_pages/D Account.py:108 all_pages/D Account.py:138
+#: all_pages/8 Useful Links.py:88 all_pages/0 Home.py:58
+#: all_pages/0 Home.py:163
+msgid "Rocket Bot Royale"
+msgstr "로켓 봇 로얄"
+
+#: all_pages/D Account.py:110 all_pages/D Account.py:116
+#: all_pages/D Account.py:122 all_pages/D Account.py:128
+msgid "No User ID Found"
+msgstr "사용자 ID를 찾을 수 없음"
+
+#: all_pages/D Account.py:114 all_pages/D Account.py:139 all_pages/0 Home.py:63
+#: all_pages/0 Home.py:168
+msgid "Goober Dash"
+msgstr "구버 대시"
+
+#: all_pages/D Account.py:120 all_pages/D Account.py:140
+#: all_pages/8 Useful Links.py:92 all_pages/0 Home.py:68
+#: all_pages/0 Home.py:173
+msgid "Goober Royale"
+msgstr "구버 로얄"
+
+#: all_pages/D Account.py:126 all_pages/D Account.py:141
+#: all_pages/8 Useful Links.py:95 all_pages/0 Home.py:73
+#: all_pages/0 Home.py:178
+msgid "Goober Shot"
+msgstr "구버 샷"
+
+#: all_pages/D Account.py:143 all_pages/D Account.py:174
+msgid "Update"
+msgstr "업데이트"
+
+#: all_pages/D Account.py:150
+msgid "Wrong User ID format of "
+msgstr "의 잘못된 사용자 ID 형식 "
+
+#: all_pages/D Account.py:162
+msgid "User IDs are updated successfully"
+msgstr "사용자 ID가 성공적으로 업데이트되었습니다."
+
+#: all_pages/D Account.py:169
+msgid "Change Name/Email"
+msgstr "이름/이메일 변경"
+
+#: all_pages/D Account.py:170
+msgid "Field"
+msgstr "필드"
+
+#: all_pages/D Account.py:173
+msgid "New value"
+msgstr "새로운 가치"
+
+#: all_pages/D Account.py:179
+msgid "Entries updated successfully"
+msgstr "항목이 성공적으로 업데이트되었습니다."
+
+#: all_pages/D Account.py:190
+msgid "Current Password"
+msgstr "현재 비밀번호"
+
+#: all_pages/D Account.py:191
+msgid "New Password"
+msgstr "새 비밀번호"
+
+#: all_pages/D Account.py:193
+msgid "Reset"
+msgstr "초기화"
+
+#: all_pages/D Account.py:198
+msgid "Password modified successfully"
+msgstr "비밀번호 수정 성공"
+
+#: all_pages/8 Useful Links.py:73 all_pages/0 Home.py:198
 msgid "Useful Links"
 msgstr "유용한 링크"
 
@@ -1657,28 +1971,13 @@ msgstr "스테이징 서버"
 msgid "**Staging Servers** are seperate servers which are used for testing new features before releasing. Usually updates are released on **Staging Servers** a few days before public release. Developers invite members to test out some upcoming features and ask for feedbacks in **Offcial Winterpixel Games Discord server** occasionally.\n"
 msgstr "**스테이징 서버**는 출시 전 새로운 기능을 테스트하는 데 사용되는 별도의 서버입니다. 일반적으로 업데이트는 공개 출시 며칠 전에 **스테이징 서버**에 배포됩니다. 개발자는 가끔 **공식 겨울픽셀 게임 디스코드 서버**에서 회원들을 초대하여 곧 출시될 기능을 테스트하고 피드백을 요청하기도 합니다.\n"
 
-#: all_pages/8 Useful Links.py:88 all_pages/0 Home.py:59
-#: all_pages/0 Home.py:164 common_config.py:1256
-msgid "Rocket Bot Royale"
-msgstr "로켓 봇 로얄"
-
-#: all_pages/8 Useful Links.py:92 all_pages/0 Home.py:69
-#: all_pages/0 Home.py:174 common_config.py:1258
-msgid "Goober Royale"
-msgstr "구버 로얄"
-
-#: all_pages/8 Useful Links.py:95 all_pages/0 Home.py:74
-#: all_pages/0 Home.py:179 common_config.py:1259
-msgid "Goober Shot"
-msgstr "구버 샷"
-
-#: all_pages/8 Useful Links.py:96 all_pages/0 Home.py:79
-#: all_pages/0 Home.py:184
+#: all_pages/8 Useful Links.py:96 all_pages/0 Home.py:78
+#: all_pages/0 Home.py:183
 msgid "Moonrock Miners"
 msgstr "문록 광부"
 
-#: all_pages/8 Useful Links.py:97 all_pages/0 Home.py:84
-#: all_pages/0 Home.py:189
+#: all_pages/8 Useful Links.py:97 all_pages/0 Home.py:83
+#: all_pages/0 Home.py:188
 msgid "Broski"
 msgstr "브로스키"
 
@@ -1698,440 +1997,163 @@ msgstr "[**구버 대시 레벨 모딩**](https://twhlynch.me/goober-dash-level-
 msgid "Goober Dash Level Modding"
 msgstr "구버 대시 레벨 모딩"
 
-#: all_pages/3 Goober Royale.py:78
-msgid "**GOOBER ROYALE** is a multiplayer battle royale game in which each player controls a character (called a \"goober\") and must collect weapons, power-ups and other items to eliminate their opponents. The clashes bring together 16 players on a map and the objective will be to be the last survivor of the game. You can play alone or in a team of 4 players. Your Goober will have several weapons, a main missile that reloads at regular intervals and a secondary accessory such as mines, a tornado, a drill and many others. Also use your jetpack to move around the map more easily, reach high places and surprise your opponents. Completing games and missions will earn you gold coins that you can spend either to improve your Goober's skills or to buy cosmetics that will give your character a unique style. An online ranking will allow you to see the 100 best players in the world and in your region."
-msgstr "**구버 로얄은 멀티플레이어 배틀 로얄 게임으로, 각 플레이어는 캐릭터('구버'라고 함)를 조종하며 무기, 파워업 및 기타 아이템을 수집하여 상대를 제거해야 합니다. 16명의 플레이어가 한 맵에 모여 전투를 벌이며, 최후의 생존자가 되는 것이 목표입니다. 혼자 또는 4명으로 구성된 팀으로 플레이할 수 있습니다. 구버에는 여러 가지 무기와 일정한 간격으로 재장전되는 주 미사일, 지뢰, 토네이도, 드릴 등의 보조 액세서리가 있습니다. 또한 제트팩을 사용하여 맵을 더 쉽게 이동하고, 높은 곳에 도달하고, 상대를 기습하세요. 게임과 미션을 완료하면 금화를 획득하여 구버의 스킬을 향상시키거나 캐릭터에 독특한 스타일을 부여하는 코스튬을 구입하는 데 사용할 수 있습니다. 온라인 랭킹을 통해 전 세계 및 해당 지역의 최고 플레이어 100명을 확인할 수 있습니다."
-
-#: all_pages/3 Goober Royale.py:83
-msgid "**Goober Royale** is in **beta** currently (Bugs are expected and Data may be reset in future)"
-msgstr "**구버 로얄**은 현재 **베타** 버전입니다(버그가 예상되며 향후 데이터가 초기화될 수 있습니다)."
-
-#: all_pages/7 About.py:55 all_pages/0 Home.py:194
-msgid "About"
-msgstr "정보"
-
-#: all_pages/7 About.py:57
-msgid "What is WinterPixelGames?"
-msgstr "윈터픽셀게임이란 무엇인가요?"
-
-#: all_pages/7 About.py:63
-msgid "**:blue-background[WinterPixelGames]** (WPG) is a community-driven site made by [**TANK8K**](https://tank8k.com/) which provides useful **Tools & Statistics** of games made by **[Winterpixel Games](https://www.winterpixel.com/)**, including **[Rocket Bot Royale](./Rocket_Bot_Royale)**, **[Goober Dash](./Goober_Dash)**, **[Goober Royale](./Goober_Royale)**, **[Goober Shot](./Goober_Shot)**, and **[Moonrock Miners](./Moonrock_Miners)**."
-msgstr "**:파란색배경[WinterPixelGames]** (WPG)는 [**TANK8K**](https://tank8k.com/)가 만든 커뮤니티 중심 사이트로, **[Winterpixel Games](https://www.winterpixel.com/)**에서 만든 **[로켓 봇 로얄](./Rocket_Bot_Royale)**, **[구버 대시](./Goober_Dash)**, **[구버 로얄](./Goober_Royale)**, **[구버 샷](./Goober_Shot)**, **[문록 광부](./Moonrock_Miners)** 등 **[로켓 봇 로얄]**, **구버 로얄]**, **[문록 광부]** 등의 게임에 대한 유용한 **도구 및 통계를 제공합니다."
-
-#: all_pages/7 About.py:70
-msgid "Affiliation"
-msgstr "제휴"
-
-#: all_pages/7 About.py:74
-msgid "This website is **NOT** affiliated with or endorsed by **Winterpixel Games Inc.**"
-msgstr "이 웹사이트는 **윈터픽셀 게임즈와 **제휴하거나 보증하지 않습니다**."
-
-#: all_pages/7 About.py:81
-msgid "Copyright Notice"
-msgstr "저작권 고지"
-
-#: all_pages/7 About.py:85
-msgid "Rocket Bot Royale, Goober Dash, Goober Royale, Goober Shot, Moonrock Miners, Websites and Media **@ Winterpixel Games Inc.**"
-msgstr "로켓 봇 로얄, 구버 대시, 구버 로얄, 구버 샷, 문록 광부, 웹사이트 및 미디어 **@ Winterpixel Games Inc.**"
-
-#: all_pages/7 About.py:92
-msgid "License"
-msgstr "라이선스"
-
-#: all_pages/7 About.py:95
-msgid "The source code is licensed under **MIT license**."
-msgstr "소스 코드는 **MIT 라이선스**에 따라 라이선스가 부여됩니다."
-
-#: all_pages/7 About.py:101
-msgid "Technology"
-msgstr "기술"
-
-#: all_pages/7 About.py:108
-msgid "Framework"
-msgstr "프레임워크"
-
-#: all_pages/7 About.py:111 common_config.py:2226
+#: all_pages/E Language.py:19 all_pages/7 About.py:110 all_pages/0 Home.py:227
 msgid "Language"
 msgstr "언어"
 
-#: all_pages/7 About.py:114
-msgid "Database"
-msgstr "데이터베이스"
-
-#: all_pages/7 About.py:117
-msgid "Cloud Vendor"
-msgstr "클라우드 공급업체"
-
-#: all_pages/7 About.py:120
-msgid "Web Server"
-msgstr "웹 서버"
-
-#: all_pages/7 About.py:123
-msgid "Source Code"
-msgstr "소스 코드"
-
-#: all_pages/7 About.py:130
-msgid "Developer"
-msgstr "개발자"
-
-#: all_pages/7 About.py:141
-msgid "Personal Website"
-msgstr "개인 웹사이트"
-
-#: all_pages/7 About.py:146
-msgid "Developed with 💖 by **[:blue[TANK8K]](https://tank8k.com/)**"
-msgstr "에 의해 💖 개발됨 **[:blue[TANK8K]](https://tank8k.com/)**"
-
-#: all_pages/1 Rocket Bot Royale.py:110
-msgid "**ROCKET BOT ROYALE** is a fun new take on the online battle royale formula. Powerful, wall-climbing, rocket-jumping, artillery-pumping Robo-Tanks are the vehicle of choice in this fast-paced shootout, where the goal is to survive longer than the competition. Collect the loot to upgrade your arsenal, tunnel into the terrain to take cover and collect buried treasure, and avoid the rising water levels to be the blast one standing!"
-msgstr "**로켓 봇 로얄은 온라인 배틀 로얄 공식에 재미를 더한 새로운 게임입니다. 벽을 오르고 로켓을 점프하며 포탄을 쏘는 강력한 로보 탱크는 경쟁자보다 오래 살아남는 것이 목표인 이 빠른 속도의 총격전에서 선택되는 탈것입니다. 전리품을 모아 무기를 업그레이드하고, 지형 속으로 터널을 뚫어 엄폐하고 묻혀 있는 보물을 수집하고, 수위가 높아지는 것을 피하여 최후의 1인이 되어 보세요!"
-
-#: all_pages/1 Rocket Bot Royale.py:114 all_pages/2 Goober Dash.py:146
-msgid "Platforms"
-msgstr "플랫폼"
-
-#: all_pages/1 Rocket Bot Royale.py:129 all_pages/2 Goober Dash.py:160
-msgid "Communities"
-msgstr "커뮤니티"
-
-#: all_pages/0 Home.py:12
-msgid "Welcome to"
-msgstr "에 오신 것을 환영합니다."
-
-#: all_pages/0 Home.py:15
-msgid "A website which provides useful Tools & Statistics of games made by [Winterpixel Games](https://www.winterpixel.com/)"
-msgstr "윈터픽셀 게임즈]에서 만든 게임의 유용한 도구와 통계를 제공하는 웹사이트(https://www.winterpixel.com/)"
-
-#: all_pages/0 Home.py:64 all_pages/0 Home.py:169 common_config.py:1257
-msgid "Goober Dash"
-msgstr "구버 대시"
-
-#: all_pages/0 Home.py:161
-msgid "Home"
-msgstr "홈"
-
-#: all_pages/2 Goober Dash.py:142
-msgid "**GOOBER DASH** is a multiplayer battle royale game that you can play online. Dash your opponents into deadly spikes, gather precious coins, and unlock a plethora of unique costumes as you strive to outlast the competition. Invite your friends to engage in epic battles in custom private lobbies. Unleash your creativity with the level editor, crafting and conquering your very own battlegrounds. Climb the global and country-based seasonal leaderboards to prove your dominance in this thrilling contest."
-msgstr "**구버 대시**는 온라인에서 플레이할 수 있는 멀티플레이 배틀 로얄 게임입니다. 상대를 치명적인 스파이크로 몰아붙이고, 귀중한 코인을 모으고, 수많은 독특한 코스튬을 잠금 해제하며 경쟁에서 살아남기 위해 노력하세요. 친구를 초대하여 맞춤형 개인 로비에서 장대한 전투를 벌여 보세요. 레벨 에디터로 창의력을 발휘하여 나만의 전장을 제작하고 정복하세요. 전 세계 및 국가별 시즌 순위표에 올라 이 스릴 넘치는 대회에서 우위를 증명하세요."
-
-#: all_pages/2 Goober Dash.py:193
-msgid "Time Trials (Certified Levels)"
-msgstr "타임 트라이얼(인증 레벨)"
-
-#: common_config.py:47 common_config.py:206
-msgid "Verify Account"
-msgstr "계정 확인"
-
-#: common_config.py:235 common_config.py:595 common_config.py:962
-msgid "Hello"
-msgstr "안녕하세요"
-
-#: common_config.py:240
-msgid "Welcome to WinterPixelGames! We're excited to have you join our community. Before you creating your account, we need to verify your email address to ensure we have the correct information."
-msgstr "윈터픽셀게임즈에 오신 것을 환영합니다! 저희 커뮤니티에 가입하게 되어 기쁩니다. 계정을 만들기 전에 정확한 정보를 확인하기 위해 이메일 주소를 확인해야 합니다."
-
-#: common_config.py:245
-msgid "Your verification code is "
-msgstr "인증 코드는 다음과 같습니다. "
-
-#: common_config.py:251
-msgid "You can now register your account using this verification code and the corresponding email."
-msgstr "이제 이 인증 코드와 해당 이메일을 사용하여 계정을 등록할 수 있습니다."
-
-#: common_config.py:256 common_config.py:618 common_config.py:985
-msgid "Happy Gaming!"
-msgstr "행복한 게임!"
-
-#: common_config.py:273
-msgid "Verify"
-msgstr "확인"
-
-#: common_config.py:288
-msgid "Please disregard this email if you did not submit a verify email request."
-msgstr "이메일 확인 요청을 제출하지 않은 경우 이 이메일은 무시하세요."
-
-#: common_config.py:317 common_config.py:683 common_config.py:1050
-msgid "Problems or questions?"
-msgstr "문제나 질문이 있으신가요?"
-
-#: common_config.py:407 common_config.py:566
-msgid "Forgot Username Request"
-msgstr "사용자 이름 찾기 요청"
-
-#: common_config.py:602
-msgid "We have sent you this email in response to your request about forgotting your username on WinterPixelGames."
-msgstr "겨울 픽셀 게임에서 사용자 아이디 분실에 대한 요청에 대한 답변으로 이 이메일을 보냈습니다."
-
-#: common_config.py:607
-msgid "Your username of the associated email is "
-msgstr "연결된 이메일의 사용자 아이디는 "
-
-#: common_config.py:613
-msgid "You can now login to your account using this username and the corresponding password."
-msgstr "이제 이 사용자 아이디와 해당 비밀번호를 사용하여 계정에 로그인할 수 있습니다."
-
-#: common_config.py:621 common_config.py:988
-msgid "WinterPixelGames"
-msgstr "겨울 픽셀 게임"
-
-#: common_config.py:637 common_config.py:1332 common_config.py:1350
-#: common_config.py:1353
-msgid "Login"
-msgstr "로그인"
-
-#: common_config.py:653
-msgid "Please disregard this email if you did not submit a forgot username request."
-msgstr "사용자 아이디 찾기 요청을 제출하지 않은 경우 이 이메일을 무시해 주세요."
-
-#: common_config.py:773 common_config.py:932
-msgid "Forgot Password Request"
-msgstr "비밀번호 찾기 요청"
-
-#: common_config.py:969
-msgid "We have sent you this email in response to your request about forgotting your password on WinterPixelGames."
-msgstr "겨울 픽셀 게임에서 비밀번호 분실에 대한 요청에 대한 답변으로 이 이메일을 보냈습니다."
-
-#: common_config.py:974
-msgid "Your new auto-generated password is "
-msgstr "새 자동 생성 비밀번호는 다음과 같습니다. "
-
-#: common_config.py:980
-msgid "You can now login to your account using this password and change it to a custom password if necessary."
-msgstr "이제 이 비밀번호를 사용하여 계정에 로그인하고 필요한 경우 사용자 지정 비밀번호로 변경할 수 있습니다."
-
-#: common_config.py:1004 common_config.py:1401
-msgid "Reset Password"
-msgstr "비밀번호 재설정"
-
-#: common_config.py:1020
-msgid "Please disregard this email if you did not submit a forgot password request."
-msgstr "비밀번호 분실 요청을 제출하지 않은 경우 이 이메일은 무시해 주세요."
-
-#: common_config.py:1187 common_config.py:1194
-msgid "Linked Game Accounts"
-msgstr "연결된 게임 계정"
-
-#: common_config.py:1188
-msgid "Change Nickname/Email"
-msgstr "닉네임/이메일 변경"
-
-#: common_config.py:1189 common_config.py:1307
-msgid "Change Password"
-msgstr "비밀번호 변경"
-
-#: common_config.py:1197
-msgid "Statistics of Linked Accounts will be tracked daily and displayed in Player Info"
-msgstr "연결된 계정의 통계는 매일 추적되어 플레이어 정보에 표시됩니다."
-
-#: common_config.py:1261 common_config.py:1292
-msgid "Update"
-msgstr "업데이트"
-
-#: common_config.py:1268
-msgid "Wrong User ID format of "
-msgstr "의 잘못된 사용자 ID 형식 "
-
-#: common_config.py:1280
-msgid "User IDs are updated successfully"
-msgstr "사용자 ID가 성공적으로 업데이트되었습니다."
-
-#: common_config.py:1287
-msgid "Change Name/Email"
-msgstr "이름/이메일 변경"
-
-#: common_config.py:1288
-msgid "Field"
-msgstr "필드"
-
-#: common_config.py:1289 common_config.py:1552
-msgid "Nickname"
-msgstr "닉네임"
-
-#: common_config.py:1290 common_config.py:1375 common_config.py:1440
-msgid "Email"
-msgstr "이메일"
-
-#: common_config.py:1291
-msgid "New value"
-msgstr "새로운 가치"
-
-#: common_config.py:1297
-msgid "Entries updated successfully"
-msgstr "항목이 성공적으로 업데이트되었습니다."
-
-#: common_config.py:1308
-msgid "Current Password"
-msgstr "현재 비밀번호"
-
-#: common_config.py:1309
-msgid "New Password"
-msgstr "새 비밀번호"
-
-#: common_config.py:1310 common_config.py:1559
-msgid "Repeat Password"
-msgstr "비밀번호 반복"
-
-#: common_config.py:1311
-msgid "Reset"
-msgstr "초기화"
-
-#: common_config.py:1316
-msgid "Password modified successfully"
-msgstr "비밀번호 수정 성공"
-
-#: common_config.py:1333 common_config.py:1374
-msgid "Forgot Username"
-msgstr "사용자 이름 찾기"
-
-#: common_config.py:1334 common_config.py:1399
-msgid "Forgot Password"
-msgstr "비밀번호 찾기"
-
-#: common_config.py:1351 common_config.py:1400 common_config.py:1557
-msgid "Username"
-msgstr "사용자 이름"
-
-#: common_config.py:1352 common_config.py:1558
-msgid "Password"
-msgstr "비밀번호"
-
-#: common_config.py:1361
-msgid "Username or Password is incorrect"
-msgstr "사용자 이름 또는 비밀번호가 올바르지 않습니다."
-
-#: common_config.py:1376
-msgid "Send Userename"
-msgstr "사용자 이름 보내기"
-
-#: common_config.py:1385
-msgid "Username is sent to the associated email successfully"
-msgstr "사용자 아이디가 연결된 이메일로 성공적으로 전송되었습니다."
-
-#: common_config.py:1387 common_config.py:1510
-msgid "Email not found"
-msgstr "이메일을 찾을 수 없습니다."
-
-#: common_config.py:1416
-msgid "New password is sent to the associated email successfully"
-msgstr "새 비밀번호가 연결된 이메일로 성공적으로 전송되었습니다."
-
-#: common_config.py:1419
-msgid "Username not found"
-msgstr "사용자 이름을 찾을 수 없습니다."
-
-#: common_config.py:1430 common_config.py:1439 common_config.py:1450
-msgid "Verify Email"
-msgstr "이메일 확인"
-
-#: common_config.py:1431 common_config.py:1551 common_config.py:1560
-msgid "Register"
-msgstr "등록하기"
-
-#: common_config.py:1444
-msgid "Send Verification Code"
-msgstr "인증 코드 보내기"
-
-#: common_config.py:1448
-msgid "Verification Code"
-msgstr "인증 코드"
-
-#: common_config.py:1494
-msgid "Verification code is sent to the email successfully"
-msgstr "인증 코드가 성공적으로 이메일로 전송되었습니다."
-
-#: common_config.py:1499
-msgid "Email is required"
-msgstr "이메일 필수 입력"
-
-#: common_config.py:1501
-msgid "Email is not valid"
-msgstr "이메일이 유효하지 않습니다."
-
-#: common_config.py:1503
-msgid "Email is already in use"
-msgstr "이메일이 이미 사용 중입니다."
-
-#: common_config.py:1515
-msgid "Wrong verification code"
-msgstr "잘못된 인증 코드"
-
-#: common_config.py:1526
-msgid "Verify success"
-msgstr "성공 확인"
-
-#: common_config.py:1552
-msgid "alphabets only"
-msgstr "알파벳만"
-
-#: common_config.py:1553
-msgid "Verified Email"
-msgstr "인증된 이메일"
-
-#: common_config.py:1555
-msgid "used for forgot username/password"
-msgstr "사용자 이름/비밀번호 분실 시 사용"
-
-#: common_config.py:1557 common_config.py:1558
-msgid "used for login"
-msgstr "로그인에 사용"
-
-#: common_config.py:1564
-msgid "User registered successfully"
-msgstr "사용자 등록 성공"
-
-#: common_config.py:1591
-msgid "Welcome back"
-msgstr "돌아온 것을 환영합니다"
-
-#: common_config.py:1692
+#: all_pages/E Language.py:148
 msgid "Apply"
 msgstr "신청하기"
 
-#: common_config.py:1695
+#: all_pages/E Language.py:154
 msgid "Contributors"
 msgstr "기여자"
 
-#: common_config.py:1695
+#: all_pages/E Language.py:154
 msgid "In no particular order"
 msgstr "특별한 순서 없이"
 
-#: common_config.py:1710
+#: all_pages/E Language.py:169
 msgid "Contribute"
 msgstr "기여하기"
 
-#: common_config.py:1760
-msgid "Back to Home"
-msgstr "홈으로 돌아가기"
+#: all_pages/3 Goober Royale.py:76
+msgid "**GOOBER ROYALE** is a multiplayer battle royale game in which each player controls a character (called a \"goober\") and must collect weapons, power-ups and other items to eliminate their opponents. The clashes bring together 16 players on a map and the objective will be to be the last survivor of the game. You can play alone or in a team of 4 players. Your Goober will have several weapons, a main missile that reloads at regular intervals and a secondary accessory such as mines, a tornado, a drill and many others. Also use your jetpack to move around the map more easily, reach high places and surprise your opponents. Completing games and missions will earn you gold coins that you can spend either to improve your Goober's skills or to buy cosmetics that will give your character a unique style. An online ranking will allow you to see the 100 best players in the world and in your region."
+msgstr "**구버 로얄은 멀티플레이어 배틀 로얄 게임으로, 각 플레이어는 캐릭터('구버'라고 함)를 조종하며 무기, 파워업 및 기타 아이템을 수집하여 상대를 제거해야 합니다. 16명의 플레이어가 한 맵에 모여 전투를 벌이며, 최후의 생존자가 되는 것이 목표입니다. 혼자 또는 4명으로 구성된 팀으로 플레이할 수 있습니다. 구버에는 여러 가지 무기와 일정한 간격으로 재장전되는 주 미사일, 지뢰, 토네이도, 드릴 등의 보조 액세서리가 있습니다. 또한 제트팩을 사용하여 맵을 더 쉽게 이동하고, 높은 곳에 도달하고, 상대를 기습하세요. 게임과 미션을 완료하면 금화를 획득하여 구버의 스킬을 향상시키거나 캐릭터에 독특한 스타일을 부여하는 코스튬을 구입하는 데 사용할 수 있습니다. 온라인 랭킹을 통해 전 세계 및 해당 지역의 최고 플레이어 100명을 확인할 수 있습니다."
 
-#: common_config.py:1802
-msgid "Back to Menu"
-msgstr "메뉴로 돌아가기"
+#: all_pages/3 Goober Royale.py:81
+msgid "**Goober Royale** is in **beta** currently (Bugs are expected and Data may be reset in future)"
+msgstr "**구버 로얄**은 현재 **베타** 버전입니다(버그가 예상되며 향후 데이터가 초기화될 수 있습니다)."
 
-#: common_config.py:2160
-msgid "This website is NOT affiliated with or endorsed by Winterpixel Games Inc."
-msgstr "이 웹사이트는 Winterpixel Games Inc.와 제휴하거나 보증하지 않습니다."
+#: all_pages/7 About.py:54 all_pages/0 Home.py:193
+msgid "About"
+msgstr "정보"
 
-#: common_config.py:2163
-msgid "All relevant trademarks belong to their respective owners."
-msgstr "모든 관련 상표는 해당 소유자의 자산입니다."
+#: all_pages/7 About.py:56
+msgid "What is WinterPixelGames?"
+msgstr "윈터픽셀게임이란 무엇인가요?"
 
-#: common_config.py:2166
-msgid "Developed with 💖 by <a style=\"text-decoration:none\" href=\"https://tank8k.com/\" target=\"_blank\">TANK8K</a>"
-msgstr "에 의해 개발됨 💖 by <a style=\"text-decoration:none\" href=\"https://tank8k.com/\" target=\"_blank\">TANK8K</a>"
+#: all_pages/7 About.py:62
+msgid "**:blue-background[WinterPixelGames]** (WPG) is a community-driven site made by [**TANK8K**](https://tank8k.com/) which provides useful **Tools & Statistics** of games made by **[Winterpixel Games](https://www.winterpixel.com/)**, including **[Rocket Bot Royale](./Rocket_Bot_Royale)**, **[Goober Dash](./Goober_Dash)**, **[Goober Royale](./Goober_Royale)**, **[Goober Shot](./Goober_Shot)**, and **[Moonrock Miners](./Moonrock_Miners)**."
+msgstr "**:파란색배경[WinterPixelGames]** (WPG)는 [**TANK8K**](https://tank8k.com/)가 만든 커뮤니티 중심 사이트로, **[Winterpixel Games](https://www.winterpixel.com/)**에서 만든 **[로켓 봇 로얄](./Rocket_Bot_Royale)**, **[구버 대시](./Goober_Dash)**, **[구버 로얄](./Goober_Royale)**, **[구버 샷](./Goober_Shot)**, **[문록 광부](./Moonrock_Miners)** 등 **[로켓 봇 로얄]**, **구버 로얄]**, **[문록 광부]** 등의 게임에 대한 유용한 **도구 및 통계를 제공합니다."
 
-#: common_config.py:2194 common_config.py:2231
+#: all_pages/7 About.py:69
+msgid "Affiliation"
+msgstr "제휴"
+
+#: all_pages/7 About.py:73
+msgid "This website is **NOT** affiliated with or endorsed by **Winterpixel Games Inc.**"
+msgstr "이 웹사이트는 **윈터픽셀 게임즈와 **제휴하거나 보증하지 않습니다**."
+
+#: all_pages/7 About.py:80
+msgid "Copyright Notice"
+msgstr "저작권 고지"
+
+#: all_pages/7 About.py:84
+msgid "Rocket Bot Royale, Goober Dash, Goober Royale, Goober Shot, Moonrock Miners, Websites and Media **@ Winterpixel Games Inc.**"
+msgstr "로켓 봇 로얄, 구버 대시, 구버 로얄, 구버 샷, 문록 광부, 웹사이트 및 미디어 **@ Winterpixel Games Inc.**"
+
+#: all_pages/7 About.py:91
+msgid "License"
+msgstr "라이선스"
+
+#: all_pages/7 About.py:94
+msgid "The source code is licensed under **MIT license**."
+msgstr "소스 코드는 **MIT 라이선스**에 따라 라이선스가 부여됩니다."
+
+#: all_pages/7 About.py:100
+msgid "Technology"
+msgstr "기술"
+
+#: all_pages/7 About.py:107
+msgid "Framework"
+msgstr "프레임워크"
+
+#: all_pages/7 About.py:113
+msgid "Database"
+msgstr "데이터베이스"
+
+#: all_pages/7 About.py:116
+msgid "Cloud Vendor"
+msgstr "클라우드 공급업체"
+
+#: all_pages/7 About.py:119
+msgid "Web Server"
+msgstr "웹 서버"
+
+#: all_pages/7 About.py:122
+msgid "Source Code"
+msgstr "소스 코드"
+
+#: all_pages/7 About.py:129
+msgid "Developer"
+msgstr "개발자"
+
+#: all_pages/7 About.py:140
+msgid "Personal Website"
+msgstr "개인 웹사이트"
+
+#: all_pages/7 About.py:145
+msgid "Developed with 💖 by **[:blue[TANK8K]](https://tank8k.com/)**"
+msgstr "에 의해 💖 개발됨 **[:blue[TANK8K]](https://tank8k.com/)**"
+
+#: all_pages/1 Rocket Bot Royale.py:108
+msgid "**ROCKET BOT ROYALE** is a fun new take on the online battle royale formula. Powerful, wall-climbing, rocket-jumping, artillery-pumping Robo-Tanks are the vehicle of choice in this fast-paced shootout, where the goal is to survive longer than the competition. Collect the loot to upgrade your arsenal, tunnel into the terrain to take cover and collect buried treasure, and avoid the rising water levels to be the blast one standing!"
+msgstr "**로켓 봇 로얄은 온라인 배틀 로얄 공식에 재미를 더한 새로운 게임입니다. 벽을 오르고 로켓을 점프하며 포탄을 쏘는 강력한 로보 탱크는 경쟁자보다 오래 살아남는 것이 목표인 이 빠른 속도의 총격전에서 선택되는 탈것입니다. 전리품을 모아 무기를 업그레이드하고, 지형 속으로 터널을 뚫어 엄폐하고 묻혀 있는 보물을 수집하고, 수위가 높아지는 것을 피하여 최후의 1인이 되어 보세요!"
+
+#: all_pages/1 Rocket Bot Royale.py:112 all_pages/2 Goober Dash.py:144
+msgid "Platforms"
+msgstr "플랫폼"
+
+#: all_pages/1 Rocket Bot Royale.py:127 all_pages/2 Goober Dash.py:158
+msgid "Communities"
+msgstr "커뮤니티"
+
+#: all_pages/0 Home.py:11
+msgid "Welcome to"
+msgstr "에 오신 것을 환영합니다."
+
+#: all_pages/0 Home.py:14
+msgid "A website which provides useful Tools & Statistics of games made by [Winterpixel Games](https://www.winterpixel.com/)"
+msgstr "윈터픽셀 게임즈]에서 만든 게임의 유용한 도구와 통계를 제공하는 웹사이트(https://www.winterpixel.com/)"
+
+#: all_pages/0 Home.py:160
+msgid "Home"
+msgstr "홈"
+
+#: all_pages/0 Home.py:215
 msgid "Log Out"
 msgstr "로그아웃"
 
-#: common_config.py:2202
-msgid "Account"
-msgstr "계정"
+#: all_pages/2 Goober Dash.py:140
+msgid "**GOOBER DASH** is a multiplayer battle royale game that you can play online. Dash your opponents into deadly spikes, gather precious coins, and unlock a plethora of unique costumes as you strive to outlast the competition. Invite your friends to engage in epic battles in custom private lobbies. Unleash your creativity with the level editor, crafting and conquering your very own battlegrounds. Climb the global and country-based seasonal leaderboards to prove your dominance in this thrilling contest."
+msgstr "**구버 대시**는 온라인에서 플레이할 수 있는 멀티플레이 배틀 로얄 게임입니다. 상대를 치명적인 스파이크로 몰아붙이고, 귀중한 코인을 모으고, 수많은 독특한 코스튬을 잠금 해제하며 경쟁에서 살아남기 위해 노력하세요. 친구를 초대하여 맞춤형 개인 로비에서 장대한 전투를 벌여 보세요. 레벨 에디터로 창의력을 발휘하여 나만의 전장을 제작하고 정복하세요. 전 세계 및 국가별 시즌 순위표에 올라 이 스릴 넘치는 대회에서 우위를 증명하세요."
 
-#: common_config.py:2210
-msgid "Log In"
-msgstr "로그인"
+#: all_pages/2 Goober Dash.py:191
+msgid "Time Trials (Certified Levels)"
+msgstr "타임 트라이얼(인증 레벨)"
 
-#: common_config.py:2218
-msgid "Sign Up"
-msgstr "가입하기"
+#: common_config.py:59
+msgid "Welcome back"
+msgstr "돌아온 것을 환영합니다"
+
+#: common_config.py:109
+msgid "Back to Home"
+msgstr "홈으로 돌아가기"
+
+#: common_config.py:151
+msgid "Back to Menu"
+msgstr "메뉴로 돌아가기"
+
+#: common_config.py:179
+msgid "This website is NOT affiliated with or endorsed by Winterpixel Games Inc."
+msgstr "이 웹사이트는 Winterpixel Games Inc.와 제휴하거나 보증하지 않습니다."
+
+#: common_config.py:181
+msgid "All relevant trademarks belong to their respective owners."
+msgstr "모든 관련 상표는 해당 소유자의 자산입니다."
+
+#: common_config.py:184
+msgid "Developed with 💖 by <a style=\"text-decoration:none\" href=\"https://tank8k.com/\" target=\"_blank\">TANK8K</a>"
+msgstr "에 의해 개발됨 💖 by <a style=\"text-decoration:none\" href=\"https://tank8k.com/\" target=\"_blank\">TANK8K</a>"
 
