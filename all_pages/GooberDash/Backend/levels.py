@@ -1,11 +1,7 @@
-import streamlit as st
 import json
 import requests
 import datetime
 import re
-
-email = st.secrets.goober_dash_credentials.email
-password = st.secrets.goober_dash_credentials.password
 
 
 def download_level(level_id):

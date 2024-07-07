@@ -552,13 +552,14 @@ def main_config(_):
             background: #192841;
             box-shadow: 0 0 10px #158fd8;
             border: 1px solid #158fd8;
+            z-index: 9999 !important;
         }
         div[data-testid="stAppViewContainer"] section:nth-child(2) div[data-testid="stAppViewBlockContainer"], div[data-testid="stAppViewContainer"] section:nth-child(3) div[data-testid="stAppViewBlockContainer"] {
             position: relative !important;
             bottom: 50px !important;
         }
         button {
-            z-index: 9999;
+            z-index: 999;
         }
         div[data-testid="stSidebarContent"] button p::before {
             font-family: "Font Awesome 5 Free" !important;

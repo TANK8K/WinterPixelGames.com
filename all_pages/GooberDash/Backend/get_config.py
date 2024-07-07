@@ -1,9 +1,5 @@
-import streamlit as st
 import json
 import websocket
-
-email = st.secrets.goober_dash_credentials.email
-password = st.secrets.goober_dash_credentials.password
 
 
 def get_config():

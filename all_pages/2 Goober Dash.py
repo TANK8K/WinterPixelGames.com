@@ -19,10 +19,6 @@ def to_flip_level_page():
     st.session_state.page = "flip_level"
 
 
-def to_maze_generator_page():
-    st.session_state.page = "maze_generator"
-
-
 def to_goober_generator_page():
     st.session_state.page = "goober_generator"
 
@@ -74,13 +70,9 @@ if st.session_state.game == "GooberDash" and st.session_state.page == "menu":
                     }
                     div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) > div:nth-child(2) p::before {
                         font-family: "Font Awesome 5 Brands" !important;
-                        content: "\\f1b6";
-                    }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) > div:nth-child(3) p::before {
-                        font-family: "Font Awesome 5 Brands" !important;
                         content: "\\f3ab";
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) > div:nth-child(4) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) > div:nth-child(3) p::before {
                         font-family: "Font Awesome 5 Brands" !important;
                         content: "\\f36f";
                     }
@@ -169,17 +161,12 @@ if st.session_state.game == "GooberDash" and st.session_state.page == "menu":
             + _("Tools")
             + "</h3>"
         )
-        col1, col2, col3, col4 = st.columns(4)
+        col1, col2, col3 = st.columns(3)
         col1.button(_("Flip Level"), on_click=to_flip_level_page, type="primary")
         col2.button(
-            _("Maze Generator") + " (" + _("WIP") + ")",
-            on_click=to_maze_generator_page,
-            type="primary",
-        )
-        col3.button(
             _("Goober Generator"), on_click=to_goober_generator_page, type="primary"
         )
-        col4.button(_("Image Assets"), on_click=to_image_assets_page, type="primary")
+        col3.button(_("Image Assets"), on_click=to_image_assets_page, type="primary")
         "---"
         st.html(
             "<h3><i class='fa-solid fa-chart-simple'></i>&nbsp;"
@@ -193,7 +180,7 @@ if st.session_state.game == "GooberDash" and st.session_state.page == "menu":
             type="primary",
         )
         col2.button(
-            _("Player Info") + " (" + _("WIP") + ")",
+            _("Player Info"),
             on_click=to_player_info_page,
             type="primary",
         )
@@ -216,17 +203,6 @@ elif st.session_state.game == "GooberDash" and st.session_state.page == "flip_le
         )
 
         GooberDash_flip_level(st.session_state.language)
-        back_to_menu(st.session_state.language)
-
-elif (
-    st.session_state.game == "GooberDash" and st.session_state.page == "maze_generator"
-):
-    with ph.container():
-        from all_pages.GooberDash.Tools.maze_generator import (
-            load_page as GooberDash_maze_generator,
-        )
-
-        GooberDash_maze_generator(st.session_state.language)
         back_to_menu(st.session_state.language)
 
 elif (
