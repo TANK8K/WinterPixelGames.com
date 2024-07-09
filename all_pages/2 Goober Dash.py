@@ -74,6 +74,10 @@ if st.session_state.game == "GooberDash" and st.session_state.page == "menu":
                     }
                     div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) > div:nth-child(3) p::before {
                         font-family: "Font Awesome 5 Brands" !important;
+                        content: "\\f3ab";
+                    }
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(5) > div:nth-child(3) p::before {
+                        font-family: "Font Awesome 5 Brands" !important;
                         content: "\\f36f";
                     }
                     div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(7) > div:nth-child(1) p::before {
@@ -98,13 +102,9 @@ if st.session_state.game == "GooberDash" and st.session_state.page == "menu":
                     }
                     div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(10) > div:nth-child(2) p::before {
                         font-family: "font awesome 5 Free" !important;
-                        content: "\\f12e";
-                    }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(10) > div:nth-child(3) p::before {
-                        font-family: "font awesome 5 Free" !important;
                         content: "\\f544";
                     }
-                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(10) > div:nth-child(4) p::before {
+                    div[data-testid="stVerticalBlock"] div[data-testid="stHorizontalBlock"]:nth-child(10) > div:nth-child(3) p::before {
                         font-family: "font awesome 5 Free" !important;
                         content: "\\f03e";
                     }

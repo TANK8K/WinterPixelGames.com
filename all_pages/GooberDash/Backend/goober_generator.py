@@ -51,12 +51,21 @@ def compose_images(layers, base_path):
 def generate_goober(hat, suit, hand, color, eyes="eyes"):
     layers = []
 
-    # 1_left_hand_and_leg
+    # 0_left_hand
     if color != "color_skelly":
         if suit == "suit_robot":
-            layers.append("1_left_hand_and_leg/left_hand_and_leg_robot")
+            layers.append("0_left_hand/left_hand_robot")
+        elif suit in ["suit_fly", "suit_penguin"]:
+            pass
         else:
-            layers.append("1_left_hand_and_leg/left_hand_and_leg")
+            layers.append("0_left_hand/left_hand")
+
+    # 1_left_leg
+    if color != "color_skelly":
+        if suit == "suit_robot":
+            layers.append("1_left_leg/left_leg_robot")
+        else:
+            layers.append("1_left_leg/left_leg")
 
     # 2_suit_back
     suit_back_list = [
@@ -69,6 +78,7 @@ def generate_goober(hat, suit, hand, color, eyes="eyes"):
         "suit_devil",
         "suit_dino",
         "suit_dog",
+        "suit_fly",
         "suit_koala",
         "suit_lion",
         "suit_monkey",
@@ -102,7 +112,7 @@ def generate_goober(hat, suit, hand, color, eyes="eyes"):
         layers.append("5_color/color_default")
 
     # 6_mouth
-    if color != "color_skelly":
+    if color != "color_skelly" and suit != "suit_penguin":
         layers.append("6_mouth/mouth")
 
     # 7_eyes
@@ -124,7 +134,8 @@ def generate_goober(hat, suit, hand, color, eyes="eyes"):
 
     # 10_hat
     try:
-        layers.append(f"10_hat/{hat}")
+        if hat != "hat_fly":
+            layers.append(f"10_hat/{hat}")
         if hat == "hat_devil":
             layers.append("10_hat/hat_devil_ear")
     except Exception:
@@ -141,6 +152,8 @@ def generate_goober(hat, suit, hand, color, eyes="eyes"):
         layers.append("12_right_hand/right_hand_robot")
     elif color == "color_skelly":
         layers.append("12_right_hand/right_hand_skelly")
+    elif suit == "suit_penguin":
+        pass
     else:
         layers.append("12_right_hand/right_hand")
 
@@ -148,6 +161,11 @@ def generate_goober(hat, suit, hand, color, eyes="eyes"):
     suit_front_list = ["suit_viking", "suit_wizard"]
     if suit in suit_front_list:
         layers.append(f"13_suit_front/{suit}")
+
+    # 14_hat_front
+    hat_front_list = ["hat_fly"]
+    if hat in hat_front_list:
+        layers.append(f"14_hat_front/{hat}")
 
     base_path = "./static/GooberDash/goober_overlay"
 
