@@ -48,6 +48,15 @@ def update_leaderboard():
                     )
                 conn.commit()
 
+                # Delete all old records to avoid bugs
+                with conn.cursor() as cur:
+                    cur.execute(
+                        """
+                        TRUNCATE TABLE goober_dash_time_trials_records;
+                        """
+                    )
+                conn.commit()
+
                 count = 0
                 global level_ids
                 level_ids = list_levels()
