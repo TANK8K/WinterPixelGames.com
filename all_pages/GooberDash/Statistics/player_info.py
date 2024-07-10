@@ -460,7 +460,6 @@ def load_page(selected_language):
                         textposition="inside",
                         textinfo="percent+label",
                         insidetextfont_color="white",
-                        insidetextfont_weight="bold",
                         sort=False,
                     )
                     fig.update_layout(
