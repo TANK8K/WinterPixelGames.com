@@ -129,6 +129,10 @@ def load_page(selected_language):
                 value=None,
             )
 
+        not_found_in_api = False
+        not_found_in_database = False
+        not_found = False
+
         if user in [None, ""]:
             user_id = None
         else:
@@ -138,7 +142,8 @@ def load_page(selected_language):
                     0, "username"
                 ][3:]
             except KeyError:
-                st.error("❌ " + _("No Players Found"))
+                username_of_users_found_database = ""
+                not_found_in_database = True
                 user_id = None
             users_found_database.rename(
                 columns={
@@ -152,34 +157,38 @@ def load_page(selected_language):
                 try:
                     user_info_2_res = user_info_2(user)["users"][0]
                 except KeyError:
-                    user_info_2_res = user_info_2(username_of_users_found_database)[
-                        "users"
-                    ][0]
-                user_info_2_res_user_id = user_info_2_res["id"]
-                user_info_2_res_username = user_info_2_res["username"]
-                search_player_not_in_database = (
-                    user_info_2_res_user_id
-                    not in users_found_database["User ID"].tolist()
-                )
-                if search_player_not_in_database:
-                    new_row = {
-                        "Player": user_info_2_res_username,
-                        "User ID": user_info_2_res_user_id,
-                    }
-                    users_found_combined = pd.concat(
-                        [pd.DataFrame([new_row]), users_found_database],
-                        ignore_index=True,
+                    try:
+                        user_info_2_res = user_info_2(username_of_users_found_database)[
+                            "users"
+                        ][0]
+                    except KeyError:
+                        not_found = True
+                if not not_found:
+                    user_info_2_res_user_id = user_info_2_res["id"]
+                    user_info_2_res_username = user_info_2_res["username"]
+                    search_player_not_in_database = (
+                        user_info_2_res_user_id
+                        not in users_found_database["User ID"].tolist()
                     )
-                else:
-                    row_index = users_found_database.index[
-                        users_found_database["User ID"] == user_info_2_res_user_id
-                    ][0]
-                    row_to_move = users_found_database.loc[[row_index]]
-                    remaining_df = users_found_database.drop(index=row_index)
-                    result_df = pd.concat(
-                        [row_to_move, remaining_df], ignore_index=True
-                    )
-                    users_found_combined = result_df
+                    if search_player_not_in_database:
+                        new_row = {
+                            "Player": user_info_2_res_username,
+                            "User ID": user_info_2_res_user_id,
+                        }
+                        users_found_combined = pd.concat(
+                            [pd.DataFrame([new_row]), users_found_database],
+                            ignore_index=True,
+                        )
+                    else:
+                        row_index = users_found_database.index[
+                            users_found_database["User ID"] == user_info_2_res_user_id
+                        ][0]
+                        row_to_move = users_found_database.loc[[row_index]]
+                        remaining_df = users_found_database.drop(index=row_index)
+                        result_df = pd.concat(
+                            [row_to_move, remaining_df], ignore_index=True
+                        )
+                        users_found_combined = result_df
             except KeyError:
                 users_found_combined = users_found_database
 
@@ -203,8 +212,11 @@ def load_page(selected_language):
                     else:
                         user_id = None
             else:
-                st.error("❌ " + _("No Players Found"))
+                not_found_in_api = True
                 user_id = None
+
+            if (not_found_in_database and not_found_in_api) or not_found:
+                st.error("❌ " + _("No Players Found"))
 
         if user_id not in [None, ""]:
             tab1, tab2, tab3, tab4, tab5 = st.tabs(
@@ -377,12 +389,16 @@ def load_page(selected_language):
                 sorted_award_names = [award[0] for award in sorted_awards]
 
                 player_awards = user_info_res["awards"]
-
-                awards_markdown = "|Award|Count|Name|Description|\n|---|---|---|---|"
-                for award in sorted_award_names:
-                    if award in player_awards:
-                        awards_markdown += f"\n|![{award}](./app/static/GooberDash/awards/{awards_config[award]['icon']})|**x{player_awards[award]['count']}**|{awards_config[award]['name']}|{awards_config[award]['desc'].replace('.','')}|"
-                st.write(awards_markdown)
+                if player_awards != {}:
+                    awards_markdown = (
+                        "|Award|Count|Name|Description|\n|---|---|---|---|"
+                    )
+                    for award in sorted_award_names:
+                        if award in player_awards:
+                            awards_markdown += f"\n|![{award}](./app/static/GooberDash/awards/{awards_config[award]['icon']})|**x{player_awards[award]['count']}**|{awards_config[award]['name']}|{awards_config[award]['desc'].replace('.','')}|"
+                    st.write(awards_markdown)
+                else:
+                    st.error("❌ " + _("No Awards Found"))
             with tab4:
                 stats = user_info_res["stats"]
 

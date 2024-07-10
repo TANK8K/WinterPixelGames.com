@@ -106,9 +106,12 @@ def generate_goober(hat, suit, hand, color, eyes="eyes"):
         layers.append(f"4_hand_back/{hand}")
 
     # 5_color
-    try:
-        layers.append(f"5_color/{color}")
-    except Exception:
+    if color != "":
+        try:
+            layers.append(f"5_color/{color}")
+        except Exception:
+            layers.append("5_color/color_default")
+    else:
         layers.append("5_color/color_default")
 
     # 6_mouth

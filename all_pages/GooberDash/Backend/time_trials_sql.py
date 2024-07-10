@@ -422,6 +422,7 @@ def update_leaderboard():
                 f.write(str(len(level_ids)))
 
             connection.close()
+            # time.sleep(43200)
 
         except Exception as e:
             print("Error:", e)
