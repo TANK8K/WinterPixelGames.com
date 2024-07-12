@@ -74,7 +74,7 @@ def refresh_goober_dash_token():
 if __name__ == "__main__":
     run_threaded_functions(
         [
-            # GooberDash_update_time_trials_leaderboard,
+            GooberDash_update_time_trials_leaderboard,
             refresh_goober_dash_token,
             clear_cache,
         ]

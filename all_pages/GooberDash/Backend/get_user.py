@@ -38,7 +38,6 @@ def user_info_2(username_or_id):
             re.IGNORECASE,
         ).match(username_or_id)
     )
-    print(is_uuid)
 
     headers = {"authorization": f"Bearer {token}"}
 

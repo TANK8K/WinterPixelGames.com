@@ -26,7 +26,7 @@ conn = st.connection("postgresql", type="sql")
 goober_dash_config = get_config()
 
 
-# @st.cache_data(show_spinner=True, ttl=21600)
+@st.cache_data(show_spinner=True, ttl=3600)
 def query_df_user(user):
     df_user_records = conn.query(
         f"""
@@ -38,7 +38,7 @@ def query_df_user(user):
     return df_user_records
 
 
-# @st.cache_data(show_spinner=True, ttl=21600)
+@st.cache_data(show_spinner=True, ttl=3600)
 def query_df_user_records(user_id):
     df_user_records = conn.query(
         f"""
@@ -51,7 +51,7 @@ def query_df_user_records(user_id):
     return df_user_records
 
 
-# @st.cache_data(show_spinner=True, ttl=21600)
+@st.cache_data(show_spinner=True, ttl=3600)
 def query_df_user_leaderboard(user_id):
     df_user_leaderboard = conn.query(
         f"""
@@ -63,7 +63,7 @@ def query_df_user_leaderboard(user_id):
     return df_user_leaderboard
 
 
-# @st.cache_data(show_spinner=True, ttl=21600)
+@st.cache_data(show_spinner=True, ttl=3600)
 def query_df_level_ids():
     df_level_ids = conn.query(
         """
@@ -129,20 +129,18 @@ def load_page(selected_language):
                 value=None,
             )
 
-        not_found_in_api = False
-        not_found_in_database = False
-        not_found = False
-
         if user in [None, ""]:
             user_id = None
         else:
+            not_found_in_database = False
+            not_found_in_api = False
+
             users_found_database = query_df_user(user)
             try:
                 username_of_users_found_database = users_found_database.loc[
                     0, "username"
                 ][3:]
             except KeyError:
-                username_of_users_found_database = ""
                 not_found_in_database = True
                 user_id = None
             users_found_database.rename(
@@ -157,13 +155,13 @@ def load_page(selected_language):
                 try:
                     user_info_2_res = user_info_2(user)["users"][0]
                 except KeyError:
-                    try:
+                    not_found_in_api = True
+                    if not not_found_in_database:
                         user_info_2_res = user_info_2(username_of_users_found_database)[
                             "users"
                         ][0]
-                    except KeyError:
-                        not_found = True
-                if not not_found:
+
+                if not (not_found_in_database and not_found_in_api):
                     user_info_2_res_user_id = user_info_2_res["id"]
                     user_info_2_res_username = user_info_2_res["username"]
                     search_player_not_in_database = (
@@ -192,31 +190,32 @@ def load_page(selected_language):
             except KeyError:
                 users_found_combined = users_found_database
 
-            if len(users_found_combined) == 1:
-                user_id = users_found_combined.iloc[0]["User ID"]
-                player_name = users_found_combined.iloc[0]["Player"]
+            if not (not_found_in_database and not_found_in_api):
+                if len(users_found_combined) == 1:
+                    user_id = users_found_combined.iloc[0]["User ID"]
+                    player_name = users_found_combined.iloc[0]["Player"]
 
-            elif len(users_found_combined) > 1:
-                with user_columns[2]:
-                    player_name = st.selectbox(
-                        "**" + _("Select Player") + "**",
-                        users_found_combined["Player"],
-                        index=None,
-                        placeholder=f"{len(users_found_combined)} "
-                        + _("Players found"),
-                    )
-                    if player_name is not None:
-                        user_id = users_found_combined.loc[
-                            users_found_combined["Player"] == player_name, "User ID"
-                        ].iloc[0]
-                    else:
-                        user_id = None
+                elif len(users_found_combined) > 1:
+                    with user_columns[2]:
+                        player_name = st.selectbox(
+                            "**" + _("Select Player") + "**",
+                            users_found_combined["Player"],
+                            index=None,
+                            placeholder=f"{len(users_found_combined)} "
+                            + _("Players found"),
+                        )
+                        if player_name is not None:
+                            user_id = users_found_combined.loc[
+                                users_found_combined["Player"] == player_name, "User ID"
+                            ].iloc[0]
+                        else:
+                            user_id = None
+
             else:
-                not_found_in_api = True
-                user_id = None
-
-            if (not_found_in_database and not_found_in_api) or not_found:
-                st.error("❌ " + _("No Players Found"))
+                print(not_found_in_api, not_found_in_database)
+                if not_found_in_api and not_found_in_database:
+                    st.error("❌ " + _("No Players Found"))
+                    user_id = None
 
         if user_id not in [None, ""]:
             tab1, tab2, tab3, tab4, tab5 = st.tabs(
@@ -389,16 +388,12 @@ def load_page(selected_language):
                 sorted_award_names = [award[0] for award in sorted_awards]
 
                 player_awards = user_info_res["awards"]
-                if player_awards != {}:
-                    awards_markdown = (
-                        "|Award|Count|Name|Description|\n|---|---|---|---|"
-                    )
-                    for award in sorted_award_names:
-                        if award in player_awards:
-                            awards_markdown += f"\n|![{award}](./app/static/GooberDash/awards/{awards_config[award]['icon']})|**x{player_awards[award]['count']}**|{awards_config[award]['name']}|{awards_config[award]['desc'].replace('.','')}|"
-                    st.write(awards_markdown)
-                else:
-                    st.error("❌ " + _("No Awards Found"))
+
+                awards_markdown = "|Award|Count|Name|Description|\n|---|---|---|---|"
+                for award in sorted_award_names:
+                    if award in player_awards:
+                        awards_markdown += f"\n|![{award}](./app/static/GooberDash/awards/{awards_config[award]['icon']})|**x{player_awards[award]['count']}**|{awards_config[award]['name']}|{awards_config[award]['desc'].replace('.','')}|"
+                st.write(awards_markdown)
             with tab4:
                 stats = user_info_res["stats"]
 
@@ -476,6 +471,7 @@ def load_page(selected_language):
                         textposition="inside",
                         textinfo="percent+label",
                         insidetextfont_color="white",
+                        insidetextfont_weight="bold",
                         sort=False,
                     )
                     fig.update_layout(

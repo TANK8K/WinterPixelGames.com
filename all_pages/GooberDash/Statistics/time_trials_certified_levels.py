@@ -11,13 +11,13 @@ from country_or_region import country_region
 conn = st.connection("postgresql", type="sql")
 
 
-# @st.cache_data(show_spinner=True, ttl=21600)
+@st.cache_data(show_spinner=True, ttl=3600)
 def split_frame(input_df, rows):
     df = [input_df.loc[i : i + rows - 1, :] for i in range(0, len(input_df), rows)]
     return df
 
 
-# @st.cache_data(show_spinner=True, ttl=21600)
+@st.cache_data(show_spinner=True, ttl=3600)
 def query_df_first_records():
     df_first_records = conn.query(
         """
@@ -264,7 +264,7 @@ def load_page(selected_language):
                     bottom_info += (
                         f"{filter_country} "
                         + _("Rank")
-                        + f"**{min_global_rank}** "
+                        + f" **{min_global_rank}** "
                         + _("to")
                         + f" **{max_global_rank}** "
                     )
